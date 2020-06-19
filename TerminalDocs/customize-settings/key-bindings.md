@@ -290,6 +290,46 @@ This opens a specific tab depending on the index.
 | ---- | --------- | ------- | ----------- |
 | `index` | Required | Integer | Tab that will open based on its position in the tab bar (starting at 0). |
 
+
+### Set the tab color
+
+This changes the color of the current tab to the provided color, or can be used to clear the color.
+
+**Command name:** `setTabColor`
+
+**Example bindings:**
+
+```json
+{ "command": { "action": "setTabColor", "color": "#123456" }, "keys": "alt+c" }, 
+{ "command": { "action": "setTabColor" }, "keys": "ctrl+alt+c" }, 
+{ "command": "setTabColor", "keys": "alt+shift+c" }
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `color` | Optional | Color | If provided, will set the tab's color to the given value. If omitted, it will clear the tab's color |
+
+> [!IMPORTANT]
+> This action is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview/), version 1.2
+
+### Open the tab color picker
+
+This keybinding immediately activates the tab color picker for the currently focused tab.
+
+**Command name:** `openTabColorPicker`
+
+**Example bindings:**
+
+```json
+{ "command": "openTabColorPicker", "keys": "alt+shift+c" }
+```
+
+> [!IMPORTANT]
+> This action is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview/), version 1.2
+
+
 <br />
 
 ___
