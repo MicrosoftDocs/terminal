@@ -290,6 +290,27 @@ This opens a specific tab depending on the index.
 | ---- | --------- | ------- | ----------- |
 | `index` | Required | Integer | Tab that will open based on its position in the tab bar (starting at 0). |
 
+### Rename the Tab
+
+This changes the name of the current tab to the provided name, or can be used to reset the name to the default.
+
+**Command name:** `renameTab`
+
+**Example bindings:**
+
+```json
+{ "command": { "action": "renameTab", "title": "name" }, "keys": "alt+r" },
+{ "command": { "action": "renameTab" }, "keys": "ctrl+alt+r" },
+{ "command": "renameTab", "keys": "alt+shift+r" }
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `title` | Optional | String | If provided, will set the tab's name to the given string. If omitted, it will reset the tab's name to default |
+
+
 <br />
 
 ___
