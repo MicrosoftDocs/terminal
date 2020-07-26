@@ -77,7 +77,7 @@ This is the directory the shell starts in when it is loaded.
 <br />
 
 > [!NOTE]
-> When setting the starting directory that your installed WSL distributions open to, you should use this format: "startingDirectory": "//wsl$/<distro name>", replacing with the name of your distribution. For example, "startingDirectory": "//wsl$/Ubuntu-20.04".
+> When setting the starting directory that your installed WSL distributions open to, you should use this format: `"startingDirectory": "\\\\wsl$/<distro name>"`, replacing with the name of your distribution. For example, `"startingDirectory": "\\\\wsl$/Ubuntu-20.04"`. Also note the double-escaped backslashes.
 
 ___
 
