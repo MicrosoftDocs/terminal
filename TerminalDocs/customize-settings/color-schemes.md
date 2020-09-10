@@ -68,7 +68,7 @@ ___
 
 ## Included color schemes
 
-Windows Terminal includes these color schemes inside the defaults.json file, which can be accessed by holding <kbd>alt</kbd> and selecting the settings button.
+Windows Terminal includes these color schemes inside the defaults.json file, which can be accessed by holding <kbd>alt</kbd> and selecting the settings button. If you'd like to change the colors of a default scheme, you can copy the scheme's JSON out of the defaults.json file and place it in your `schemes` array inside your settings.json file. From there, you can change any colors you'd like.
 
 ### Campbell
 
