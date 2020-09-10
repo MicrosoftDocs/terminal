@@ -52,7 +52,7 @@ ___
 
 ## Adding a color scheme to a profile
 
-You can add a color scheme to a profile by adding the `colorScheme` property to the profile and setting it to the color scheme's name. Below is an example profile using the One Half Dark color scheme.
+If you would like to set up a color scheme inside one of your profiles, add the `colorScheme` property with the color scheme's `name` as the value. Below is an example of a profile using the One Half Dark color scheme.
 
 ```json
 {
@@ -68,11 +68,7 @@ ___
 
 ## Included color schemes
 
-Windows Terminal includes these color schemes inside the defaults.json file, which can be accessed by holding <kbd>alt</kbd> and selecting the settings button. If you would like to set up a color scheme inside one of your command-line profiles, add the `colorScheme` property with the color scheme's `name` as the value.
-
-```json
-"colorScheme": "COLOR SCHEME NAME"
-```
+Windows Terminal includes these color schemes inside the defaults.json file, which can be accessed by holding <kbd>alt</kbd> and selecting the settings button.
 
 ### Campbell
 
