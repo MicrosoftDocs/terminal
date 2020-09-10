@@ -50,6 +50,22 @@ Every setting, aside from `name`, accepts a color as a string in hex format: `"#
 
 ___
 
+## Adding a color scheme to a profile
+
+You can add a color scheme to a profile by adding the `colorScheme` property to the profile and setting it to the color scheme's name. Below is an example profile using the One Half Dark color scheme.
+
+```json
+{
+    "name" : "PowerShell",
+    "source": "Windows.Terminal.PowershellCore",
+    "colorScheme" : "One Half Dark"
+}
+```
+
+<br />
+
+___
+
 ## Included color schemes
 
 Windows Terminal includes these color schemes inside the defaults.json file, which can be accessed by holding <kbd>alt</kbd> and selecting the settings button. If you would like to set up a color scheme inside one of your command-line profiles, add the `colorScheme` property with the color scheme's `name` as the value.
