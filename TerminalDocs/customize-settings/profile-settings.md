@@ -116,6 +116,8 @@ This sets the icon that displays within the tab and the dropdown menu.
 
 **Accepts:** File location as a string
 
+To change the background of any of the shells, you’ll first need to place the image file in a location the Terminal App can read. Windows Terminal’s AppData folder is located in `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState` - place your images here. For instance, if you place `ubuntu.png` in this folder, the property will be `"icon": "ms-appdata:///roaming/ubuntu.png"`.
+
 ### Hide a profile from the dropdown
 
 If `hidden` is set to `true`, the profile will not appear in the list of profiles. This can be used to hide default profiles and dynamically generated profiles, while leaving them in your settings file. To learn more about dynamic profiles, visit the [Dynamic profiles page](./../dynamic-profiles.md).
