@@ -1,8 +1,8 @@
 {
     "redirections": [
         {
-            "source_path": "key-bindings",
-            "redirect_url": "actions",
+            "source_path": "TerminalDocs/customize-settings/key-bindings.md",
+            "redirect_url": "https://docs.microsoft.com/microsoft/terminal/customize-settings/actions",
             "redirect_document_id": true
         }
     ]
