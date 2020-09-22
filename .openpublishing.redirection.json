@@ -1,0 +1,9 @@
+{
+    "redirections": [
+        {
+            "source_path": "TerminalDocs/customize-settings/key-bindings.md",
+            "redirect_url": "TerminalDocs/customize-settings/actions.md",
+            "redirect_document_id": true
+        }
+    ]
+}
