@@ -91,6 +91,9 @@ Your Windows PowerShell profile settings.json file should now look like this:
 > [!TIP]
 > If you also use the integrated terminal in Visual Studio Code, you should add `"terminal.integrated.fontFamily": "Cascadia Code PL"` to your Visual Studio Code settings to make sure Powerline works there, too.
 
+> [!TIP]
+> If you also use the integrated terminal in Visual Studio 2019, you should add set the terminal font via Options > Font and Colors and choose Terminal in the dropdown. You can then choose the Cascadia Code PL font to make sure Powerline works there, too.
+
 ## Set up Powerline in WSL Ubuntu
 
 ### WSL Ubuntu prerequisites
@@ -121,3 +124,4 @@ fi
 * [Scott Hanselman's "How to make a pretty prompt in Windows Terminal"](https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerlineNerdFontsCascadiaCodeWSLAndOhmyposh.aspx)
 
 * [How to change/set up bash custom prompt (PS1) in Linux](https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html)
+* [How to configure a powerlines font for the integrated terminal within Visual Studio 2019](https://blog.mjjames.co.uk/2020/11/enabling-powerlines-in-your-visual.html)
