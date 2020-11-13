@@ -76,6 +76,9 @@ This is the directory the shell starts in when it is loaded.
 <br />
 
 > [!NOTE]
+> Backslashes need to be escaped. For example, `C:\Users\USERNAME\Documents` should be entered as `C:\\Users\\USERNAME\\Documents`.
+
+> [!NOTE]
 > When setting the starting directory that your installed WSL distributions open to, you should use this format: `"startingDirectory": "\\\\wsl$\\DISTRO NAME\\home\\USERNAME"`, replacing with the name of your distribution. For example, `"startingDirectory": "\\\\wsl$\\Ubuntu-20.04\\home\\user1"`.
 
 > [!NOTE]
