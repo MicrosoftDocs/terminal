@@ -33,6 +33,9 @@ Profiles can use a GUID as a unique identifier. To make a profile your default p
 
 **Accepts:** GUID as a string in registry format: `"{00000000-0000-0000-0000-000000000000}"`
 
+> [!TIP]
+> If you want to generate a GUID for your custom profile, you can run `[guid]::NewGuid()` in PowerShell.
+
 <br />
 
 ___
