@@ -3,7 +3,7 @@ title: Windows Terminal command-line arguments
 description: Learn how to create command-line arguments for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 11/11/2020
+ms.date: 1/28/2021
 ms.topic: how-to
 ---
 
@@ -20,7 +20,7 @@ You can use `wt.exe` to open a new instance of Windows Terminal from the command
 
 The `wt` command line accepts two types of values: **options** and **commands**. **Options** are a list of flags and other parameters that can control the behavior of the `wt` command line as a whole. **Commands** provide the action, or list of actions separated by semicolons, that should be implemented. If no command is specified, then the command is assumed to be `new-tab` by default.
 
-```bash
+```cmd
 wt [options] [command ; ]
 ```
 
@@ -37,14 +37,15 @@ Below is the full list of supported commands and options for the `wt` command li
 | `--fullscreen`, `-F` | Launches the terminal as full screen. |
 | `--focus`, `-f` | Launches the terminal in the focus mode. Can be combined with `maximized`. |
 
-> [!IMPORTANT]
-> The `--focus` and `-f` flags are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
-
 | Command | Parameters | Description |
 | ------- | ---------- | ----------- |
-| `new-tab`, `nt` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Creates a new tab. |
-| `split-pane`, `sp` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Splits a new pane. |
+| `new-tab`, `nt` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title`, `--tabColor` | Creates a new tab. |
+| `split-pane`, `sp` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `--title`, `--tabColor`, `--size, -s size`, `commandline` | Splits a new pane. |
 | `focus-tab`, `ft` | `--target, -t tab-index` | Focuses on a specific tab. |
+| `move-focus`, `mf` | `direction` | Move focus between panes in the given direction. Accepts one of `up`, `down`, `left`, `right`. |
+
+> [!IMPORTANT]
+> The `--tabColor` parameter of the `new-tab` subcommand, `--tabColor` and `--size,-s size` parameters of the `split-pane` subcommand, and the `move-focus` subcommand are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
 
 > [!NOTE]
 > When opening Windows Terminal from cmd (Command Prompt), if you want to use your custom "cmd" profile settings, you will need to use the command `wt -p cmd`. Otherwise, to run your *default* profile settings, just use `wt cmd`.
@@ -60,7 +61,7 @@ To open a new terminal instance, in this case the command will open the profile 
 <!-- Start tab selectors. -->
 #### [Command Prompt](#tab/windows)
 
-```bash
+```cmd
 wt -p "Ubuntu-18.04"
 ```
 
@@ -90,7 +91,7 @@ To specify the folder that should be used as the starting directory for the cons
 <!-- Start tab selectors. -->
 #### [Command Prompt](#tab/windows)
 
-```bash
+```cmd
 wt -d d:\
 ```
 
@@ -118,7 +119,7 @@ To open a new terminal instance with multiple tabs, enter:
 <!-- Start tab selectors. -->
 #### [Command Prompt](#tab/windows)
 
-```bash
+```cmd
 wt ; ;
 ```
 
@@ -146,7 +147,7 @@ To open a new terminal instance with multiple tabs, in this case a Command Promp
 <!-- Start tab selectors. -->
 #### [Command Prompt](#tab/windows)
 
-```bash
+```cmd
 wt -p "Command Prompt" ; new-tab -p "Windows PowerShell"
 ```
 
@@ -176,7 +177,7 @@ To open a new terminal instance with one tab containing three panes running a Co
 <!-- Start tab selectors. -->
 #### [Command Prompt](#tab/windows)
 
-```bash
+```cmd
 wt -p "Command Prompt" ; split-pane -p "Windows PowerShell" ; split-pane -H wsl.exe
 ```
 
@@ -208,7 +209,7 @@ The `new-tab` and `split-pane` commands can be sequenced to get multiple tabs, e
 <!-- Start tab selectors. -->
 #### [Command Prompt](#tab/windows)
 
-```bash
+```cmd
 wt -p "Command Prompt" ; split-pane -V wsl.exe ; new-tab -d c:\ ; split-pane -H -d c:\ wsl.exe
 ```
 
@@ -238,7 +239,7 @@ To open a new terminal instance with custom tab titles, use the `--title` argume
 <!-- Start tab selectors. -->
 #### [Command Prompt](#tab/windows)
 
-```bash
+```cmd
 wt --title tabname1 ; new-tab -p "Ubuntu-18.04" --title tabname2
 ```
 
@@ -259,6 +260,43 @@ Execution aliases do not work in WSL distributions. If you want to use wt.exe fr
 ---
 <!-- End tab selectors.  -->
 
+### Tab color ([Preview](https://aka.ms/terminal-preview))
+
+To open a new terminal instance with custom tab colors, use the `--tabColor` argument. This argument overrides the value defined in the profile, but can be overridden as well using the tab color picker. In the following example, a new terminal is created with two tabs of different colors:
+
+<!-- Start tab selectors. -->
+#### [Command Prompt](#tab/windows)
+
+```cmd
+wt --tabColor #009999 ; new-tab --tabColor #f59218
+```
+
+#### [PowerShell](#tab/powershell)
+
+```powershell
+wt --tabColor #009999 ; new-tab --tabColor #f59218
+```
+
+#### [Linux](#tab/linux)
+
+```bash
+cmd.exe /c "wt.exe" --tabColor #009999 \; new-tab --tabColor #f59218
+```
+
+Execution aliases do not work in WSL distributions. If you want to use wt.exe from a WSL command line, you can spawn it from CMD directly by running `cmd.exe`. The `/c` option tells CMD to terminate after running and `\;` separates commands.
+
+---
+<!-- End tab selectors.  -->
+
+When `--tabColor` is set for a tab, it is associated with the first pane of this tab. Hence in a tab with multiple panes, the color will be applied only if the first pane is in focus. To set the tab color for additional panes, you will need to add the `--tabColor` parameter to the `split-pane` subcommand as well. In the example below, a tab with two panes is created with tab colors specified for each pane:
+
+```powershell
+wt new-tab --tabColor #009999 ; split-pane --tabColor #f59218
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ### Tab focus
 
 To open a new terminal instance with a specific tab in focus, use the `-t` flag (or `--target`), along with the tab-index number. To open your default profile in the first tab and the "Ubuntu-18.04" profile focused in the second tab (`-t 1`), enter:
@@ -266,7 +304,7 @@ To open a new terminal instance with a specific tab in focus, use the `-t` flag 
 <!-- Start tab selectors. -->
 #### [Command Prompt](#tab/windows)
 
-```bash
+```cmd
 wt ; new-tab -p "Ubuntu-18.04" ; focus-tab -t 1
 ```
 

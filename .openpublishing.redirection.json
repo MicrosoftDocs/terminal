@@ -4,6 +4,16 @@
             "source_path": "TerminalDocs/customize-settings/key-bindings.md",
             "redirect_url": "https://docs.microsoft.com/windows/terminal/customize-settings/actions",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "TerminalDocs/customize-settings/global-settings.md",
+            "redirect_url": "https://docs.microsoft.com/windows/terminal/customize-settings/startup",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "TerminalDocs/customize-settings/profile-settings.md",
+            "redirect_url": "https://docs.microsoft.com/windows/terminal/customize-settings/profile-general",
+            "redirect_document_id": true
         }
     ]
 }
