@@ -1,6 +1,6 @@
 ---
 title: Windows Terminal installation
-description: This quick-start guide familiarizes you with the features of Windows Terminal.
+description: In this quickstart, you will learn how to install and run Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 12/11/2020
