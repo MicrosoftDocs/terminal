@@ -12,14 +12,6 @@ ms.localizationpriority: high
 
 This guide addresses some of the common errors and obstacles you may encounter when using Windows Terminal.
 
-## Open the settings UI
-
-At the moment, the settings UI is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview). In order to open the settings UI, you will have to add the `"openSettings"` action to your `"actions"` array in order to open it with the command palette or keyboard.
-
-```
-{ "command": { "action": "openSettings", "target": "settingsUI" }, "keys": "ctrl+shift+," },
-```
-
 ## Set your WSL distribution to start in the home `~` directory when launched
 
 By default, the `startingDirectory` of a profile is `%USERPROFILE%` (`C:\Users\<YourUsername>`). This is a Windows path. For WSL, however, you may want to use the WSL home path instead. `startingDirectory` only accepts a Windows-style path, so setting it to start within a WSL distribution requires a prefix.
