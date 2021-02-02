@@ -68,6 +68,8 @@ This is the directory the shell starts in when it is loaded.
 
 **Default value:** `"%USERPROFILE%"`
 
+**Example:** Start the PowerShell profile in the *GitHubRepos* folder of your *Documents* directory by finding the powershell.exe profile and adding `"startingDirectory": "%USERPROFILE%/Documents/GitHubRepos",`
+
 <br />
 
 Backslashes need to be escaped. For example, `C:\Users\USERNAME\Documents` should be entered as `C:\\Users\\USERNAME\\Documents`.
