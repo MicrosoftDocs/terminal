@@ -71,7 +71,7 @@ Set-Theme Paradox
 Now, each new instance starts by importing Posh-Git and Oh-My-Posh, then setting the Paradox theme from Oh-My-Posh. Oh-My-Posh comes with several [built-in themes](https://github.com/JanDeDobbeleer/oh-my-posh#themes).
 
 > [!IMPORTANT]
-> Script execution policy must be set to either **RemoteSigned** or **Unrestricted** in order for the profile script to run. [Learn more about Execution Policies](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2)
+> Script execution policy must be set to either **RemoteSigned** or **Unrestricted** in order for the profile script to run. [Learn more about Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)
 
 ### Set Cascadia Code PL as your font
 
