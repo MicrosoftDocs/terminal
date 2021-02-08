@@ -111,6 +111,34 @@ This sets the pixel position of the top left corner of the window upon first loa
 
 ___
 
+## Launch position
+
+When set to `true`, the terminal window will auto-center itself on the display it opens on. The terminal will use the `"initialPosition"` to determine which display to open on.
+
+This interacts with the other launch settings in the following ways:
+
+* `"initialPos": x,y`, `"centerOnLaunch": true`, `"launchMode": "default"`: center on the monitor that `x,y` is on.
+* `"initialPos": x,y`, `"centerOnLaunch": true`, `"launchMode": "maximized"`: maximized on the monitor that `x,y` is on (`centerOnLaunch` adds nothing).
+* `"initialPos": <omitted>`, `"centerOnLaunch": true`, `"launchMode": "default"`: center on the default monitor.
+* `"initialPos": <omitted>`, `"centerOnLaunch": true`, `"launchMode": "focus"`: center and enter focus mode on the default monitor.
+* `"initialPos": <omitted>`, `"centerOnLaunch": true`, `"launchMode": "maximized"`: maximized on the default monitor (`centerOnLaunch` adds nothing).
+
+**Property name:** `centerOnLaunch`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
+
+<br />
+
+___
+
 ## Disable dynamic profiles
 
 This sets which dynamic profile generators are disabled, preventing them from adding their profiles to the list of profiles on startup. For information on dynamic profiles, visit the [Dynamic profiles page](./../dynamic-profiles.md).
