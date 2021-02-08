@@ -111,7 +111,7 @@ This sets the pixel position of the top left corner of the window upon first loa
 
 ___
 
-## Launch position
+## Center on launch
 
 When set to `true`, the terminal window will auto-center itself on the display it opens on. The terminal will use the `"initialPosition"` to determine which display to open on.
 
