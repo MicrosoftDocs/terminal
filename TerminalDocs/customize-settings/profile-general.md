@@ -83,6 +83,41 @@ This is the directory the shell starts in when it is loaded.
 
 ___
 
+## Environment variables
+
+These are extra environment variables to be added when the shell is loaded.
+
+**Property name:** `environment`
+
+**Necessity:** Optional
+
+**Accepts:** Object of string keys and corresponding string values
+
+**Example:** Start a profile with `C:\my_app` appended to your path environment variable
+```
+"environment": {
+    "PATH": "${env:PATH};C:\\my_app"
+}
+```
+
+**Example with parameter substitution:** When using the same environment variable in multiple other environment variables
+```
+"environment": {
+    "APP_DIR": "C:\\my_app",
+    "APP_BIN": "${env:APP_DIR}\\bin",
+    "APP_LIB": "${env:APP_DIR}\\lib"
+}
+```
+
+**Default behavior:** When `environment` object is not specified the shell will use the environment from the terminal process.
+
+> [!NOTE]
+> - Backslashes need to be escaped. For example, `C:\Users\USERNAME\Documents` should be entered as `C:\\Users\\USERNAME\\Documents`.
+> - If a parameter in the environment value can not be resolved it will be substituted with an empty string
+> - Parameter substitution is not applied on environment keys
+> - Self or circular parameter references will result in an error
+___
+
 ## Icon
 
 This sets the icon that displays within the tab, dropdown menu, jumplist, and tab switcher.
