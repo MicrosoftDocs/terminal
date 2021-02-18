@@ -65,7 +65,7 @@ In your PowerShell profile, add the following to the end of the file:
 ```powershell
 Import-Module posh-git
 Import-Module oh-my-posh
-Set-Theme Paradox
+Set-PoshPrompt -Theme paradox
 ```
 
 Now, each new instance starts by importing Posh-Git and Oh-My-Posh, then setting the Paradox theme from Oh-My-Posh. Oh-My-Posh comes with several [built-in themes](https://github.com/JanDeDobbeleer/oh-my-posh#themes).
