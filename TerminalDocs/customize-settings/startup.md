@@ -65,6 +65,29 @@ This defines whether the terminal will launch as maximized, full screen, or in a
 
 ___
 
+## Windowing Behavior
+
+This setting controls how new terminal instances attach to existing windows. This propoerty is only used if the `--window,-w window` commandline argument is not provided. This setting accepts the following possible values:
+
+* `useNew`: Create a new window, always. This is how the Terminal always behaved prior to version 1.7.
+* `useExisting`: Create new tabs in the most recently used window on this desktop. If there's not an existing window on this virtual desktop, then create a new Terminal window.
+* `useAnyExisting`: Create new tabs in the most recently used window, regardless of which virtual desktop the window is on.
+
+**Property name:** `windowingBehavior`
+
+**Necessity:** Optional
+
+**Accepts:** `"useNew"`, `"useExisting"`, `"useAnyExisting"`
+
+**Default value:** `"useNew"`
+
+> [!IMPORTANT]
+> This setting is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
+
+<br />
+
+___
+
 ## Launch size
 
 ### Columns on first launch
