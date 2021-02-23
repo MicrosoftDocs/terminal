@@ -3,7 +3,7 @@ title: Windows Terminal command-line arguments
 description: Learn how to create command-line arguments for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 1/28/2021
+ms.date: 02/25/2021
 ms.topic: how-to
 ---
 
@@ -43,9 +43,6 @@ Below is the full list of supported commands and options for the `wt` command li
 | `split-pane`, `sp` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `--title`, `--tabColor`, `--size, -s size`, `commandline` | Splits a new pane. |
 | `focus-tab`, `ft` | `--target, -t tab-index` | Focuses on a specific tab. |
 | `move-focus`, `mf` | `direction` | Move focus between panes in the given direction. Accepts one of `up`, `down`, `left`, `right`. |
-
-> [!IMPORTANT]
-> The `--tabColor` parameter of the `new-tab` subcommand, `--tabColor` and `--size,-s size` parameters of the `split-pane` subcommand, and the `move-focus` subcommand are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
 
 > [!NOTE]
 > When opening Windows Terminal from cmd (Command Prompt), if you want to use your custom "cmd" profile settings, you will need to use the command `wt -p cmd`. Otherwise, to run your *default* profile settings, just use `wt cmd`.
@@ -260,7 +257,7 @@ Execution aliases do not work in WSL distributions. If you want to use wt.exe fr
 ---
 <!-- End tab selectors.  -->
 
-### Tab color ([Preview](https://aka.ms/terminal-preview))
+### Tab color
 
 To open a new terminal instance with custom tab colors, use the `--tabColor` argument. This argument overrides the value defined in the profile, but can be overridden as well using the tab color picker. In the following example, a new terminal is created with two tabs of different colors:
 
@@ -293,9 +290,6 @@ When `--tabColor` is set for a tab, it is associated with the first pane of this
 ```powershell
 wt new-tab --tabColor #009999 ; split-pane --tabColor #f59218
 ```
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Tab focus
 

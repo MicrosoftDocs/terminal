@@ -3,7 +3,7 @@ title: Windows Terminal Startup Settings
 description: Learn how to customize startup settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 01/28/2021
+ms.date: 02/25/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -65,12 +65,12 @@ This defines whether the terminal will launch as maximized, full screen, or in a
 
 ___
 
-## Windowing Behavior
+## New instance behavior ([Preview](https://aka.ms/terminal-preview))
 
-This setting controls how new terminal instances attach to existing windows. This propoerty is only used if the `--window,-w window` commandline argument is not provided. This setting accepts the following possible values:
+This setting controls how new terminal instances attach to existing windows. This propoerty is only used if the `--window,-w window` command line argument is not provided. This setting accepts the following possible values:
 
-* `useNew`: Create a new window, always. This is how the Terminal always behaved prior to version 1.7.
-* `useExisting`: Create new tabs in the most recently used window on this desktop. If there's not an existing window on this virtual desktop, then create a new Terminal window.
+* `useNew`: Create a new window, always. This is how the terminal always behaved prior to version 1.7.
+* `useExisting`: Create new tabs in the most recently used window on this desktop. If there's not an existing window on this virtual desktop, then create a new terminal window.
 * `useAnyExisting`: Create new tabs in the most recently used window, regardless of which virtual desktop the window is on.
 
 **Property name:** `windowingBehavior`
@@ -82,7 +82,7 @@ This setting controls how new terminal instances attach to existing windows. Thi
 **Default value:** `"useNew"`
 
 > [!IMPORTANT]
-> This setting is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
+> This setting is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
@@ -134,7 +134,7 @@ This sets the pixel position of the top left corner of the window upon first loa
 
 ___
 
-## Center on launch
+## Center on launch ([Preview](https://aka.ms/terminal-preview))
 
 When set to `true`, the terminal window will auto-center itself on the display it opens on. The terminal will use the `"initialPosition"` to determine which display to open on.
 
@@ -156,7 +156,7 @@ This interacts with the other launch settings in the following ways:
 
 
 > [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
@@ -178,7 +178,7 @@ This sets which dynamic profile generators are disabled, preventing them from ad
 
 ___
 
-## Startup actions ([Preview](https://aka.ms/terminal-preview))
+## Startup actions
 
 This sets the list of actions to execute on startup, allowing the terminal to launch with a custom set of tabs and panes by default. These actions will be applied only if no command line arguments were supplied. The list of actions is represented by a string with the same format as commands in the command line arguments. For more information about the commands format, visit the [Command line arguments page](./../command-line-arguments.md).
 
@@ -189,6 +189,3 @@ This sets the list of actions to execute on startup, allowing the terminal to la
 **Accepts:** String representing a list of commands to run
 
 **Default value:** `""`
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).

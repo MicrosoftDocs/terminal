@@ -3,7 +3,7 @@ title: Windows Terminal Actions
 description: Learn how to create custom actions for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 1/28/2021
+ms.date: 02/25/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -498,7 +498,7 @@ This command can be used to open the color picker for the active tab. The color 
 { "command": "openTabColorPicker" }
 ```
 
-### Move tab ([Preview](https://aka.ms/terminal-preview))
+### Move tab
 
 This command moves the tab "backward" and "forward", which is equivalent to "left" and "right" in left-to-right UI.
 
@@ -521,9 +521,6 @@ _This command is not currently bound in the default settings_.
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `direction` | Required | `"backward"`, `"forward"` | Direction in which the tab will move. |
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
@@ -564,9 +561,6 @@ This changes focus to a different pane depending on the direction. Setting the `
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `direction` | Required | `"left"`, `"right"`, `"up"`, `"down"`, `"previous"` | Direction in which the focus will move. |
-
-> [!IMPORTANT]
-> The `"previous"` direction is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Zoom a pane
 
@@ -639,9 +633,6 @@ This halves the size of the active pane and opens another. Without any arguments
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
 | `splitMode` | Optional | `"duplicate"` | Controls how the pane splits. Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane. |
 | `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
-
-> [!IMPORTANT]
-> The `size` parameter is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
@@ -768,9 +759,6 @@ This scrolls the screen up to the top of the input buffer.
 { "command": "scrollToTop", "keys": "ctrl+shift+home" }
 ```
 
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 ### Scroll to the latest history
 
 This scrolls the screen down to the bottom of the input buffer.
@@ -782,9 +770,6 @@ This scrolls the screen down to the bottom of the input buffer.
 ```json
 { "command": "scrollToBottom", "keys": "ctrl+shift+end" }
 ```
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 

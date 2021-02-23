@@ -3,7 +3,7 @@ title: Windows Terminal Interaction Settings
 description: Learn how to customize interaction settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 01/28/2021
+ms.date: 02/25/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -140,6 +140,25 @@ The tab switcher will open on the initial press of the actions for `nextTab` and
 
 ___
 
+## Automatically focus pane on mouse hover ([Preview](https://aka.ms/terminal-preview))
+
+When this is set to `true`, the terminal will move focus to the pane on mouse hover. When it's set to `false`, a click will be required to focus the pane using the mouse.
+
+**Property name:** `focusFollowMouse`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+<br />
+
+___
+
 ## Paste warnings
 
 ### Warn when the text to paste is very large
@@ -165,19 +184,3 @@ When this is set to `true`, trying to paste text with multiple lines will displa
 **Accepts:** `true`, `false`
 
 **Default value:** `true`
-
-<br />
-
-___
-
-## Automatically move focus to pane on mouse hover
-
-When this is set to `true`, the terminal will move focus to the pane on mouse hover. When it's set to `false`, a click will be required to focus the pane using the mouse.
-
-**Property name:** `focusFollowMouse`
-
-**Necessity:** Optional
-
-**Accepts:** `true`, `false`
-
-**Default value:** `false`
