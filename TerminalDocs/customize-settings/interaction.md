@@ -165,3 +165,19 @@ When this is set to `true`, trying to paste text with multiple lines will displa
 **Accepts:** `true`, `false`
 
 **Default value:** `true`
+
+<br />
+
+___
+
+## Automatically move focus to pane on mouse hover
+
+When this is set to `true`, the terminal will move focus to the pane on mouse hover. When it's set to `false`, a click will be required to focus the pane using the mouse.
+
+**Property name:** `focusFollowMouse`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
