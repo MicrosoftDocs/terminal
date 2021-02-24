@@ -622,6 +622,21 @@ This changes the size of the active pane.
 | ---- | --------- | ------- | ----------- |
 | `direction` | Required | `"left"`, `"right"`, `"up"`, `"down"` | Direction in which the pane will be resized. |
 
+### Mark a pane as read-only ([Preview](https://aka.ms/terminal-preview))
+
+This prevents input from being entered into a pane.
+
+**Command name:** `toggleReadOnlyMode`
+
+**Default bindings:**
+
+```json
+{ "command": "toggleReadOnlyMode" }
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
+
 ### Split a pane
 
 This halves the size of the active pane and opens another. Without any arguments, this will open the default profile in the new pane. If an action is not specified, the default profile's equivalent setting will be used.
