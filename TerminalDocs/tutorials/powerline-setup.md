@@ -1,6 +1,6 @@
 ---
 title: Windows Terminal Powerline Setup
-description: In this tutorial, you learn how to set up Powerline in the Windows Terminal.
+description: In this tutorial, you learn how to set up Powerline in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 02/25/2021

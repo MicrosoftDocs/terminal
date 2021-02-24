@@ -1,6 +1,6 @@
 ---
 title: Windows Terminal Panes
-description: Learn how to split panes in the Windows Terminal.
+description: Learn how to split panes in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 09/22/2020

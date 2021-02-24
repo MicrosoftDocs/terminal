@@ -34,6 +34,8 @@
       href: panes.md
     - name: Dynamic profiles
       href: dynamic-profiles.md
+    - name: JSON fragment extensions
+      href: json-fragment-extensions.md
     - name: Cascadia Code
       href: cascadia-code.md
     - name: Tips and tricks
