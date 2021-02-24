@@ -50,7 +50,7 @@ The JSON file should be split up into 2 lists, one for profiles and one for sche
             "brightBlue": "#3B78FF",
             "brightCyan": "#61D6D6",
             "brightGreen": "#16C60C",
-            "brightPurp1e": "#B4009E",
+            "brightPurple": "#B4009E",
             "brightRed": "#E74856",
             "brightWhite": "#F2F2F2",
             "brightYellow": "#F9F1A5"
@@ -61,7 +61,7 @@ The JSON file should be split up into 2 lists, one for profiles and one for sche
 
 The first item in the `"profiles"` list updates an existing profile, identifying the profile it wishes to update via the GUID provided to the `"updates"` field (details on how to obtain the GUID below). The second item in that list creates a new profile called "Cool Profile".
 
-In the `"schemes"` list, a new color scheme called "Postmordern Tango Light" is defined, and can be subsequently be referenced by the user in their settings file or in this JSON file itself (notice that "Cool Profile" uses this newly defined color scheme).
+In the `"schemes"` list, a new color scheme called "Postmodern Tango Light" is defined, and can be subsequently be referenced by the user in their settings file or in this JSON file itself (notice that "Cool Profile" uses this newly defined color scheme).
 
 Of course, if the developer only wishes to add/modify profiles without adding color schemes (and vice-versa), only the relevant list needs to be present and the other list can be omitted.
 
@@ -132,4 +132,4 @@ In the second case, the installation is only for the current user. In this case,
 
 **C:\Users\<user>\AppData\Local\Microsoft\Windows Terminal\Fragments\\{app-name}**
 
-Note that both the ProgramData and LocalAppData folders are known folders that the installer should be able to access. If in either case, if the Windows Terminal\Fragments directory does not exist, the installer should create it.  
+Note that both the ProgramData and LocalAppData folders are known folders that the installer should be able to access. If in either case, if the Windows Terminal\Fragments directory does not exist, the installer should create it.
