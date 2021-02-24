@@ -165,6 +165,28 @@ This opens the search dialog box. More information on search can be found on the
 { "command": "find", "keys": "ctrl+shift+f" }
 ```
 
+### Find next/previous search match ([Preview](https://aka.ms/terminal-preview))
+
+This lets you navigate through your search matches.
+
+**Command name:** `findMatch`
+
+**Default bindings:**
+
+```json
+{ "command": { "action": "findMatch", "direction": "next" } },
+{ "command": { "action": "findMatch", "direction": "prev" } }
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `direction` | Required | `"next"`, `"prev"` | The direction to navigate through search results. |
+
+> [!IMPORTANT]
+> The `"settingsUI"` value for `target` is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ### Open the dropdown
 
 This opens the dropdown menu.
@@ -183,7 +205,7 @@ This opens either the default or custom settings files. Without the `target` fie
 
 **Command name:** `openSettings`
 
-**Default binding:**
+**Default bindings:**
 
 ```json
 { "command": "openSettings", "keys": "ctrl+," },
@@ -218,7 +240,7 @@ This allows you to enter "focus mode", which hides the tabs and title bar.
 
 **Command name:** `toggleFocusMode`
 
-**Default bindings:**
+**Default binding:**
 
 ```json
 { "command": "toggleFocusMode" }
@@ -230,7 +252,7 @@ This allows you toggle the "always on top" state of the window. When in "always 
 
 **Command name:** `toggleAlwaysOnTop`
 
-**Default bindings:**
+**Default binding:**
 
 ```json
 { "command": "toggleAlwaysOnTop" }
@@ -246,7 +268,7 @@ For instance `"\u001b[A"` will behave as if the up arrow button had been pressed
 
 **Command name:** `sendInput`
 
-**Default bindings:**
+**Default binding:**
 
 _This command is not currently bound in the default settings_.
 
@@ -456,10 +478,8 @@ This command changes the tab title into a text field that lets you edit the titl
 
 **Default binding:**
 
-_This command is not currently bound in the default settings_.
-
 ```json
-{ "command": "openTabRenamer", "keys": "ctrl+alt+a" }
+{ "command": "openTabRenamer" }
 ```
 
 ### Change tab color
@@ -506,14 +526,12 @@ This command moves the tab "backward" and "forward", which is equivalent to "lef
 
 **Default binding:**
 
-_This command is not currently bound in the default settings_.
-
 ```json
 // Move tab backward (left in LTR)
-{ "command": { "action": "moveTab", "direction": "backward" }, "keys": "" }
+{ "command": { "action": "moveTab", "direction": "backward" } }
 
 // Move tab forward (right in LTR)
-{ "command": { "action": "moveTab", "direction": "forward" }, "keys": "" }
+{ "command": { "action": "moveTab", "direction": "forward" } }
 ```
 
 #### Actions
