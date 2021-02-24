@@ -93,7 +93,7 @@ This sets the icon that displays within the tab, dropdown menu, jumplist, and ta
 
 **Accepts:** File location as a string, or an emoji
 
-**Example:**  Placing the icon image `ubuntu.ico` in the folder located at `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`, you can display the icon by adding this line to the profile in your settings.json: `"icon": "ms-appdata:///roaming/ubuntu.ico"`.
+**Example:** By placing the icon image `ubuntu.ico` in the folder located at `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`, you can display the icon by adding this line to the profile in your settings.json: `"icon": "ms-appdata:///roaming/ubuntu.ico"`.
 
 <br>
 ___
