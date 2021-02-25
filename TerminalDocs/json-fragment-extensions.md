@@ -39,21 +39,21 @@ The JSON file should be split up into 2 lists, one for profiles and one for sche
             "name": "Postmodern Tango Light",
 
             "black": "#0C0C0C",
-            "blue": "#0037DA",
-            "cyan": "#3A96DD",
-            "green": "#13A10E",
-            "purple": "#881798",
             "red": "#C50F1F",
-            "white": "#CCCCCC",
+            "green": "#13A10E",
             "yellow": "#C19C00",
+            "blue": "#0037DA",
+            "purple": "#881798",
+            "cyan": "#3A96DD",            
+            "white": "#CCCCCC",
             "brightBlack": "#767676",
-            "brightBlue": "#3B78FF",
-            "brightCyan": "#61D6D6",
-            "brightGreen": "#16C60C",
-            "brightPurple": "#B4009E",
             "brightRed": "#E74856",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#F9F1A5"
+            "brightGreen": "#16C60C",
+            "brightYellow": "#F9F1A5",
+            "brightBlue": "#3B78FF",
+            "brightPurple": "#B4009E",
+            "brightCyan": "#61D6D6",
+            "brightWhite": "#F2F2F2"
         }
     ]
 }
@@ -69,10 +69,10 @@ Of course, if the developer only wishes to add/modify profiles without adding co
 
 The only profiles that can be modified through fragments are the default profiles, Command Prompt and PowerShell, as well as [dynamic profiles](./dynamic-profiles.md). To determine the GUID of the profile to be updated, use a Version 5 UUID generator with the following namespace GUID and name:
 
-- The namespace GUID: { 2BDE4A90 - D05F - 401C - 9492 - E40884EAD1D8 } 
+- The namespace GUID: `{2BDE4A90-D05F-401C-9492-E40884EAD1D8}` 
 - The name of the profile to be updated 
 
-As a sanity check, a profile called 'Ubuntu' will get the generated GUID: { 2C4DE342 - 38B7 - 51CF - B940 - 2309A097F518 } 
+As a sanity check, a profile called 'Ubuntu' will get the generated GUID: `{2C4DE342-38B7-51CF-B940-2309A097F518}` 
 
 ## Minimum requirements for settings added with fragments 
 
@@ -126,10 +126,10 @@ For applications installed 'traditionally', there are 2 cases.
 
 The first is that the installation is for all the users on the system. In this case, the JSON files should be added to the folder:
 
-**C:\ProgramData\Microsoft\Windows Terminal\Fragments\\{app-name}**
+`C:\ProgramData\Microsoft\Windows Terminal\Fragments\{app-name}`
 
 In the second case, the installation is only for the current user. In this case, the JSON files should be added to the folder:
 
-**C:\Users\<user>\AppData\Local\Microsoft\Windows Terminal\Fragments\\{app-name}**
+`C:\Users\<user>\AppData\Local\Microsoft\Windows Terminal\Fragments\{app-name}`
 
-Note that both the ProgramData and LocalAppData folders are known folders that the installer should be able to access. If in either case, if the Windows Terminal\Fragments directory does not exist, the installer should create it.
+Note that both the `ProgramData` and `LocalAppData` folders are known folders that the installer should be able to access. If in either case, if the `Windows Terminal\Fragments` directory does not exist, the installer should create it.
