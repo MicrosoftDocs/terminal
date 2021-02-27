@@ -67,7 +67,7 @@ ___
 
 ## New instance behavior ([Preview](https://aka.ms/terminal-preview))
 
-This setting controls how new terminal instances attach to existing windows. This propoerty is only used if the `--window,-w window` command line argument is not provided. This setting accepts the following possible values:
+This setting controls how new terminal instances attach to existing windows. This property is only used if the `--window,-w window` [command line argument](./../command-line-arguments.md) is not provided. This setting accepts the following possible values:
 
 * `useNew`: Create a new window, always. This is how the terminal always behaved prior to version 1.7.
 * `useExisting`: Create new tabs in the most recently used window on this desktop. If there's not an existing window on this virtual desktop, then create a new terminal window.

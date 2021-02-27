@@ -20,48 +20,51 @@ The JSON file should be split up into 2 lists, one for profiles and one for sche
 
 ```JSON 
 {
-    "profiles": [
-        {
-            "updates": "{2c4de342-38b7-51cf-b940-23e9ae97f518}",
-            "fontSize": 16,
-            "fontWeight": "thin"
-        },
-        {
-            "name": "Cool Profile",
-            "commandline": "powershell.exe",
-            "antialiasingMode": "aliased",
-            "fontWeight": "bold",
-            "colorScheme": "Postmodern Tango Light"
-        }
-    ],
-    "schemes": [
-        {
-            "name": "Postmodern Tango Light",
+  "profiles": [
+    {
+      // update the profile with the GUID below
+      "updates": "{2c4de342-38b7-51cf-b940-23e9ae97f518}",
+      "fontSize": 16,
+      "fontWeight": "thin"
+    },
+    {
+      // create a new profile
+      "name": "Cool Profile",
+      "commandline": "powershell.exe",
+      "antialiasingMode": "aliased",
+      "fontWeight": "bold",
+      "colorScheme": "Postmodern Tango Light"
+    }
+  ],
+  "schemes": [
+    {
+      // create a new color scheme
+      "name": "Postmodern Tango Light",
 
-            "black": "#0C0C0C",
-            "red": "#C50F1F",
-            "green": "#13A10E",
-            "yellow": "#C19C00",
-            "blue": "#0037DA",
-            "purple": "#881798",
-            "cyan": "#3A96DD",            
-            "white": "#CCCCCC",
-            "brightBlack": "#767676",
-            "brightRed": "#E74856",
-            "brightGreen": "#16C60C",
-            "brightYellow": "#F9F1A5",
-            "brightBlue": "#3B78FF",
-            "brightPurple": "#B4009E",
-            "brightCyan": "#61D6D6",
-            "brightWhite": "#F2F2F2"
-        }
-    ]
+      "black": "#0C0C0C",
+      "red": "#C50F1F",
+      "green": "#13A10E",
+      "yellow": "#C19C00",
+      "blue": "#0037DA",
+      "purple": "#881798",
+      "cyan": "#3A96DD",            
+      "white": "#CCCCCC",
+      "brightBlack": "#767676",
+      "brightRed": "#E74856",
+      "brightGreen": "#16C60C",
+      "brightYellow": "#F9F1A5",
+      "brightBlue": "#3B78FF",
+      "brightPurple": "#B4009E",
+      "brightCyan": "#61D6D6",
+      "brightWhite": "#F2F2F2"
+    }
+  ]
 }
 ```
 
-The first item in the `"profiles"` list updates an existing profile, identifying the profile it wishes to update via the GUID provided to the `"updates"` field (details on how to obtain the GUID below). The second item in that list creates a new profile called "Cool Profile".
+The first item in the `"profiles"` list updates an existing profile, identifying the profile it wishes to update via the GUID provided to the `"updates"` field (details on how to obtain the GUID are in the next section). The second item in that list creates a new profile called "Cool Profile".
 
-In the `"schemes"` list, a new color scheme called "Postmodern Tango Light" is defined, and can be subsequently be referenced by the user in their settings file or in this JSON file itself (notice that "Cool Profile" uses this newly defined color scheme).
+In the `"schemes"` list, a new color scheme called "Postmodern Tango Light" is defined, and can be subsequently referenced by the user in their settings file or in this JSON file itself (notice that "Cool Profile" uses this newly defined color scheme).
 
 Of course, if the developer only wishes to add/modify profiles without adding color schemes (and vice-versa), only the relevant list needs to be present and the other list can be omitted.
 
@@ -120,9 +123,9 @@ Key things to note:
 - The `"PublicFolder"` field should have the name of the folder, relative to the package root, where the JSON files are stored (this folder is typically called "Public" but can be named something else if the developer wishes).
 - Inside the public folder, a subdirectory called "Fragments" should be created, and the JSON files should be stored in that subdirectory.
 
-### 'Traditionally' installed applications 
+### Applications installed from the web 
 
-For applications installed 'traditionally', there are 2 cases.
+For applications installed from the web, there are 2 cases.
 
 The first is that the installation is for all the users on the system. In this case, the JSON files should be added to the folder:
 

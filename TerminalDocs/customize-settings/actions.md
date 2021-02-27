@@ -624,7 +624,7 @@ This changes the size of the active pane.
 
 ### Mark a pane as read-only ([Preview](https://aka.ms/terminal-preview))
 
-This prevents input from being entered into a pane.
+You can mark a pane as read-only, which will prevent input from going into the text buffer. If you attempt to close or input text into a read-only pane, the terminal will display a popup warning instead.
 
 **Command name:** `toggleReadOnlyMode`
 
