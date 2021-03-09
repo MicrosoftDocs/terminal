@@ -307,6 +307,38 @@ Execution aliases do not work in WSL distributions. If you want to use wt.exe fr
 ---
 <!-- End tab selectors.  -->
 
+### Using application title
+
+To open a new terminal instance allowing applications within it to set tab title by sending title change messages, use the `--useApplicationTitle` flag. To suppress these messages, use the `--suppressApplicationTitle` flag. If none of these flags is provided, the behavior is inheritted from profile settings. To open a tab with title `tabname` that will not be overridden by the application, enter:
+
+<!-- Start tab selectors. -->
+#### [Command Prompt](#tab/windows)
+
+```cmd
+wt --title tabname --suppressApplicationTitle
+```
+
+#### [PowerShell](#tab/powershell)
+
+```powershell
+wt --title tabname --suppressApplicationTitle
+```
+
+#### [Linux](#tab/linux)
+
+```bash
+cmd.exe /c "wt.exe" --title tabname --suppressApplicationTitle
+```
+
+Execution aliases do not work in WSL distributions. If you want to use wt.exe from a WSL command line, you can spawn it from CMD directly by running `cmd.exe`. The `/c` option tells CMD to terminate after running and the `\;` backslash + semicolon separates commands.
+
+---
+<!-- End tab selectors.  -->
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+
 ### Tab color
 
 To open a new terminal instance with custom tab colors, use the `--tabColor` argument. This argument overrides the value defined in the profile, but can be overridden as well using the tab color picker. In the following example, a new terminal is created with two tabs of different colors:
