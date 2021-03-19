@@ -8,11 +8,11 @@ ms.topic: overview
 ms.localizationpriority: high
 ---
 
-## Installing and running Windows Terminal
+# Installing and running Windows Terminal
 
 > Note: Windows Terminal requires Windows 10 1903 (build 18362) or later
 
-### Microsoft Store [Recommended]
+## Microsoft Store [Recommended]
 
 Install the [Windows Terminal from the Microsoft Store][store-install-link].
 This allows you to always be on the latest version when we release new builds
@@ -20,9 +20,9 @@ with automatic upgrades.
 
 This is our preferred method.
 
-### Other install methods
+## Other install methods
 
-#### Via GitHub
+### Via GitHub
 
 For users who are unable to install Windows Terminal from the Microsoft Store,
 released builds can be manually downloaded from our repository's [Releases
@@ -47,7 +47,7 @@ Add-AppxPackage Microsoft.WindowsTerminal_<versionNumber>.msixbundle
 >   to regularly install the latest Terminal release to receive all the latest
 >   fixes and improvements!
 
-#### Via Windows Package Manager CLI (aka winget)
+### Via Windows Package Manager CLI (aka winget)
 
 [winget](https://github.com/microsoft/winget-cli) users can download and install
 the latest Terminal release by installing the `Microsoft.WindowsTerminal`
@@ -57,7 +57,7 @@ package:
 winget install --id=Microsoft.WindowsTerminal -e
 ```
 
-#### Via Chocolatey (unofficial)
+### Via Chocolatey (unofficial)
 
 [Chocolatey](https://chocolatey.org) users can download and install the latest
 Terminal release by installing the `microsoft-windows-terminal` package:
@@ -77,7 +77,7 @@ If you have any issues when installing/upgrading the package please go to the
 page](https://chocolatey.org/packages/microsoft-windows-terminal) and follow the
 [Chocolatey triage process](https://chocolatey.org/docs/package-triage-process)
 
-#### Via Scoop (unofficial)
+### Via Scoop (unofficial)
 
 [Scoop](https://scoop.sh) users can download and install the latest Terminal
 release by installing the `windows-terminal` package:
