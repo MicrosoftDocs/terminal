@@ -17,6 +17,10 @@ Windows Terminal is a modern terminal application for users of command-line tool
 > [!NOTE]
 > [What's the difference between a console, a terminal, and a shell?](https://www.hanselman.com/blog/WhatsTheDifferenceBetweenAConsoleATerminalAndAShell.aspx) Read Scott Hanselman's explanation.
 
+## Installing the Terminal
+
+For info on installing the Terminal, see [Installing the Windows Terminal](./install.md).
+
 ## Multiple profiles supporting a variety of command line applications
 
 Any application that has a command line interface can be run inside Windows Terminal. This includes everything from PowerShell and Command Prompt to Azure Cloud Shell and any WSL distribution such as Ubuntu or Oh-My-Zsh.
