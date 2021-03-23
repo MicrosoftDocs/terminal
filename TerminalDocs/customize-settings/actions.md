@@ -3,7 +3,7 @@ title: Windows Terminal Actions
 description: Learn how to create custom actions for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 09/22/2020
+ms.date: 02/25/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -93,6 +93,16 @@ This sets the name that will appear in the command palette. If one isn't provide
 
 **Accepts:** String
 
+### Icon
+
+This sets the icon that displays within the command palette.
+
+**Property name:** `icon`
+
+**Necessity:** Optional
+
+**Accepts:** File location as a string, or an emoji
+
 <br />
 
 ___
@@ -104,7 +114,7 @@ ___
 `ctrl+`, `shift+`, `alt+`
 
 > [!NOTE]
-> The `Windows` key is not supported as a modifier. 
+> The `Windows` key is not supported as a modifier.
 
 ### Modifier keys
 
@@ -126,7 +136,7 @@ ___
 
 :::row:::
 :::column span="":::
-This closes the current window and all tabs within it. If `confirmCloseAllTabs` is set to `true`, a confirmation dialog will appear to ensure you'd like to close all your tabs. More information on this setting can be found on the [Global settings page](./global-settings.md#hide-close-all-tabs-popup).
+This closes the current window and all tabs within it. If `confirmCloseAllTabs` is set to `true`, a confirmation dialog will appear to ensure you'd like to close all your tabs. More information on this setting can be found on the [Appearance page](./appearance.md#show-close-all-tabs-popup).
 
 **Command name:** `closeWindow`
 
@@ -155,6 +165,28 @@ This opens the search dialog box. More information on search can be found on the
 { "command": "find", "keys": "ctrl+shift+f" }
 ```
 
+### Find next/previous search match ([Preview](https://aka.ms/terminal-preview))
+
+This lets you navigate through your search matches.
+
+**Command name:** `findMatch`
+
+**Default bindings:**
+
+```json
+{ "command": { "action": "findMatch", "direction": "next" } },
+{ "command": { "action": "findMatch", "direction": "prev" } }
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `direction` | Required | `"next"`, `"prev"` | The direction to navigate through search results. |
+
+> [!IMPORTANT]
+> The `"settingsUI"` value for `target` is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ### Open the dropdown
 
 This opens the dropdown menu.
@@ -173,7 +205,7 @@ This opens either the default or custom settings files. Without the `target` fie
 
 **Command name:** `openSettings`
 
-**Default binding:**
+**Default bindings:**
 
 ```json
 { "command": "openSettings", "keys": "ctrl+," },
@@ -184,7 +216,10 @@ This opens either the default or custom settings files. Without the `target` fie
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
-| `target` | Optional | `"settingsFile"`, `"defaultsFile"`, `"allFiles"` | The settings file to open. |
+| `target` | Optional | `"settingsFile"`, `"defaultsFile"`, `"settingsUI"`, `"allFiles"` | The settings file to open. |
+
+> [!IMPORTANT]
+> The `"settingsUI"` value for `target` is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Toggle full screen
 
@@ -205,7 +240,7 @@ This allows you to enter "focus mode", which hides the tabs and title bar.
 
 **Command name:** `toggleFocusMode`
 
-**Default bindings:**
+**Default binding:**
 
 ```json
 { "command": "toggleFocusMode" }
@@ -217,7 +252,7 @@ This allows you toggle the "always on top" state of the window. When in "always 
 
 **Command name:** `toggleAlwaysOnTop`
 
-**Default bindings:**
+**Default binding:**
 
 ```json
 { "command": "toggleAlwaysOnTop" }
@@ -233,7 +268,7 @@ For instance `"\u001b[A"` will behave as if the up arrow button had been pressed
 
 **Command name:** `sendInput`
 
-**Default bindings:**
+**Default binding:**
 
 _This command is not currently bound in the default settings_.
 
@@ -435,6 +470,18 @@ _This command is not currently bound in the default settings_.
 | ---- | --------- | ------- | ----------- |
 | `title` | Optional | String | The new title to use for this tab. If omitted, this command will revert the tab title back to its original value. |
 
+### Open tab rename text box
+
+This command changes the tab title into a text field that lets you edit the title for the current tab. Clearing the text field will reset the tab title back to the default for the current shell instance.
+
+**Command name:** `openTabRenamer`
+
+**Default binding:**
+
+```json
+{ "command": "openTabRenamer" }
+```
+
 ### Change tab color
 
 This command can be used to change the color of a tab to a specific value.
@@ -453,7 +500,7 @@ _This command is not currently bound in the default settings_.
 { "command": { "action": "setTabColor", "color": null }, "keys": "" }
 ```
 
-#### Arguments
+#### Actions
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -471,8 +518,60 @@ This command can be used to open the color picker for the active tab. The color 
 { "command": "openTabColorPicker" }
 ```
 
+### Move tab
+
+This command moves the tab "backward" and "forward", which is equivalent to "left" and "right" in left-to-right UI.
+
+**Command name:** `moveTab`
+
+**Default binding:**
+
+```json
+// Move tab backward (left in LTR)
+{ "command": { "action": "moveTab", "direction": "backward" } }
+
+// Move tab forward (right in LTR)
+{ "command": { "action": "moveTab", "direction": "forward" } }
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `direction` | Required | `"backward"`, `"forward"` | Direction in which the tab will move. |
+
 <br />
 
+___
+
+## Window management commands
+
+### New window
+
+This creates a new window. Without any arguments, this will open the default profile in a new window (regardless of the setting of `windowingBehavior`). If an action is not specified, the default profile's equivalent setting will be used.
+
+**Command name:** `newWindow`
+
+**Default bindings:**
+
+```json
+{ "command": "newWindow", "keys": "ctrl+shift+n" },
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `commandline` | Optional | Executable file name as a string | Executable run within the tab. |
+| `startingDirectory` | Optional | Folder location as a string | Directory in which the window will open. |
+| `tabTitle` | Optional | String | Title of the window tab. |
+| `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
+| `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
+
+<br />
 ___
 
 ## Pane management commands
@@ -491,7 +590,7 @@ This closes the active pane. If there aren't any split panes, this will close th
 
 ### Move pane focus
 
-This changes focus to a different pane depending on the direction.
+This changes focus to a different pane depending on the direction. Setting the `direction` to `"previous"` will move focus to the most recently used pane.
 
 **Command name:** `moveFocus`
 
@@ -501,14 +600,15 @@ This changes focus to a different pane depending on the direction.
 { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" },
 { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+left" },
 { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+right" },
-{ "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" }
+{ "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" },
+{ "command": { "action": "moveFocus", "direction": "previous" }, "keys": "ctrl+alt+left" }
 ```
 
 #### Actions
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
-| `direction` | Required | `"left"`, `"right"`, `"up"`, `"down"` | Direction in which the focus will move. |
+| `direction` | Required | `"left"`, `"right"`, `"up"`, `"down"`, `"previous"` | Direction in which the focus will move. |
 
 ### Zoom a pane
 
@@ -552,6 +652,21 @@ This changes the size of the active pane.
 | ---- | --------- | ------- | ----------- |
 | `direction` | Required | `"left"`, `"right"`, `"up"`, `"down"` | Direction in which the pane will be resized. |
 
+### Mark a pane as read-only ([Preview](https://aka.ms/terminal-preview))
+
+You can mark a pane as read-only, which will prevent input from going into the text buffer. If you attempt to close or input text into a read-only pane, the terminal will display a popup warning instead.
+
+**Command name:** `toggleReadOnlyMode`
+
+**Default bindings:**
+
+```json
+{ "command": "toggleReadOnlyMode" }
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
+
 ### Split a pane
 
 This halves the size of the active pane and opens another. Without any arguments, this will open the default profile in the new pane. If an action is not specified, the default profile's equivalent setting will be used.
@@ -565,8 +680,8 @@ This halves the size of the active pane and opens another. Without any arguments
 { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
 
 // In defaults.json
-{ "command": { "action": "splitPane", "split": "horizontal"}, "keys": "alt+shift+-" },
-{ "command": { "action": "splitPane", "split": "vertical"}, "keys": "alt+shift+plus" }
+{ "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-" },
+{ "command": { "action": "splitPane", "split": "vertical" }, "keys": "alt+shift+plus" }
 ```
 
 #### Actions
@@ -580,6 +695,7 @@ This halves the size of the active pane and opens another. Without any arguments
 | `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
 | `splitMode` | Optional | `"duplicate"` | Controls how the pane splits. Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane. |
+| `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
 
 <br />
 
@@ -604,12 +720,12 @@ This copies the selected terminal content to your clipboard.
 { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+insert" }
 ```
 
-#### Clipboard Actions
+#### Actions
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `singleLine` | Optional | `true`, `false` | When `true`, the copied content will be copied as a single line. When `false`, newlines persist from the selected text. |
-| `copyFormatting` | Optional | `true`, `false`, `"all"`, `"none"`, `"html"`, `"rtf"` | When `true`, the color and font formatting of the selected text is also copied to your clipboard. When `false`, only plain text is copied to your clipboard. You can also specify which formats you would like to copy. When `null`, the global `copyFormatting` behavior is inherited. |
+| `copyFormatting` | Optional | `true`, `false`, `"all"`, `"none"`, `"html"`, `"rtf"` | When `true`, the color and font formatting of the selected text is also copied to your clipboard. When `false`, only plain text is copied to your clipboard. You can also specify which formats you would like to copy. When `null`, the global `"copyFormatting"` behavior is inherited. |
 
 ### Paste
 
@@ -636,7 +752,7 @@ ___
 
 ### Scroll up
 
-This scrolls the screen up.
+This scrolls the screen up by the number of rows defined by `"rowsToScroll"`. If `"rowsToScroll"` is not provided, it will scroll up the amount defined by the system default, which is the same amount as mouse scrolling.
 
 **Command name:** `scrollUp`
 
@@ -646,9 +762,15 @@ This scrolls the screen up.
 { "command": "scrollUp", "keys": "ctrl+shift+up" }
 ```
 
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `rowsToScroll` | Optional | Integer | The number of rows to scroll. |
+
 ### Scroll down
 
-This scrolls the screen down.
+This scrolls the screen down by the number of rows defined by `"rowsToScroll"`. If `"rowsToScroll"` is not provided, it will scroll down the amount defined by the system default, which is the same amount as mouse scrolling.
 
 **Command name:** `scrollDown`
 
@@ -657,6 +779,12 @@ This scrolls the screen down.
 ```json
 { "command": "scrollDown", "keys": "ctrl+shift+down" }
 ```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `rowsToScroll` | Optional | Integer | The number of rows to scroll. |
 
 ### Scroll up a whole page
 
@@ -680,6 +808,30 @@ This scrolls the screen down by a whole page, which is the height of the window.
 
 ```json
 { "command": "scrollDownPage", "keys": "ctrl+shift+pgdn" }
+```
+
+### Scroll to the earliest history
+
+This scrolls the screen up to the top of the input buffer.
+
+**Command name:** `scrollToTop`
+
+**Default binding:**
+
+```json
+{ "command": "scrollToTop", "keys": "ctrl+shift+home" }
+```
+
+### Scroll to the latest history
+
+This scrolls the screen down to the bottom of the input buffer.
+
+**Command name:** `scrollToBottom`
+
+**Default binding:**
+
+```json
+{ "command": "scrollToBottom", "keys": "ctrl+shift+end" }
 ```
 
 <br />
@@ -719,17 +871,20 @@ This resets the text size to the default value.
 { "command": "resetFontSize", "keys": "ctrl+0" }
 ```
 
-### Toggle retro terminal effects
+### Toggle pixel shader effects
 
-This toggles the "retro terminal effect", which is enabled with the profile setting `experimental.retroTerminalEffect`.
+This toggles any pixel shader effects enabled in the terminal. If the user specified a valid shader with `experimental.pixelShaderPath`, this action will toggle that shader on/off. This will also toggle the "retro terminal effect", which is enabled with the profile setting `experimental.retroTerminalEffect`.
 
-**Command name:** `toggleRetroEffect`
+**Command name:** `toggleShaderEffects`
 
 **Default binding:**
 
 ```json
-{ "command": "toggleRetroEffect" }
+{ "command": "toggleShaderEffects" }
 ```
+
+> [!CAUTION]
+> The `toggleRetroEffect` action is no longer available in versions 1.6 and later. It is recommended that you use `toggleShaderEffects` instead.
 
 ### Set the color scheme
 
@@ -737,7 +892,7 @@ Changes the active color scheme.
 
 **Command name:** `setColorScheme`
 
-#### Arguments
+#### Actions
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |

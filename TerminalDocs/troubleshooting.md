@@ -1,9 +1,9 @@
 ---
 title: Windows Terminal Troubleshooting
-description: Learn fixes to common obstacles in the Windows Terminal.
+description: Learn fixes to common obstacles in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 09/22/2020
+ms.date: 02/25/2021
 ms.topic: overview
 ms.localizationpriority: high
 ---
@@ -44,10 +44,6 @@ Visit the [Command line arguments page](./command-line-arguments.md) to learn ho
 
 Visit the [Command line arguments page](./command-line-arguments.md) to learn how command-line arguments operate in WSL.
 
-## Hyperlinks don't work
-
-As of Windows Terminal 1.4, [embedded hyperlinks](https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda) inside the text buffer are clickable and will open in your default browser. If a link is not a hyperlink, this means it is not an embedded hyperlink and it is simply plain text. Support for automatically detecting plain text links will arrive in a future release.
-
 ## Problem setting `startingDirectory`
 
 If the `startingDirectory` is being ignored in your profile, first check to make sure your settings.json's syntax is correct. To help you check this syntax, `"$schema": "https://aka.ms/terminal-profiles-schema"` is automatically injected. Some applications, like [Visual Studio Code](https://code.visualstudio.com/download), can use that injected schema to validate your json file as you make edits.
@@ -57,6 +53,14 @@ If your settings are correct, you may be running a startup script that sets the 
 Alternatively, if you are running a script using the `commandline` profile setting, it may be that you are setting the location there. Similar to PowerShell profiles, your commands there take precedence over the `startingDirectory` profile setting.
 
 The purpose of `startingDirectory` is to launch a new Windows Terminal instance in the given directory. If the terminal runs any code that changes its directory, that may be a good place to take a look.
+
+## Deleting a profile
+
+By default, Windows Terminal ships with a built-in PowerShell and a Command Prompt profile. The terminal will also autodetect if other command line applications are installed, such as PowerShell Core, WSL distributions (Ubuntu, Debian, etc), and Azure Cloud Shell. We call these types of automatically generated profiles "Dynamic profiles".
+
+For both built-in and dynamic profiles, deleting the profile from your settings.json file will not remove it from your profiles. Built-in profiles are defined in `defaults.json`, so they're always available. Dynamic profiles will attempt to create a JSON stub for their profile in your `settings.json` file whenever a profile is not already present in the file.
+
+The only way to truly remove these profiles from the list is by "hiding" them. To hide a profile, add the property `"hidden": true` to the profile.
 
 ## Ctrl+= does not increase the font size
 
@@ -72,7 +76,7 @@ On the other hand, if you do use this hotkey feature for multiple input language
 
 ## The text is blurry
 
-Some display drivers and hardware combinations do not handle scroll and/or dirty regions without blurring the data from the previous frame. To mitigate this problem, you can add a combination of [these global rendering settings](./customize-settings/global-settings.md#rendering-settings) to reduce the strain placed on your hardware caused by the terminal text renderer.
+Some display drivers and hardware combinations do not handle scroll and/or dirty regions without blurring the data from the previous frame. To mitigate this problem, you can add a combination of [these global rendering settings](./customize-settings/rendering.md) to reduce the strain placed on your hardware caused by the terminal text renderer.
 
 ## My colors look strange! There are black bars on my screen!
 
@@ -95,8 +99,35 @@ To update to the newest version of PSReadline, please run the following command:
 Update-Module PSReadline
 ```
 
-### Technical Notes
+## Why are my emojis not appearing as icons in the jumplist?
+
+Only images linked from a file location can be rendered as profile icons in the jumplist. Emojis are not supported for jumplist icons.
+
+## Technical Notes
 
 Applications that use the [`GetConsoleScreenBufferInfo` family of APIs](https://docs.microsoft.com/windows/console/getconsolescreenbufferinfoex) to retrieve the active console colors in Win32 format and then attempt to transform them into cross-platform VT sequences (for example, by transforming `BACKGROUND_RED` to `\x1b[41m`) may interfere with Terminal's ability to detect what background color the application is attempting to use.
 
 Application developers are encouraged to choose either Windows API functions _or_ VT sequences for adjusting colors and not attempt to mix them.
+
+### Keyboard service warning
+
+Starting in Windows Terminal 1.5, the Terminal will display a warning if the "Touch Keyboard and Handwriting Panel Service" is disabled. This service is needed by the operating system to properly route input events to the Terminal application (as well as many other applications on Windows). If you see this warning, you can follow these steps to re-enable the service:
+1. In the run dialog, run `services.msc`
+
+  ![services.msc in the run dialog](https://user-images.githubusercontent.com/18356694/97891741-c81eed00-1cf4-11eb-9d48-7b94fede5294.png)
+
+2. Find the "Touch Keyboard and Handwriting Panel Service"
+
+  ![Touch Keyboard and Handwriting Panel Service in Services.msc](https://user-images.githubusercontent.com/18356694/97891813-e1279e00-1cf4-11eb-91c8-69a5c6da6c3d.png)
+
+3. Open the "Properties" for this service
+
+  ![service properties](https://user-images.githubusercontent.com/18356694/97891923-03212080-1cf5-11eb-90cc-821a4fbf16ba.png)
+
+4. Change the "startup type" to "Automatic"
+
+  ![service startup type](https://user-images.githubusercontent.com/18356694/97892043-25b33980-1cf5-11eb-8833-a2e65a306a79.png)
+
+5. Hit "Ok", and restart the PC.
+
+After restarting the machine, the service should auto-start, and the dialog should no longer appear.
