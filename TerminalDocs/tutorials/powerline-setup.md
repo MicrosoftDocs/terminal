@@ -119,6 +119,4 @@ fi
 ## Additional resources
 
 * [Scott Hanselman's "How to make a pretty prompt in Windows Terminal"](https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerlineNerdFontsCascadiaCodeWSLAndOhmyposh.aspx)
-
-* [How to change/set up bash custom prompt (PS1) in Linux](https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html)
-* [How to configure a powerlines font for the integrated terminal within Visual Studio 2019](https://blog.mjjames.co.uk/2020/11/enabling-powerlines-in-your-visual.html)
+* [Oh my Posh documentation](https://ohmyposh.dev)
