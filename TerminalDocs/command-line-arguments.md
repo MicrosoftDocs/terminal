@@ -52,6 +52,15 @@ Below is the full list of supported commands and options for the `wt` command li
 
 Commands may vary slightly depending on which command line you're using.
 
+### Passing an argument to the default shell
+
+To start an instance of Windows Terminal and have it execute a command, call `wt.exe` followed by your command.
+
+```cmd
+wt ping docs.microsoft.com
+wt new-tab PowerShell -c Start-Service ; new-tab cmd /k dir
+```
+
 ### Target a specific window
 
 > [!IMPORTANT]
