@@ -344,6 +344,34 @@ When `--tabColor` is set for a tab, it is associated with the first pane of this
 wt new-tab --tabColor #009999 ; split-pane --tabColor #f59218
 ```
 
+### Color Scheme
+
+To open a new terminal instance with a specific color scheme (instead of the `colorScheme` set in the profile), use the `--colorScheme` argument. This argument overrides the value defined in the profile.
+
+<!-- Start tab selectors. -->
+#### [Command Prompt](#tab/windows)
+
+```cmd
+wt --colorScheme Vintage ; split-pane --colorScheme "Tango Light"
+```
+
+#### [PowerShell](#tab/powershell)
+
+```powershell
+wt --colorScheme Vintage ; split-pane --colorScheme "Tango Light"
+```
+
+#### [Linux](#tab/linux)
+
+```bash
+cmd.exe /c "wt.exe" --colorScheme Vintage \; split-pane --colorScheme "Tango Light"
+```
+
+Execution aliases do not work in WSL distributions. If you want to use wt.exe from a WSL command line, you can spawn it from CMD directly by running `cmd.exe`. The `/c` option tells CMD to terminate after running and `\;` separates commands.
+
+---
+<!-- End tab selectors.  -->
+
 ### Tab focus
 
 To open a new terminal instance with a specific tab in focus, use the `-t` flag (or `--target`), along with the tab-index number. To open your default profile in the first tab and the "Ubuntu-18.04" profile focused in the second tab (`-t 1`), enter:
