@@ -41,12 +41,15 @@ Below is the full list of supported commands and options for the `wt` command li
 | Command | Parameters | Description |
 | ------- | ---------- | ----------- |
 | `new-tab`, `nt` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title`, `--tabColor` | Creates a new tab. |
-| `split-pane`, `sp` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `--title`, `--tabColor`, `--size, -s size`, `commandline` | Splits a new pane. |
+| `split-pane`, `sp` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `--title`, `--tabColor`, `--size, -s size`, `commandline`, `-D` | Splits a new pane. |
 | `focus-tab`, `ft` | `--target, -t tab-index` | Focuses on a specific tab. |
 | `move-focus`, `mf` | `direction` | Move focus between panes in the given direction. Accepts one of `up`, `down`, `left`, `right`. |
 
 > [!NOTE]
 > When opening Windows Terminal from cmd (Command Prompt), if you want to use your custom "cmd" profile settings, you will need to use the command `wt -p cmd`. Otherwise, to run your *default* profile settings, just use `wt cmd`.
+
+> [!IMPORTANT]
+> The `-D` parameter for `split-pane` is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ## Command line argument examples
 
@@ -55,7 +58,7 @@ Commands may vary slightly depending on which command line you're using.
 ### Target a specific window
 
 > [!IMPORTANT]
-> The `--window,-w` parameter accepts window names only in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+> The ability for the `--window,-w` parameter to accept window names is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 Below are examples of how to target specific windows using the `--window,-w` option.
 
@@ -384,7 +387,7 @@ When `--tabColor` is set for a tab, it is associated with the first pane of this
 wt new-tab --tabColor #009999 ; split-pane --tabColor #f59218
 ```
 
-### Color Scheme
+### Color scheme ([Preview](https://aka.ms/terminal-preview))
 
 To open a new terminal instance with a specific color scheme (instead of the `colorScheme` set in the profile), use the `--colorScheme` argument. This argument overrides the value defined in the profile.
 
@@ -411,6 +414,9 @@ Execution aliases do not work in WSL distributions. If you want to use wt.exe fr
 
 ---
 <!-- End tab selectors.  -->
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Tab focus
 

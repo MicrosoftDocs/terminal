@@ -376,7 +376,7 @@ This creates a new tab. Without any arguments, this will open the default profil
 | `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. |
 
 > [!IMPORTANT]
-> The `"suppressApplicationTitle"` parameter is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+> The `"colorScheme"` and `"suppressApplicationTitle"` parameters are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 
 ### Open next tab
@@ -596,6 +596,38 @@ This creates a new window. Without any arguments, this will open the default pro
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
 
+### Identify window
+
+This pops up an overlay on the focused window that displays the window's identifier (name or index).
+
+**Command name:** `identifyWindow`
+
+**Default binding:**
+
+```json
+{"command": "identifyWindow", "keys": "" },
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Identify windows
+
+This pops up an overlay on all windows that displays each window's identifier (name or index).
+
+**Command name:** `identifyWindows`
+
+**Default binding:**
+
+_This command is not currently bound in the default settings_.
+
+```json
+{"command": "identifyWindows" },
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 <br />
 ___
 
@@ -725,7 +757,7 @@ This halves the size of the active pane and opens another. Without any arguments
 | `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
 
 > [!IMPORTANT]
-> The `"suppressApplicationTitle"` parameter is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+> The `"colorScheme"` and `"suppressApplicationTitle"` parameters are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
