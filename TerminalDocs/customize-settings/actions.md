@@ -373,6 +373,11 @@ This creates a new tab. Without any arguments, this will open the default profil
 | `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
 | `colorScheme` | Optional | The name of a color scheme as a string | The scheme to use instead of the profile's set `colorScheme` |
+| `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. |
+
+> [!IMPORTANT]
+> The `"suppressApplicationTitle"` parameter is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 
 ### Open next tab
 
@@ -386,6 +391,15 @@ This opens the tab to the right of the current one.
 { "command": "nextTab", "keys": "ctrl+tab" }
 ```
 
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `tabSwitcherMode` | Optional | `"mru"`, `"inOrder"`, `"disabled"` | Move to the next tab using `"tabSwitcherMode"`. If no mode is provided, use the globally defined one. |
+
+> [!IMPORTANT]
+> The `"tabSwitcherMode"` parameter is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ### Open previous tab
 
 This opens the tab to the left of the current one.
@@ -397,6 +411,15 @@ This opens the tab to the left of the current one.
 ```json
 { "command": "prevTab", "keys": "ctrl+shift+tab" }
 ```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `tabSwitcherMode` | Optional | `"mru"`, `"inOrder"`, `"disabled"` | Move to the previous tab using `"tabSwitcherMode"`. If no mode is provided, use the globally defined one. |
+
+> [!IMPORTANT]
+> The `"tabSwitcherMode"` parameter is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Tab search
 
@@ -568,6 +591,7 @@ This creates a new window. Without any arguments, this will open the default pro
 | `tabTitle` | Optional | String | Title of the window tab. |
 | `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
+| `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false` allows applications to change tab title by sending title change messages. When set to true `true` suppresses these messages. If not provided, the behavior is inheritted from profile settings. |
 
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
@@ -696,8 +720,12 @@ This halves the size of the active pane and opens another. Without any arguments
 | `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
 | `colorScheme` | Optional | The name of a color scheme as a string | The scheme to use instead of the profile's set `colorScheme` |
+| `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. |
 | `splitMode` | Optional | `"duplicate"` | Controls how the pane splits. Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane. |
 | `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
+
+> [!IMPORTANT]
+> The `"suppressApplicationTitle"` parameter is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 

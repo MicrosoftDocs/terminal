@@ -55,7 +55,7 @@ Commands may vary slightly depending on which command line you're using.
 ### Target a specific window
 
 > [!IMPORTANT]
-> The `--window,-w` parameter is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
+> The `--window,-w` parameter accepts window names only in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 Below are examples of how to target specific windows using the `--window,-w` option.
 
@@ -71,6 +71,9 @@ wt -w -1 nt
 
 // Open a new tab in the first-created terminal window with the default profile
 wt -w 1 nt
+
+// Open a new tab in the terminal window named foo with the default profile. If foo does not exist, create a new window named foo.
+wt -w foo nt
 ```
 
 #### [PowerShell](#tab/powershell)
@@ -84,6 +87,9 @@ wt -w -1 nt
 
 // Open a new tab in the first-created terminal window with the default profile
 wt -w 1 nt
+
+// Open a new tab in the terminal window named foo with the default profile. If foo does not exist then, create a new window named foo.
+wt -w foo nt
 ```
 
 #### [Linux](#tab/linux)
@@ -97,6 +103,9 @@ cmd.exe /c "wt.exe" -w -1 nt
 
 // Open a new tab in the first-created terminal window with the default profile
 cmd.exe /c "wt.exe" -w 1 nt
+
+// Open a new tab in the terminal window named foo with the default profile. If foo does not exist then, create a new window named foo.
+cmd.exe /c "wt.exe" -w foo nt
 ```
 
 Execution aliases do not work in WSL distributions. If you want to use wt.exe from a WSL command line, you can spawn it from CMD directly by running `cmd.exe`. The `/c` option tells CMD to terminate after running.
@@ -309,6 +318,37 @@ Execution aliases do not work in WSL distributions. If you want to use wt.exe fr
 
 ---
 <!-- End tab selectors.  -->
+
+### Using application title ([Preview](https://aka.ms/terminal-preview))
+
+To open a new terminal instance allowing applications within it to set the tab title by sending title change messages, use the `--useApplicationTitle` flag. To suppress these messages, use the `--suppressApplicationTitle` flag. If none of these flags are provided, the behavior is inherited from the profile's settings. To open a tab with title `tabname` that will not be overridden by the application, enter:
+
+<!-- Start tab selectors. -->
+#### [Command Prompt](#tab/windows)
+
+```cmd
+wt --title tabname --suppressApplicationTitle
+```
+
+#### [PowerShell](#tab/powershell)
+
+```powershell
+wt --title tabname --suppressApplicationTitle
+```
+
+#### [Linux](#tab/linux)
+
+```bash
+cmd.exe /c "wt.exe" --title tabname --suppressApplicationTitle
+```
+
+Execution aliases do not work in WSL distributions. If you want to use wt.exe from a WSL command line, you can spawn it from CMD directly by running `cmd.exe`. The `/c` option tells CMD to terminate after running and the `\;` backslash + semicolon separates commands.
+
+---
+<!-- End tab selectors.  -->
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Tab color
 
