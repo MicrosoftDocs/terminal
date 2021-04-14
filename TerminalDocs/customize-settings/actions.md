@@ -637,7 +637,7 @@ This command changes displays a popup window that lets you edit the name for the
 
 ### Identify window ([Preview](https://aka.ms/terminal-preview))
 
-This pops up an overlay on the focused window that displays the window's identifier (name or index).
+This pops up an overlay on the focused window that displays the window's name and index.
 
 **Command name:** `identifyWindow`
 
@@ -652,7 +652,7 @@ This pops up an overlay on the focused window that displays the window's identif
 
 ### Identify windows ([Preview](https://aka.ms/terminal-preview))
 
-This pops up an overlay on all windows that displays each window's identifier (name or index).
+This pops up an overlay on all windows that displays each window's name and index.
 
 **Command name:** `identifyWindows`
 
