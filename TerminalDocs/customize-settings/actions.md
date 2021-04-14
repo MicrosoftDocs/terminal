@@ -596,7 +596,7 @@ This creates a new window. Without any arguments, this will open the default pro
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
 
-### Rename window
+### Rename window ([Preview](https://aka.ms/terminal-preview))
 
 This command can be used to rename a window to a specific string.
 
@@ -623,7 +623,7 @@ _This command is not currently bound in the default settings_.
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
-### Open window rename dialog
+### Open window rename dialog ([Preview](https://aka.ms/terminal-preview))
 
 This command changes displays a popup window that lets you edit the name for the current window. Clearing the text field will reset the window name.
 
