@@ -56,6 +56,9 @@ When this is set to `true` and you copy a text in rectangular (block) selection 
 
 **Default value:** `false`
 
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 <br />
 
 ___
