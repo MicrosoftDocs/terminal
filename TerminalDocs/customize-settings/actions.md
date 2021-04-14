@@ -596,6 +596,48 @@ This creates a new window. Without any arguments, this will open the default pro
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
 
+### Rename window
+
+This command can be used to rename a window to a specific string.
+
+**Command name:** `renameWindow`
+
+**Default binding:**
+
+_This command is not currently bound in the default settings_.
+
+```json
+// Rename a window to "Foo"
+{ "command": { "action": "renameWindow", "name": "Foo" }, "keys": "" }
+
+// Reset the window's name
+{ "command": { "action": "renameWindow", "name": null }, "keys": "" }
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `name` | Optional | String | The new name to use for this window. If omitted, this command will revert the window name back to its original value. |
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Open window rename dialog
+
+This command changes displays a popup window that lets you edit the name for the current window. Clearing the text field will reset the window name.
+
+**Command name:** `openWindowRenamer`
+
+**Default binding:**
+
+```json
+{ "command": "openWindowRenamer" }
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ### Identify window
 
 This pops up an overlay on the focused window that displays the window's identifier (name or index).
