@@ -44,6 +44,22 @@ When this is set to `true`, the color and font formatting of the selected text i
 
 ___
 
+## Remove trailing white-spaces when copying text in rectangular selection to clipboard
+
+When this is set to `true` and you copy a text in rectangular (block) selection to clipboard, trailing white-spaces are removed from each line. When it's set to `false`, the white-spaces are preserved, ensuring that all lines have the same length.
+
+**Property name:** `trimBlockSelection`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+<br />
+
+___
+
 ## Word delimiters
 
 This determines the word delimiters used in a double-click selection. Word delimiters are characters that specify where the boundary is between two words. The most common examples are spaces, semicolons, commas, and periods.
