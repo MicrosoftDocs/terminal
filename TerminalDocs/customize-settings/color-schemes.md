@@ -3,7 +3,7 @@ title: Windows Terminal Color Schemes
 description: Learn how to create color schemes for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 02/25/2021
+ms.date: 04/14/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---

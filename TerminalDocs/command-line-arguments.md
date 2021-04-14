@@ -3,7 +3,7 @@ title: Windows Terminal command line arguments
 description: Learn how to create command line arguments for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 02/25/2021
+ms.date: 04/14/2021
 ms.topic: how-to
 ---
 
