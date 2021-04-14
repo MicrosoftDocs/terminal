@@ -165,7 +165,7 @@ This opens the search dialog box. More information on search can be found on the
 { "command": "find", "keys": "ctrl+shift+f" }
 ```
 
-### Find next/previous search match ([Preview](https://aka.ms/terminal-preview))
+### Find next/previous search match
 
 This lets you navigate through your search matches.
 
@@ -183,9 +183,6 @@ This lets you navigate through your search matches.
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `direction` | Required | `"next"`, `"prev"` | The direction to navigate through search results. |
-
-> [!IMPORTANT]
-> The `"settingsUI"` value for `target` is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Open the dropdown
 
@@ -751,7 +748,7 @@ This changes the size of the active pane.
 | ---- | --------- | ------- | ----------- |
 | `direction` | Required | `"left"`, `"right"`, `"up"`, `"down"` | Direction in which the pane will be resized. |
 
-### Mark a pane as read-only ([Preview](https://aka.ms/terminal-preview))
+### Mark a pane as read-only
 
 You can mark a pane as read-only, which will prevent input from going into the text buffer. If you attempt to close or input text into a read-only pane, the terminal will display a popup warning instead.
 
@@ -762,9 +759,6 @@ You can mark a pane as read-only, which will prevent input from going into the t
 ```json
 { "command": "toggleReadOnlyMode" }
 ```
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
 
 ### Split a pane
 

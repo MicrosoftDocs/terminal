@@ -12,9 +12,6 @@ ms.localizationpriority: high
 
 The properties listed below affect the entire terminal window, regardless of the profile settings. These should be placed at the root of your settings.json file.
 
-> [!IMPORTANT]
-> The settings UI is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 ## Automatically copy selection to clipboard
 
 When this is set to `true`, a selection is immediately copied to your clipboard upon creation. The right-click on your mouse will always paste in this case. When it's set to `false`, the selection persists and awaits further action. Using your mouse to right-click will copy the selection.
@@ -140,7 +137,7 @@ The tab switcher will open on the initial press of the actions for `nextTab` and
 
 ___
 
-## Automatically focus pane on mouse hover ([Preview](https://aka.ms/terminal-preview))
+## Automatically focus pane on mouse hover
 
 When this is set to `true`, the terminal will move focus to the pane on mouse hover. When it's set to `false`, a click will be required to focus the pane using the mouse.
 
@@ -151,9 +148,6 @@ When this is set to `true`, the terminal will move focus to the pane on mouse ho
 **Accepts:** `true`, `false`
 
 **Default value:** `false`
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 

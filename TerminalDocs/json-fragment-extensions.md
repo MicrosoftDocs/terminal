@@ -9,9 +9,6 @@ ms.topic: how-to
 
 # JSON fragment extensions in Windows Terminal
 
-> [!IMPORTANT]
-> JSON fragment extension support is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 JSON fragment extensions are snippets of JSON that application developers can write to add new profiles to users' settings, or even modify certain existing profiles. They can also be used to add new color schemes to users' settings.
 
 ## Structure of the JSON files 

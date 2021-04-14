@@ -23,9 +23,6 @@ The settings listed below are specific to each unique profile. If you'd like a s
 ]
 ```
 
-> [!IMPORTANT]
-> The settings UI is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 ## Suppress title changes
 
 When this is set to `true`, `tabTitle` overrides the default title of the tab and any title change messages from the application will be suppressed. If `tabTitle` isn't set, `name` will be used instead. When this is set to `false`, `tabTitle` behaves as normal.
