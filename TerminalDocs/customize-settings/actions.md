@@ -591,7 +591,7 @@ This creates a new window. Without any arguments, this will open the default pro
 | `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false` allows applications to change tab title by sending title change messages. When set to true `true` suppresses these messages. If not provided, the behavior is inheritted from profile settings. |
 
 > [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.7+.
+> The `"suppressApplicationTitle"` parameter is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Rename window ([Preview](https://aka.ms/terminal-preview))
 
@@ -635,7 +635,7 @@ This command changes displays a popup window that lets you edit the name for the
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
-### Identify window
+### Identify window ([Preview](https://aka.ms/terminal-preview))
 
 This pops up an overlay on the focused window that displays the window's identifier (name or index).
 
@@ -650,7 +650,7 @@ This pops up an overlay on the focused window that displays the window's identif
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
-### Identify windows
+### Identify windows ([Preview](https://aka.ms/terminal-preview))
 
 This pops up an overlay on all windows that displays each window's identifier (name or index).
 
