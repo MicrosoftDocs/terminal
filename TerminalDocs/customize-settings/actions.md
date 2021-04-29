@@ -198,7 +198,8 @@ This opens the dropdown menu.
 
 ### Open settings files
 
-This opens either the default or custom settings files. Without the `target` field, this will open the settings.json file.
+This opens either the settings UI, custom settings file, or default settings file, depending on the `target` field.  
+Without the `target` field, the custom settings file will be opened..
 
 **Command name:** `openSettings`
 
