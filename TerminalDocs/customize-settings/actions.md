@@ -205,7 +205,8 @@ This opens either the default or custom settings files. Without the `target` fie
 **Default bindings:**
 
 ```json
-{ "command": "openSettings", "keys": "ctrl+," },
+{ "command": { "action": "openSettings", "target": "settingsUI" }, "keys": "ctrl+," },
+{ "command": { "action": "openSettings", "target": "settingsFile" }, "keys": "ctrl+shift+," },
 { "command": { "action": "openSettings", "target": "defaultsFile" }, "keys": "ctrl+alt+," },
 ```
 
@@ -214,9 +215,6 @@ This opens either the default or custom settings files. Without the `target` fie
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `target` | Optional | `"settingsFile"`, `"defaultsFile"`, `"settingsUI"`, `"allFiles"` | The settings file to open. |
-
-> [!IMPORTANT]
-> The `"settingsUI"` value for `target` is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Toggle full screen
 
