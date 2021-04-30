@@ -56,7 +56,7 @@ Commands may vary slightly depending on which command line you're using.
 
 To start an instance of Windows Terminal and have it execute a command, call `wt.exe` followed by your command.
 
-Here's an example of calling Windows Terminal to pass a [ping](https://docs.microsoft.com/windows-server/administration/windows-commands/ping) command argument to echo and IP address:
+Here's an example of calling Windows Terminal to pass a [ping](https://docs.microsoft.com/windows-server/administration/windows-commands/ping) command argument to echo an IP address:
 
 ```powershell
 wt ping docs.microsoft.com
