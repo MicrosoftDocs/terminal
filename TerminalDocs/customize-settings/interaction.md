@@ -44,7 +44,7 @@ When this is set to `true`, the color and font formatting of the selected text i
 
 ___
 
-## Remove trailing white-spaces when copying text in rectangular selection to clipboard
+## Remove trailing white-spaces when copying text in rectangular selection to clipboard (preview)
 
 When this is set to `true` and you copy text in a rectangular (block) selection to the clipboard, trailing white-spaces are removed from each line. When it's set to `false`, the white-spaces are preserved, ensuring that all lines have the same length. To copy text in a rectangular (block) selection, hold down the `Alt` key, right-click and drag your mouse over the text area you want to select. This can be useful for selecting text columns, etc.
 
