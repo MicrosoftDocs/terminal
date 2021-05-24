@@ -642,6 +642,7 @@ _This command is not currently bound in the default settings_.
 ```
 
 <br />
+
 ___
 
 ## Pane management commands
