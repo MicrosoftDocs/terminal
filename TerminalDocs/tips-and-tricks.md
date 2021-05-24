@@ -77,4 +77,4 @@ wt -w _quake
 ```
 
 > [!NOTE]
-> If you don't have a [`quakeMode`](./customize-settings/actions.md#open-the-quake-mode-window) action bound and minimize the quake window, you'll need to go into Task Manager to be able to exit that terminal window!
+> If you don't have a [`quakeMode`](./customize-settings/actions.md#global-commands) action bound and minimize the quake window, you'll need to go into Task Manager to be able to exit that terminal window!
