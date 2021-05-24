@@ -993,7 +993,7 @@ This is a special action that works globally in the OS, rather than only in the 
 
 * Elevated and unelevated instances of the terminal will not be able to both register for the same keys. The same applies to both Preview and Stable versions of the terminal - the first one to be launched will always win.
 
-* These key strokes will only work when an instance of the terminal is already running. To launch the terminal automatically on login, see [`startOnUserLogin`](./startup.md#Launch-on-machine-startup).
+* These key strokes will only work when an instance of the terminal is already running. To launch the terminal automatically on login, see [`startOnUserLogin`](./startup.md#launch-on-machine-startup).
 
 **Command name:** `globalSummon`
 
@@ -1072,7 +1072,7 @@ The `desktop` and `monitor` properties can be combined in the following ways:
 
 :::row:::
 :::column span="":::
-This action is a special variation of the [`globalSummon`](#Global-Summon) action. It specifically summons the [quake window](../tips-and-tricks.md#quake-mode). It is a shorthand for the following `globalSummon` action:
+This action is a special variation of the [`globalSummon`](#global-commands) action. It specifically summons the [quake window](../tips-and-tricks.md#quake-mode). It is a shorthand for the following `globalSummon` action:
 
 ```json
 { "keys": "win+`", "command": { "action": "globalSummon", "name": "_quake", "dropdownDuration": 200, "toggleVisibility": true, "monitor": "toCursor", "desktop": "toCurrent" } }

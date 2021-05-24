@@ -64,7 +64,7 @@ Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) appli
 
 * The window automatically enters focus mode (note that you may have multiple tabs in focus mode).
 
-* When [`windowingBehavior`](./customize-settings/startup.md#New-instance-behavior) is set to `"useExisting"` or `"useAnyExisting"`, they will ignore the existence of the `_quake` window.
+* When [`windowingBehavior`](./customize-settings/startup.md#new-instance-behavior) is set to `"useExisting"` or `"useAnyExisting"`, they will ignore the existence of the `_quake` window.
 
 * The window will be hidden from the taskbar and from <kbd>Alt</kbd>+<kbd>Tab</kbd>.
 
@@ -77,4 +77,4 @@ wt -w _quake
 ```
 
 > [!NOTE]
-> If you don't have a [`quakeMode`](./customize-settings/actions.md#Open-the-Quake-Mode-window) action bound and minimize the quake window, you'll need to go into Task Manager to be able to exit that terminal window!
+> If you don't have a [`quakeMode`](./customize-settings/actions.md#open-the-quake-mode-window) action bound and minimize the quake window, you'll need to go into Task Manager to be able to exit that terminal window!
