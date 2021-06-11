@@ -12,7 +12,7 @@ ms.localizationpriority: high
 
 ## Installation
 
-Visit the Microsoft Store to [install Windows Terminal](https://aka.ms/terminal) or [install Windows Terminal (Preview)](https://www.microsoft.com/p/windows-terminal-preview/9n8g5rfz9xk3#activetab=pivot:overviewtab) to try the latest not-yet-released features.
+Visit the Microsoft Store to [install Windows Terminal](https://aka.ms/terminal) or [install Windows Terminal Preview](https://www.microsoft.com/p/windows-terminal-preview/9n8g5rfz9xk3#activetab=pivot:overviewtab) to try the latest features.
 
 If you don't have access to the Microsoft Store, the builds are published on the [GitHub releases page](https://github.com/microsoft/terminal/releases). If you install from GitHub, the terminal will not automatically update with new versions. For additional installation options using a package manager (winget, chocolatey, scoop), see the [Windows Terminal product repo](https://github.com/microsoft/terminal#other-install-methods). 
 
