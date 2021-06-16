@@ -26,7 +26,7 @@ To open any command line application with Windows Terminal, set it as your defau
 1. Open Windows Terminal and go to the **Settings** UI window.
 2. Select **Startup** and choose "Windows Terminal" as the **Default terminal application** setting.
 
-![Screenshot of Windows Terminal Startup default in Settings UI](./images/settings-default.png)
+![Screenshot of Windows Terminal Startup default in Settings UI](./images/settings-default-shell.png)
 
 ## Set your default terminal profile
 
