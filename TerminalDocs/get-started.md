@@ -12,19 +12,40 @@ ms.localizationpriority: high
 
 ## Installation
 
-Visit the Microsoft Store to [install Windows Terminal](https://aka.ms/terminal) or [install Windows Terminal Preview](https://www.microsoft.com/p/windows-terminal-preview/9n8g5rfz9xk3#activetab=pivot:overviewtab) to try the latest features.
+Visit the Microsoft Store to **[install Windows Terminal](https://aka.ms/terminal)**.
 
-If you don't have access to the Microsoft Store, the builds are published on the [GitHub releases page](https://github.com/microsoft/terminal/releases). If you install from GitHub, the terminal will not automatically update with new versions. For additional installation options using a package manager (winget, chocolatey, scoop), see the [Windows Terminal product repo](https://github.com/microsoft/terminal#other-install-methods). 
+To try the latest preview features, you may also want to [install Windows Terminal Preview](https://www.microsoft.com/p/windows-terminal-preview/9n8g5rfz9xk3#activetab=pivot:overviewtab).
 
-## First run
+> [!NOTE]
+> If you don't have access to the Microsoft Store, the builds are published on the **[GitHub releases page](https://github.com/microsoft/terminal/releases)**. If you install from GitHub, Windows Terminal will not automatically update with new versions. For additional installation options using a package manager (winget, chocolatey, scoop), see the **[Windows Terminal product repo](https://github.com/microsoft/terminal#other-install-methods)**.
 
-After installation, when you open the terminal, it will start with PowerShell as the default profile in the open tab.
+## Set your default terminal application
 
-![Windows Terminal first run](./images/first-run.png)
+To open any command line application with Windows Terminal, set it as your default terminal application.
 
-### Dynamic profiles
+1. Open Windows Terminal and go to the **Settings** UI window.
+2. Select **Startup** and choose "Windows Terminal" as the **Default terminal application** setting.
 
-The terminal will automatically create profiles for you if you have WSL distros or multiple versions of PowerShell installed. Learn more about dynamic profiles on the [Dynamic profiles page](./dynamic-profiles.md).
+![Screenshot of Windows Terminal Startup default in Settings UI](./images/settings-default.png)
+
+## Set your default terminal profile
+
+After installation, when you open Windows Terminal, it will start with the [PowerShell](/powershell) command line as the default profile in the open tab.
+
+To change the default profile:
+
+1. Open Windows Terminal and go to the **Settings** UI window.
+2. Select **Startup** and choose the **Default profile** that you prefer.
+
+You can also [set your default profile in the Settings.json file](./customize-settings/startup.md#default-profile) associated with Windows Terminal if you prefer.
+
+![Screenshot of Windows Terminal Settings default profile](./images/settings-default-profile.png)
+
+## Dynamic profiles
+
+The terminal will automatically create profiles for you if you have WSL distributions or multiple versions of PowerShell installed. Learn more about dynamic profiles on the [Dynamic profiles page](./dynamic-profiles.md).
+
+![Screenshot of Windows Terminal Settings list of profiles](./images/settings-dynamic-profiles.png)
 
 ## Open a new tab
 
