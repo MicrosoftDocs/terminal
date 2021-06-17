@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 # Install and set up Windows Terminal
 
-## Installation
+## Install
 
 Visit the Microsoft Store to **[install Windows Terminal](https://aka.ms/terminal)**.
 
@@ -41,9 +41,13 @@ You can also [set your default profile in the Settings.json file](./customize-se
 
 ![Screenshot of Windows Terminal Settings default profile](./images/settings-default-profile.png)
 
-## Dynamic profiles
+## Add new profiles
 
-The terminal will automatically create profiles for you if you have WSL distributions or multiple versions of PowerShell installed. Learn more about dynamic profiles on the [Dynamic profiles page](./dynamic-profiles.md).
+Windows Terminal will automatically create profiles for you if you have WSL distributions or multiple versions of PowerShell installed.
+
+Your command line profiles will be listed in the Settings UI, in addition to the option to **+ Add new** profiles.
+
+Learn more about dynamic profiles on the [Dynamic profiles page](./dynamic-profiles.md).
 
 ![Screenshot of Windows Terminal Settings list of profiles](./images/settings-dynamic-profiles.png)
 
