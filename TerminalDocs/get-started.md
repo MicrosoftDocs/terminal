@@ -12,14 +12,15 @@ ms.localizationpriority: high
 
 ## Install
 
-Visit the Microsoft Store to **[install Windows Terminal](https://aka.ms/terminal)**.
+> [!div class="nextstepaction"]
+> [Install Windows Terminal](https://aka.ms/terminal)
 
 To try the latest preview features, you may also want to [install Windows Terminal Preview](https://www.microsoft.com/p/windows-terminal-preview/9n8g5rfz9xk3#activetab=pivot:overviewtab).
 
 > [!NOTE]
 > If you don't have access to the Microsoft Store, the builds are published on the **[GitHub releases page](https://github.com/microsoft/terminal/releases)**. If you install from GitHub, Windows Terminal will not automatically update with new versions. For additional installation options using a package manager (winget, chocolatey, scoop), see the **[Windows Terminal product repo](https://github.com/microsoft/terminal#other-install-methods)**.
 
-## Set your default terminal application
+## Set your default terminal application ([Preview](https://aka.ms/terminal-preview))
 
 To open any command line application with Windows Terminal, set it as your default terminal application.
 
@@ -27,6 +28,9 @@ To open any command line application with Windows Terminal, set it as your defau
 2. Select **Startup** and choose "Windows Terminal" as the **Default terminal application** setting.
 
 ![Screenshot of Windows Terminal Startup default in Settings UI](./images/settings-default-shell.png)
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ## Set your default terminal profile
 
