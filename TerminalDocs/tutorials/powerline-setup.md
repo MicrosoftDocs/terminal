@@ -58,7 +58,9 @@ Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 
 ### Customize your PowerShell prompt
 
-Open your PowerShell profile with `notepad $PROFILE` or the text editor of your choice. This is not your Windows Terminal profile. Your PowerShell profile is a script that runs every time PowerShell starts. [Learn more about PowerShell profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
+Open your PowerShell profile with `notepad $PROFILE` or the text editor of your choice. This is not your Windows Terminal profile. Your PowerShell profile is a script that runs every time PowerShell starts. [Learn more about PowerShell profiles](/powershell/module/microsoft.powershell.core/about/about_profiles). If the PowerShell profile doesn't exist all the notepad to create a blank file for you.
+
+
 
 In your PowerShell profile, add the following to the end of the file:
 
