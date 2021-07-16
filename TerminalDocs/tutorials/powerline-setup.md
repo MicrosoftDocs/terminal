@@ -105,8 +105,8 @@ Ubuntu has several Powerline options to install from. This tutorial will be usin
 First, install oh-my-posh:
 
 ```bash
-wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
-chmod +x /usr/local/bin/oh-my-posh
+sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+sudo chmod +x /usr/local/bin/oh-my-posh
 ```
 
 The second step is optional. Oh-my-posh can use the same theme config regardless of the shell or environment, so if you're already using it on Windows Powershell for example, you can reuse that theme configuration rather than download the themes.
