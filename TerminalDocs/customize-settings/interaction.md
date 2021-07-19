@@ -248,3 +248,19 @@ When this is set to `true`, trying to paste text with multiple lines will displa
 **Accepts:** `true`, `false`
 
 **Default value:** `true`
+
+<br />
+
+___
+
+## Legacy input encoding
+
+Force the terminal to use the legacy input encoding. Certain keys in some applications may stop working when enabling this setting. This can be useful for debugging certain types of input issues, especially with the [debug tap](https://github.com/microsoft/terminal/wiki/Enabling-the-debug-tap).
+
+**Property name:** `experimental.input.forceVT`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
