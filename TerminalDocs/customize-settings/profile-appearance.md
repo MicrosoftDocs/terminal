@@ -91,6 +91,14 @@ This sets the weight (lightness or heaviness of the strokes) for the profile's f
 }
 ```
 
+> [!IMPORTANT]
+> This `font` object is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), version 1.10+. Prior to that version, you should use the `fontFace`, `fontSize`, and `fontWeight` properties separately, like so:
+> ```json
+> "fontFace": "Cascadia Mono",
+> "fontSize": 12,
+> "fontWeight": "normal"
+> ```
+
 ## Retro terminal effects
 
 :::row:::
