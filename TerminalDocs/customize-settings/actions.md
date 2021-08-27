@@ -1167,3 +1167,20 @@ ___
 This unbinds the associated keys from any command.
 
 **Command name:** `unbound`
+
+To unbind a keystroke that is bound to an action in the default
+keybindings, you can set the "command" to "unbound" or null. This will
+allow the keystroke to associate with the commandline application setting instead of
+performing the default action.
+
+**Example:**
+
+```json
+{
+   "command" : null, "keys" : ["ctrl+v"]
+},
+```
+
+**Use-case scenario:**
+
+Windows terminal uses the shortcut keybinding `ctrl+v` as the paste command. When working with a WSL command line, you may want to use a Linux application such as Vim to edit files. However, Vim relies on the `ctrl+v` keybinding to use [blockwise Visual mode](http://vimdoc.sourceforge.net/htmldoc/visual.html#CTRL-V). This keybinding will be blocked, with the Windows Terminal paste command taking priority, unless the unbind setting is adjusted in your settings.json file so that the keybinding will associate with the Vim command line app, rather than with the Windows Terminal binding.
