@@ -129,7 +129,21 @@ This sets the percentage height of the cursor starting from the bottom. This wil
 
 ___
 
-## Background image
+## Background images and icons
+
+Windows Terminal enables you to specify custom background images and icons using the settings UI menu or settings.json file for each of your command line profiles, allowing you to configure/brand/style each of your profiles independently from one another.
+To do so, specify your preferred `backgroundImage`, position it using `backgroundImageAlignment`, set its opacity with `backgroundImageOpacity`, and/or specify how your image fill the available space using `backgroundImageStretchMode`.
+
+For example:
+
+```json
+    "backgroundImage": "C:\\Users\\username\\OneDrive\\WindowsTerminal\\bg-ubuntu-256.png",
+    "backgroundImageAlignment": "bottomRight",
+    "backgroundImageOpacity": 0.1,
+    "backgroundImageStretchMode": "none"
+```
+
+You can easily roam your collection of images and icons across all your machines by storing your icons and images in OneDrive (as shown above).
 
 ### Background image path
 
@@ -140,6 +154,26 @@ This sets the file location of the image to draw over the window background. The
 **Necessity:** Optional
 
 **Accepts:** File location as a string or `"desktopWallpaper"`
+
+It is recommended that custom images and icons are stored in system-provided folders and referred to using the correct [URI Schemes](/windows/uwp/app-resources/uri-schemes). URI Schemes provide a way to reference files independent of their physical paths (which may change in the future). The most useful URI schemes to remember when customizing background images and icons are:
+
+| URI Scheme | Corresponding Physical Path | Use / description |
+| --- | --- | ---|
+| `ms-appdata:///Local/` | `%localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\` | Per-machine files |
+| `ms-appdata:///Roaming/` | `%localappdata%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState\` | Common files |
+
+> [!WARNING]
+> Do not rely on file references using the ms-appx URI Scheme (i.e. icons). These files are considered an internal implementation detail and may change name/location or may be omitted in the future.
+
+### Icons
+
+Terminal displays icons for each profile which Terminal generates for any built-in shells, for example: PowerShell Core, PowerShell, and any installed Linux/WSL distributions. Each profile refers to a stock icon via the ms-appx URI Scheme. You can refer to you own custom icons by entering a path in your [settings.json file](../get-started.md#settings-json-file):
+
+```json
+    "icon" : "C:\\Users\\richturn\\OneDrive\\WindowsTerminal\\icon-ubuntu-32.png",
+```
+
+Icons should be sized to 32x32px in an appropriate raster image format (e.g. .PNG, .GIF, or .ICO) to avoid having to scale your icons during runtime (causing a noticeable delay and loss of quality.)
 
 ### Background image stretch mode
 
