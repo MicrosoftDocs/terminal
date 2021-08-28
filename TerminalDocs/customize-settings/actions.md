@@ -3,7 +3,7 @@ title: Windows Terminal Actions
 description: Learn how to create custom actions for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/25/2021
+ms.date: 07/14/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -11,7 +11,7 @@ ms.localizationpriority: high
 # Custom actions in Windows Terminal
 
 > [!IMPORTANT]
-> As of Windows Terminal version 1.4, the `keybindings` array has been renamed to `actions` inside the settings.json file. Support for the `keybindings` array still exists for backward compatibility, however the terminal will not automatically rename `keybindings` to `actions` inside your settings.json file.
+> As of Windows Terminal version 1.4, the `keybindings` array has been renamed to `actions` inside the settings.json file. Support for the `keybindings` array still exists for backward compatibility, however the terminal will not automatically rename `keybindings` to `actions` inside your [settings.json file](../get-started.md#settings-json-file).
 
 You can create custom actions inside Windows Terminal that give you control of how you interact with the terminal. These actions will automatically be added to the command palette.
 
@@ -198,7 +198,7 @@ This opens the dropdown menu.
 
 ### Open settings files
 
-This opens either the settings UI, custom settings file (`settings.json`), or default settings file (`defaults.json`), depending on the `target` field.
+This opens either the settings UI, custom settings file ([`settings.json`](../get-started.md#settings-json-file)), or default settings file (`defaults.json`), depending on the `target` field.
 Without the `target` field, the custom settings file will be opened.
 
 **Command name:** `openSettings`
@@ -286,9 +286,18 @@ ___
 
 ### Close tab
 
-This closes the current tab.
+This closes the tab at a given index. If no index is provided, use the focused tab's index.
 
 **Command name:** `closeTab`
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `index` | Optional | Integer | Position of the tab to close. |
+
+> [!IMPORTANT]
+> This `index` property is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Close all other tabs
 
@@ -369,7 +378,7 @@ This creates a new tab. Without any arguments, this will open the default profil
 | `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
 | `colorScheme` | Optional | The name of a color scheme as a string | The scheme to use instead of the profile's set `colorScheme` |
-| `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. |
+| `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. In order to enter a new tab title and have that title persist, this must be set to true. |
 
 ### Open next tab
 
@@ -683,6 +692,23 @@ _This command is not currently bound in the default settings_.
 
 ```json
 {"command": "identifyWindows" },
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Minimize to tray ([Preview](https://aka.ms/terminal-preview))
+
+This will hide the currently focused window from the Taskbar and instead will be accessible from the system tray icon. This action will only be useable when the tray icon is visible through one of the two global settings `minimizeToTray` or `alwaysShowTrayIcon`.
+
+**Command name:** `minimizeToTray`
+
+**Default binding:**
+
+_This command is not currently bound in the default settings_.
+
+```json
+{"command": "minimizeToTray" },
 ```
 
 > [!IMPORTANT]
@@ -1032,7 +1058,7 @@ ___
 
 ## Global commands
 
-### Global summon ([Preview](https://aka.ms/terminal-preview))
+### Global summon
 
 This is a special action that works globally in the OS, rather than only in the context of the terminal window. When pressed, this action will summon the terminal window. Which window is summoned, where the window is summoned to, and how the window behaves when summoning it, is controlled by the properties on this action.
 
@@ -1078,12 +1104,12 @@ ways:
 
 The `desktop` and `monitor` properties can be combined in the following ways:
 
-|  | `"desktop"` |  |  |
-| -- | --------- | -- | -- |
-| **`"monitor"`** | `"any"`<br />**Leave where it is** | `"toCurrent"`<br />**Move to current desktop** | `"onCurrent"`<br />**On current desktop only** |
-| `"any"`<br />**Summon the MRU window** | Go to the desktop the window is on (leave position alone) | Move the window to this desktop (leave position alone) | If there isn't one on this desktop:<ul><li>Create a new one in the default position</li></ul>Else:<ul><li>Activate the one on this desktop (don't move it)</li></ul> |
-| `"toCurrent"`<br />**Summon the MRU window TO the monitor with the foreground window** | Go to the desktop the window is on, move to the monitor with the foreground window | Move the window to this desktop, move to the monitor with the foreground window | If there isn't one on this desktop:<ul><li>Create a new one</li></ul>Else:<ul><li>Activate the one on this desktop, move to the monitor with the foreground window</li></ul> |
-| `"toMouse"`<br />**Summon the MRU window TO the monitor with the mouse** | Go to the desktop the window is on, move to the monitor with the mouse | Move the window to this desktop, move to the monitor with the mouse | If there isn't one on this desktop:<ul><li>Create a new one</li></ul>Else:<ul><li>Activate the one on this desktop, move to the monitor with the mouse</li></ul> |
+| Combinations | **`"desktop": "any"`** | **`"desktop": "toCurrent"`**| **`"desktop": "onCurrent"`**| Not included |
+| ------------ | ---------------------- | --------------------------- | --------------------------- | ------------ |
+| **`"monitor": "any"`**| Go to the desktop the window is on (leave position alone) | Move the window to this desktop (leave position alone) | If there isn't one on this desktop:<ul><li>Create a new one in the default position</li></ul>Else:<ul><li>Activate the one on this desktop (don't move it)</li></ul> | Summon the MRU window |
+| **`"monitor": "toCurrent"`**| Go to the desktop the window is on, move to the monitor with the foreground window | Move the window to this desktop, move to the monitor with the foreground window | If there isn't one on this desktop:<ul><li>Create a new one</li></ul>Else:<ul><li>Activate the one on this desktop, move to the monitor with the foreground window</li></ul> | Summon the MRU window TO the monitor with the foreground window |
+| **`"monitor": "toMouse"`**| Go to the desktop the window is on, move to the monitor with the mouse | Move the window to this desktop, move to the monitor with the mouse | If there isn't one on this desktop:<ul><li>Create a new one</li></ul>Else:<ul><li>Activate the one on this desktop, move to the monitor with the mouse</li></ul> | Summon the MRU window TO the monitor with the mouse |
+| **Not included** | Leave where it is | Move to current desktop | On current desktop only | N/A |
 
 #### Examples
 
@@ -1115,10 +1141,7 @@ The `desktop` and `monitor` properties can be combined in the following ways:
 { "keys": "ctrl+7", "command": { "action": "globalSummon", "name": "_quake" } }
 ```
 
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
-### Open the quake mode window ([Preview](https://aka.ms/terminal-preview))
+### Open the quake mode window
 
 :::row:::
 :::column span="":::
@@ -1154,9 +1177,6 @@ If you'd like to change the behavior of the `quakeMode` action, we recommended c
 
 :::column-end:::
 :::row-end:::
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
