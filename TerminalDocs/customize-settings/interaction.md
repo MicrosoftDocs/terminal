@@ -107,7 +107,7 @@ ___
 
 ## Minimize to tray ([Preview](https://aka.ms/terminal-preview))
 
-When this is set to `true`, minimizing a window will hide it from the taskbar, making it inaccessible from that area. It will instead be accessible from Terminal's system tray icon. If either this global setting or the `minimizeToTray` global setting is set to true, Terminal will place an icon in the system tray.
+When this is set to `true`, minimizing a window will hide it from the taskbar, making it inaccessible from that area. It will instead be accessible from terminal's system tray icon. If either this global setting or the `minimizeToTray` global setting is set to true, terminal will place an icon in the system tray.
 
 **Property name:** `minimizeToTray`
 
