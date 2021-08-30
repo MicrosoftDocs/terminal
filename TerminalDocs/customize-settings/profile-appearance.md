@@ -91,7 +91,7 @@ This sets the weight (lightness or heaviness of the strokes) for the profile's f
 }
 ```
 
-### Intense text formatting ([Preview](https://aka.ms/terminal-preview))
+### Intense text formatting
 
 This controls how "intense" text is formatted in the terminal. "Intense" text is text formatted with the escape sequence `\x1b[1m`.
 
@@ -107,9 +107,6 @@ This controls how "intense" text is formatted in the terminal. "Intense" text is
 * `"none"`: the terminal won't do anything special for intense text
 
 **Default value:** `"all"`
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ## Retro terminal effects
 
