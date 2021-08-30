@@ -99,6 +99,54 @@ This sets the weight (lightness or heaviness of the strokes) for the profile's f
 > "fontWeight": "normal"
 > ```
 
+### Font features ([Preview](https://aka.ms/terminal-preview))
+
+This sets the DWrite font features for the given font.
+
+**Property name:** `features` (defined within the `font` object)
+
+**Necessity:** Optional
+
+**Accepts:** Feature properties in the format of: `"string": integer`
+
+**Example:**
+
+```jsonc
+// Enables ss01 and disables ligatures
+"font": {
+    "face": "Cascadia Code",
+    "features": {
+        "ss01": 1,
+        "liga": 0
+    }
+}
+```
+
+> [!IMPORTANT]
+> This feature only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Font axes ([Preview](https://aka.ms/terminal-preview))
+
+This sets the DWrite font axes for the given font.
+
+**Property name:** `axes` (defined within the `font` object)
+
+**Necessity:** Optional
+
+**Accepts:** Axis properties in the format of: `"string": integer`
+
+**Example:**
+
+```jsonc
+// Sets the font weight to 200
+"font": {
+    "face": "Cascadia Code",
+    "axes": {
+        "wght": 200
+    }
+}
+```
+
 ### Intense text formatting
 
 This controls how "intense" text is formatted in the terminal. "Intense" text is text formatted with the escape sequence `\x1b[1m`.
