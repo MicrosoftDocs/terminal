@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 # Appearance profile settings in Windows Terminal
 
-The settings listed below are specific to each unique profile. If you'd like a setting to apply to all of your profiles, you can add it to the `defaults` section above the list of profiles in your settings.json file.
+The settings listed below affect the visual settings of each profile separately. If you'd like a setting to apply to all of your profiles, you can add it to the `defaults` section above the list of profiles in your [settings.json file](../get-started.md#settings-json-file).
 
 ```json
 "defaults":
@@ -98,6 +98,23 @@ This sets the weight (lightness or heaviness of the strokes) for the profile's f
 > "fontSize": 12,
 > "fontWeight": "normal"
 > ```
+
+### Intense Text Formatting
+
+This controls how "intense" text is formatted in the Terminal. "Intense" text is text formatted with the escape sequence `\x1b[1m`.
+
+**Property name:** `intenseTextStyle`
+
+**Necessity:** Optional
+
+**Accepts:** `"none"`, `"bold"`, `"bright"`, `"all"`
+
+* `"all"`: render intense text as both **bold** and bright
+* `"bold"`: render intense text as **bold**, but not bright
+* `"bright"`: render intense text bright, but not bold
+* `"none"`: the Terminal won't do anything special for intense text
+
+**Default value:** `"all"`
 
 ## Retro terminal effects
 
