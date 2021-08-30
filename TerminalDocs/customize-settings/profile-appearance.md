@@ -3,7 +3,7 @@ title: Windows Terminal Appearance Profile Settings
 description: Learn how to customize the appearance profile settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 07/14/2021
+ms.date: 08/30/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -91,9 +91,9 @@ This sets the weight (lightness or heaviness of the strokes) for the profile's f
 }
 ```
 
-### Intense Text Formatting
+### Intense text formatting ([Preview](https://aka.ms/terminal-preview))
 
-This controls how "intense" text is formatted in the Terminal. "Intense" text is text formatted with the escape sequence `\x1b[1m`.
+This controls how "intense" text is formatted in the terminal. "Intense" text is text formatted with the escape sequence `\x1b[1m`.
 
 **Property name:** `intenseTextStyle`
 
@@ -104,9 +104,12 @@ This controls how "intense" text is formatted in the Terminal. "Intense" text is
 * `"all"`: render intense text as both **bold** and bright
 * `"bold"`: render intense text as **bold**, but not bright
 * `"bright"`: render intense text bright, but not bold
-* `"none"`: the Terminal won't do anything special for intense text
+* `"none"`: the terminal won't do anything special for intense text
 
 **Default value:** `"all"`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ## Retro terminal effects
 

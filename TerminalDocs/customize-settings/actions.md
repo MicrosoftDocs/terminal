@@ -297,9 +297,6 @@ This closes the tab at a given index. If no index is provided, use the focused t
 | ---- | --------- | ------- | ----------- |
 | `index` | Optional | Integer | Position of the tab to close. |
 
-> [!IMPORTANT]
-> This `index` property is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 ### Close all other tabs
 
 This closes all tabs except for the one at an index. If no index is provided, use the focused tab's index.
@@ -698,7 +695,7 @@ _This command is not currently bound in the default settings_.
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
-### Minimize to tray ([Preview](https://aka.ms/terminal-preview))
+### Minimize to tray
 
 This will hide the currently focused window from the Taskbar and instead will be accessible from the system tray icon. This action will only be useable when the tray icon is visible through one of the two global settings `minimizeToTray` or `alwaysShowTrayIcon`.
 
@@ -711,9 +708,6 @@ _This command is not currently bound in the default settings_.
 ```json
 {"command": "minimizeToTray" },
 ```
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
