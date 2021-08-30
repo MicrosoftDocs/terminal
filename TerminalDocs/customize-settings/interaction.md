@@ -105,7 +105,7 @@ When this is set to `true`, the window will snap to the nearest character bounda
 
 ___
 
-## Minimize to tray
+## Minimize to tray ([Preview](https://aka.ms/terminal-preview))
 
 When this is set to `true`, minimizing a window will hide it from the taskbar, making it inaccessible from that area. It will instead be accessible from Terminal's system tray icon. If either this global setting or the `minimizeToTray` global setting is set to true, Terminal will place an icon in the system tray. The user will also be able to utilize the `minimizeToTray` _action_.
 
@@ -117,11 +117,14 @@ When this is set to `true`, minimizing a window will hide it from the taskbar, m
 
 **Default value:** `false`
 
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 <br />
 
 ___
 
-## Always show tray icon
+## Always show tray icon ([Preview](https://aka.ms/terminal-preview))
 
 When this is set to `true`, the Terminal will place its icon in the system tray. If either this global setting or the `minimizeToTray` global setting is set to true, Terminal will place an icon in the system tray. The user will also be able to utilize the `minimizeToTray` _action_.
 
@@ -132,6 +135,9 @@ When this is set to `true`, the Terminal will place its icon in the system tray.
 **Accepts:** `true`, `false`
 
 **Default value:** `false`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
