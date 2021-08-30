@@ -3,7 +3,7 @@ title: Windows Terminal Troubleshooting
 description: Learn fixes to common obstacles in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 02/25/2021
+ms.date: 08/30/2021
 ms.topic: overview
 ms.localizationpriority: high
 ---
@@ -34,6 +34,9 @@ For example, the following setting will launch the "Ubuntu-18.04" distribution i
     "startingDirectory" : "//wsl$/Ubuntu-18.04/home/<Your Ubuntu Username>"
 }
 ```
+
+> [!IMPORTANT]
+> On newer versions of Windows, `startingDirectory` can accept Linux-style paths in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ## Setting the tab title
 
