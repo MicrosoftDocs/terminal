@@ -104,6 +104,34 @@ When this is set to `true`, the tabs are moved into the title bar and the title 
 
 ___
 
+## Show acrylic in tab row ([Preview](https://aka.ms/terminal-preview))
+
+:::row:::
+:::column span="":::
+When this is set to `true`, the tab row is given an acrylic background at 50% opacity. When it's set to `false`, the tab row will be opaque. Note that changing this setting will require starting a new terminal instance.
+
+**Property name:** `useAcrylicInTabRow`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+:::column-end:::
+:::column span="":::
+![Windows Terminal acrylic in tab row](./../images/acrylic-tab-row.png)
+
+:::column-end:::
+:::row-end:::
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+<br />
+
+___
+
 ## Use active terminal title as application title
 
 When this is set to `true`, the title bar displays the title of the selected tab. When it's set to `false`, title bar displays "Windows Terminal". Note that changing this setting will require starting a new terminal instance.
