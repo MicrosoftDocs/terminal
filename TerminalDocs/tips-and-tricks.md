@@ -44,11 +44,14 @@ You can adjust the opacity of the background by holding <kbd>ctrl+shift</kbd> an
 
 You can open a hyperlink from inside Windows Terminal with your mouse using <kbd>ctrl</kbd> + click.
 
-### Drag and drop file/folder to open
+### Drag and drop file/folder to open ([Preview](https://aka.ms/terminal-preview))
 
 You can drag and drop a file or folder over the New Tab button to open your default profile with that given file or folder. By default, this will open a new tab. You can hold <kbd>Alt</kbd> to open a new pane in your current tab or hold <kbd>Shift</kbd> to open a new window.
 
 ![Windows Terminal drag and drop](./images/drag-and-drop.gif)
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Copy/paste
 
