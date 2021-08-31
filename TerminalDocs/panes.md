@@ -34,6 +34,15 @@ If you'd like to open a new pane of your default profile, you can hold the <kbd>
 
 ![Windows Terminal dropdown pane](./images/alt-click-pane.gif)
 
+### Using the tab context menu ([Preview](https://aka.ms/terminal-preview))
+
+If you'd like to open a new pane of a profile that is already open in your terminal, you can right click on the tab and click Split Tab. This will duplicate the focused pane in the current tab.
+
+![Windows Terminal split tab](./images/split-tab.gif)
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ## Switching between panes
 
 The terminal allows you to navigate between panes by using the keyboard. If you hold the <kbd>Alt</kbd> key, you can use your arrow keys to move your focus between panes. You can identify which pane is in focus by the accent color border surrounding it. Note that this accent color is set in your Windows color settings.
