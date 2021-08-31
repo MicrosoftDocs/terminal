@@ -101,7 +101,7 @@ This sets the weight (lightness or heaviness of the strokes) for the profile's f
 
 ### Font features ([Preview](https://aka.ms/terminal-preview))
 
-This sets the DWrite font features for the given font.
+This sets the OpenType font features for the given font. More information on OpenType features can be found [here](https://docs.microsoft.com/typography/opentype/spec/featurelist).
 
 **Property name:** `features` (defined within the `font` object)
 
@@ -127,7 +127,7 @@ This sets the DWrite font features for the given font.
 
 ### Font axes ([Preview](https://aka.ms/terminal-preview))
 
-This sets the DWrite font axes for the given font.
+This sets the OpenType font axes for the given font. More information on OpenType axes can be found [here](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg).
 
 **Property name:** `axes` (defined within the `font` object)
 
@@ -138,11 +138,11 @@ This sets the DWrite font axes for the given font.
 **Example:**
 
 ```jsonc
-// Sets the font weight to 200
+// Sets the font to italic
 "font": {
     "face": "Cascadia Code",
     "axes": {
-        "wght": 200
+        "ital": 1
     }
 }
 ```
