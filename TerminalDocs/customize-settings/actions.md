@@ -1190,7 +1190,7 @@ This unbinds the associated keys from any command.
 
 To unbind a keystroke that is bound to an action in the default
 key bindings, you can set the "command" to "unbound" or null. This will
-allow the keystroke to associate with the commandline application setting instead of
+allow the keystroke to associate with the command line application setting instead of
 performing the default action.
 
 **Example:**
