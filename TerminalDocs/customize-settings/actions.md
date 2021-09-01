@@ -1118,3 +1118,36 @@ ___
 This unbinds the associated keys from any command.
 
 **Command name:** `unbound`
+
+## Run Multiple Actions
+
+This action allows the user to bind multiple sequential actions to one command. 
+
+**Command name:** `multipleActions`
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `actions` | Required | Array of Actions | The list of `action` to run. |
+
+
+#### Examples
+
+```jsonc
+{ "name": "Create My Layout", "command": { 
+    "action": "multipleActions",
+    "actions": [
+        // Create a new tab with 3 panes
+        { "action": "newTab", "tabTitle": "Work", "colorScheme": "One Half Dark" },
+        { "action": "splitPane", "split": "vertical", "profile": "Windows PowerShell", "tabTitle": "Work", "colorScheme": "Campbell Powershell", },
+        { "action": "splitPane", "split": "horizontal", "profile": "Windows PowerShell", "tabTitle": "Work", "colorScheme": "Campbell Powershell", },
+        // Create a second tab
+        { "action": "newTab", "tabTitle": "Misc"},
+        // Go back to the first tab and zoom the first pane
+        { "action": "prevTab", "tabSwitcherMode": "disabled" },
+        { "action": "moveFocus", "direction": "first"},
+        "togglePaneZoom"
+        ]
+}}
+```
