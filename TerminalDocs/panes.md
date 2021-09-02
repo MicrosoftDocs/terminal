@@ -142,6 +142,31 @@ You can change which keys close the pane by adding a key binding that uses the `
 { "command": "closePane", "keys": "ctrl+shift+w" }
 ```
 
+## Zooming a pane
+
+You can zoom the focused pane to fill the entire contents of the window.
+
+![Windows Terminal toggle pane zoom](./images/toggle-pane-zoom.gif)
+
+This can be done by using the `togglePaneZoom` command.
+
+```json
+{ "command": "togglePaneZoom" }
+```
+
+> [!NOTE]
+> The `togglePaneZoom` action is not boud to any keys by default, but it can be accessed through the [Command Palette](./command-palette.md), which is bound to `Ctrl+Shift+P` by default.
+
+## Marking a pane as read-only
+
+You can mark a pane as read-only, which will prevent input from going into the text buffer. If you attempt to close or input text into a read-only pane, the terminal will display a popup warning instead.
+
+You can toggle read-only mode on a pane with the `toggleReadOnlyMode` command.
+
+```
+{ "command": "toggleReadOnlyMode" },
+```
+
 ## Customizing panes using key bindings
 
 You can customize what opens inside a new pane depending on your custom key bindings.
@@ -156,28 +181,6 @@ This can be done by adding the `splitMode` property with `duplicate` as the valu
 
 ```json
 { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
-```
-
-### Zooming a pane
-
-You can zoom the focused pane to fill the entire contents of the window.
-
-![Windows Terminal toggle pane zoom](./images/toggle-pane-zoom.gif)
-
-This can be done by using the `togglePaneZoom` command.
-
-```json
-{ "command": "togglePaneZoom" }
-```
-
-### Marking a pane as read-only
-
-You can mark a pane as read-only, which will prevent input from going into the text buffer. If you attempt to close or input text into a read-only pane, the terminal will display a popup warning instead.
-
-You can toggle read-only mode on a pane with the `toggleReadOnlyMode` command.
-
-```
-{ "command": "toggleReadOnlyMode" },
 ```
 
 ### New terminal arguments
