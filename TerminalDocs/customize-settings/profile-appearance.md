@@ -297,7 +297,37 @@ This sets the transparency of the background image.
 
 ___
 
-## Acrylic
+## Transparency
+
+### Opacity
+
+:::row:::
+:::column span="":::
+
+This sets the transparency of the window for the profile. This accepts an integer value from 0-100, representing a "percent opaque". `100` is "fully opaque", `50` is semi-transparent, and `0` is fully transparent.
+
+When `useAcrylic` is set to `true`, the window will use Acrylic to create a blurred background for the Terminal. When `useAcrylic` is set to false, the Terminal will use a unblurred opacity.
+
+**Property name:** `opacity`
+
+**Necessity:** Optional
+
+**Accepts:** Number as a integer value from 0-100
+
+**Default value:** `100` when `useAcrylic` is false, `50` when `useAcrylic` is true.
+
+:::column-end:::
+:::column span="":::
+![Windows Terminal acrylic opacity](./../images/acrylic-opacity.gif)
+
+:::column-end:::
+:::row-end:::
+
+> [!IMPORTANT]
+> Prior to Windows Terminal version 1.12, this setting was `acrylicOpacity`, was a float that accepted 0.0-1.0 which defaulted to 0.5, and the opacity would only apply if `useAcrylic` was set to true. On 1.12+, `acrylicOpacity` will gracefully continue to work as the equivalent `opacity` value.
+
+> [!IMPORTANT]
+> Unblurred opacity (`"useAcrylic": false`) only works on Windows 11 or above.
 
 ### Enable acrylic
 
@@ -316,27 +346,6 @@ When this is set to `true`, the window will have an acrylic background. When it'
 :::column-end:::
 :::column span="":::
 ![Windows Terminal acrylic](./../images/acrylic.gif)
-
-:::column-end:::
-:::row-end:::
-
-### Acrylic opacity
-
-:::row:::
-:::column span="":::
-When `useAcrylic` is set to `true`, this sets the transparency of the window for the profile. This accepts floating point values from 0-1.
-
-**Property name:** `acrylicOpacity`
-
-**Necessity:** Optional
-
-**Accepts:** Number as a floating point value from 0-1
-
-**Default value:** `0.5`
-
-:::column-end:::
-:::column span="":::
-![Windows Terminal acrylic opacity](./../images/acrylic-opacity.gif)
 
 :::column-end:::
 :::row-end:::
