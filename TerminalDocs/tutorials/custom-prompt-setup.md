@@ -27,7 +27,7 @@ In this tutorial, you learn how to:
 
 ### Install a Nerd Font
 
-Oh My Posh and Terminal-Icons use glyphs in order to style the prompt. If your font does not include the appropriate glyphs, you may see several Unicode replacement characters '&#x25AF;' throughout your prompt. In order to see all of the glyphs in your terminal, you should install a [Nerd Font](https://nerdfonts.com). The Nerd Font that looks most like Cascadia Code is called Caskaydia Cove Nerd Font.
+Oh My Posh and Terminal-Icons use glyphs in order to style the prompt. If your font does not include the appropriate glyphs, you may see several Unicode replacement characters '&#x25AF;' throughout your prompt. In order to see all of the glyphs in your terminal, you should install a [Nerd Font](https://nerdfonts.com). The Nerd Font that looks most like Cascadia Code is called Caskaydia Cove Nerd Font. ([How to add a new font to Windows.](https://support.microsoft.com/en-us/office/add-a-font-b7c5f17c-4426-4b53-967f-455339c564c1))
 
 ## Set up Oh My Posh in PowerShell
 
