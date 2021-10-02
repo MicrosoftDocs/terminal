@@ -68,17 +68,21 @@ Import-Module oh-my-posh
 Set-PoshPrompt -Theme paradox
 ```
 
-Now, each new instance starts by importing Posh-Git and Oh-My-Posh, then setting the Paradox theme from Oh-My-Posh. Oh-My-Posh comes with several [built-in themes](https://ohmyposh.dev/docs/themes). If you decide to use Cascadia Code PL as a font, oh-my-posh themes that contain `minimal`
+Now, each new instance starts by importing Posh-Git and Oh-My-Posh, then setting the Paradox theme from Oh-My-Posh. Oh-My-Posh comes with several [built-in themes](https://ohmyposh.dev/docs/themes). If you do not decide to use Cascadia Code PL or any Powerline/[Nerd Font](https://www.nerdfonts.com/) as a font, oh-my-posh themes that contain `minimal`
 function without the need for additional icons. You can also [create a custom theme](https://ohmyposh.dev/docs/installation#change-the-theme) to match the font of your choice.
 
 > [!IMPORTANT]
 > Script execution policy must be set to either **RemoteSigned** or **Unrestricted** in order for the profile script to run. Run this command to see your current execution policy `Get-ExecutionPolicy`. [Learn more about Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies)
 
-### Set Cascadia Code PL as your font
+### Install a Nerd Font
 
-To set the Cascadia Code PL font for use with PowerLine (after [downloading the Cascadia Code font](https://github.com/microsoft/cascadia-code/releases), unzipping, and installing on your system), you will need to open your [profile settings](../customize-settings/profile-appearance.md) in your [settings.json file](../get-started.md#settings-json-file) by selecting **Settings** (Ctrl+,) from your Windows Terminal dropdown menu while holding down <kbd>Shift</kbd>. This can also be done using the settings UI if you have it enabled.
+Many of the [Oh-My-Posh themes](https://ohmyposh.dev/docs/themes) require the use of [Nerd Fonts](https://www.nerdfonts.com/) to properly display the icons used in the prompts. To install these Nerd Fonts, you can download the font of your choice from [the Nerd Fonts website](https://www.nerdfonts.com/font-downloads), unzip the file, and install the fonts on your system.
 
-Once your settings.json file opens, find the Windows PowerShell profile and add: `"fontFace": "Cascadia Code PL"` to designate Cascadia Code PL as the font. This will provide those nice Cascadia Code Powerline glyphs. You should notice the change in your terminal as soon as you select **Save** in your editor.
+If you want to retain the fun look of Cascadia Code, while having Nerd Font icons, you can try [Delugia Code](https://github.com/adam7/delugia-code) and download the `delugia-complete` version.
+
+To use these fonts, open the Windows Terminal settings.json file with your preferred editor using the shortcut Ctrl+Shift+,.
+Once your settings.json file opens, find the Windows PowerShell profile and add: `"fontFace": "Delugia"` to designate Delugia as the font. This value can be changed to the name of the Nerd Font you installed.
+This will provide those nice Powerline glyphs, as well as the properly-rendered icons. You should notice the change in your terminal as soon as you select **Save** in your editor.
 
 Your Windows PowerShell profile settings.json file should now look like this:
 
@@ -88,7 +92,7 @@ Your Windows PowerShell profile settings.json file should now look like this:
     "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "name": "Windows PowerShell",
     "commandline": "powershell.exe",
-    "fontFace": "Cascadia Code PL",
+    "fontFace": "Delugia",  // The font can be set to any Nerd Font you have installed.
     "hidden": false
 },
 ```
