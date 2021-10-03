@@ -100,7 +100,11 @@ Your Windows PowerShell profile settings.json file should now look like this:
 
 ### WSL Ubuntu prerequisites
 
-Ubuntu has several Powerline options to install from. This tutorial will be using oh-my-posh for Linux:
+Ubuntu has several Powerline options to install from. This tutorial will be using oh-my-posh for Linux.
+
+> [!TIP]
+> If you're also using oh-my-posh on Windows, it's a good idea to install oh-my-posh using Winget or Scoop.
+> Follow the guide on the [oh-my-posh doc site](https://ohmyposh.dev/docs/windows) and continue with [setting up your prompt](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup#customize-your-ubuntu-prompt).
 
 First, install oh-my-posh:
 
