@@ -40,7 +40,7 @@ Using PowerShell, install Posh-Git and Oh-My-Posh:
 
 ```powershell
 Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser -RequiredVersion 2.0.412
+Install-Module oh-my-posh -Scope CurrentUser
 ```
 
 > [!TIP]
