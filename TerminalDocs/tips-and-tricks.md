@@ -18,15 +18,25 @@ You can right click on a tab and select Rename Tab to rename a tab for that term
 
 ## Color a tab
 
-You can right click on a tab and select Color... to color the tab for that terminal session. You can select from a predefined list of colors or you can click Custom... to pick any color using the color picker or the RGB/HSV or hex fields.
+You can right-click on a tab and select **Color**... to color the tab for that terminal session. You can select from a predefined list of colors or you can select **Custom...** to pick any color using the color picker or the RGB/HSV or hex fields.
 
 ![Windows Terminal tab color](./images/tab-color.png)
 
 > [!TIP]
 > Use the hex field to set your tab to the same color as your background color for a seamless look.
 
-> [!NOTE]
-> While it is possible to [set the tab title from the commandline](./tutorials/tab-title.md) with escape sequences, it currently isn't possible to set the tab color in this way.
+The `tabColor` can be set as part of a command line profile. See [Profile - Appearance: Tab color](./customize-settings/profile-appearance.md#tab-color). For example:
+
+```json
+ {
+            "guid": "{1234abc-abcd-1234-12ab-1234abc}",
+            "name": "Windows PowerShell",
+            "background": "#012456",
+            "tabColor": "#012456",
+        },
+```
+
+The `tabColor` cannot be set as part of a color scheme. Additionally, while it is possible to [set the tab title from the commandline](./tutorials/tab-title.md) with escape sequences, it currently isn't possible to set the tab color in this way.
 
 ## Mouse interaction
 
@@ -81,7 +91,7 @@ Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) appli
 
 The quake mode window can be created either by binding the `quakeMode` action, or by manually running the command line:
 
-```
+```console
 wt -w _quake
 ```
 
