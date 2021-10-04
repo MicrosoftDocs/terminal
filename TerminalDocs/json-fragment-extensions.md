@@ -3,7 +3,7 @@ title: Windows Terminal JSON Fragment Extensions
 description: Learn how to use JSON fragment extensions in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 04/14/2021
+ms.date: 10/04/2021
 ms.topic: how-to
 ---
 
@@ -85,9 +85,9 @@ There are some minimal restrictions on what can be added to user settings using 
 
 The location to place the JSON fragment files varies depending on the installation method of the application that wishes to place them.  
 
-### Microsoft Store applications 
+### Microsoft Store applications
 
-For applications installed through the Microsoft Store (or similar), the application must declare itself to be an app extension. More details on app extensions can be found in the [Microsoft Docs](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-an-extension) and the necessary section is replicated here. The appxmanifest file of the package must include: 
+For applications installed through the Microsoft Store (or similar), the application must declare itself to be an app extension. Learn more about how to [Create an host an app extenstion](/windows/uwp/launch-resume/how-to-create-an-extension). The necessary section is replicated here. The appxmanifest file of the package must include:
 
 ```xml
 <Package
@@ -113,7 +113,7 @@ For applications installed through the Microsoft Store (or similar), the applica
 </Package>
 ```
 
-Key things to note: 
+Key things to note:
 
 - The `"Name"` field must be `com.microsoft.windows.terminal.settings` for Windows Terminal to be able to detect the extension.
 - The `"Id"` field can be filled out as the developer wishes.
