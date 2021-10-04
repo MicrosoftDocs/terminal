@@ -64,9 +64,6 @@ Below is the full list of supported commands and options for the `wt` command li
 | `split-pane`, `sp` | `commandline` | Creates a new split window pane based on the assigned command line. | To-Do: Kayla  |
 | `split-pane`, `sp` | `--duplicate, -D` | Creates a new split window pane that is a duplicate of the current pane. | To-Do: Kayla |
 
-> [!IMPORTANT]
-> The `-D, --duplicate` parameter for `split-pane` is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 ### Focus-tab command
 
 | `focus-tab`, `ft` |  `--target, -t tab-index` | Focuses on a specific tab according to it's tab index number. | To-Do: Kayla will enter value format / example. |
