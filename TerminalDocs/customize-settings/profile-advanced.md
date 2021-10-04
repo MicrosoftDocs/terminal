@@ -117,6 +117,8 @@ This sets how the profile reacts to termination or failure to launch. `"graceful
 
 <br />
 
+> [!NOTE]
+> In Windows Command Prompt (cmd.exe), `exit` will return the return code of the previous command. If the command you typed before `exit` resulted in an error, then `"closeOnExit": "graceful"` will still show that error code, instead of closing the tab.
 ___
 
 ## Bell notification style
