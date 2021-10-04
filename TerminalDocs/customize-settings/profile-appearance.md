@@ -258,10 +258,10 @@ It is recommended that custom images and icons are stored in system-provided fol
 
 ### Icons
 
-Terminal displays icons for each profile which Terminal generates for any built-in shells, for example: PowerShell Core, PowerShell, and any installed Linux/WSL distributions. Each profile refers to a stock icon via the ms-appx URI Scheme. You can refer to you own custom icons by entering a path in your [settings.json file](../get-started.md#settings-json-file):
+Windows Terminal displays icons for each profile which the terminal generates for any built-in shells, for example: PowerShell Core, PowerShell, and any installed Linux/WSL distributions. Each profile refers to a stock icon via the ms-appx URI Scheme. You can refer to you own custom icons by entering a path in your [settings.json file](../get-started.md#settings-json-file):
 
 ```json
-    "icon" : "C:\\Users\\richturn\\OneDrive\\WindowsTerminal\\icon-ubuntu-32.png",
+    "icon" : "C:\\Users\\username\\OneDrive\\WindowsTerminal\\icon-ubuntu-32.png",
 ```
 
 Icons should be sized to 32x32px in an appropriate raster image format (e.g. .PNG, .GIF, or .ICO) to avoid having to scale your icons during runtime (causing a noticeable delay and loss of quality.)

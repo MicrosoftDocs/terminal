@@ -25,7 +25,7 @@ You can right-click on a tab and select **Color**... to color the tab for that t
 > [!TIP]
 > Use the hex field to set your tab to the same color as your background color for a seamless look.
 
-The `tabColor` can be set as part of a command line profile. See [Profile - Appearance: Tab color](./customize-settings/profile-appearance.md#tab-color). For example:
+The `tabColor` can be set as part of a profile. See [Profile - Appearance: Tab color](./customize-settings/profile-appearance.md#tab-color). For example:
 
 ```json
  {
