@@ -16,7 +16,7 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "TerminalDocs/install.md",
+            "source_path": "TerminalDocs/get-started.md",
             "redirect_url": "https://docs.microsoft.com/windows/terminal/install",
             "redirect_document_id": true
         }
