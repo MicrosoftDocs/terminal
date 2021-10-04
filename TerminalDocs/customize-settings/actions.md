@@ -1115,6 +1115,17 @@ ___
 
 ## Unbind keys
 
-This unbinds the associated keys from any command.
+You can disable keybindings or "unbind" the associated keys from any command. This may be necessary when using underlying terminals (such as VIM). The unbound key will pass to the underlying terminal.
 
 **Command name:** `unbound`
+
+For example, to unbind the shortcut keys "alt+shift+-" and "alt+shift+=", include these commands in the **actions** section of your [settings.json file](../get-started.md#settings-json-file).
+
+```json
+{
+    "actions": [
+        { "command": "unbound", "keys": "alt+shift+-" },
+        { "command": "unbound", "keys": "alt+shift+=" }
+    ]
+}
+```
