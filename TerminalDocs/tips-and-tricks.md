@@ -111,12 +111,14 @@ Windows Terminal gives you the ability to send input to your shell with a key bi
 { "command": {"action": "sendInput", "input": ""}, "keys": "" }
 ```
 
+You can also add a `"name": ""` value if desired.
+
 ### Clear your screen
 
 Sending input to the shell with a keyboard shortcut can be useful for commands you run often. One example would be clearing your screen:
 
 ```json
-{ "command": {"action": "sendInput", "input": "clear\r"}, "keys": "alt+k" }
+{ "command": {"action": "sendInput", "input": "clear\r"}, "keys": "alt+k", "name": "clear terminal" }
 ```
 
 ### Navigate to parent directory
