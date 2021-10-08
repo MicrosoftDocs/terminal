@@ -421,6 +421,21 @@ This sets the background color of a selection within the profile. This will over
 
 **Accepts:** Color as a string in hex format: `"#rgb"` or `"#rrggbb"`
 
+### Adjust indistinguishable colors ([Preview](https://aka.ms/terminal-preview))
+
+When set to true, this will (when necessary) adjust the foreground color to make it more visible, based on the background color.
+
+**Property name:** `adjustIndistinguishableColors`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `true`
+
+> [!IMPORTANT]
+> This feature only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ### Cursor color
 
 This sets the cursor color of the profile. This will override the `cursorColor` set in the color scheme if `colorScheme` is set.
