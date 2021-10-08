@@ -3,7 +3,7 @@ title: Windows Terminal Startup Settings
 description: Learn how to customize startup settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/25/2021
+ms.date: 10/08/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -28,7 +28,7 @@ Set the default profile that opens by typing <kbd>ctrl+shift+t</kbd>, typing the
 
 ___
 
-## Default terminal application ([Preview](https://aka.ms/terminal-preview))
+## Default terminal application
 
 Set the default terminal emulator in Windows for all command line applications to run inside of.
 
@@ -41,7 +41,7 @@ Set the default terminal emulator in Windows for all command line applications t
 **Default value:** Windows Console Host
 
 > [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview) when running Windows 10 Insider Program Dev Channel or Windows 11.
+> This feature is only available when running Windows 10 Insider Program Dev Channel or Windows 11.
 
 <br />
 

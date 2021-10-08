@@ -3,7 +3,7 @@ title: Windows Terminal Appearance Profile Settings
 description: Learn how to customize the appearance profile settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 08/30/2021
+ms.date: 10/08/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -99,7 +99,7 @@ This sets the weight (lightness or heaviness of the strokes) for the profile's f
 > "fontWeight": "normal"
 > ```
 
-### Font features ([Preview](https://aka.ms/terminal-preview))
+### Font features
 
 This sets the [OpenType font features](/typography/opentype/spec/featurelist) for the given font.
 
@@ -122,10 +122,7 @@ This sets the [OpenType font features](/typography/opentype/spec/featurelist) fo
 }
 ```
 
-> [!IMPORTANT]
-> This feature only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
-### Font axes ([Preview](https://aka.ms/terminal-preview))
+### Font axes
 
 This sets the [OpenType font axes](/typography/opentype/spec/dvaraxisreg) for the given font.
 
