@@ -296,14 +296,14 @@ ___
 
 ## Transparency
 
-### Opacity
+### Opacity ([Preview](https://aka.ms/terminal-preview))
 
 :::row:::
 :::column span="":::
 
 This sets the transparency of the window for the profile. This accepts an integer value from 0-100, representing a "percent opaque". `100` is "fully opaque", `50` is semi-transparent, and `0` is fully transparent.
 
-When `useAcrylic` is set to `true`, the window will use Acrylic to create a blurred background for the Terminal. When `useAcrylic` is set to false, the Terminal will use a unblurred opacity.
+When `useAcrylic` is set to `true`, the window will use the acrylic material to create a blurred background for the terminal. When `useAcrylic` is set to false, the terminal will use a unblurred opacity.
 
 **Property name:** `opacity`
 
@@ -324,7 +324,7 @@ When `useAcrylic` is set to `true`, the window will use Acrylic to create a blur
 > Prior to Windows Terminal version 1.12, this setting was `acrylicOpacity`, was a float that accepted 0.0-1.0 which defaulted to 0.5, and the opacity would only apply if `useAcrylic` was set to true. On 1.12+, `acrylicOpacity` will gracefully continue to work as the equivalent `opacity` value.
 
 > [!IMPORTANT]
-> Unblurred opacity (`"useAcrylic": false`) only works on Windows 11 or above.
+> Unblurred opacity (`"useAcrylic": false`) only works on Windows 11 or above with [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Enable acrylic
 
