@@ -46,7 +46,7 @@ The terminal allows you to navigate between panes by using the keyboard. If you 
 
 ![Windows Terminal switch panes](./images/navigate-panes.gif)
 
-You can customize this by adding key bindings for the `moveFocus` command and setting the `direction` to either `down`, `left`, `right`, or `up`. Additionally, `direction` can be `previous` for the last used pane, or `previousInOrder` or `nextInOrder` for navigation by tree order.
+You can customize this by adding key bindings for the `moveFocus` command and setting the `direction` to either `down`, `left`, `right`, or `up`. Additionally, `direction` can be `previous` for the last used pane, `previousInOrder` or `nextInOrder` for navigation by tree order, or `first` for the first pane.
 
 ```json
 { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" },
@@ -55,11 +55,12 @@ You can customize this by adding key bindings for the `moveFocus` command and se
 { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" },
 { "command": { "action": "moveFocus", "direction": "previous" } },
 { "command": { "action": "moveFocus", "direction": "previousInOrder" } },
-{ "command": { "action": "moveFocus", "direction": "nextInOrder" } }
+{ "command": { "action": "moveFocus", "direction": "nextInOrder" } },
+{ "command": { "action": "moveFocus", "direction": "first" } }
 ```
 
 > [!IMPORTANT]
-> The `previous`, `previousInOrder`, and `nextInOrder` directions are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+> The `previousInOrder`, and `nextInOrder`, and `first` directions are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ## Swapping panes
 
@@ -74,7 +75,8 @@ The `swapPane` command can be customized using the same navigation `direction`s 
 { "command": { "action": "swapPane", "direction": "up" } },
 { "command": { "action": "swapPane", "direction": "previous" } },
 { "command": { "action": "swapPane", "direction": "previousInOrder" } },
-{ "command": { "action": "swapPane", "direction": "nextInOrder" } }
+{ "command": { "action": "swapPane", "direction": "nextInOrder" } },
+{ "command": { "action": "swapPane", "direction": "first" } }
 ```
 
 ## Moving panes
