@@ -28,6 +28,37 @@ You can right click on a tab and select Color... to color the tab for that termi
 > [!NOTE]
 > While it is possible to [set the tab title from the commandline](./tutorials/tab-title.md) with escape sequences, it currently isn't possible to set the tab color in this way.
 
+## Set Cascadia Code font as the default across all terminal profiles
+
+Most [profile settings](./customize-settings/profile-general.md) in your terminal's [settings.json file](./get-started.md#settings-json-file) are specific to each unique command line profile. However, if you'd like a setting to apply to ALL of your profiles, you can add it to the defaults section above the list of profiles in your settings.json file.
+
+```json
+"defaults":
+{
+    // SETTINGS TO APPLY TO ALL PROFILES
+},
+"list":
+[
+    // PROFILE OBJECTS
+]
+```
+
+To apply the [Cascadia Code font](./cascadia-code.md) (or Cascadia Code PL in this case to include Powerline glyphs) as the default font across all of your shells / command line profiles, add the following to your `settings.json` file "defaults" section:
+
+```json
+ "profiles": 
+    {
+    "defaults": {
+    "fontFace": "Cascadia Code PL"
+    },
+    "list":
+    [
+    // PROFILE OBJECTS
+    ]
+``` 
+
+Now all of your terminal profiles will automatically default to using the Cascadia Code PL font.
+
 ## Mouse interaction
 
 There are several ways to interact with Windows Terminal using a mouse.
@@ -65,6 +96,8 @@ Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) appli
 
 ## Quake mode
 
+Quake mode allows you to quickly open a new terminal instance from anywhere in Windows by typing <kbd>Win</kbd> + <kbd>`</kbd> (backtick). The quake window will appear on the top half of your screen and can easily be dismissed with the same keyboard shortcut.
+
 "Quake mode" is the name for the special mode the terminal enters when naming a window `_quake`. When a window is in quake mode:
 
 * The terminal is automatically snapped to the top half of the monitor.
@@ -81,7 +114,7 @@ Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) appli
 
 The quake mode window can be created either by binding the `quakeMode` action, or by manually running the command line:
 
-```
+```console
 wt -w _quake
 ```
 
