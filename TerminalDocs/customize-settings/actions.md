@@ -294,6 +294,18 @@ _This command is not currently bound in the default settings_.
 | ---- | --------- | ------- | ----------- |
 | `input` | Required | String | The text input to feed into the shell. |
 
+### Open system menu
+
+Opens the system menu at the top left corner of the window.
+
+**Command name:** `openSystemMenu`
+
+**Default binding:**
+
+```json
+{ "command": "openSystemMenu", "keys": "alt+space" }
+```
+
 <br />
 
 ___
