@@ -1003,7 +1003,7 @@ This changes the text size by a specified point amount.
 { "command": { "action": "adjustFontSize", "delta": 1 }, "keys": "ctrl+=" },
 { "command": { "action": "adjustFontSize", "delta": -1 }, "keys": "ctrl+-" },
 { "command": { "action": "adjustFontSize", "delta": 1 }, "keys": "ctrl+numpad_plus" },
-{ "command": { "action": "adjustFontSize", "delta": -1 }, "keys": "ctrl+numpad_minus" },
+{ "command": { "action": "adjustFontSize", "delta": -1 }, "keys": "ctrl+numpad_minus" }
 ```
 
 #### Actions
