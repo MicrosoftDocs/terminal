@@ -145,7 +145,7 @@ This can be done by using the `togglePaneZoom` command.
 ```
 
 > [!NOTE]
-> The `togglePaneZoom` action is not boud to any keys by default, but it can be accessed through the [Command Palette](./command-palette.md), which is bound to `Ctrl+Shift+P` by default.
+> The `togglePaneZoom` action is not bound to any keys by default, but it can be accessed through the [command palette](./command-palette.md), which is bound to <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> by default.
 
 ## Marking a pane as read-only
 
@@ -153,8 +153,8 @@ You can mark a pane as read-only, which will prevent input from going into the t
 
 You can toggle read-only mode on a pane with the `toggleReadOnlyMode` command.
 
-```
-{ "command": "toggleReadOnlyMode" },
+```json
+{ "command": "toggleReadOnlyMode" }
 ```
 
 ## Customizing panes using key bindings
