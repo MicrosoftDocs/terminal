@@ -3,7 +3,7 @@ title: Windows Terminal tips and tricks
 description: In this page, you will find tips and tricks to help improve your Windows Terminal experience.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 08/30/2021
+ms.date: 10/08/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -34,24 +34,24 @@ There are several ways to interact with Windows Terminal using a mouse.
 
 ### Zoom with the mouse
 
-You can zoom the text window of Windows Terminal (making the text size larger or smaller) by holding <kbd>ctrl</kbd> and scrolling. The zoom will persist for that terminal session. If you want to change your font size, you can learn more about the font size feature on the [Profile - Appearance page](./customize-settings/profile-appearance.md#text).
+You can zoom the text window of Windows Terminal (making the text size larger or smaller) by holding <kbd>Ctrl</kbd> and scrolling. The zoom will persist for that terminal session. If you want to change your font size, you can learn more about the font size feature on the [Profile - Appearance page](./customize-settings/profile-appearance.md#text).
 
 ### Adjust background opacity with the mouse
 
-You can adjust the opacity of the background by holding <kbd>ctrl+shift</kbd> and scrolling. The opacity will persist for that terminal session. If you want to change your acrylic opacity for a profile, you can learn more about acrylic background effects on the [Profile - Appearance page](./customize-settings/profile-appearance.md#acrylic).
+You can adjust the opacity of the background by holding <kbd>Ctrl</kbd>+<kbd>Shift</kbd> and scrolling. The opacity will persist for that terminal session. If you want to change your acrylic opacity for a profile, you can learn more about acrylic background effects on the [Profile - Appearance page](./customize-settings/profile-appearance.md#opacity).
+
+> [!NOTE]
+> In [Windows Terminal Preview](https://aka.ms/terminal-preview) version 1.12, changing the background opacity with the mouse wheel will use vintage-style opacity by default, unless `useAcrylic` is set to true in your settings. Prior to 1.12, the terminal would always use acrylic for transparency.
 
 ### Open a hyperlink
 
 You can open a hyperlink from inside Windows Terminal with your mouse using <kbd>ctrl</kbd> + click.
 
-### Drag and drop file/folder to open ([Preview](https://aka.ms/terminal-preview))
+### Drag and drop file/folder to open
 
 You can drag and drop a file or folder over the New Tab button to open your default profile with that given file or folder. By default, this will open a new tab. You can hold <kbd>Alt</kbd> to open a new pane in your current tab or hold <kbd>Shift</kbd> to open a new window.
 
 ![Windows Terminal drag and drop](./images/drag-and-drop.gif)
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Copy/paste
 

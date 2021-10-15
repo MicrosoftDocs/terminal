@@ -3,7 +3,7 @@ title: Windows Terminal Appearance Profile Settings
 description: Learn how to customize the appearance profile settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 08/30/2021
+ms.date: 10/08/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -99,7 +99,7 @@ This sets the weight (lightness or heaviness of the strokes) for the profile's f
 > "fontWeight": "normal"
 > ```
 
-### Font features ([Preview](https://aka.ms/terminal-preview))
+### Font features
 
 This sets the [OpenType font features](/typography/opentype/spec/featurelist) for the given font.
 
@@ -122,10 +122,7 @@ This sets the [OpenType font features](/typography/opentype/spec/featurelist) fo
 }
 ```
 
-> [!IMPORTANT]
-> This feature only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
-### Font axes ([Preview](https://aka.ms/terminal-preview))
+### Font axes
 
 This sets the [OpenType font axes](/typography/opentype/spec/dvaraxisreg) for the given font.
 
@@ -297,7 +294,37 @@ This sets the transparency of the background image.
 
 ___
 
-## Acrylic
+## Transparency
+
+### Opacity ([Preview](https://aka.ms/terminal-preview))
+
+:::row:::
+:::column span="":::
+
+This sets the transparency of the window for the profile. This accepts an integer value from 0-100, representing a "percent opaque". `100` is "fully opaque", `50` is semi-transparent, and `0` is fully transparent.
+
+When `useAcrylic` is set to `true`, the window will use the acrylic material to create a blurred background for the terminal. When `useAcrylic` is set to false, the terminal will use a unblurred opacity.
+
+**Property name:** `opacity`
+
+**Necessity:** Optional
+
+**Accepts:** Number as a integer value from 0-100
+
+**Default value:** `100` when `useAcrylic` is false, `50` when `useAcrylic` is true.
+
+:::column-end:::
+:::column span="":::
+![Windows Terminal acrylic opacity](./../images/acrylic-opacity.gif)
+
+:::column-end:::
+:::row-end:::
+
+> [!IMPORTANT]
+> Prior to Windows Terminal version 1.12, this setting was `acrylicOpacity`, was a float that accepted 0.0-1.0 which defaulted to 0.5, and the opacity would only apply if `useAcrylic` was set to true. On 1.12+, `acrylicOpacity` will gracefully continue to work as the equivalent `opacity` value.
+
+> [!IMPORTANT]
+> Unblurred opacity (`"useAcrylic": false`) only works on Windows 11 or above with [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Enable acrylic
 
@@ -316,27 +343,6 @@ When this is set to `true`, the window will have an acrylic background. When it'
 :::column-end:::
 :::column span="":::
 ![Windows Terminal acrylic](./../images/acrylic.gif)
-
-:::column-end:::
-:::row-end:::
-
-### Acrylic opacity
-
-:::row:::
-:::column span="":::
-When `useAcrylic` is set to `true`, this sets the transparency of the window for the profile. This accepts floating point values from 0-1.
-
-**Property name:** `acrylicOpacity`
-
-**Necessity:** Optional
-
-**Accepts:** Number as a floating point value from 0-1
-
-**Default value:** `0.5`
-
-:::column-end:::
-:::column span="":::
-![Windows Terminal acrylic opacity](./../images/acrylic-opacity.gif)
 
 :::column-end:::
 :::row-end:::
@@ -423,6 +429,21 @@ This sets the background color of a selection within the profile. This will over
 **Necessity:** Optional
 
 **Accepts:** Color as a string in hex format: `"#rgb"` or `"#rrggbb"`
+
+### Adjust indistinguishable colors ([Preview](https://aka.ms/terminal-preview))
+
+When set to true, this will (when necessary) adjust the foreground color to make it more visible, based on the background color.
+
+**Property name:** `adjustIndistinguishableColors`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `true`
+
+> [!IMPORTANT]
+> This feature only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Cursor color
 

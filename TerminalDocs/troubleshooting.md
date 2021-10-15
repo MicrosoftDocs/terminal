@@ -3,7 +3,7 @@ title: Windows Terminal Troubleshooting
 description: Learn fixes to common obstacles in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 08/30/2021
+ms.date: 10/08/2021
 ms.topic: overview
 ms.localizationpriority: high
 ---
@@ -36,7 +36,7 @@ For example, the following setting will launch the "Ubuntu-18.04" distribution i
 ```
 
 > [!IMPORTANT]
-> On newer versions of Windows, `startingDirectory` can accept Linux-style paths in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+> On newer versions of Windows, `startingDirectory` can accept Linux-style paths.
 
 ## Setting the tab title
 
@@ -155,4 +155,7 @@ Press Ctrl + O and Ctrl + X to Save and Exit.
 
 ## How do I reset my settings in Windows Terminal back to the default settings?
 
-To reset your settings back to the original default settings, delete your [settings.json file](./get-started.md#settings-json-file). This will cause Windows Terminal to regenerate a settings.json file with the original default settings.
+To reset your settings back to the original default settings, delete your [settings.json file](./get-started.md#settings-json-file). This will cause Windows Terminal to regenerate a `settings.json` file with the original default settings.
+
+> [!IMPORTANT]
+> As of Windows Terminal version 1.10 or greater, you'll also need to delete the `state.json` file in the same directory as the `settings.json` file to fully reset the settings to the defaults.
