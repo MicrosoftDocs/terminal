@@ -133,15 +133,20 @@ ___
 
 ## Application-level commands
 
-### Quit
+### Quit ([Preview](https://aka.ms/terminal-preview))
+
 This closes all open terminal windows. A confirmation dialog will appear in the current window to ensure you'd like to close all windows.
 
 **Command name:** `quit`
 
 **Default Binding:**
+
 ```json
 { "command": "quit" }
 ```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Close window
 
