@@ -3,7 +3,7 @@ title: Windows Terminal Appearance Settings
 description: Learn how to customize appearance settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 08/30/2021
+ms.date: 10/08/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -104,7 +104,7 @@ When this is set to `true`, the tabs are moved into the title bar and the title 
 
 ___
 
-## Show acrylic in tab row ([Preview](https://aka.ms/terminal-preview))
+## Show acrylic in tab row
 
 :::row:::
 :::column span="":::
@@ -124,9 +124,6 @@ When this is set to `true`, the tab row is given an acrylic background at 50% op
 
 :::column-end:::
 :::row-end:::
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
