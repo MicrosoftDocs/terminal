@@ -793,6 +793,9 @@ This halves the size of the active pane and opens another. Without any arguments
 | `splitMode` | Optional | `"duplicate"` | Controls how the pane splits. Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane. |
 | `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
 
+> [!IMPORTANT]
+> The `"up"`, `"right"`, `"down"`, and `"left"` options for `split` are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 <br />
 
 ___

@@ -3,7 +3,7 @@ title: Windows Terminal Panes
 description: Learn how to split panes in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 10/08/2021
+ms.date: 10/15/2021
 ms.topic: how-to
 ---
 
@@ -16,6 +16,9 @@ Panes give you the ability to run multiple command-line applications next to eac
 ### Using the keyboard
 
 You can either create a new vertical or horizontal pane in Windows Terminal. Splitting vertically will open a new pane to the right of the focused pane and splitting horizontally will open a new pane below the focused pane. Using directional splits `up`, `right`, `down`, or `left` gives more options for where the new pane can go. `right` and `down` are equivalent to `vertical` and `horizontal`, whereas `up` and `left` allow you to put the new pane above and to the left of the focused pane respectively. To create a new vertical pane of your default profile, you can press the <kbd>Alt</kbd>+<kbd>Shift</kbd>+plus key combination. For a horizontal pane of your default profile, you can use <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd>.
+
+> [!IMPORTANT]
+> The `"up"`, `"right"`, `"down"`, and `"left"` options for `split` are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ![Windows Terminal create pane](./images/open-panes.gif)
 _Configuration: [Raspberry Ubuntu](./custom-terminal-gallery/raspberry-ubuntu.md)_
