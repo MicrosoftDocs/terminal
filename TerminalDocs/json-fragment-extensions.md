@@ -11,11 +11,11 @@ ms.topic: how-to
 
 JSON fragment extensions are snippets of JSON that application developers can write to add new profiles to users' settings, or even modify certain existing profiles. They can also be used to add new color schemes to users' settings.
 
-## Structure of the JSON files 
+## Structure of the JSON files
 
-The JSON file should be split up into 2 lists, one for profiles and one for schemes. Here is an example of a json file that adds a new profile, modifies an existing profile, and creates a new color scheme: 
+The JSON file should be split up into 2 lists, one for profiles and one for schemes. Here is an example of a json file that adds a new profile, modifies an existing profile, and creates a new color scheme:
 
-```JSON 
+```json
 {
   "profiles": [
     {
@@ -65,16 +65,16 @@ In the `"schemes"` list, a new color scheme called "Postmodern Tango Light" is d
 
 Of course, if the developer only wishes to add/modify profiles without adding color schemes (and vice-versa), only the relevant list needs to be present and the other list can be omitted.
 
-## How to determine the GUID of an existing profile 
+## How to determine the GUID of an existing profile
 
 The only profiles that can be modified through fragments are the default profiles, Command Prompt and PowerShell, as well as [dynamic profiles](./dynamic-profiles.md). To determine the GUID of the profile to be updated, use a Version 5 UUID generator with the following namespace GUID and name:
 
-- The namespace GUID: `{2BDE4A90-D05F-401C-9492-E40884EAD1D8}` 
+- The namespace GUID: `{2BDE4A90-D05F-401C-9492-E40884EAD1D8}`
 - The name of the profile to be updated 
 
 As a sanity check, a profile called 'Ubuntu' will get the generated GUID: `{2C4DE342-38B7-51CF-B940-2309A097F518}` 
 
-## Minimum requirements for settings added with fragments 
+## Minimum requirements for settings added with fragments
 
 There are some minimal restrictions on what can be added to user settings using JSON fragments:
 
@@ -85,7 +85,7 @@ There are some minimal restrictions on what can be added to user settings using 
 
 The location to place the JSON fragment files varies depending on the installation method of the application that wishes to place them.  
 
-### Microsoft Store applications 
+### Microsoft Store applications
 
 For applications installed through the Microsoft Store (or similar), the application must declare itself to be an app extension. More details on app extensions can be found in the [Microsoft Docs](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-an-extension) and the necessary section is replicated here. The appxmanifest file of the package must include: 
 
@@ -113,7 +113,7 @@ For applications installed through the Microsoft Store (or similar), the applica
 </Package>
 ```
 
-Key things to note: 
+Key things to note:
 
 - The `"Name"` field must be `com.microsoft.windows.terminal.settings` for Windows Terminal to be able to detect the extension.
 - The `"Id"` field can be filled out as the developer wishes.
@@ -133,3 +133,45 @@ In the second case, the installation is only for the current user. In this case,
 `C:\Users\<user>\AppData\Local\Microsoft\Windows Terminal\Fragments\{app-name}`
 
 Note that both the `ProgramData` and `LocalAppData` folders are known folders that the installer should be able to access. If in either case, if the `Windows Terminal\Fragments` directory does not exist, the installer should create it.
+
+## Import color schemes as a fragment
+
+To import multiple schemes, you can treat them as a fragment extension. This may be helpful to reduce the length of your `settings.json` file so that it appears less cluttered.
+
+1. Make a folder in `%localappdata%\Microsoft\Windows Terminal\Fragments`. For this example, we'll use `TestFragment` as the directory name.
+
+2. In the `TestFragment` directory, create a new `.json` file. It can be named anything (as long as the extension is .json). For this example, we'll call it `schemes.json`.
+
+3. In the `schemes.json` file, add all of your color schemes. For example:
+
+    ```json
+    {
+    "schemes": [
+      {
+        "name": "Banana Blueberry",
+        "black": "#17141f",
+        "red": "#ff6b7f",
+        "green": "#00bd9c",
+        "yellow": "#e6c62f",
+        "blue": "#22e8df",
+        "purple": "#dc396a",
+        "cyan": "#56b6c2",
+        "white": "#f1f1f1",
+        "brightBlack": "#495162",
+        "brightRed": "#fe9ea1",
+        "brightGreen": "#98c379",
+        "brightYellow": "#f9e46b",
+        "brightBlue": "#91fff4",
+        "brightPurple": "#da70d6",
+        "brightCyan": "#bcf3ff",
+        "brightWhite": "#ffffff",
+        "background": "#191323",
+        "foreground": "#cccccc",
+        "cursorColor": "#e07d13",
+        "selectionBackground": "#220525"
+      }
+    ]
+    }
+    ```
+
+4. After restarting Windows Terminal, you'll see that all the schemes from the `schemes.json` file are available in the terminal, without needing to be in the `settings.json` file.
