@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 # Advanced profile settings in Windows Terminal
 
-The settings listed below are specific to each unique profile. If you'd like a setting to apply to all of your profiles, you can add it to the `defaults` section above the list of profiles in your [settings.json file](../get-started.md#settings-json-file).
+The settings listed below are specific to each unique profile. If you'd like a setting to apply to all of your profiles, you can add it to the `defaults` section above the list of profiles in your [settings.json file](../install.md#settings-json-file).
 
 ```json
 "defaults":
@@ -117,11 +117,13 @@ This sets how the profile reacts to termination or failure to launch. `"graceful
 
 <br />
 
+> [!NOTE]
+> In Windows Command Prompt (cmd.exe), `exit` will return the return code of the previous command. If the command you typed before `exit` resulted in an error, then `"closeOnExit": "graceful"` will still show that error code, instead of closing the tab.
 ___
 
 ## Bell notification style
 
-Controls what happens when the application emits a BEL character. When set to `"all"`, the terminal will play a sound and flash the taskbar icon.
+Controls what happens when the application emits a BEL character. When set to `"all"`, the terminal will play a sound and flash the taskbar icon. When the terminal is not in focus, only the taskbar icon will flash.
 
 **Property name:** `bellStyle`
 

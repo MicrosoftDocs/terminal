@@ -11,7 +11,7 @@ ms.localizationpriority: high
 # Custom actions in Windows Terminal
 
 > [!IMPORTANT]
-> As of Windows Terminal version 1.4, the `keybindings` array has been renamed to `actions` inside the settings.json file. Support for the `keybindings` array still exists for backward compatibility, however the terminal will not automatically rename `keybindings` to `actions` inside your [settings.json file](../get-started.md#settings-json-file).
+> As of Windows Terminal version 1.4, the `keybindings` array has been renamed to `actions` inside the settings.json file. Support for the `keybindings` array still exists for backward compatibility, however the terminal will not automatically rename `keybindings` to `actions` inside your [settings.json file](../install.md#settings-json-file).
 
 You can create custom actions inside Windows Terminal that give you control of how you interact with the terminal. These actions will automatically be added to the command palette.
 
@@ -214,7 +214,7 @@ This opens the dropdown menu.
 
 ### Open settings files
 
-This opens either the settings UI, custom settings file ([`settings.json`](../get-started.md#settings-json-file)), or default settings file (`defaults.json`), depending on the `target` field.
+This opens either the settings UI, custom settings file ([`settings.json`](../install.md#settings-json-file)), or default settings file (`defaults.json`), depending on the `target` field.
 Without the `target` field, the custom settings file will be opened.
 
 **Command name:** `openSettings`
@@ -1188,6 +1188,7 @@ If you'd like to change the behavior of the `quakeMode` action, we recommended c
 
 ___
 
+## Unbind keys (disable keybindings)
 ## Run multiple actions ([Preview](https://aka.ms/terminal-preview))
 
 This action allows the user to bind multiple sequential actions to one command. 
@@ -1231,6 +1232,36 @@ ___
 
 ## Unbind keys
 
-This unbinds the associated keys from any command.
+You can disable keybindings or "unbind" the associated keys from any command. This may be necessary when using underlying terminal applications (such as VIM). The unbound key will pass to the underlying terminal.
 
 **Command name:** `unbound`
+
+**Example using unbound:**
+
+For example, to unbind the shortcut keys "alt+shift+-" and "alt+shift+=", include these commands in the **actions** section of your [settings.json file](../install.md#settings-json-file).
+
+```json
+{
+    "actions": [
+        { "command": "unbound", "keys": "alt+shift+-" },
+        { "command": "unbound", "keys": "alt+shift+=" }
+    ]
+}
+```
+
+**Example using null:**
+
+You can also unbind a keystroke that is bound by default to an action by setting "command" to null. This will also allow the keystroke to associate with the command line application setting instead of
+performing the default action.
+
+**Example:**
+
+```json
+{
+   "command" : null, "keys" : ["ctrl+v"]
+},
+```
+
+**Use-case scenario:**
+
+Windows Terminal uses the shortcut key binding <kbd>Ctrl</kbd>+<kbd>v</kbd> as the paste command. When working with a WSL command line, you may want to use a Linux application such as Vim to edit files. However, Vim relies on the <kbd>Ctrl</kbd>+<kbd>v</kbd> key binding to use [blockwise Visual mode](http://vimdoc.sourceforge.net/htmldoc/visual.html#CTRL-V). This key binding will be blocked, with the Windows Terminal paste command taking priority, unless the `unbound` setting is adjusted in your settings.json file so that the key binding will associate with the Vim command line app, rather than with the Windows Terminal binding.

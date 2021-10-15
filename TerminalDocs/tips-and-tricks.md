@@ -10,6 +10,36 @@ ms.localizationpriority: high
 
 # Windows Terminal tips and tricks
 
+## On first launch
+
+When you first install Windows Terminal, you will be greeted with a Windows PowerShell prompt. Windows Terminal ships with Windows PowerShell, Command Prompt, and Azure Cloud Shell profiles by default.
+
+In addition to these profiles, if you have any [Windows Subsystem for Linux (WSL)](/windows/wsl) distributions installed, the terminal will automatically create profiles for those distributions as well. If you would like to install additional WSL distributions on your machine, you can do so after installing terminal and on your next terminal launch, the profiles for those distributions will automatically appear. These profiles will have the Linux Tux image as their icon.
+
+> [!NOTE]
+> You can change the icon of each WSL distribution if desired. Specific distribution icons do not come shipped inside the terminal but can be downloaded and assigned using the terminal settings.
+
+## View default settings
+
+Windows Terminal comes with a large set of default settings, including [color schemes](./customize-settings/color-schemes.md) and [keyboard shortcuts](./customize-settings/actions.md) (now called "Custom actions"). If you’d like to view the default settings file, you can hold <kbd>Alt</kbd> and click on the Settings button inside the dropdown menu.
+
+## Global profile settings
+
+Windows Terminal enables you to apply a setting to every profile without having to duplicate the setting for each profile entry. This can be done by adding a setting inside the "defaults" array inside the [profiles](./customize-settings/profile-general.md) object. Learn more about [General profile settings](./customize-settings/profile-general.md), [Appearance profile settings](./customize-settings/profile-appearance.md), and [Advanced profile settings](./customize-settings/profile-advanced.md).
+
+```json
+"profiles":
+    {
+        "defaults":
+        {
+            // Put settings here that you want to apply to all profiles.
+            "fontFace": "Cascadia Code"
+        },
+        "list":
+        []
+    }
+```
+
 ## Rename a tab
 
 You can right click on a tab and select Rename Tab to rename a tab for that terminal session. Clicking this option in the context menu will change your tab title into a text field, where you can then edit the title. If you'd like to set the tab title for that profile for every terminal instance, you can learn more in the [Tab title tutorial](./tutorials/tab-title.md).
@@ -18,15 +48,25 @@ You can right click on a tab and select Rename Tab to rename a tab for that term
 
 ## Color a tab
 
-You can right click on a tab and select Color... to color the tab for that terminal session. You can select from a predefined list of colors or you can click Custom... to pick any color using the color picker or the RGB/HSV or hex fields.
+You can right-click on a tab and select **Color**... to color the tab for that terminal session. You can select from a predefined list of colors or you can select **Custom...** to pick any color using the color picker or the RGB/HSV or hex fields.
 
 ![Windows Terminal tab color](./images/tab-color.png)
 
 > [!TIP]
 > Use the hex field to set your tab to the same color as your background color for a seamless look.
 
-> [!NOTE]
-> While it is possible to [set the tab title from the commandline](./tutorials/tab-title.md) with escape sequences, it currently isn't possible to set the tab color in this way.
+The `tabColor` can be set as part of a profile. See [Profile - Appearance: Tab color](./customize-settings/profile-appearance.md#tab-color). For example:
+
+```json
+ {
+            "guid": "{1234abc-abcd-1234-12ab-1234abc}",
+            "name": "Windows PowerShell",
+            "background": "#012456",
+            "tabColor": "#012456",
+        },
+```
+
+The `tabColor` cannot be set as part of a color scheme. Additionally, while it is possible to [set the tab title from the commandline](./tutorials/tab-title.md) with escape sequences, it currently isn't possible to set the tab color in this way.
 
 ## Mouse interaction
 
@@ -63,6 +103,34 @@ Windows Terminal also includes a **[copyOnSelect](./customize-settings/interacti
 
 Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) applications as well as Windows applications that use virtual terminal (VT) input. This means applications such as [tmux](https://github.com/tmux/tmux/wiki) and [Midnight Commander](https://www.linuxhelp.com/how-to-install-midnight-commander-in-linux) will recognize when you select items in the Terminal window. If an application is in mouse mode, you can hold down <kbd>shift</kbd> to make a selection instead of sending VT input.
 
+## Send input commands with a key binding
+
+Windows Terminal gives you the ability to send input to your shell with a key binding. This can be done with the following structure inside the "actions" array of your settings.json file.
+
+```json
+{ "command": {"action": "sendInput", "input": ""}, "keys": "" }
+```
+
+You can also add a `"name": ""` value if desired.
+
+### Clear your screen
+
+Sending input to the shell with a keyboard shortcut can be useful for commands you run often. One example would be clearing your screen:
+
+```json
+{ "command": {"action": "sendInput", "input": "clear\r"}, "keys": "alt+k", "name": "clear terminal" }
+```
+
+### Navigate to parent directory
+
+Navigating to the parent directory with a key binding may also be helpful.
+
+```json
+{ "command": {"action": "sendInput", "input": "cd ..\r"}, "keys": "ctrl+up" }
+```
+
+You can also use this functionality to run builds or test scripts.
+
 ## Quake mode
 
 "Quake mode" is the name for the special mode the terminal enters when naming a window `_quake`. When a window is in quake mode:
@@ -81,7 +149,7 @@ Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) appli
 
 The quake mode window can be created either by binding the `quakeMode` action, or by manually running the command line:
 
-```
+```console
 wt -w _quake
 ```
 
