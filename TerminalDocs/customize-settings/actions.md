@@ -1022,6 +1022,7 @@ This resets the text size to the default value.
 
 ```json
 { "command": "resetFontSize", "keys": "ctrl+0" }
+{ "command": "resetFontSize", "keys": "ctrl+numpad_0" }
 ```
 
 ### Toggle pixel shader effects
