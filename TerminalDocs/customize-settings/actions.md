@@ -1018,10 +1018,10 @@ This resets the text size to the default value.
 
 **Command name:** `resetFontSize`
 
-**Default binding:**
+**Default bindings:**
 
 ```json
-{ "command": "resetFontSize", "keys": "ctrl+0" }
+{ "command": "resetFontSize", "keys": "ctrl+0" },
 { "command": "resetFontSize", "keys": "ctrl+numpad_0" }
 ```
 
