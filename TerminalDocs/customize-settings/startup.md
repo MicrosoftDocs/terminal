@@ -65,6 +65,28 @@ Note: if the Windows Terminal startup task entry is disabled either by org polic
 
 ___
 
+## Behavior on starting a new terminal session
+
+When set to `"defaultProfile"`, Windows Terminal will start a new session by opening a single tab with your default profile.
+
+When set to `"persistedWindowLayout"`, this enables Windows Terminal to save the layout of open windows on close, and restore all saved windows on starting a new session. Windows Terminal will save the layout of all open windows automatically to assist with restoring from crashes and will also save the layout when using the `quit` action. Additionally, closing the last open window by clicking the `X` button or using the `closeWindow` command will save the layout of that last window. 
+
+Note: Currently, Windows Terminal will save the following information
+- Each window's position, size, and name.
+- The tab layout of each window, including the layout and profile of each pane, but not any contents of those panes.
+
+**Property name:** `firstWindowPreference`
+
+**Necessity:** Optional
+
+**Accepts:** `"defaultProfile"`, `"persistedWindowLayout"`
+
+**Default value:** `"defaultProfile"`
+
+<br />
+
+___
+
 ## Launch mode
 
 This defines whether the terminal will launch as maximized, full screen, or in a window. Setting this to `focus` is equivalent to launching the terminal in the `default` mode, but with [focus mode](./actions.md#toggle-focus-mode) enabled. Similarly, setting this to `maximizedFocus` will result in launching the terminal in a maximized window with focus mode enabled.
