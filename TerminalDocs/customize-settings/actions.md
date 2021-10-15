@@ -771,14 +771,18 @@ This halves the size of the active pane and opens another. Without any arguments
 
 // In defaults.json
 { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-" },
-{ "command": { "action": "splitPane", "split": "vertical" }, "keys": "alt+shift+plus" }
+{ "command": { "action": "splitPane", "split": "vertical" }, "keys": "alt+shift+plus" },
+{ "command": { "action": "splitPane", "split": "up" } },
+{ "command": { "action": "splitPane", "split": "right" } },
+{ "command": { "action": "splitPane", "split": "down" } },
+{ "command": { "action": "splitPane", "split": "left" } }
 ```
 
 #### Actions
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
-| `split` | Required | `"vertical"`, `"horizontal"`, `"auto"` | How the pane will split. `"auto"` will split in the direction that provides the most surface area. |
+| `split` | Required | `"vertical"`, `"horizontal"`, `"auto"`, `"up"`, `"right"`, `"down"`, `"left"` | How the pane will split. `"auto"` will split in the direction that provides the most surface area. |
 | `commandline` | Optional | Executable file name as a string | Executable run within the pane. |
 | `startingDirectory` | Optional | Folder location as a string | Directory in which the pane will open. |
 | `tabTitle` | Optional | String | Title of the tab when the new pane is focused. |
