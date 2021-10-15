@@ -3,7 +3,7 @@ title: Windows Terminal Actions
 description: Learn how to create custom actions for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 07/14/2021
+ms.date: 10/15/2021
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -1052,7 +1052,7 @@ _This command is not currently bound in the default settings_.
 { "keys": "", "command": { "action": "globalSummon" } }
 ```
 
-#### Arguments
+#### Actions
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -1153,13 +1153,7 @@ If you'd like to change the behavior of the `quakeMode` action, we recommended c
 
 ___
 
-## Unbind keys
-
-This unbinds the associated keys from any command.
-
-**Command name:** `unbound`
-
-## Run Multiple Actions
+## Run multiple actions ([Preview](https://aka.ms/terminal-preview))
 
 This action allows the user to bind multiple sequential actions to one command. 
 
@@ -1171,8 +1165,7 @@ This action allows the user to bind multiple sequential actions to one command.
 | ---- | --------- | ------- | ----------- |
 | `actions` | Required | Array of Actions | The list of `action` to run. |
 
-
-#### Examples
+#### Example
 
 ```jsonc
 { "name": "Create My Layout", "command": { 
@@ -1182,8 +1175,10 @@ This action allows the user to bind multiple sequential actions to one command.
         { "action": "newTab", "tabTitle": "Work", "colorScheme": "One Half Dark" },
         { "action": "splitPane", "split": "vertical", "profile": "Windows PowerShell", "tabTitle": "Work", "colorScheme": "Campbell Powershell", },
         { "action": "splitPane", "split": "horizontal", "profile": "Windows PowerShell", "tabTitle": "Work", "colorScheme": "Campbell Powershell", },
+
         // Create a second tab
         { "action": "newTab", "tabTitle": "Misc"},
+
         // Go back to the first tab and zoom the first pane
         { "action": "prevTab", "tabSwitcherMode": "disabled" },
         { "action": "moveFocus", "direction": "first"},
@@ -1191,3 +1186,16 @@ This action allows the user to bind multiple sequential actions to one command.
         ]
 }}
 ```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+<br />
+
+___
+
+## Unbind keys
+
+This unbinds the associated keys from any command.
+
+**Command name:** `unbound`
