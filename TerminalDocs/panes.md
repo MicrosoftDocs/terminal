@@ -53,8 +53,7 @@ The terminal allows you to navigate between panes by using the keyboard. If you 
 
 ![Windows Terminal switch panes](./images/navigate-panes.gif)
 
-You can customize this by adding key bindings for the `moveFocus` command and setting the `direction` to either `down`, `left`, `right`, or `up`. Additionally, `direction` can be `previous` for the last used pane, or `previousInOrder` or `nextInOrder` for navigation by tree order. Lastly, you can navigate up the tree using the `parent` direction to select multiple panes, and then `child` to select fewer panes and move back down the tree. When multiple panes are selected you can perform actions  like if you had a single pane focused.
-You can customize this by adding key bindings for the `moveFocus` command and setting the `direction` to either `down`, `left`, `right`, or `up`. Additionally, `direction` can be `previous` for the last used pane, `previousInOrder` or `nextInOrder` for navigation by tree order, or `first` for the first pane.
+You can customize this by adding key bindings for the `moveFocus` command and setting the `direction` to either `down`, `left`, `right`, or `up`. Additionally, `direction` can be `previous` for the last used pane, or `previousInOrder` or `nextInOrder` for navigation by tree order, or `first` for the first pane. Lastly, you can navigate up the tree using the `parent` direction to select multiple panes, and then `child` to select fewer panes and move back down the tree. When multiple panes are selected you can perform actions  like if you had a single pane focused.
 
 ```json
 { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" },
@@ -64,19 +63,13 @@ You can customize this by adding key bindings for the `moveFocus` command and se
 { "command": { "action": "moveFocus", "direction": "previous" } },
 { "command": { "action": "moveFocus", "direction": "previousInOrder" } },
 { "command": { "action": "moveFocus", "direction": "nextInOrder" } },
+{ "command": { "action": "moveFocus", "direction": "first" } },
 { "command": { "action": "moveFocus", "direction": "parent" } },
 { "command": { "action": "moveFocus", "direction": "child" } }
 ```
 
 > [!IMPORTANT]
-> The `previous`, `previousInOrder`, and `nextInOrder` directions are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-> The `parent`, and `child` directions are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
-{ "command": { "action": "moveFocus", "direction": "first" } }
-```
-
-> [!IMPORTANT]
-> The `previousInOrder`, and `nextInOrder`, and `first` directions are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+> The `first`, `parent`, and `child` directions are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ## Swapping panes
 
