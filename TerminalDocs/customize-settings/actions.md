@@ -233,6 +233,18 @@ Without the `target` field, the custom settings file will be opened.
 | ---- | --------- | ------- | ----------- |
 | `target` | Optional | `"settingsFile"`, `"defaultsFile"`, `"settingsUI"`, `"allFiles"` | The settings file to open. |
 
+### Open system menu
+
+Opens the system menu at the top left corner of the window.
+
+**Command name:** `openSystemMenu`
+
+**Default binding:**
+
+```json
+{ "command": "openSystemMenu", "keys": "alt+space" }
+```
+
 ### Toggle full screen
 
 This allows you to switch between full screen and default window sizes.
@@ -293,18 +305,6 @@ _This command is not currently bound in the default settings_.
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `input` | Required | String | The text input to feed into the shell. |
-
-### Open system menu
-
-Opens the system menu at the top left corner of the window.
-
-**Command name:** `openSystemMenu`
-
-**Default binding:**
-
-```json
-{ "command": "openSystemMenu", "keys": "alt+space" }
-```
 
 <br />
 
