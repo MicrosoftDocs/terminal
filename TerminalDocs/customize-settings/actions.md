@@ -133,6 +133,16 @@ ___
 
 ## Application-level commands
 
+### Quit
+This closes all open terminal windows. A confirmation dialog will appear in the current window to ensure you'd like to close all windows.
+
+**Command name:** `quit`
+
+**Default Binding:**
+```json
+{ "command": "quit" }
+```
+
 ### Close window
 
 :::row:::
