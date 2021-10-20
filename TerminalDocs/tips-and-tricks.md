@@ -23,7 +23,7 @@ In addition to these profiles, if you have any [Windows Subsystem for Linux (WSL
 
 Windows Terminal comes with a large set of default settings, including [color schemes](./customize-settings/color-schemes.md) and [keyboard shortcuts](./customize-settings/actions.md) (now called "Custom actions"). If you’d like to view the default settings file, you can hold <kbd>Alt</kbd> and click on the Settings button inside the dropdown menu.
 
-## Global profile settings
+## Default profile settings
 
 Windows Terminal enables you to apply a setting to every profile without having to duplicate the setting for each profile entry. This can be done by adding a setting inside the "defaults" array inside the [profiles](./customize-settings/profile-general.md) object. Learn more about [General profile settings](./customize-settings/profile-general.md), [Appearance profile settings](./customize-settings/profile-appearance.md), and [Advanced profile settings](./customize-settings/profile-advanced.md).
 
@@ -105,7 +105,7 @@ Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) appli
 
 ## Send input commands with a key binding
 
-Windows Terminal gives you the ability to send input to your shell with a key binding. This can be done with the following structure inside the "actions" array of your settings.json file.
+Windows Terminal gives you the ability to send input to your shell with a key binding. This can be done with the following structure inside the `"actions"` array of your settings.json file.
 
 ```json
 { "command": {"action": "sendInput", "input": ""}, "keys": "" }
