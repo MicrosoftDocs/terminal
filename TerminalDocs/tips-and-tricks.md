@@ -78,7 +78,7 @@ You can zoom the text window of Windows Terminal (making the text size larger or
 
 ### Adjust background opacity with the mouse
 
-You can adjust the opacity of the background by holding <kbd>Ctrl</kbd>+<kbd>Shift</kbd> and scrolling. The opacity will persist for that terminal session. If you want to change your acrylic opacity for a profile, you can learn more about acrylic background effects on the [Profile - Appearance page](./customize-settings/profile-appearance.md#opacity).
+You can adjust the opacity of the background by holding <kbd>Ctrl</kbd>+<kbd>Shift</kbd> and scrolling. The opacity will persist for that terminal session. If you want to change your acrylic opacity for a profile, you can learn more about acrylic background effects on the [Profile - Appearance page](./customize-settings/profile-appearance.md#transparency).
 
 > [!NOTE]
 > In [Windows Terminal Preview](https://aka.ms/terminal-preview) version 1.12, changing the background opacity with the mouse wheel will use vintage-style opacity by default, unless `useAcrylic` is set to true in your settings. Prior to 1.12, the terminal would always use acrylic for transparency.
