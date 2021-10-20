@@ -1188,7 +1188,6 @@ If you'd like to change the behavior of the `quakeMode` action, we recommended c
 
 ___
 
-## Unbind keys (disable keybindings)
 ## Run multiple actions ([Preview](https://aka.ms/terminal-preview))
 
 This action allows the user to bind multiple sequential actions to one command. 
@@ -1230,7 +1229,7 @@ This action allows the user to bind multiple sequential actions to one command.
 
 ___
 
-## Unbind keys
+## Unbind keys (disable keybindings)
 
 You can disable keybindings or "unbind" the associated keys from any command. This may be necessary when using underlying terminal applications (such as VIM). The unbound key will pass to the underlying terminal.
 
@@ -1238,7 +1237,7 @@ You can disable keybindings or "unbind" the associated keys from any command. Th
 
 **Example using unbound:**
 
-For example, to unbind the shortcut keys "alt+shift+-" and "alt+shift+=", include these commands in the **actions** section of your [settings.json file](../install.md#settings-json-file).
+For example, to unbind the shortcut keys <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd>" and <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>=</kbd>", include these commands in the `actions` section of your [settings.json file](../install.md#settings-json-file).
 
 ```json
 {
@@ -1251,10 +1250,7 @@ For example, to unbind the shortcut keys "alt+shift+-" and "alt+shift+=", includ
 
 **Example using null:**
 
-You can also unbind a keystroke that is bound by default to an action by setting "command" to null. This will also allow the keystroke to associate with the command line application setting instead of
-performing the default action.
-
-**Example:**
+You can also unbind a keystroke that is bound by default to an action by setting `"command"` to `null`. This will also allow the keystroke to associate with the command line application setting instead of performing the default action.
 
 ```json
 {
@@ -1264,4 +1260,4 @@ performing the default action.
 
 **Use-case scenario:**
 
-Windows Terminal uses the shortcut key binding <kbd>Ctrl</kbd>+<kbd>v</kbd> as the paste command. When working with a WSL command line, you may want to use a Linux application such as Vim to edit files. However, Vim relies on the <kbd>Ctrl</kbd>+<kbd>v</kbd> key binding to use [blockwise Visual mode](http://vimdoc.sourceforge.net/htmldoc/visual.html#CTRL-V). This key binding will be blocked, with the Windows Terminal paste command taking priority, unless the `unbound` setting is adjusted in your settings.json file so that the key binding will associate with the Vim command line app, rather than with the Windows Terminal binding.
+Windows Terminal uses the shortcut key binding <kbd>Ctrl</kbd>+<kbd>V</kbd> as the paste command. When working with a WSL command line, you may want to use a Linux application such as Vim to edit files. However, Vim relies on the <kbd>Ctrl</kbd>+<kbd>v</kbd> key binding to use [blockwise Visual mode](http://vimdoc.sourceforge.net/htmldoc/visual.html#CTRL-V). This key binding will be blocked, with the Windows Terminal paste command taking priority, unless the `unbound` setting is adjusted in your settings.json file so that the key binding will associate with the Vim command line app, rather than with the Windows Terminal binding.
