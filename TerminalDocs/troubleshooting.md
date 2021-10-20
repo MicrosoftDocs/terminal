@@ -157,7 +157,5 @@ Press Ctrl + O and Ctrl + X to Save and Exit.
 
 To reset your settings back to the original default settings, delete your [settings.json file](./install.md#settings-json-file). This will cause Windows Terminal to regenerate a settings.json file with the original default settings.
 
-To reset your settings back to the original default settings, delete your [settings.json file](./get-started.md#settings-json-file). This will cause Windows Terminal to regenerate a `settings.json` file with the original default settings.
-
 > [!IMPORTANT]
 > As of Windows Terminal version 1.10 or greater, you'll also need to delete the `state.json` file in the same directory as the `settings.json` file to fully reset the settings to the defaults.
