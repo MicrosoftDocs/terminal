@@ -2,8 +2,8 @@
   items: 
     - name: Overview
       href: index.md
-    - name: Get started
-      href: get-started.md
+    - name: Install
+      href: install.md
     - name: Customize settings
       items:
         - name: Startup

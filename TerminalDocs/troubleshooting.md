@@ -3,7 +3,7 @@ title: Windows Terminal Troubleshooting
 description: Learn fixes to common obstacles in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 02/25/2021
+ms.date: 10/08/2021
 ms.topic: overview
 ms.localizationpriority: high
 ---
@@ -35,9 +35,12 @@ For example, the following setting will launch the "Ubuntu-18.04" distribution i
 }
 ```
 
+> [!IMPORTANT]
+> On newer versions of Windows, `startingDirectory` can accept Linux-style paths.
+
 ## Setting the tab title
 
-To have the shell automatically set your tab title, [visit the set the tab title tutorial](./tutorials/tab-title.md). If you want to set your own tab title, open the [settings.json file](./get-started.md#settings-json-file) and follow these steps:
+To have the shell automatically set your tab title, [visit the set the tab title tutorial](./tutorials/tab-title.md). If you want to set your own tab title, open the [settings.json file](./install.md#settings-json-file) and follow these steps:
 
 1. In the profile for the command line of your choice, add `"suppressApplicationTitle": true` to suppress any title change events that get sent from the shell. Adding *only* this setting to your profile will set the tab title to the name of your profile.
 
@@ -53,21 +56,13 @@ Visit the [Command line arguments page](./command-line-arguments.md) to learn ho
 
 ## Problem setting `startingDirectory`
 
-If the `startingDirectory` is being ignored in your profile, first check to make sure the syntax is correct in your [settings.json file](./get-started.md#settings-json-file). To help you check this syntax, `"$schema": "https://aka.ms/terminal-profiles-schema"` is automatically injected. Some applications, like [Visual Studio Code](https://code.visualstudio.com/download), can use that injected schema to validate your json file as you make edits.
+If the `startingDirectory` is being ignored in your profile, first check to make sure the syntax is correct in your [settings.json file](./install.md#settings-json-file). To help you check this syntax, `"$schema": "https://aka.ms/terminal-profiles-schema"` is automatically injected. Some applications, like [Visual Studio Code](https://code.visualstudio.com/download), can use that injected schema to validate your json file as you make edits.
 
 If your settings are correct, you may be running a startup script that sets the starting directory of your terminal separately. For example, PowerShell has its own separate concept of profiles. If you are changing your starting directory there, it will take precedence over the setting defined in Windows Terminal.
 
 Alternatively, if you are running a script using the `commandline` profile setting, it may be that you are setting the location there. Similar to PowerShell profiles, your commands there take precedence over the `startingDirectory` profile setting.
 
 The purpose of `startingDirectory` is to launch a new Windows Terminal instance in the given directory. If the terminal runs any code that changes its directory, that may be a good place to take a look.
-
-## Deleting a profile
-
-By default, Windows Terminal ships with a built-in PowerShell and a Command Prompt profile. The terminal will also autodetect if other command line applications are installed, such as PowerShell Core, WSL distributions (Ubuntu, Debian, etc), and Azure Cloud Shell. We call these types of automatically generated profiles "Dynamic profiles".
-
-For both built-in and dynamic profiles, deleting the profile from your [settings.json file](./get-started.md#settings-json-file) will not remove it from your profiles. Built-in profiles are defined in `defaults.json`, so they're always available. Dynamic profiles will attempt to create a JSON stub for their profile in your `settings.json` file whenever a profile is not already present in the file.
-
-The only way to truly remove these profiles from the list is by "hiding" them. To hide a profile, add the property `"hidden": true` to the profile.
 
 ## Ctrl+= does not increase the font size
 
@@ -79,7 +74,7 @@ If you would like to disable this feature in order for `Ctrl+=` to work properly
 
 Change the 'Switch Keyboard Layout' option to 'Not Assigned' (or off of <kbd>ctrl+shift</kbd>), then select **OK** and then **Apply**. <kbd>ctrl+shift+0</kbd> should now work as a key binding and is passed through to the terminal.
 
-On the other hand, if you do use this hotkey feature for multiple input languages, you can [configure your own custom key binding](./customize-settings/actions.md) in your [settings.json file](./get-started.md#settings-json-file).
+On the other hand, if you do use this hotkey feature for multiple input languages, you can [configure your own custom key binding](./customize-settings/actions.md) in your [settings.json file](./install.md#settings-json-file).
 
 ## The text is blurry
 
@@ -160,4 +155,7 @@ Press Ctrl + O and Ctrl + X to Save and Exit.
 
 ## How do I reset my settings in Windows Terminal back to the default settings?
 
-To reset your settings back to the original default settings, delete your [settings.json file](./get-started.md#settings-json-file). This will cause Windows Terminal to regenerate a settings.json file with the original default settings.
+To reset your settings back to the original default settings, delete your [settings.json file](./install.md#settings-json-file). This will cause Windows Terminal to regenerate a settings.json file with the original default settings.
+
+> [!IMPORTANT]
+> As of Windows Terminal version 1.10 or greater, you'll also need to delete the `state.json` file in the same directory as the `settings.json` file to fully reset the settings to the defaults.
