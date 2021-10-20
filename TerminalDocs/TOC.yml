@@ -42,8 +42,8 @@
       href: tips-and-tricks.md
     - name: Tutorials
       items:
-        - name: Powerline setup
-          href: tutorials/powerline-setup.md
+        - name: Custom prompt setup
+          href: tutorials/custom-prompt-setup.md
         - name: SSH
           href: tutorials/ssh.md
         - name: Set the tab title
