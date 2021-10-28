@@ -60,6 +60,23 @@ When this is set to `true` and you copy text in a rectangular (block) selection 
 
 ___
 
+## Trim trailing whitespace on paste
+
+When enabled, the Terminal will automatically trim trailing whitespace characters when pasting text to the Terminal.
+
+**Property name:** `trimPaste`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `true`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+___
+
 ## Word delimiters
 
 This determines the word delimiters used in a double-click selection. Word delimiters are characters that specify where the boundary is between two words. The most common examples are spaces, semicolons, commas, and periods.
