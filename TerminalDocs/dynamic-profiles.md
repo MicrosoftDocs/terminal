@@ -156,9 +156,8 @@ Assuming that you've installed [Visual Studio 2019 Enterprise](https://visualstu
 
 ```json
 {
-    "name": "Developer Command Prompt for VS 2019",
-    "commandline": "powershell.exe -noe -c \"&{Import-Module \"\"\"C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/Common7/Tools/Microsoft.VisualStudio.DevShell.dll\"\"\"; Enter-VsDevShell 994a9d58}\"",
-    "startingDirectory": "%USERPROFILE%"
+    "name": "Developer Powershell for VS 2019",
+    "commandline": "powershell.exe -noe -c \"&{Import-Module \"\"\"C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/Common7/Tools/Microsoft.VisualStudio.DevShell.dll\"\"\"; Enter-VsDevShell 994a9d58}\""
 }
 ```
 
