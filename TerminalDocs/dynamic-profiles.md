@@ -162,8 +162,9 @@ Assuming that you've installed [Visual Studio 2019 Enterprise](https://visualstu
 ```
 
 An easy way to figure out the `commandline` to use for your Visual Studio instance is:
-1. Find the shortcut to `Developer Powershell for VS 2019` in the (Windows 10) start menu
+1. Find the shortcut to `Developer Powershell for VS 2019` in the start menu
 2. Right-click and select `Open File Location`
 3. Right-click and select `Properties` on the shortcut
 4. Inspect the `Target` field. It will be some value like `C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -noe -c "&{Import-Module """C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell 994a9d58}"`
-5. The main things to copy to `commandline` property in your Windows Terminal configuration is the file path for the `Import-Module` and the unique instance ID used with the `Enter-VsDevShell` command.
+5. Use `Target` field value to update the file path for `Import-Module` in the profile `commandline`
+6. Use `Target` field value to update the unique instance ID used with the `Enter-VsDevShell` command in the profile `commandline`
