@@ -28,6 +28,10 @@ No, mixing administrator-level permission tabbed shells with those that do not h
 
 No, Visual Studio Code is xtermjs and written in TypeScript while Windows Terminal is native code.
 
+## What shells does Windows Terminal support?
+
+Windows Terminal will support any command line or shell that you have on your machine, including those that are included with Windows like PowerShell or Windows Command Prompt (cmd.exe), as well as any Linux distribution that can be installed with [WSL](/windows/wsl/), Azure Cloud Shell, Git Bash, etc. The terminal will automatically detect when you've installed a Linux distribution with WSL and create a profile for you. It can also save your Azure credentials, so you can quickly log in quickly to Azure Cloud Shell.
+
 ## How can I manually add a shell?
 
 In your [settings.json file](./install.md#settings-json-file), you can create or modify profiles that run any command-line executable. In the settings.json file, set "commandline" to whatever you want. For example, powershell --> "pwsh.exe".
@@ -53,34 +57,29 @@ For example:
 }
 ```
 
-<!-- In progress
-
 ## What sort of features have open-source community contributors added to Windows Terminal?
 
-https://channel9.msdn.com/Blogs/One-Dev-Minute/What-kinds-of-features-have-community-members-made--One-Dev-Question
-
-## To contribute or file requests
-
-Visit the [Windows Terminal open source repo on GitHub](https://github.com/microsoft/terminal).
-
-## What shells does Windows Terminal support?
-
-https://channel9.msdn.com/Blogs/One-Dev-Minute/What-shells-does-Terminal-support--One-Dev-Question
+There have been a wide variety of [contributions](https://github.com/microsoft/terminal/pulls?q=is%3Apr+is%3Aclosed) to Windows Terminal, including bug fixes, identifying and discussing [issues](https://github.com/microsoft/terminal/issues), [contributing to this documentation](/contribute/), but a few of our favorite features that have come from community contributions have included support for [background images and gifs](./customize-settings/profile-appearance.md#background-images-and-icons), [retro effects](./customize-settings/profile-appearance.md#retro-terminal-effects), and [tab coloring](./customize-settings/profile-appearance.md#tab-color), just to name a few. Learn more about [how to contribute](https://github.com/microsoft/terminal/blob/main/CONTRIBUTING.md).
 
 ## What is conhost.exe?
 
-https://github.com/Microsoft/terminal#the-windows-console-host
+The Windows Console host, conhost.exe, is Windows' original command-line user experience. It also hosts Windows' command-line infrastructure and the Windows Console API server, input engine, rendering engine, user preferences, etc. A primary goal of Windows Console is to maintain backward compatibility, thus adding new features became prohibitive and let to the creation of the Windows Terminal. Learn more in the [Windows Terminal open-source repo](https://github.com/Microsoft/terminal#the-windows-console-host) and in the [WIndows Console docs](/windows/console/definitions#console-host).
 
-## Is saving a terminal session, a status bar, or settings sync on the development roadmap?
+## Can I save the layout of all of my open console windows when closing Windows Terminal and restore them when starting a new session?
+
+Yes! As of [Windows Terminal Preview v1.12.2922.0](https://github.com/microsoft/terminal/releases/tag/v1.12.2922.0), you can now save window pane layouts upon closing a terminal session with the [firstWindowPreference](./customize-settings/startup.md#behavior-when-starting-a-new-terminal-session-preview) global setting.
 
 ## What is being planned for Windows Terminal? Is there a development roadmap or feature request list that I can contribute to?
 
-https://github.com/microsoft/terminal/blob/main/doc/terminal-v2-roadmap.md
+Windows Terminal is under very active development. You can view the team's plans on the [Terminal 2.0 Roadmap](https://github.com/microsoft/terminal/blob/main/doc/terminal-v2-roadmap.md) document in the open-source terminal repo. New features go into [Windows Terminal Preview](https://aka.ms/terminal-preview) first, then typically a month after they've been in Preview, those features move into [Windows Terminal](https://aka.ms/terminal).
 
-## If you get several shells arranged just the way you like in a Windows Terminal session and want to save that configuration, similar to how one would save a tmux or vim session...
+You can contribute feature Requests or ideas, as well as bug reports, security vulnerabilities, or documentation issues by [filing an issue in the terminal repo](https://github.com/microsoft/terminal/issues/new/choose).
+
+![Screenshot of filing an issue in terminal repo](./images/file-issue.png)
+
+<!-- In progress
 
 ## Is there a way to sync your terminal settings across devices?
 
 ## Can we expect a status bar on the bottom of Windows Terminal? 
-
 -->
