@@ -60,7 +60,7 @@ When this is set to `true` and you copy text in a rectangular (block) selection 
 
 ___
 
-## Trim trailing whitespace on paste
+## Trim trailing whitespace on paste ([Preview](https://aka.ms/terminal-preview))
 
 When enabled, the Terminal will automatically trim trailing whitespace characters when pasting text to the Terminal.
 
