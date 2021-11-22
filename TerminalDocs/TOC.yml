@@ -62,6 +62,8 @@
           href: custom-terminal-gallery/retro-command-prompt.md
     - name: FAQs
       href: faq.yml
+    - name: Samples
+      href: samples.md
     - name: Troubleshooting
       href: troubleshooting.md
 
