@@ -44,7 +44,8 @@ sections:
 
       - question: What is the difference between Windows Terminal and Windows Terminal (Preview)?
         answer: |
-          Windows Terminal is [open-source](https://github.com/microsoft/terminal) and under active development. The recommended way to [install](./install.md) is via the Microsoft Store, which will provide automatic updates whenever they are released. [Windows Terminal](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab) stable public release receives frequent updates, but the development team has also provided the [Windows Terminal Preview]() release for those interested in trying the latest features as they are developed.
+          [Windows Terminal](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab) is the stable public release and receives regular updates that have been tested and debugged in the preview release. The recommended way to [install](./install.md) is via the Microsoft Store, which will provide automatic updates whenever they are released.
+          [Windows Terminal Preview](https://www.microsoft.com/p/windows-terminal-preview/9n8g5rfz9xk3#activetab=pivot:overviewtab) is a release for those interested in trying the latest features as they are being developed, tested for bugs, and becoming stable enough to be added to the main terminal release. Features from this release are documented with the (Preview) tag.
 
       - question: What alternative ways are there to install Windows Terminal?
         answer: |
