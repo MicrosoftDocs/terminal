@@ -39,6 +39,8 @@ sections:
       - question: How can I manually add a shell?
         answer: |
           In your [settings.json file](./install.md#settings-json-file), you can create or modify profiles that run any command-line executable. In the settings.json file, set "commandline" to whatever you want. For example, powershell --> "pwsh.exe".
+          You can also add a profile using the terminal settings ui by scrolling to the bottom of your profiles list and selecting "+ Add a new profile".
+          ![Screenshot of settings add a profile](./images/settings-add-a-profile.png)
 
       - question: What is the difference between Windows Terminal and Windows Terminal (Preview)?
         answer: |
@@ -48,7 +50,7 @@ sections:
         answer: |
           While we recommend installing Windows Terminal [using the Microsoft Store](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab), you can also install using [Windows Package Manager](https://github.com/Microsoft/terminal#via-windows-package-manager-cli-aka-winget), [GitHub](https://github.com/Microsoft/terminal#via-github), [Chocolatey](https://github.com/Microsoft/terminal#via-chocolatey-unofficial), or [Scoop](https://github.com/Microsoft/terminal#via-scoop-unofficial).
 
-      - question: Is it possible to initialize Windows Terminal profile with a batch file?
+      - question: Is it possible to initialize a Windows Terminal profile with a batch file?
         answer: |
           Yes. You first need to go to the [Profiles](./customize-settings/profile-general.md) section of your [settings.json file](./install.md#settings-json-file). Using the [`"commandline":` property](./customize-settings/profile-general.md#command-line), you can specify any batch file, command, ssh connection, or executable that you want to run as a profile in Windows Terminal. You just need to enter the path to the file that you want to run.
 
@@ -60,6 +62,8 @@ sections:
           "name": "Batch Profile"
           }
           ```
+          This can also be done in the Settings UI. Select "+ Add a new profile" > "+ New empty profile". Browse to the starting directory where your batch file (or SSH connection, executable, command file, etc) is located. Give the profile a name and save.
+          ![Screenshot of settings add an batch file profile](./images/settings-batch-file.png)
 
       - question: What sort of features have open-source community contributors added to Windows Terminal?
         answer: |
