@@ -40,7 +40,7 @@ sections:
         answer: |
           In your [settings.json file](./install.md#settings-json-file), you can create or modify profiles that run any command-line executable. In the settings.json file, set "commandline" to whatever you want. For example, powershell --> "pwsh.exe".
           You can also add a profile using the terminal settings ui by scrolling to the bottom of your profiles list and selecting "+ Add a new profile".
-          ![Screenshot of settings add a profile](./images/settings-add-a-profile.png)
+          ![Screenshot of settings add a profile](./images/settings-add-profile.png)
 
       - question: What is the difference between Windows Terminal and Windows Terminal (Preview)?
         answer: |
