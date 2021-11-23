@@ -12,9 +12,9 @@ ms.topic: tutorial
 
 Typically, the "new tab" and "split pane" actions will always open a new tab/pane in whatever the `startingDirectory` is for that profile. However, on other platforms, it's common for new tabs to automatically use the working directory of the current tab as the starting directory for a new tab. This allows the user to quickly multitask in a single directory. 
 
-Unfortunatly, on Windows, it's tricky to determine what the current working directory ("CWD") for a process is. Even if we were able to look it up, not all applications actually set their CWD as they navigate. Notably, Windows PowerShell doesn't change it's CWD as you `cd` around the file system! Duplicating the CWD of PowerShell automatically would almost always be wrong. 
+Unfortunately, on Windows, it's tricky to determine what the current working directory ("CWD") for a process is. Even if we were able to look it up, not all applications actually set their CWD as they navigate. Notably, Windows PowerShell doesn't change its CWD as you `cd` around the file system! Duplicating the CWD of PowerShell automatically would almost always be wrong.
 
-Fortunately, there's a workaround. Applications can emit a special escape sequence to manually tell the Terminal what the CWD should be. ently focused pane. If you want to customize what is set as the tab title, follow this tutorial.
+Fortunately, there's a workaround. Applications can emit a special escape sequence to manually tell the Terminal what the CWD should be.
 
 In this tutorial, you learn how to:
 
