@@ -50,9 +50,9 @@ setx PROMPT %PROMPT%
 
 #### PowerShell: `powershell.exe` or `pwsh.exe`
 
-If you've never changed your PowerShell prompt before, you should check out [about_Prompts](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_prompts) first.
+If you've never changed your PowerShell prompt before, you should check out [about_Prompts](/powershell/module/microsoft.powershell.core/about/about_prompts) first.
 
-Add the following to your [PowerShell profile](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles):
+Add the following to your [PowerShell profile](/powershell/module/microsoft.powershell.core/about/about_profiles):
 
 ```powershell
 function prompt {
@@ -112,7 +112,7 @@ To open a new tab with the same path (and profile) as the currently active termi
         { "command": "duplicateTab", "keys": "ctrl+shift+d" },
 ```
 
-(see [`duplicateTab`](../customize-settings/actions#duplicate-tab)) for more details.
+(see [`duplicateTab`](../customize-settings/actions.md#duplicate-tab)) for more details.
 
 ### Open a new pane with `splitPane`
 
@@ -122,7 +122,7 @@ To open a new pane with the same path (and profile) as the currently active term
         { "command": { "action": "splitPane", "splitMode": "duplicate" } },
 ```
 
-(see [`splitPane`](../customize-settings/actions#split-a-pane)) for more details.
+(see [`splitPane`](../customize-settings/actions.md#split-a-pane)) for more details.
 
 ## Using the menu to duplicate the path
 
