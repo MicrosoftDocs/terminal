@@ -50,9 +50,9 @@ setx PROMPT %PROMPT%
 
 #### PowerShell: `powershell.exe` or `pwsh.exe`
 
-If you've never changed your PowerShell prompt before, you should check out [about_Prompts](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.2) first.
+If you've never changed your PowerShell prompt before, you should check out [about_Prompts](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_prompts) first.
 
-Add the following to your [PowerShell profile](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.2#the-profile-files):
+Add the following to your [PowerShell profile](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles):
 
 ```powershell
 function prompt {
@@ -96,6 +96,10 @@ PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(
 
 The `PROMPT_COMMAND` variable in bash tells bash what command to run before displaying the prompt. The `printf` statement is what we're using to append the sequence for setting the working directory with the Terminal. The `$(wslpath -w "$PWD")` bit will invoke the `wslpath` executable to convert the current directory into it's Windows-like path. The `${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}` bit is [some bash magic](https://unix.stackexchange.com/a/466100) to make sure we append this command to any existing command (if you've already set `PROMPT_COMMAND` somewhere else.)
 
+
+> [!NOTE]
+> Don't see your favorite shell here? If you figure it out, feel free to open a PR to contribute a solution for your preferred shell!
+
 ## Using actions to duplicate the path
 
 Once you've got the shell configured to tell the Terminal what the current directory is, opening a new tab or pane with that path is easy.
@@ -108,7 +112,7 @@ To open a new tab with the same path (and profile) as the currently active termi
         { "command": "duplicateTab", "keys": "ctrl+shift+d" },
 ```
 
-(see [`duplicateTab`](customize-settings/actions#duplicate-tab)) for more details.
+(see [`duplicateTab`](../customize-settings/actions#duplicate-tab)) for more details.
 
 ### Open a new pane with `splitPane`
 
@@ -118,7 +122,7 @@ To open a new pane with the same path (and profile) as the currently active term
         { "command": { "action": "splitPane", "splitMode": "duplicate" } },
 ```
 
-(see [`splitPane`](customize-settings/actions#split-a-pane)) for more details.
+(see [`splitPane`](../customize-settings/actions#split-a-pane)) for more details.
 
 ## Using the menu to duplicate the path
 
