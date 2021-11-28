@@ -59,7 +59,7 @@ If you are only interested in using Oh My Posh with PowerShell, you can follow t
 
     ```powershell
     Import-Module oh-my-posh
-    Set-PoshPrompt -Theme paradox
+    Set-Theme -Name paradox
     ```
 
 Now, each new PowerShell instance will start by importing Oh My Posh and setting your command line theme.
