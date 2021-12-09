@@ -29,6 +29,8 @@ Oh My Posh and Terminal-Icons use glyphs in order to style the prompt. If your f
 
 After downloading, you will need to unzip and install the font on your system. ([How to add a new font to Windows](https://support.microsoft.com/en-us/office/add-a-font-b7c5f17c-4426-4b53-967f-455339c564c1)).
 
+<!-- Update to point directly to oh my posh docs, but first check on whether to recommend Linux install or keeping themes on Windows directory and point to from WSL (which may create a performance drag)
+ -->
 ### Install Oh My Posh
 
 Oh My Posh enables you to use a full color set to define and render your terminal prompt, including the ability to use built-in themes or create your own custom theme.
