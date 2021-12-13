@@ -84,6 +84,27 @@ function prompt
 }
 ```
 
+#### PowerShell with oh-my-posh
+
+If you're using oh-my-posh, then that will already modify your prompt. In that case, you'll want to only add the necessary output to the already modified prompt. The following example is a lightly modified version of the above posh-git example:
+
+```powershell
+
+$PoshPromptScriptBlock = $function:prompt
+
+function prompt {
+    $loc = Get-Location
+    $currentPrompt = & $PoshPromptScriptBlock
+    $currentPrompt += "$([char]27)]9;12$([char]7)"
+    if ($loc.Provider.Name -eq "FileSystem") {
+        $currentPrompt += "$([char]27)]9;9;`"$($loc.Path)`"$([char]7)"
+    }
+    $currentPrompt
+}
+
+```
+
+
 ### WSL
 
 #### `bash`
