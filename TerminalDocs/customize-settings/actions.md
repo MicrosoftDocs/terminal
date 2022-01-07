@@ -1024,7 +1024,7 @@ This resets the text size to the default value.
 { "command": "resetFontSize", "keys": "ctrl+numpad_0" }
 ```
 
-### Adjust opacity
+### Adjust opacity ([Preview](https://aka.ms/terminal-preview))
 
 This changes the opacity of the window. If `relative` is set to true, it will adjust the opacity relative to the current opacity. Otherwise, it will set the opacity directly to the given `opacity`
 
@@ -1045,6 +1045,9 @@ This changes the opacity of the window. If `relative` is set to true, it will ad
 | ---- | --------- | ------- | ----------- |
 | `opacity` | Optional | Integer | How opaque the terminal should become or how much the opacity should be changed by, depending on the value of `relative` |
 | `relative` | Optional | Boolean | If true, then adjust the current opacity by the given `opacity` parameter. If false, set the opacity to exactly that value. |
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Toggle pixel shader effects
 
