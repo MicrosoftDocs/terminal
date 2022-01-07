@@ -1061,6 +1061,31 @@ Changes the active color scheme.
 
 ___
 
+## Buffer Exporting
+
+### Export Buffer
+
+This allows the user to export the text of the buffer to a file. If the file doesn't exist, it will be created. If the file already exists, its contents will be replaced with the Terminal buffer text.
+
+**Command name:** `exportBuffer`
+
+**Default bindings:**
+
+```json
+{ "command": { "action": "exportBuffer" } },
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `path` | Optional | String | If provided, then the Terminal will export the buffer contents to the given file. Otherwise, the Terminal will open a file picker to choose the file to export to. |
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+___
+
 ## Global commands
 
 ### Global summon
