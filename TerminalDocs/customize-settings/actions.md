@@ -1003,7 +1003,6 @@ This action can be used to manually clear the Terminal buffer. This is useful fo
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `clear` | Optional | `"screen"`, `"scrollback"`, `"all"` | What part of the screen to clear. <ul><li>`"screen"`: Clear the terminal viewport content. Leaves the scrollback untouched. Moves the cursor row to the top of the viewport (unmodified).</li><li>`"scrollback"`: Clear the scrollback. Leaves the viewport untouched.</li><li>`"all"` (_default_): Clear the scrollback and the visible viewport. Moves the cursor row to the top of the viewport. </li></ul> |
-| `relative` | Optional | Boolean | If true, then adjust the current opacity by the given `opacity` parameter. If false, set the opacity to exactly that value. |
 
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
