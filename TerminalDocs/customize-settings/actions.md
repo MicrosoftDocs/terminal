@@ -1045,6 +1045,31 @@ This resets the text size to the default value.
 { "command": "resetFontSize", "keys": "ctrl+numpad_0" }
 ```
 
+### Adjust opacity ([Preview](https://aka.ms/terminal-preview))
+
+This changes the opacity of the window. If `relative` is set to true, it will adjust the opacity relative to the current opacity. Otherwise, it will set the opacity directly to the given `opacity`
+
+**Command name:** `adjustOpacity`
+
+**Default bindings:**
+
+```json
+{ "command": { "action": "adjustOpacity", "relative": false, "opacity": 0 } },
+{ "command": { "action": "adjustOpacity", "relative": false, "opacity": 25 } },
+{ "command": { "action": "adjustOpacity", "relative": false, "opacity": 50 } },
+{ "command": { "action": "adjustOpacity", "relative": false, "opacity": 100 } }
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `opacity` | Optional | Integer | How opaque the terminal should become or how much the opacity should be changed by, depending on the value of `relative` |
+| `relative` | Optional | Boolean | If true, then adjust the current opacity by the given `opacity` parameter. If false, set the opacity to exactly that value. |
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ### Toggle pixel shader effects
 
 This toggles any pixel shader effects enabled in the terminal. If the user specified a valid shader with `experimental.pixelShaderPath`, this action will toggle that shader on/off. This will also toggle the "retro terminal effect", which is enabled with the profile setting `experimental.retroTerminalEffect`.
