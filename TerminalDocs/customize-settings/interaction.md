@@ -3,7 +3,7 @@ title: Windows Terminal Interaction Settings
 description: Learn how to customize interaction settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 10/05/2021
+ms.date: 02/01/2022
 ms.topic: how-to
 ---
 
@@ -61,7 +61,7 @@ ___
 
 ## Trim trailing whitespace on paste ([Preview](https://aka.ms/terminal-preview))
 
-When enabled, the Terminal will automatically trim trailing whitespace characters when pasting text to the Terminal.
+When enabled, the terminal will automatically trim trailing whitespace characters when pasting text to the terminal.
 
 **Property name:** `trimPaste`
 

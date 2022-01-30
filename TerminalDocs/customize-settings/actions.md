@@ -3,7 +3,7 @@ title: Windows Terminal Actions
 description: Learn how to create custom actions for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 10/15/2021
+ms.date: 02/01/2022
 ms.topic: how-to
 ---
 
@@ -132,7 +132,7 @@ ___
 
 ## Application-level commands
 
-### Quit ([Preview](https://aka.ms/terminal-preview))
+### Quit
 
 This closes all open terminal windows. A confirmation dialog will appear in the current window to ensure you'd like to close all windows.
 
@@ -143,9 +143,6 @@ This closes all open terminal windows. A confirmation dialog will appear in the 
 ```json
 { "command": "quit" }
 ```
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Close window
 
@@ -804,9 +801,6 @@ This halves the size of the active pane and opens another. Without any arguments
 | `splitMode` | Optional | `"duplicate"` | Controls how the pane splits. Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane. |
 | `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
 
-> [!IMPORTANT]
-> The `"up"`, `"right"`, `"down"`, and `"left"` options for `split` are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 <br />
 
 ___
@@ -837,7 +831,7 @@ This copies the selected terminal content to your clipboard. If no selection exi
  | `singleLine` | Optional | `true`, `false` | When `true`, the copied content will be copied as a single line. When `false`, newlines persist from the selected text. |
  | `copyFormatting` | Optional | `true`, `false`, `"all"`, `"none"`, `"html"`, `"rtf"` | When `true`, the color and font formatting of the selected text is also copied to your clipboard. When `false`, only plain text is copied to your clipboard. You can also specify which formats you would like to copy. When `null`, the global `"copyFormatting"` behavior is inherited. |
 
-### Keyboard Selection ([Preview](https://aka.ms/terminal-preview))
+### Keyboard selection
 
 This modifies an existing selection. If no selection exists, the key chord is sent directly to the terminal.
 
@@ -873,9 +867,6 @@ This modifies an existing selection. If no selection exists, the key chord is se
 | ---- | --------- | ------- | ----------- |
 | `direction` | Required | `"left"`, `"right"`, `"up"`, `"down"` | Direction in which the selection endpoint will move. |
 | `mode` | Required | `"char"`, `"word"`, `"view"`, `"buffer"` | Controls how much the endpoint moves by. |
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Paste
 
@@ -986,9 +977,9 @@ This scrolls the screen down to the bottom of the input buffer.
 
 <br />
 
-### Clear Buffer ([Preview](https://aka.ms/terminal-preview))
+### Clear buffer
 
-This action can be used to manually clear the Terminal buffer. This is useful for scenarios where you're not sitting at a command-line shell prompt and can't easily run `Clear-Host`/`cls`/`clear`.
+This action can be used to manually clear the terminal buffer. This is useful for scenarios where you're not sitting at a command-line shell prompt and can't easily run `Clear-Host`/`cls`/`clear`.
 
 **Command name:** `clearBuffer`
 
@@ -1003,9 +994,6 @@ This action can be used to manually clear the Terminal buffer. This is useful fo
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `clear` | Optional | `"screen"`, `"scrollback"`, `"all"` | What part of the screen to clear. <ul><li>`"screen"`: Clear the terminal viewport content. Leaves the scrollback untouched. Moves the cursor row to the top of the viewport (unmodified).</li><li>`"scrollback"`: Clear the scrollback. Leaves the viewport untouched.</li><li>`"all"` (_default_): Clear the scrollback and the visible viewport. Moves the cursor row to the top of the viewport. </li></ul> |
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ___
 
@@ -1107,9 +1095,9 @@ Changes the active color scheme.
 
 ___
 
-## Buffer Exporting
+## Buffer exporting
 
-### Export Buffer
+### Export buffer ([Preview](https://aka.ms/terminal-preview))
 
 This allows the user to export the text of the buffer to a file. If the file doesn't exist, it will be created. If the file already exists, its contents will be replaced with the Terminal buffer text.
 
@@ -1118,14 +1106,14 @@ This allows the user to export the text of the buffer to a file. If the file doe
 **Default bindings:**
 
 ```json
-{ "command": { "action": "exportBuffer" } },
+{ "command": { "action": "exportBuffer" } }
 ```
 
 #### Actions
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
-| `path` | Optional | String | If provided, then the Terminal will export the buffer contents to the given file. Otherwise, the Terminal will open a file picker to choose the file to export to. |
+| `path` | Optional | String | If provided, then the Terminal will export the buffer contents to the given file. Otherwise, the terminal will open a file picker to choose the file to export to. |
 
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
@@ -1258,7 +1246,7 @@ If you'd like to change the behavior of the `quakeMode` action, we recommended c
 
 ___
 
-## Run multiple actions ([Preview](https://aka.ms/terminal-preview))
+## Run multiple actions
 
 This action allows the user to bind multiple sequential actions to one command. 
 
@@ -1291,9 +1279,6 @@ This action allows the user to bind multiple sequential actions to one command.
         ]
 }}
 ```
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
