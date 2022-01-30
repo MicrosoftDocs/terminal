@@ -3,7 +3,7 @@ title: Windows Terminal General Profile Settings
 description: Learn how to customize the general profile settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 04/14/2021
+ms.date: 02/01/2022
 ms.topic: how-to
 ---
 
@@ -119,3 +119,22 @@ If `hidden` is set to `true`, the profile will not appear in the list of profile
 **Accepts:** `true`, `false`
 
 **Default value:** `false`
+
+<br />
+
+___
+
+## Automatically elevate profile ([Preview](https://aka.ms/terminal-preview))
+
+When opening this profile, if your existing terminal window is running unelevated and `elevate` is set to `true`, then instead of opening a new tab, the terminal will open an elevated window with the profile. Otherwise, a new tab will be opened in the existing window. This includes when the window is already elevated and `elevate` is set to `false`.
+
+**Property name:** `elevate`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
