@@ -986,6 +986,27 @@ This scrolls the screen down to the bottom of the input buffer.
 
 <br />
 
+### Clear Buffer ([Preview](https://aka.ms/terminal-preview))
+
+This action can be used to manually clear the Terminal buffer. This is useful for scenarios where you're not sitting at a command-line shell prompt and can't easily run `Clear-Host`/`cls`/`clear`.
+
+**Command name:** `clearBuffer`
+
+**Default bindings:**
+
+```json
+{ "command": { "action": "clearBuffer", "clear": "all" } },
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `clear` | Optional | `"screen"`, `"scrollback"`, `"all"` | What part of the screen to clear. <ul><li>`"screen"`: Clear the terminal viewport content. Leaves the scrollback untouched. Moves the cursor row to the top of the viewport (unmodified).</li><li>`"scrollback"`: Clear the scrollback. Leaves the viewport untouched.</li><li>`"all"` (_default_): Clear the scrollback and the visible viewport. Moves the cursor row to the top of the viewport. </li></ul> |
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ___
 
 ## Visual adjustment commands
@@ -1024,6 +1045,31 @@ This resets the text size to the default value.
 { "command": "resetFontSize", "keys": "ctrl+numpad_0" }
 ```
 
+### Adjust opacity ([Preview](https://aka.ms/terminal-preview))
+
+This changes the opacity of the window. If `relative` is set to true, it will adjust the opacity relative to the current opacity. Otherwise, it will set the opacity directly to the given `opacity`
+
+**Command name:** `adjustOpacity`
+
+**Default bindings:**
+
+```json
+{ "command": { "action": "adjustOpacity", "relative": false, "opacity": 0 } },
+{ "command": { "action": "adjustOpacity", "relative": false, "opacity": 25 } },
+{ "command": { "action": "adjustOpacity", "relative": false, "opacity": 50 } },
+{ "command": { "action": "adjustOpacity", "relative": false, "opacity": 100 } }
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `opacity` | Optional | Integer | How opaque the terminal should become or how much the opacity should be changed by, depending on the value of `relative` |
+| `relative` | Optional | Boolean | If true, then adjust the current opacity by the given `opacity` parameter. If false, set the opacity to exactly that value. |
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ### Toggle pixel shader effects
 
 This toggles any pixel shader effects enabled in the terminal. If the user specified a valid shader with `experimental.pixelShaderPath`, this action will toggle that shader on/off. This will also toggle the "retro terminal effect", which is enabled with the profile setting `experimental.retroTerminalEffect`.
@@ -1058,6 +1104,31 @@ Changes the active color scheme.
 ```
 
 <br />
+
+___
+
+## Buffer Exporting
+
+### Export Buffer
+
+This allows the user to export the text of the buffer to a file. If the file doesn't exist, it will be created. If the file already exists, its contents will be replaced with the Terminal buffer text.
+
+**Command name:** `exportBuffer`
+
+**Default bindings:**
+
+```json
+{ "command": { "action": "exportBuffer" } },
+```
+
+#### Actions
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `path` | Optional | String | If provided, then the Terminal will export the buffer contents to the given file. Otherwise, the Terminal will open a file picker to choose the file to export to. |
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ___
 
