@@ -115,9 +115,9 @@ When this property is set to `false`, opening this profile in an elevated window
 
 If you set this property in `profiles.defaults`, then _all_ profiles will launch as administrator by default, unless overrided by specifically setting this to false.
 
-This property can be overridden in the [`newTab`](./actions#new-tab) and [`splitPane`](./actions#split-a-pane) actions, with the `elevate` property.
+This property can be overridden in the [`newTab`](./actions.md#new-tab) and [`splitPane`](./actions.md#split-a-pane) actions, with the `elevate` property.
 
-Elevated and unelevated tabs cannot exist in the same Terminal window. For more details, please see the [FAQ](/faq#Can-you-have-have-tabs-running-as-Administrator--elevated--in-unelevated-Terminal-windows).
+Elevated and unelevated tabs cannot exist in the same Terminal window. For more details, please see the [FAQ](/faq.yml#Can-you-have-have-tabs-running-as-Administrator--elevated--in-unelevated-Terminal-windows).
 
 **Property name:** `elevate`
 

@@ -403,7 +403,7 @@ This creates a new tab. Without any arguments, this will open the default profil
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
 | `colorScheme` | Optional | The name of a color scheme as a string | The scheme to use instead of the profile's set `colorScheme` |
 | `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. In order to enter a new tab title and have that title persist, this must be set to true. |
-| `elevate` | Optional | `true`, `false` | Overrides the [`elevate`](./profile-general#Automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was maked `"elevate": true` or `"elevate": false` (respectively) |
+| `elevate` | Optional | `true`, `false` | Overrides the [`elevate`](./profile-general.md#Automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was maked `"elevate": true` or `"elevate": false` (respectively) |
 
 > [!IMPORTANT]
 > The `"elevate"` property is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
@@ -807,7 +807,7 @@ This halves the size of the active pane and opens another. Without any arguments
 | `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. |
 | `splitMode` | Optional | `"duplicate"` | Controls how the pane splits. Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane. |
 | `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
-| `elevate` | Optional | `true`, `false` | Overrides the [`elevate`](./profile-general#Automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was maked `"elevate": true` or `"elevate": false` (respectively) |
+| `elevate` | Optional | `true`, `false` | Overrides the [`elevate`](./profile-general.md#Automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was maked `"elevate": true` or `"elevate": false` (respectively) |
 
 > [!IMPORTANT]
 > The `"up"`, `"right"`, `"down"`, and `"left"` options for `split` are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
