@@ -86,7 +86,7 @@ sections:
 
       - question: Can I save the layout of all of my open console windows when closing Windows Terminal and restore them when starting a new session?
         answer: |
-          Yes! As of [Windows Terminal Preview v1.12.2922.0](https://github.com/microsoft/terminal/releases/tag/v1.12.2922.0), you can now save window pane layouts upon closing a terminal session with the [firstWindowPreference](./customize-settings/startup.md#behavior-when-starting-a-new-terminal-session-preview) global setting.
+          Yes! As of [Windows Terminal Preview v1.12.2922.0](https://github.com/microsoft/terminal/releases/tag/v1.12.2922.0), you can now save window pane layouts upon closing a terminal session with the [firstWindowPreference](./customize-settings/startup.md#behavior-when-starting-a-new-terminal-session) global setting.
 
       - question: What is being planned for Windows Terminal? Is there a development roadmap or feature request list that I can contribute to?
         answer: |

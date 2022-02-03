@@ -395,7 +395,7 @@ This creates a new tab. Without any arguments, this will open the default profil
 | ---- | --------- | ------- | ----------- |
 | `commandline` | Optional | Executable file name as a string | Executable run within the tab. |
 | `startingDirectory` | Optional | Folder location as a string | Directory in which the tab will open. |
-| `elevate` | Optional | `true`, `false`, `null` | Overrides the [`elevate`](./profile-general.md#automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was set with `"elevate": true` or `"elevate": false` (respectively). |
+| `elevate` | Optional | `true`, `false`, `null` | Overrides the [`elevate`](./profile-general.md#automatically-run-as-administrator-preview) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was set with `"elevate": true` or `"elevate": false` (respectively). |
 | `tabTitle` | Optional | String | Title of the new tab. |
 | `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
@@ -797,7 +797,7 @@ This halves the size of the active pane and opens another. Without any arguments
 | `split` | Required | `"vertical"`, `"horizontal"`, `"auto"`, `"up"`, `"right"`, `"down"`, `"left"` | How the pane will split. `"auto"` will split in the direction that provides the most surface area. |
 | `commandline` | Optional | Executable file name as a string | Executable run within the pane. |
 | `startingDirectory` | Optional | Folder location as a string | Directory in which the pane will open. |
-| `elevate` | Optional | `true`, `false`, `null` | Overrides the [`elevate`](./profile-general.md#automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was set with `"elevate": true` or `"elevate": false` (respectively). |
+| `elevate` | Optional | `true`, `false`, `null` | Overrides the [`elevate`](./profile-general.md#automatically-run-as-administrator-preview) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was set with `"elevate": true` or `"elevate": false` (respectively). |
 | `tabTitle` | Optional | String | Title of the tab when the new pane is focused. |
 | `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
