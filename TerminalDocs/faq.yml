@@ -100,6 +100,10 @@ sections:
         answer: |
          The PSReadLine module is responsible for setting the colors and behavior of your PowerShell command line. You can set colors for specific attributes of your PowerShell prompt by using the [Set-PSReadLineOption, see Example 4: Set multiple color options](/powershell/module/psreadline/set-psreadlineoption#example-4--set-multiple-color-options).
         
+      - question: Can you have have tabs running as Administrator (elevated) in unelevated Terminal windows?
+        answer: |
+          No. For more technical details, refer to [this spec](https://github.com/microsoft/terminal/blob/main/doc/specs/%235000%20-%20Process%20Model%202.0/%231032%20-%20Elevation%20Quality%20of%20Life%20Improvements.md#background) and [this doc](https://github.com/microsoft/terminal/blob/main/doc/Niksa.md#elevation).
+
       # - question: Is there a way to sync your terminal settings across devices?
       #   answer: |
       #     TBD
