@@ -3,7 +3,7 @@ title: Windows Terminal Actions
 description: Learn how to create custom actions for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 02/01/2022
+ms.date: 02/03/2022
 ms.topic: how-to
 ---
 
@@ -395,19 +395,15 @@ This creates a new tab. Without any arguments, this will open the default profil
 | ---- | --------- | ------- | ----------- |
 | `commandline` | Optional | Executable file name as a string | Executable run within the tab. |
 | `startingDirectory` | Optional | Folder location as a string | Directory in which the tab will open. |
-| `elevate` | Optional | `true`, `false`, `null` | When set to `true`, the terminal will attempt to automatically elevate that profile. When set to `null`, `newTab` will use the elevation set by the profile. |
+| `elevate` | Optional | `true`, `false`, `null` | Overrides the [`elevate`](./profile-general.md#automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was set with `"elevate": true` or `"elevate": false` (respectively). |
 | `tabTitle` | Optional | String | Title of the new tab. |
 | `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
 | `colorScheme` | Optional | The name of a color scheme as a string | The scheme to use instead of the profile's set `colorScheme` |
 | `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. In order to enter a new tab title and have that title persist, this must be set to true. |
-| `elevate` | Optional | `true`, `false` | Overrides the [`elevate`](./profile-general.md#automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was maked `"elevate": true` or `"elevate": false` (respectively) |
 
 > [!IMPORTANT]
-> The `"elevate"` property is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
-> [!IMPORTANT]
-> The `elevate` action is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+> The `elevate` property is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Open next tab
 
@@ -801,7 +797,7 @@ This halves the size of the active pane and opens another. Without any arguments
 | `split` | Required | `"vertical"`, `"horizontal"`, `"auto"`, `"up"`, `"right"`, `"down"`, `"left"` | How the pane will split. `"auto"` will split in the direction that provides the most surface area. |
 | `commandline` | Optional | Executable file name as a string | Executable run within the pane. |
 | `startingDirectory` | Optional | Folder location as a string | Directory in which the pane will open. |
-| `elevate` | Optional | `true`, `false`, `null` | When set to `true`, the terminal will attempt to automatically elevate that profile. When set to `null`, `splitTab` will use the elevation set by the profile. |
+| `elevate` | Optional | `true`, `false`, `null` | Overrides the [`elevate`](./profile-general.md#automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was set with `"elevate": true` or `"elevate": false` (respectively). |
 | `tabTitle` | Optional | String | Title of the tab when the new pane is focused. |
 | `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
 | `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
@@ -809,13 +805,9 @@ This halves the size of the active pane and opens another. Without any arguments
 | `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. |
 | `splitMode` | Optional | `"duplicate"` | Controls how the pane splits. Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane. |
 | `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
-| `elevate` | Optional | `true`, `false` | Overrides the [`elevate`](./profile-general.md#automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was maked `"elevate": true` or `"elevate": false` (respectively) |
 
 > [!IMPORTANT]
-> The `elevate` action is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
-> [!IMPORTANT]
-> The `"elevate"` property is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+> The `elevate` property is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
@@ -1002,7 +994,7 @@ This action can be used to manually clear the terminal buffer. This is useful fo
 **Default bindings:**
 
 ```json
-{ "command": { "action": "clearBuffer", "clear": "all" } },
+{ "command": { "action": "clearBuffer", "clear": "all" } }
 ```
 
 #### Actions
