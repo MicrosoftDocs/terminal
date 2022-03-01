@@ -40,8 +40,6 @@ If you are using an earlier version of Windows Terminal, WSL may require using t
 }
 ```
 
-> [!IMPORTANT]
-> On newer versions of Windows, `startingDirectory` can accept Linux-style paths.
 
 ## Setting the tab title
 
