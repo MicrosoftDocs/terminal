@@ -40,7 +40,7 @@ To set a Nerd Font for use with Oh My Posh and Terminal Icons, open the Windows 
 
 Oh My Posh enables you to use a full color set to define and render your terminal prompt, including the ability to use built-in themes or create your own custom theme.
 
-If you want to use the same custom prompt themes across both PowerShell and WSL, we recommend installing Oh My Posh using [winget](/package-manager/winget/), the official Windows Package Manager. It's included with Windows 11, but you may need to install it if you're running Windows 10. Then follow the `winget` install instructions in the [Oh My Posh docs](https://ohmyposh.dev/docs/windows).
+If you want to use the same custom prompt themes across both PowerShell and WSL, we recommend installing Oh My Posh using [winget](/windows/package-manager/winget), the official Windows Package Manager. It's included with Windows 11, but you may need to install it if you're running Windows 10. Then follow the `winget` install instructions in the [Oh My Posh docs](https://ohmyposh.dev/docs/windows).
 
 ### Install Oh My Posh for PowerShell
 
@@ -62,11 +62,7 @@ You may also want to enter this command to ensure you have the latest updates: `
 
 ### Choose and apply a PowerShell prompt theme
 
-To browse the Oh My Posh prompt themes, use the command:
-
-```powershell
-Get-PoshThemes
-```
+You may browse the full list of themes on the [Oh My Posh themes page](https://ohmyposh.dev/docs/themes).
 
 Choose a theme and update your PowerShell profile with this command. (You can replace `notepad` with the text editor of your choice.)
 
@@ -127,7 +123,7 @@ You can [customize the Oh My Posh themes](https://ohmyposh.dev/docs/linux#custom
 To install Terminal-Icons with PowerShell, use the command:
 
 ```powershell
-PS> Install-Module -Name Terminal-Icons -Repository PSGallery
+Install-Module -Name Terminal-Icons -Repository PSGallery
 ```
 
 For more information, including usage and commands, see the [Terminal-Icons](https://github.com/devblackops/Terminal-Icons) repo on GitHub.
