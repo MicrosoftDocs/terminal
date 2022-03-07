@@ -1,0 +1,18 @@
+---
+name: Windows Terminal documentation issue
+description: Report an issue regarding the documentation of Windows Terminal
+body:
+- type: textarea
+  attributes:
+    label: Documentation Issue
+    description: Please list the issues you're seeing and the docs.microsoft.com URL(s) where you have found this issue. 
+    placeholder: Links to the relevant docs page and a description of what the problem is with its content.
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Suggested Improvements
+    description: Please list what actionable changes you would like to see to the docs to improve this
+  validations:
+    required: false
