@@ -172,8 +172,8 @@ You can set the transparency of a terminal window with the [`useAcrylic` propert
 
 - As a system-wide policy, acrylic is only enabled for the foreground window. So if you activate any other window than the Terminal, the Terminal's acrylic will turn off.
 - Acrylic doesn't work if your GPU hardware does not support it. If you're running an app in a Virtual Machine (VM) or over remote desktop, acrylic likely will not work.
-- Acrylic can be disabled by the operating system for a number of reasons, like being in power saver (low-battery)mode or when accessing a machine using Remote Desktop.
+- Acrylic can be disabled by the operating system for a number of reasons, like being in power saver (low-battery) mode or when accessing a machine using Remote Desktop.
 
 ## Why does my mouse pointer disappear when hovering over a window and typing?
 
-This cursor auto-hiding behavior is by design, but can be disabled in the by searching for "Mouse settings" > "Additional Mouse Settings" > "Mouse Properties" > "Pointer Options" > Uncheck "Hide pointer while typing". You may need to restart your Windows Terminal in order for this change to take effect.
+This cursor auto-hiding behavior is by design, but can be disabled in the by searching in Windows Settings for "Mouse settings" > "Additional Mouse Settings" > "Mouse Properties" > "Pointer Options" > Uncheck "Hide pointer while typing". You may need to restart your Windows Terminal in order for this change to take effect.
