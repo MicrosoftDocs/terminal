@@ -190,7 +190,7 @@ This lets you navigate through your search matches.
 { "command": { "action": "findMatch", "direction": "prev" } }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -223,7 +223,7 @@ Without the `target` field, the custom settings file will be opened.
 { "command": { "action": "openSettings", "target": "defaultsFile" }, "keys": "ctrl+alt+," },
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -296,7 +296,7 @@ _This command is not currently bound in the default settings_.
 { "command": { "action": "sendInput", "input": "\u001b[A" }, "keys": "" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -314,7 +314,7 @@ This closes the tab at a given index. If no index is provided, use the focused t
 
 **Command name:** `closeTab`
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -332,7 +332,7 @@ This closes all tabs except for the one at an index. If no index is provided, us
 { "command": "closeOtherTabs" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -350,7 +350,7 @@ This closes the tabs following the tab at an index. If no index is provided, use
 { "command": "closeTabsAfter" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -389,7 +389,7 @@ This creates a new tab. Without any arguments, this will open the default profil
 { "command": { "action": "newTab", "index": 8 }, "keys": "ctrl+shift+9" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -417,7 +417,7 @@ This opens the tab to the right of the current one.
 { "command": "nextTab", "keys": "ctrl+tab" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -435,7 +435,7 @@ This opens the tab to the left of the current one.
 { "command": "prevTab", "keys": "ctrl+shift+tab" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -484,7 +484,7 @@ This opens a specific tab depending on the index.
 { "command": { "action": "switchToTab", "index": 8 }, "keys": "ctrl+alt+9" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -508,7 +508,7 @@ _This command is not currently bound in the default settings_.
 { "command": { "action": "renameTab", "title": null }, "keys": "" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -544,7 +544,7 @@ _This command is not currently bound in the default settings_.
 { "command": { "action": "setTabColor", "color": null }, "keys": "" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -578,7 +578,7 @@ This command moves the tab "backward" and "forward", which is equivalent to "lef
 { "command": { "action": "moveTab", "direction": "forward" } }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -602,7 +602,7 @@ This creates a new window. Without any arguments, this will open the default pro
 { "command": "newWindow", "keys": "ctrl+shift+n" },
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -631,7 +631,7 @@ _This command is not currently bound in the default settings_.
 { "command": { "action": "renameWindow", "name": null }, "keys": "" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -709,7 +709,7 @@ This changes focus to a different pane depending on the direction. Setting the `
 { "command": { "action": "moveFocus", "direction": "previous" }, "keys": "ctrl+alt+left" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -751,7 +751,7 @@ This changes the size of the active pane.
 { "command": { "action": "resizePane", "direction": "up" }, "keys": "alt+shift+up" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -790,7 +790,7 @@ This halves the size of the active pane and opens another. Without any arguments
 { "command": { "action": "splitPane", "split": "left" } }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -832,7 +832,7 @@ This copies the selected terminal content to your clipboard. If no selection exi
 { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+insert" }
 ```
 
-#### Arguments
+#### Parameters
 
  | Name | Necessity | Accepts | Description |
  | ---- | --------- | ------- | ----------- |
@@ -869,7 +869,7 @@ This modifies an existing selection. If no selection exists, the key chord is se
 { "command": {"action": "updateSelection", "direction": "down", "mode": "buffer" }, "keys": "ctrl+shift+end" },
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -911,7 +911,7 @@ This scrolls the screen up by the number of rows defined by `"rowsToScroll"`. If
 { "command": "scrollUp", "keys": "ctrl+shift+up" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -929,7 +929,7 @@ This scrolls the screen down by the number of rows defined by `"rowsToScroll"`. 
 { "command": "scrollDown", "keys": "ctrl+shift+down" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -997,7 +997,7 @@ This action can be used to manually clear the terminal buffer. This is useful fo
 { "command": { "action": "clearBuffer", "clear": "all" } }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -1022,7 +1022,7 @@ This changes the text size by a specified point amount.
 { "command": { "action": "adjustFontSize", "delta": -1 }, "keys": "ctrl+numpad_minus" }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -1056,7 +1056,7 @@ This changes the opacity of the window. If `relative` is set to true, it will ad
 { "command": { "action": "adjustOpacity", "relative": false, "opacity": 100 } }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -1087,7 +1087,7 @@ Changes the active color scheme.
 
 **Command name:** `setColorScheme`
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -1117,7 +1117,7 @@ This allows the user to export the text of the buffer to a file. If the file doe
 { "command": { "action": "exportBuffer" } }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -1153,7 +1153,7 @@ _This command is not currently bound in the default settings_.
 { "keys": "", "command": { "action": "globalSummon" } }
 ```
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
@@ -1260,7 +1260,7 @@ This action allows the user to bind multiple sequential actions to one command.
 
 **Command name:** `multipleActions`
 
-#### Arguments
+#### Parameters
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
