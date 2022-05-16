@@ -53,7 +53,7 @@ When this is set to `true` and you copy text in a rectangular (block) selection 
 
 **Accepts:** `true`, `false`
 
-**Default value:** `false`
+**Default value:** `true`
 
 <br />
 

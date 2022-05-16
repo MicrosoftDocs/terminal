@@ -838,7 +838,6 @@ This copies the selected terminal content to your clipboard. If no selection exi
  | ---- | --------- | ------- | ----------- |
  | `singleLine` | Optional | `true`, `false` | When `true`, the copied content will be copied as a single line. When `false`, newlines persist from the selected text. |
  | `copyFormatting` | Optional | `true`, `false`, `"all"`, `"none"`, `"html"`, `"rtf"` | When `true`, the color and font formatting of the selected text is also copied to your clipboard. When `false`, only plain text is copied to your clipboard. You can also specify which formats you would like to copy. When `null`, the global `"copyFormatting"` behavior is inherited. |
- | `trimBlockSelection` | Optional | `true`, `false` | When `true`, trailing white-spaces will be removed from text in rectangular (block) selection while copied to your clipboard. When set to false, the white-spaces will be preserved. |
 
 ### Keyboard selection
 
