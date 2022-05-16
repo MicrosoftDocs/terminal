@@ -893,6 +893,18 @@ This inserts the content that was copied onto the clipboard.
 { "command": "paste", "keys": "shift+insert" }
 ```
 
+### Select All
+
+This selects all of the content in the text buffer.
+
+**Command name:** `selectAll`
+
+**Default bindings:**
+
+```json
+{ "command": "selectAll", "keys": "ctrl+shift+a" }
+```
+
 <br />
 
 ___
