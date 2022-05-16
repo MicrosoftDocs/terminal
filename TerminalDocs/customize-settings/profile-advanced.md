@@ -173,6 +173,25 @@ Enables use of the experimental text rendering engine for the profile. This is a
 
 ___
 
+## VT passthrough mode ([Preview](https://aka.ms/terminal-preview))
+
+When set to true, directs the PTY for this connection to use pass-through mode instead of the original Conhost PTY simulation engine. This is an experimental feature, and its continued existence is not guaranteed.
+
+**Property name:** `experimental.connection.passthroughMode`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+<br />
+
+___
+
 ## Unique identifier
 
 Profiles can use a GUID as a unique identifier. To make a profile your default profile, it needs a GUID for the `defaultProfile` global setting.
