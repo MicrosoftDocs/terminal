@@ -107,7 +107,7 @@ If set, this will replace the `name` as the title to pass to the shell on startu
 <br />
 ___
 
-## Automatically run as Administrator ([Preview](https://aka.ms/terminal-preview))
+## Automatically run as Administrator
 
 If set, this profile will automatically open up in an "elevated" window (running as Administrator) by default. If you run this profile from an unelevated window, then a new elevated terminal window will be created to host this profile. If you launch this profile from an already elevated window, then it will open as a new tab.
 
@@ -126,9 +126,6 @@ Elevated and unelevated tabs cannot exist in the same terminal window. For more 
 **Accepts:** `true`, `false`
 
 **Default value:** `false`
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 ___

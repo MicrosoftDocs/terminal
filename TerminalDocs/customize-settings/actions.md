@@ -402,9 +402,6 @@ This creates a new tab. Without any arguments, this will open the default profil
 | `colorScheme` | Optional | The name of a color scheme as a string | The scheme to use instead of the profile's set `colorScheme` |
 | `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. In order to enter a new tab title and have that title persist, this must be set to true. |
 
-> [!IMPORTANT]
-> The `elevate` property is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 ### Open next tab
 
 This opens the tab to the right of the current one.
@@ -806,9 +803,6 @@ This halves the size of the active pane and opens another. Without any arguments
 | `splitMode` | Optional | `"duplicate"` | Controls how the pane splits. Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane. |
 | `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
 
-> [!IMPORTANT]
-> The `elevate` property is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 <br />
 
 ___
@@ -1016,7 +1010,7 @@ This resets the text size to the default value.
 { "command": "resetFontSize", "keys": "ctrl+numpad_0" }
 ```
 
-### Adjust opacity ([Preview](https://aka.ms/terminal-preview))
+### Adjust opacity
 
 This changes the opacity of the window. If `relative` is set to true, it will adjust the opacity relative to the current opacity. Otherwise, it will set the opacity directly to the given `opacity`
 
@@ -1037,9 +1031,6 @@ This changes the opacity of the window. If `relative` is set to true, it will ad
 | ---- | --------- | ------- | ----------- |
 | `opacity` | Optional | Integer | How opaque the terminal should become or how much the opacity should be changed by, depending on the value of `relative` |
 | `relative` | Optional | Boolean | If true, then adjust the current opacity by the given `opacity` parameter. If false, set the opacity to exactly that value. |
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Toggle pixel shader effects
 
@@ -1080,7 +1071,7 @@ ___
 
 ## Buffer exporting
 
-### Export buffer ([Preview](https://aka.ms/terminal-preview))
+### Export buffer
 
 This allows the user to export the text of the buffer to a file. If the file doesn't exist, it will be created. If the file already exists, its contents will be replaced with the Terminal buffer text.
 
@@ -1097,9 +1088,6 @@ This allows the user to export the text of the buffer to a file. If the file doe
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `path` | Optional | String | If provided, then the Terminal will export the buffer contents to the given file. Otherwise, the terminal will open a file picker to choose the file to export to. |
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ___
 
