@@ -370,7 +370,7 @@ This makes a copy of the current tab's profile and directory and opens it. This 
 
 ### New tab
 
-This creates a new tab. Without any arguments, this will open the default profile in a new tab. If an action is not specified, the default profile's equivalent setting will be used.
+This creates a new tab. Without any arguments, this will open the default profile in a new tab. If an index is not specified, the default profile's equivalent setting will be used. If the index doesn't map to a profile, the keys are passed directly to the terminal (or ignored if no keys were used to invoke the action).
 
 **Command name:** `newTab`
 
