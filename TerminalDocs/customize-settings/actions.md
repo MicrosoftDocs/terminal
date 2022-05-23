@@ -850,7 +850,7 @@ This inserts the content that was copied onto the clipboard.
 { "command": "paste", "keys": "shift+insert" }
 ```
 
-### Select All
+### Select all ([Preview](https://aka.ms/terminal-preview))
 
 This selects all of the content in the text buffer.
 
@@ -861,6 +861,9 @@ This selects all of the content in the text buffer.
 ```json
 { "command": "selectAll", "keys": "ctrl+shift+a" }
 ```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 

@@ -223,7 +223,7 @@ When this is set to `true`, closing a window with multiple tabs open _will_ requ
 
 ___
 
-## Use a background image for the entire window
+## Use a background image for the entire window ([Preview](https://aka.ms/terminal-preview))
 
 :::row:::
 :::column span="":::
@@ -243,3 +243,6 @@ When set to `true`, the background image for the currently focused profile is ex
 
 :::column-end:::
 :::row-end:::
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
