@@ -225,8 +225,6 @@ ___
 
 ## Use a background image for the entire window ([Preview](https://aka.ms/terminal-preview))
 
-:::row:::
-:::column span="":::
 When set to `true`, the background image for the currently focused profile is expanded to encompass the entire window, beneath other panes. This is an experimental feature, and its continued existence is not guaranteed.
 
 **Property name:** `experimental.useBackgroundImageForWindow`
