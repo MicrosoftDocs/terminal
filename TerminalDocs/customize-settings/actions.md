@@ -839,43 +839,6 @@ This copies the selected terminal content to your clipboard. If no selection exi
  | `singleLine` | Optional | `true`, `false` | When `true`, the copied content will be copied as a single line. When `false`, newlines persist from the selected text. |
  | `copyFormatting` | Optional | `true`, `false`, `"all"`, `"none"`, `"html"`, `"rtf"` | When `true`, the color and font formatting of the selected text is also copied to your clipboard. When `false`, only plain text is copied to your clipboard. You can also specify which formats you would like to copy. When `null`, the global `"copyFormatting"` behavior is inherited. |
 
-### Keyboard selection
-
-This modifies an existing selection. If no selection exists, the key chord is sent directly to the terminal.
-
-**Command name:** `updateSelection`
-
-**Default bindings:**
-
-```json
-// Move by character
-{ "command": {"action": "updateSelection", "direction": "left", "mode": "char" }, "keys": "shift+left" },
-{ "command": {"action": "updateSelection", "direction": "right", "mode": "char" }, "keys": "shift+right" },
-{ "command": {"action": "updateSelection", "direction": "up", "mode": "char" }, "keys": "shift+up" },
-{ "command": {"action": "updateSelection", "direction": "down", "mode": "char" }, "keys": "shift+down" },
-
-// Move by word
-{ "command": {"action": "updateSelection", "direction": "left", "mode": "word" }, "keys": "ctrl+shift+left" },
-{ "command": {"action": "updateSelection", "direction": "right", "mode": "word" }, "keys": "ctrl+shift+right" },
-
-// Move by viewport
-{ "command": {"action": "updateSelection", "direction": "left", "mode": "view" }, "keys": "shift+home" },
-{ "command": {"action": "updateSelection", "direction": "right", "mode": "view" }, "keys": "shift+end" },
-{ "command": {"action": "updateSelection", "direction": "up", "mode": "view" }, "keys": "shift+pgup" },
-{ "command": {"action": "updateSelection", "direction": "down", "mode": "view" }, "keys": "shift+pgdn" },
-
-// Move by buffer
-{ "command": {"action": "updateSelection", "direction": "up", "mode": "buffer" }, "keys": "ctrl+shift+home" },
-{ "command": {"action": "updateSelection", "direction": "down", "mode": "buffer" }, "keys": "ctrl+shift+end" },
-```
-
-#### Parameters
-
-| Name | Necessity | Accepts | Description |
-| ---- | --------- | ------- | ----------- |
-| `direction` | Required | `"left"`, `"right"`, `"up"`, `"down"` | Direction in which the selection endpoint will move. |
-| `mode` | Required | `"char"`, `"word"`, `"view"`, `"buffer"` | Controls how much the endpoint moves by. |
-
 ### Paste
 
 This inserts the content that was copied onto the clipboard.
