@@ -27,8 +27,9 @@ Once you have a selection present, you have a few options. A single left-click w
 ## Keyboard support
 
 You can create a selection by using the `selectAll` or `markMode` actions. The `selectAll` action selects all the text in the buffer. The `markMode` action toggles a special mode where a selection is created at the cursor's position in the terminal. When in mark mode, you can use the following non-configurable key bindings to move the cursor around:
+
 | Key binding | Result |
-|--|--|
+| ----------- | ------ |
 | Arrow keys | Move by character in the specified direction |
 | <kbd>Ctrl</kbd> + <kbd>Left</kbd> | Move to the beginning of the previous or existing word |
 | <kbd>Ctrl</kbd> + <kbd>Right</kbd> | Move to the end of the next or existing word |
@@ -40,8 +41,9 @@ You can create a selection by using the `selectAll` or `markMode` actions. The `
 | <kbd>Ctrl</kbd> + <kbd>End</kbd> | Move to the end of the buffer |
 
 Regardless of being in mark mode, you can expand an existing selection using the following non-configurable key bindings:
+
 | Key binding | Result |
-|--|--|
+| ----------- | ------ |
 | <kbd>Shift</kbd> + Arrow keys | Expand by character in the specified direction |
 | <kbd>Ctrl</kbd> + <kbd>Left</kbd> | Expand to the beginning of the previous or existing word |
 | <kbd>Ctrl</kbd> + <kbd>Right</kbd> | Expand to the end of the next or existing word |
