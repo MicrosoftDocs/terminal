@@ -1114,6 +1114,78 @@ Changes the active color scheme.
 { "command": { "action": "setColorScheme", "colorScheme": "Campbell" }, "keys": "" }
 ```
 
+### Experimental add scroll mark ([Preview](https://aka.ms/terminal-preview))
+
+Adds a scroll mark to the text buffer. If there's a selection, the mark is placed at the selection, otherwise it's placed at the cursor row.
+
+**Command name:** `addMark`
+
+#### Parameters
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `color` | Optional | String, in hex format: `"#rgb"` or `"#rrggbb"` | The color of the mark. |
+
+**Example binding:**
+
+```json
+{ "command": { "action": "addMark", "color": "#ff00ff" } }
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Experimental scroll to mark ([Preview](https://aka.ms/terminal-preview))
+
+Scrolls to the scroll mark in the given direction.
+
+**Command name:** `scrollToMark`
+
+#### Parameters
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `direction` | Required | `"first"`, `"previous"`, `"next"`, `"last"` | The direction in which to scroll. |
+
+**Example binding:**
+
+```json
+{ "command": { "action": "scrollToMark", "direction": "previous" } }
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Experimental clear mark ([Preview](https://aka.ms/terminal-preview))
+
+Clears scroll mark at the current position, either at a selection if there is one or at the cursor position.
+
+**Command name:** `clearMark`
+
+**Example binding:**
+
+```json
+{ "command": { "action": "clearMark" } }
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Experimental clear all marks ([Preview](https://aka.ms/terminal-preview))
+
+Clears all scroll marks in the text buffer.
+
+**Command name:** `clearAllMarks`
+
+**Example binding:**
+
+```json
+{ "command": { "action": "clearAllMarks" } }
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 <br />
 
 ___

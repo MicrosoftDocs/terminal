@@ -3,7 +3,7 @@ title: Windows Terminal Advanced Profile Settings
 description: Learn how to customize the advanced profile settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/24/2022
+ms.date: 07/06/2022
 ms.topic: how-to
 ---
 
@@ -146,6 +146,38 @@ When `bellStyle` is set to `"all"` or `"audible"`, this allows you to choose the
 **Necessity:** Optional
 
 **Accepts:** File location as a string or an array of file locations as strings
+
+___
+
+## Scroll marks ([Preview](https://aka.ms/terminal-preview))
+
+The following settings modify how scroll marks behave in Windows Terminal.
+
+### Experimental automatically add scroll marks ([Preview](https://aka.ms/terminal-preview))
+
+Automatically marks prompts when set to `true`.
+
+**Property name:** `experimental.autoMarkPrompts`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Experimental show marks on scrollbar ([Preview](https://aka.ms/terminal-preview))
+
+Displays marks on the scrollbar when set to `true`.
+
+**Property name:** `experimental.showMarksOnScrollbar`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ___
 
