@@ -851,7 +851,7 @@ This inserts the content that was copied onto the clipboard.
 { "command": "paste", "keys": "shift+insert" }
 ```
 
-### Select all ([Preview](https://aka.ms/terminal-preview))
+### Select all
 
 This selects all of the content in the text buffer.
 
@@ -862,9 +862,6 @@ This selects all of the content in the text buffer.
 ```json
 { "command": "selectAll", "keys": "ctrl+shift+a" }
 ```
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Mark mode ([Preview](https://aka.ms/terminal-preview))
 
@@ -1116,7 +1113,7 @@ Changes the active color scheme.
 
 ### Experimental add scroll mark ([Preview](https://aka.ms/terminal-preview))
 
-Adds a scroll mark to the text buffer. If there's a selection, the mark is placed at the selection, otherwise it's placed at the cursor row.
+Adds a scroll mark to the text buffer. If there's a selection, the mark is placed at the selection, otherwise it's placed at the cursor row. This is an experimental feature, and its continued existence is not guaranteed.
 
 **Command name:** `addMark`
 
@@ -1137,7 +1134,7 @@ Adds a scroll mark to the text buffer. If there's a selection, the mark is place
 
 ### Experimental scroll to mark ([Preview](https://aka.ms/terminal-preview))
 
-Scrolls to the scroll mark in the given direction.
+Scrolls to the scroll mark in the given direction. This is an experimental feature, and its continued existence is not guaranteed.
 
 **Command name:** `scrollToMark`
 
@@ -1158,7 +1155,7 @@ Scrolls to the scroll mark in the given direction.
 
 ### Experimental clear mark ([Preview](https://aka.ms/terminal-preview))
 
-Clears scroll mark at the current position, either at a selection if there is one or at the cursor position.
+Clears scroll mark at the current position, either at a selection if there is one or at the cursor position. This is an experimental feature, and its continued existence is not guaranteed.
 
 **Command name:** `clearMark`
 
@@ -1173,7 +1170,7 @@ Clears scroll mark at the current position, either at a selection if there is on
 
 ### Experimental clear all marks ([Preview](https://aka.ms/terminal-preview))
 
-Clears all scroll marks in the text buffer.
+Clears all scroll marks in the text buffer. This is an experimental feature, and its continued existence is not guaranteed.
 
 **Command name:** `clearAllMarks`
 

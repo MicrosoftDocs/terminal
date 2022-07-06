@@ -155,7 +155,7 @@ The following settings modify how scroll marks behave in Windows Terminal.
 
 ### Experimental automatically add scroll marks ([Preview](https://aka.ms/terminal-preview))
 
-Automatically marks prompts when set to `true`.
+Automatically marks prompts when set to `true`. This is an experimental feature, and its continued existence is not guaranteed.
 
 **Property name:** `experimental.autoMarkPrompts`
 
@@ -168,7 +168,7 @@ Automatically marks prompts when set to `true`.
 
 ### Experimental show marks on scrollbar ([Preview](https://aka.ms/terminal-preview))
 
-Displays marks on the scrollbar when set to `true`.
+Displays marks on the scrollbar when set to `true`. This is an experimental feature, and its continued existence is not guaranteed.
 
 **Property name:** `experimental.showMarksOnScrollbar`
 
@@ -197,7 +197,7 @@ Enables use of the experimental text rendering engine for the profile. This is a
 
 ___
 
-## VT passthrough mode ([Preview](https://aka.ms/terminal-preview))
+## VT passthrough mode
 
 When set to true, directs the PTY for this connection to use pass-through mode instead of the original Conhost PTY simulation engine. This is an experimental feature, and its continued existence is not guaranteed.
 
@@ -208,9 +208,6 @@ When set to true, directs the PTY for this connection to use pass-through mode i
 **Accepts:** `true`, `false`
 
 **Default value:** `false`
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
