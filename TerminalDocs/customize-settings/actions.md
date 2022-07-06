@@ -823,7 +823,8 @@ This copies the selected terminal content to your clipboard. If no selection exi
 
 // In defaults.json
 { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+shift+c" },
-{ "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+insert" }
+{ "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+insert" },
+{ "command": { "action": "copy", "singleLine": false }, "keys": "enter" }
 ```
 
 #### Parameters
@@ -860,6 +861,51 @@ This selects all of the content in the text buffer.
 
 ```json
 { "command": "selectAll", "keys": "ctrl+shift+a" }
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Mark Mode ([Preview](https://aka.ms/terminal-preview))
+
+This toggles mark mode. Mark Mode is a mode where you can use the keyboard to create a selection at the cursor's position on the terminal.
+
+**Command name:** `markMode`
+
+**Default bindings:**
+
+```json
+{ "command": "markMode", "keys": "ctrl+shift+m" },
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Switch selection marker ([Preview](https://aka.ms/terminal-preview))
+
+When modifying a selection using the keyboard, you are moving one end of the selection around. You can use this action to switch to the other selection marker.
+
+**Command name:** `switchSelectionEndpoint`
+
+**Default bindings:**
+
+```json
+{ "command": "switchSelectionEndpoint" },
+```
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Toggle block selection ([Preview](https://aka.ms/terminal-preview))
+
+Makes the exisiting selection a block selection, meaning that the selected area is a rectangle, as opposed to wrapping to the beginning and end of each line.
+
+**Command name:** `toggleBlockSelection`
+
+**Default bindings:**
+
+```json
+{ "command": "toggleBlockSelection" },
 ```
 
 > [!IMPORTANT]
