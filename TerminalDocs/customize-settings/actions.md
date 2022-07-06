@@ -3,7 +3,7 @@ title: Windows Terminal Actions
 description: Learn how to create custom actions for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/24/2022
+ms.date: 07/06/2022
 ms.topic: how-to
 ---
 
@@ -866,9 +866,9 @@ This selects all of the content in the text buffer.
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
-### Mark Mode ([Preview](https://aka.ms/terminal-preview))
+### Mark mode ([Preview](https://aka.ms/terminal-preview))
 
-This toggles mark mode. Mark Mode is a mode where you can use the keyboard to create a selection at the cursor's position on the terminal.
+This toggles mark mode. Mark mode is a mode where you can use the keyboard to create a selection at the cursor's position in the terminal.
 
 **Command name:** `markMode`
 

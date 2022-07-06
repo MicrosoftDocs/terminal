@@ -3,7 +3,7 @@ title: Selection
 description: Learn how to select text in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/16/2022
+ms.date: 07/06/2022
 ms.topic: how-to
 ---
 
@@ -13,21 +13,21 @@ Selecting text is straightforward in Windows Terminal, but there are a lot of ad
 
 ## Mouse support
 
-Left-click and drag your mouse to create a selection. Double-clicks expand the selection by word, whereas triple-clicks expand by line.
+Left-click and drag your mouse to create a selection. Double-click expands the selection by word, whereas triple-click expands by line.
 
-If you are holding the <kbd>Alt</kbd> key, you will create a block selection (as opposed to a line selection). Block selections create a rectangular region that does not wrap to the end of the line.
+If you are holding the <kbd>Alt</kbd> key, you will create a block selection (as opposed to a line selection). Block selections create a rectangular region that do not wrap to the end of the line.
 
 If you are holding the <kbd>Shift</kbd> key, you can explicitly expand the selection to a specific point on the terminal without the need to click and drag.
 
 Once you have a selection present, you have a few options. A single left-click will clear your selection. If you actually want to use it, you can right-click to copy the selected text to your clipboard and clear the selection. If you right-click again, the contents of your clipboard will then be pasted into the terminal.
 
 > [!NOTE]
-> Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) applications as well as Windows applications that use virtual terminal (VT) input. This means applications such as [tmux](https://github.com/tmux/tmux/wiki) and [Midnight Commander](https://www.linuxhelp.com/how-to-install-midnight-commander-in-linux) will recognize when you select items in the Terminal window. If an application is in mouse mode, you can hold down <kbd>Shift</kbd> to make a selection instead of sending VT input.
+> Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) applications as well as Windows applications that use virtual terminal (VT) input. This means applications such as [tmux](https://github.com/tmux/tmux/wiki) and [Midnight Commander](https://www.linuxhelp.com/how-to-install-midnight-commander-in-linux) will recognize when you select items in the terminal window. If an application is in mouse mode, you can hold down <kbd>Shift</kbd> to make a selection instead of sending VT input.
 
 ## Keyboard support
 
-You can create a selection by using the `selectAll` or `markMode` action. The `selectAll` action selects all the text in the buffer. The `markMode` action toggles a special mode where a selection is created at the cursor's position in the terminal. When in mark mode, you can use the following non-configurable key bindings to move the cursor around:
-| Key chord | Result |
+You can create a selection by using the `selectAll` or `markMode` actions. The `selectAll` action selects all the text in the buffer. The `markMode` action toggles a special mode where a selection is created at the cursor's position in the terminal. When in mark mode, you can use the following non-configurable key bindings to move the cursor around:
+| Key binding | Result |
 |--|--|
 | Arrow keys | Move by character in the specified direction |
 | <kbd>Ctrl</kbd> + <kbd>Left</kbd> | Move to the beginning of the previous or existing word |
@@ -40,7 +40,7 @@ You can create a selection by using the `selectAll` or `markMode` action. The `s
 | <kbd>Ctrl</kbd> + <kbd>End</kbd> | Move to the end of the buffer |
 
 Regardless of being in mark mode, you can expand an existing selection using the following non-configurable key bindings:
-| Key chord | Result |
+| Key binding | Result |
 |--|--|
 | <kbd>Shift</kbd> + Arrow keys | Expand by character in the specified direction |
 | <kbd>Ctrl</kbd> + <kbd>Left</kbd> | Expand to the beginning of the previous or existing word |
@@ -61,13 +61,13 @@ Once you have a selection present, you have a few options. You can use the <kbd>
 ## Copying selected text
 
 As mentioned above, selected text can be copied with a right-click or the `copy` action. However, there are a number of settings regarding copying text that you can customize:
-- copying formatted text
+- Copying formatted text
     - You can use the `copyFormatting` global setting to also copy the formatting of the selected text itself to the clipboard. This allows you to copy the terminal's font information such as foreground color, background color, and font.
     - If you want to limit copying the formatting to certain key bindings (or commands), you can modify the `copyFormatting` parameter on a `copy` action.
-- copying as a single line
+- Copying as a single line
     - You can copy text as a single line using the `singleLine` parameter in the `copy` action.
-- removing trailing whitespace from block selections
-    - You can remove the trailing whitespace form a block selection using the `trimBlockSelection` global setting.
+- Removing trailing whitespace from block selections
+    - You can remove the trailing whitespace from a block selection using the `trimBlockSelection` global setting.
 
 You can also use the `copyOnSelect` global setting to have newly selected text automatically copied to your clipboard. With this setting enabled, if a selection is present, right-clicking the terminal copies and pastes the selected text to your terminal.
 
