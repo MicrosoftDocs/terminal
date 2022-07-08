@@ -3,7 +3,7 @@ title: Windows Terminal command line arguments
 description: Learn how to create command line arguments for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 10/15/2021
+ms.date: 05/24/2022
 ms.topic: how-to
 ---
 
@@ -49,7 +49,7 @@ Below is the full list of supported commands and options for the `wt` command li
 | `new-tab`, `nt` | `--tabColor` | Creates a new tab with the tab color assigned. | Hex color as #RGB or #RRGGBB |
 
 > [!TIP]
-> If you change the title of a tab in Windows Terminal and want that title to persist, you must enable the [suppressApplicationTitle](./customize-settings/actions.md#actions-6) option by setting it to `true`.
+> If you change the title of a tab in Windows Terminal and want that title to persist, you must enable the [suppressApplicationTitle](./customize-settings/profile-advanced.md#suppress-title-changes) option by setting it to `true`.
 
 ### `Split-pane` command
 
@@ -431,7 +431,7 @@ wt --tabColor #009999 ; new-tab --tabColor #f59218
 #### [PowerShell](#tab/powershell)
 
 ```powershell
-wt --tabColor #009999 ; new-tab --tabColor #f59218
+wt --tabColor '#009999' `; new-tab --tabColor '#f59218'
 ```
 
 #### [Linux](#tab/linux)
@@ -448,7 +448,7 @@ Execution aliases do not work in WSL distributions. If you want to use wt.exe fr
 When `--tabColor` is set for a tab, it is associated with the first pane of this tab. Hence in a tab with multiple panes, the color will be applied only if the first pane is in focus. To set the tab color for additional panes, you will need to add the `--tabColor` parameter to the `split-pane` subcommand as well. In the example below, a tab with two panes is created with tab colors specified for each pane:
 
 ```powershell
-wt new-tab --tabColor #009999 ; split-pane --tabColor #f59218
+wt new-tab --tabColor '#009999' `; split-pane --tabColor '#f59218'
 ```
 
 ### Color scheme

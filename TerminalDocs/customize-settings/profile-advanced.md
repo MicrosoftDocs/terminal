@@ -3,7 +3,7 @@ title: Windows Terminal Advanced Profile Settings
 description: Learn how to customize the advanced profile settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 02/03/2022
+ms.date: 07/06/2022
 ms.topic: how-to
 ---
 
@@ -137,7 +137,7 @@ Controls what happens when the application emits a BEL character. When set to `"
 
 ___
 
-## Bell sound ([Preview](https://aka.ms/terminal-preview))
+## Bell sound
 
 When `bellStyle` is set to `"all"` or `"audible"`, this allows you to choose the audio file for the bell. If you have an array of sounds set, the terminal will pick one at random.
 
@@ -147,14 +147,41 @@ When `bellStyle` is set to `"all"` or `"audible"`, this allows you to choose the
 
 **Accepts:** File location as a string or an array of file locations as strings
 
+___
+
+## Scroll marks ([Preview](https://aka.ms/terminal-preview))
+
+The following settings modify how scroll marks behave in Windows Terminal.
+
+### Experimental automatically add scroll marks ([Preview](https://aka.ms/terminal-preview))
+
+Automatically marks prompts when set to `true`. This is an experimental feature, and its continued existence is not guaranteed.
+
+**Property name:** `experimental.autoMarkPrompts`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
-<br />
+### Experimental show marks on scrollbar ([Preview](https://aka.ms/terminal-preview))
+
+Displays marks on the scrollbar when set to `true`. This is an experimental feature, and its continued existence is not guaranteed.
+
+**Property name:** `experimental.showMarksOnScrollbar`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ___
 
-## Experimental text rendering engine ([Preview](https://aka.ms/terminal-preview))
+## Experimental text rendering engine
 
 Enables use of the experimental text rendering engine for the profile. This is an experimental feature and its continued existence is not guaranteed. A new instance of the profile needs to be opened in order for this setting to take effect.
 
@@ -166,8 +193,21 @@ Enables use of the experimental text rendering engine for the profile. This is a
 
 **Default value:** `false`
 
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+<br />
+
+___
+
+## VT passthrough mode
+
+When set to true, directs the PTY for this connection to use pass-through mode instead of the original Conhost PTY simulation engine. This is an experimental feature, and its continued existence is not guaranteed.
+
+**Property name:** `experimental.connection.passthroughMode`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
 
 <br />
 
