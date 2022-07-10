@@ -68,7 +68,7 @@ ___
 
 When set to `"defaultProfile"`, Windows Terminal will start a new session by opening a single tab with your default profile.
 
-When set to `"persistedWindowLayout"`, this enables Windows Terminal to save the layout of open windows on close and restore all saved windows on starting a new session. Windows Terminal will save the layout of all open windows automatically to assist with restoration from crashes and will also save the layout when using the `quit` action. Additionally, closing the last open window by clicking the `X` button or using the `closeWindow` command will save the layout of that last window. 
+When set to `"persistedWindowLayout"`, this enables Windows Terminal to save the layout of open windows on close and restore all saved windows on starting a new session. Windows Terminal will save the layout of all open windows automatically to assist with restoration from crashes and will also save the layout when using the `quit` action. Additionally, closing the last open window by clicking the `X` button or using the `closeWindow` command will save the layout of that last window.
 
 Note: Currently, Windows Terminal will save the following information:
 
@@ -204,7 +204,7 @@ This sets which dynamic profile generators are disabled, preventing them from ad
 
 **Necessity:** Optional
 
-**Accepts:** `"Windows.Terminal.Wsl"`, `"Windows.Terminal.Azure"`, and/or `"Windows.Terminal.PowershellCore"` inside an array
+**Accepts:** `"Windows.Terminal.Wsl"`, `"Windows.Terminal.Azure"`, `"Windows.Terminal.VisualStudio"` and/or `"Windows.Terminal.PowershellCore"` inside an array
 
 **Default value:** `[]`
 
