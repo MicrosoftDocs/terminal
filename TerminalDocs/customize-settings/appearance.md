@@ -78,18 +78,18 @@ When this is set to `true`, tabs are always displayed. When it's set to `false` 
 
 ___
 
-## Position of the new tab
+## Position of newly created tabs
 
-Specifies position of the new tab. When this is set to `"atTheEnd"`, new tabs appear at the end of tab row. When it's set to `"afterCurrentTab"`, new tabs appear after currently selected tab.
+Specifies where new tabs appear in the tab row. When this is set to `"afterLastTab"`, new tabs appear at the end of tab row. When it's set to `"afterCurrentTab"`, new tabs appear after current tab.
 
 
 **Property name:** `newTabPosition`
 
 **Necessity:** Optional
 
-**Accepts:** `"atTheEnd"`, `"afterCurrentTab"`
+**Accepts:** `"afterLastTab"`, `"afterCurrentTab"`
 
-**Default value:** `"atTheEnd"`
+**Default value:** `"afterLastTab"`
 
 <br />
 
