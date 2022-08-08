@@ -219,6 +219,9 @@ When this is set to `true`, closing a window with multiple tabs open _will_ requ
 :::column span="":::
 ![Windows Terminal confirm close all tabs](./../images/confirm-close-all-tabs.png)
 
+:::column-end:::
+:::row-end:::
+
 <br />
 
 ___
