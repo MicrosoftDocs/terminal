@@ -79,7 +79,7 @@ The color of the tab row when the window is in the foreground.
 
 **Necessity:** Optional
 
-**Accepts:** a [Theme Color](#Theme-Colors).
+**Accepts:** a [Theme Color](#theme-colors).
 
 ### Inactive background color
 
@@ -89,7 +89,7 @@ The color of the tab row, when the window is inactive.
 
 **Necessity:** Optional
 
-**Accepts:** a [Theme Color](#Theme-Colors).
+**Accepts:** a [Theme Color](#theme-colors).
 
 ___
 
@@ -105,7 +105,7 @@ This color is always treated as a solid color, even if set to a `terminalBackgro
 
 **Necessity:** Optional
 
-**Accepts:** a [Theme Color](#Theme-Colors).
+**Accepts:** a [Theme Color](#theme-colors).
 
 ### Inactive background color
 
@@ -119,7 +119,7 @@ When set to `terminalBackground` or `accent`, this will automatically use an alp
 
 **Necessity:** Optional
 
-**Accepts:** a [Theme Color](#Theme-Colors).
+**Accepts:** a [Theme Color](#theme-colors).
 
 ### Show close button
 

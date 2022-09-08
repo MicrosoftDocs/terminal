@@ -35,3 +35,32 @@ Below are some examples of [Themes](/customize-settings/themes.md).
     }
 },
 ```
+
+## Under Construction
+
+![Windows Terminal Under Construction Theme](./../images/Under-Construction-Theme.png)
+
+```json
+{
+    "name": "Under Contruction",
+    "tab":
+    {
+        "background": "#FFFF00FF",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#88440088"
+    },
+    "tabRow":
+    {
+        "background": "#FF8800FF",
+        "unfocusedBackground": "#202020FF"
+    },
+    "window":
+    {
+        "applicationTheme": "light",
+        "useMica": true
+    }
+},
+```
+
+(Color scheme is based on [Fun Forrest](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/windowsterminal/FunForrest.json))
+
