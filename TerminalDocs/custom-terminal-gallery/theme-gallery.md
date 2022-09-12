@@ -9,7 +9,7 @@ ms.topic: sample
 
 # Theme Gallery
 
-Below are some examples of [Themes](/customize-settings/themes.md).
+Below are some examples of [Themes](./../customize-settings/themes.md).
 
 ## Seamless
 

@@ -19,7 +19,7 @@ The settings listed below affect the visuals of the Terminal window itself, rath
 ]
 ```
 
-For some example themes, take a head over to the [Themes Gallery](/custom-terminal-gallery/theme-gallery.md).
+For some example themes, take a head over to the [Themes Gallery](./../custom-terminal-gallery/theme-gallery.md).
 
 Each theme in the `themes` list is comprised of a collection of property objects, that specify the properties of individual elements of the application. For example, the default `"dark"` theme is the following:
 
@@ -55,7 +55,7 @@ ___
 
 ### Application Theme
 
-This is the name of the color scheme used in the profile. Color schemes are defined in the `schemes` object. More detailed information can be found on the [Color schemes page](./color-schemes.md).
+This sets the UI theme of the application. This will stylize things such as buttons, the Command Palette, and other application UI elements. It can either be light or dark. `"system"` will use the same theme as Windows.
 
 **Property name:** `applicationTheme`
 
