@@ -78,6 +78,23 @@ When this is set to `true`, tabs are always displayed. When it's set to `false` 
 
 ___
 
+## Position of newly created tabs
+
+Specifies where new tabs appear in the tab row. When this is set to `"afterLastTab"`, new tabs appear at the end of tab row. When it's set to `"afterCurrentTab"`, new tabs appear after current tab.
+
+
+**Property name:** `newTabPosition`
+
+**Necessity:** Optional
+
+**Accepts:** `"afterLastTab"`, `"afterCurrentTab"`
+
+**Default value:** `"afterLastTab"`
+
+<br />
+
+___
+
 ## Hide the title bar
 
 :::row:::
