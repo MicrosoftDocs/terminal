@@ -3,13 +3,13 @@ title: Windows Terminal Theme Settings
 description: Learn how to customize the theme settings within Windows Terminal.
 author: zadjii-msft
 ms.author: migrie
-ms.date: 09/06/2022
+ms.date: 09/12/2022
 ms.topic: how-to
 ---
 
-# Theme settings in Windows Terminal
+# Theme settings in Windows Terminal ([Preview](https://aka.ms/terminal-preview))
 
-The settings listed below affect the visuals of the Terminal window itself, rather than the appearance of an individual tab/pane. These settings are currently only editable directly in the [settings.json file](../install.md#settings-json-file), and are not configurable via the Settings UI.
+The settings listed below affect the visuals of the terminal window itself, rather than the appearance of an individual tab/pane. These settings are currently only editable directly in the [settings.json file](../install.md#settings-json-file) and are not configurable via the settings UI.
 
 ```json
 "theme": "dark"
@@ -19,7 +19,7 @@ The settings listed below affect the visuals of the Terminal window itself, rath
 ]
 ```
 
-For some example themes, take a head over to the [Themes Gallery](/custom-terminal-gallery/theme-gallery.md).
+For some example themes, take a look at the [Themes gallery](/custom-terminal-gallery/theme-gallery.md).
 
 Each theme in the `themes` list is comprised of a collection of property objects, that specify the properties of individual elements of the application. For example, the default `"dark"` theme is the following:
 

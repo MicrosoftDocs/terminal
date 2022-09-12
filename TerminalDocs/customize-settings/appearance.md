@@ -33,7 +33,7 @@ This sets the theme of the application. `"system"` will use the same theme as Wi
 
 **Necessity:** Optional
 
-**Accepts:** `"system"`, `"dark"`, `"light"`
+**Accepts:** `"system"`, `"dark"`, `"light"`, name of custom [theme](./themes.md)
 
 **Default value:** `"system"`
 
@@ -58,7 +58,6 @@ When this is set to `true`, tabs are always displayed. When it's set to `false` 
 > [!NOTE]
 > This setting has no effect when `showTabsInTitlebar` is `true`.
 
-
 **Property name:** `alwaysShowTabs`
 
 **Necessity:** Optional
@@ -78,10 +77,9 @@ When this is set to `true`, tabs are always displayed. When it's set to `false` 
 
 ___
 
-## Position of newly created tabs
+## Position of newly created tabs ([Preview](https://aka.ms/terminal-preview))
 
-Specifies where new tabs appear in the tab row. When this is set to `"afterLastTab"`, new tabs appear at the end of tab row. When it's set to `"afterCurrentTab"`, new tabs appear after current tab.
-
+Specifies where new tabs appear in the tab row. When this is set to `"afterLastTab"`, new tabs appear at the end of the tab row. When it's set to `"afterCurrentTab"`, new tabs appear after the current tab.
 
 **Property name:** `newTabPosition`
 

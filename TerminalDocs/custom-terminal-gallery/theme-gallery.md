@@ -3,11 +3,11 @@ title: Windows Terminal Themes Gallery
 description: Some sample theme configurations for Windows Terminal.
 author: zadjii-msft
 ms.author: migrie
-ms.date: 09/08/2022
+ms.date: 09/13/2022
 ms.topic: sample
 ---
 
-# Theme Gallery
+# Theme gallery ([Preview](https://aka.ms/terminal-preview))
 
 Below are some examples of [Themes](/customize-settings/themes.md).
 
