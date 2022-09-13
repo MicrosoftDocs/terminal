@@ -39,7 +39,7 @@ Each theme in the `themes` list is comprised of a collection of property objects
 },
 ```
 
-## Theme Name
+## Theme name
 
 This is the name of the theme. Names should be unique. The names `dark`, `light`, and `system` are reserved for the built-in default themes.
 
@@ -47,15 +47,17 @@ This is the name of the theme. Names should be unique. The names `dark`, `light`
 
 **Necessity:** Required
 
-**Accepts:** a string
+**Accepts:** Name of theme as a string
+
+<br />
 
 ___
 
 ## Window
 
-### Application Theme
+### Application theme
 
-This is the name of the color scheme used in the profile. Color schemes are defined in the `schemes` object. More detailed information can be found on the [Color schemes page](./color-schemes.md).
+This is the theme that will be applied to the terminal unless other colors are specified. `"system"` will use the same theme as Windows.
 
 **Property name:** `applicationTheme`
 
@@ -65,11 +67,13 @@ This is the name of the color scheme used in the profile. Color schemes are defi
 
 **Default value:** `"dark"`
 
+<br />
+
 ___
 
-## Tab Row
+## Tab row
 
-These settings are used to configure the appearance of the tab row. When `showTabsInTitlebar` is `true` (the default), this configures the titlebar.
+These settings are used to configure the appearance of the tab row. When `showTabsInTitlebar` is `true` (the default), this configures the title bar.
 
 ### Background color
 
@@ -79,17 +83,19 @@ The color of the tab row when the window is in the foreground.
 
 **Necessity:** Optional
 
-**Accepts:** a [Theme Color](#theme-colors).
+**Accepts:** a [theme color](#theme-colors).
 
 ### Inactive background color
 
-The color of the tab row, when the window is inactive.
+The color of the tab row when the window is inactive.
 
 **Property name:** `unfocusedBackground`
 
 **Necessity:** Optional
 
-**Accepts:** a [Theme Color](#theme-colors).
+**Accepts:** a [theme color](#theme-colors).
+
+<br />
 
 ___
 
@@ -97,21 +103,21 @@ ___
 
 ### Background color
 
-The color a tab should be when the tab is active. Setting a `tabColor` in a profile will override this value. Similarly, setting a color at runtime with the tab color picker will override this color.
+The color of the active tab. Setting a `tabColor` in a profile will override this value. Similarly, setting a color at runtime with the tab color picker will override this color.
 
-This color is always treated as a solid color, even if set to a `terminalBackground` with a pane with an acrylic background.
+This color is always treated as a solid color, even if set to a `terminalBackground` of a pane with an acrylic background.
 
 **Property name:** `background`
 
 **Necessity:** Optional
 
-**Accepts:** a [Theme Color](#theme-colors).
+**Accepts:** a [theme color](#theme-colors).
 
 ### Inactive background color
 
-The color a tab should be when the tab is inactive. Setting a `tabColor` in a profile will override this value. Similarly, setting a color at runtime with the tab color picker will override this color.
+The color of inactive tabs. Setting a `tabColor` in a profile will override this value. Similarly, setting a color at runtime with the tab color picker will override this color.
 
-This color is always treated as a solid color, even if set to a `terminalBackground` with a pane with an acrylic background.
+This color is always treated as a solid color, even if set to a `terminalBackground` of a pane with an acrylic background.
 
 When set to `terminalBackground` or `accent`, this will automatically use an alpha value of 30%, to be semi-transparent.
 
@@ -119,11 +125,11 @@ When set to `terminalBackground` or `accent`, this will automatically use an alp
 
 **Necessity:** Optional
 
-**Accepts:** a [Theme Color](#theme-colors).
+**Accepts:** a [theme color](#theme-colors).
 
 ### Show close button
 
-Configures how the "close" button on the tab should behave. This accepts the following values:
+Configures how the "close" button on the tab should appear. This accepts the following values:
 * `"always"`: Always show tab close buttons.
 * `"hover"`: Show the tab close button on the active tab, and any tabs that are hovered with the mouse.
 * `"never"`: Never show tab close buttons. This also disables the ability to close the tab with the middle mouse button.
@@ -136,12 +142,13 @@ Configures how the "close" button on the tab should behave. This accepts the fol
 
 **Default value:** `"always"`
 
+<br />
+
 ___
 
+## Theme colors
 
-## Theme Colors
-
-The colors used in themes both accept RGBA color values, as well as a few special strings for custom values. The accepted values are as follows
+The colors used in themes both accept RGBA color values, as well as a few special strings for custom values. The accepted values are as follows:
 
 * `"#rgb`, `"#rrggbb`, `"#rrggbbaa`: An RGB color value. When the alpha chanel is omitted, these colors default to a fully opaque alpha channel.
 * `"accent"`: This is a special value that means "the accent color set in the system settings".
