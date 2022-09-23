@@ -14,6 +14,9 @@ Windows has a built-in SSH client that you can use in Windows Terminal.
 
 In this tutorial, you'll learn how to set up a profile in Windows Terminal that uses SSH.
 
+> [!NOTE]
+> Windows Terminal version 1.XX+ can dynamically generate profiles to connect to the SSH hosts within your [OpenSSH config file](https://man.openbsd.org/ssh_config).
+
 ## Create a profile
 
 You can start an SSH session in your command prompt by executing `ssh user@machine` and you will be prompted to enter your password. You can create a Windows Terminal profile that does this on startup by adding the `commandline` setting to a profile in your [settings.json file](../install.md#settings-json-file) inside the `list` of profile objects.
