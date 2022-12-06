@@ -26,7 +26,7 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "TerminalDocs/tutorials/powerline-in-powershell.md",
+            "source_path": "TerminalDocs/custom-terminal-gallery/powerline-in-powershell.md",
             "redirect_url": "/windows/terminal/tutorials/custom-prompt-setup",
             "redirect_document_id": false
         }
