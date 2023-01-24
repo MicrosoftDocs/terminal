@@ -39,7 +39,7 @@ Each theme in the `themes` list is comprised of a collection of property objects
 },
 ```
 
-You may also configure the Terminal to use separate themes for light and dark mode in the OS, and change automatically between those themes when the OS theme changes. To do this, specify the `theme` property in the following way:
+You may also configure the Terminal to use separate themes for light and dark mode in the OS and change automatically between those themes when the OS theme changes. To do this, specify the `theme` property as an object containing the keys `light` and `dark`:
 
 ```json
 "theme": { "dark": "<Dark Theme Name>", "light": "<Light Theme Name>" },
@@ -84,7 +84,7 @@ This sets the UI theme of the application. This will stylize items such as butto
 
 ### Mica
 
-This enables the Mica effect on this window, beneath all other UI layers. For Mica to be visible, the layers above it need to be transparent. As an example, to have a tab row with Mica in it, you'll need to configure the alpha channel of the background to be 0, as follows:
+This enables the Mica effect on this window, beneath all other UI layers. For Mica to be visible, the layers above it need to be transparent. As an example, to have a tab row with Mica in it you'll need to configure the alpha channel of the background to be `0` as follows:
 
 ```json
 {
@@ -105,7 +105,7 @@ This enables the Mica effect on this window, beneath all other UI layers. For Mi
 },
 ```
 
-Note that when Mica is enabled for the window, it is enabled under the entirety of the window, including as a backdrop for the Terminal controls in the window. This means that profiles which are using `opacity` without `useAcrylic` enabled will make Mica visible underneath the Terminal. It is not currently possible to have a unblurred transparent background for the Terminal, and a Mica background for the tabs / tab row simultaneously.
+Note that when Mica is enabled for the window it is enabled under the entirety of the window, including as a backdrop for the Terminal panes in the window. This means that profiles which are using `opacity` without `useAcrylic` enabled will show through to the new Mica background. It is not currently possible to have a unblurred transparent background for the Terminal and a Mica background for the tabs / tab row simultaneously.
 
 **Property name:** `useMica`
 
