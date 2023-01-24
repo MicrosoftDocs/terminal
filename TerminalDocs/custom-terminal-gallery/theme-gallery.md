@@ -100,4 +100,4 @@ For best results, this theme is combined with the global settings `"alwaysShowTa
             }
         }
     ]
-``
+```

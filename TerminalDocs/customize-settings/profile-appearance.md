@@ -38,7 +38,7 @@ In addition to a single color scheme name, this property can accept a pair of co
 },
 ```
 
-When specified in this manner, the Terminal will automatically switch between the two given color schemes, depending on the theme of the application. The Terminal will obey the [`theme.applicationTheme`](./themes#application-theme) property of the Terminal's selected theme. If that `applicationTheme` is set to `system`, then this will instead use the color scheme matching the theme as set by the OS.
+When specified in this manner, the Terminal will automatically switch between the two given color schemes, depending on the theme of the application. The Terminal will obey the [`theme.applicationTheme`](./themes.md#application-theme) property of the Terminal's selected theme. If that `applicationTheme` is set to `system`, then this will instead use the color scheme matching the theme as set by the OS.
 
 **Property name:** `colorScheme`
 
@@ -375,7 +375,7 @@ When `useAcrylic` is set to `true`, the window will use the acrylic material to 
 > Unblurred opacity (`"useAcrylic": false`) only works on Windows 11.
 
 > [!IMPORTANT]
-> When Mica is enabled in the [theme settings](./themes#mica), Mica will appear underneath the Terminal contents as well, when the `opacity` of the Terminal is set to a value <100.
+> When Mica is enabled in the [theme settings](./themes.md#mica), Mica will appear underneath the Terminal contents as well, when the `opacity` of the Terminal is set to a value <100.
 
 ### Enable acrylic
 
