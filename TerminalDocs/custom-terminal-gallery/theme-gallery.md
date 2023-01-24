@@ -68,7 +68,7 @@ Below are some examples of [Themes](./../customize-settings/themes.md).
 
 ![Windows Terminal Chonk Theme](./../images/Chonk-Theme.png)
 
-For best results, this theme is combined with the global settings `"alwaysShowTabs": true` and `"showTabsInTitlebar": false`, and setting the `opacity` of your profile to `0`. You may also want to disable the "Show accent color on title bars and windows borders" setting in the Windows settings app (under "Personalization > Colors")
+For best results, this theme is combined with the global settings `"alwaysShowTabs": true` and `"showTabsInTitlebar": false`, and a profile `opacity` of `0`. You may also want to disable the "Show accent color on title bars and windows borders" setting in the Windows settings app (under "Personalization > Colors")
 
 ```json
     "profiles": {

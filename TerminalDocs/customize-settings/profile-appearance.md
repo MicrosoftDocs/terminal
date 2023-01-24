@@ -28,7 +28,7 @@ The settings listed below affect the visual settings of each profile separately.
 
 This is the name of the color scheme used in the profile. Color schemes are defined in the `schemes` object. More detailed information can be found on the [Color schemes page](./color-schemes.md).
 
-This property can alternatively accept a pair of color scheme names, as follows:
+In addition to a single color scheme name, this property can accept a pair of color scheme names as follows:
 
 ```json
 "colorScheme":
