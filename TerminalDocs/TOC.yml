@@ -48,8 +48,6 @@
       items:
         - name: Custom prompt setup
           href: tutorials/custom-prompt-setup.md
-        - name: SSH
-          href: tutorials/ssh.md
         - name: Set the tab title
           href: tutorials/tab-title.md
         - name: Open tab or pane in same directory
