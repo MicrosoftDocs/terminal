@@ -3,7 +3,7 @@ title: Windows Terminal Actions
 description: Learn how to create custom actions for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 07/06/2022
+ms.date: 03/31/2023
 ms.topic: how-to
 ---
 
@@ -857,6 +857,63 @@ You can mark a pane as read-only, which will prevent input from going into the t
 ```json
 { "command": "toggleReadOnlyMode" }
 ```
+
+You can enable read-only mode on a pane. This works similarly to toggling, however, will not switch state if triggered again.
+
+**Command name:** `enableReadOnlyMode`
+
+**Default bindings:**
+
+```json
+{ "command": "enableReadOnlyMode" }
+```
+
+You can disable read-only mode on a pane. This works similarly to toggling, however, will not switch state if triggered again.
+
+**Command name:** `disableReadOnlyMode`
+
+**Default bindings:**
+
+```json
+{ "command": "disableReadOnlyMode" }
+```
+
+### Split a pane
+
+This halves the size of the active pane and opens another. Without any arguments, this will open the default profile in the new pane. If an action is not specified, the default profile's equivalent setting will be used.
+
+**Command name:** `splitPane`
+
+**Default bindings:**
+
+```json
+// In settings.json
+{ "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+
+// In defaults.json
+{ "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-" },
+{ "command": { "action": "splitPane", "split": "vertical" }, "keys": "alt+shift+plus" },
+{ "command": { "action": "splitPane", "split": "up" } },
+{ "command": { "action": "splitPane", "split": "right" } },
+{ "command": { "action": "splitPane", "split": "down" } },
+{ "command": { "action": "splitPane", "split": "left" } }
+```
+
+#### Parameters
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `split` | Required | `"vertical"`, `"horizontal"`, `"auto"`, `"up"`, `"right"`, `"down"`, `"left"` | How the pane will split. `"auto"` will split in the direction that provides the most surface area. |
+| `commandline` | Optional | Executable file name as a string | Executable run within the pane. |
+| `startingDirectory` | Optional | Folder location as a string | Directory in which the pane will open. |
+| `elevate` | Optional | `true`, `false`, `null` | Overrides the [`elevate`](./profile-general.md#automatically-run-as-administrator) property of the profile. When omitted, this action will behave according to the profile's `elevate` setting. When set to `true` or `false`, this action will behave as though the profile was set with `"elevate": true` or `"elevate": false` (respectively). |
+| `tabTitle` | Optional | String | Title of the tab when the new pane is focused. |
+| `index` | Optional | Integer | Profile that will open based on its position in the dropdown (starting at 0). |
+| `profile` | Optional | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
+| `colorScheme` | Optional | The name of a color scheme as a string | The scheme to use instead of the profile's set `colorScheme` |
+| `suppressApplicationTitle` | Optional | `true`, `false` | When set to `false`, applications can change the tab title by sending title change messages. When set to `true`, these messages are suppressed. If not provided, the behavior is inherited from the profile's settings. |
+| `splitMode` | Optional | `"duplicate"` | Controls how the pane splits. Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane. |
+| `size` | Optional | Float | Specify how large the new pane should be, as a fraction of the current pane's size. `1.0` would be "all of the current pane", and `0.0` is "None of the parent". Defaults to `0.5`. |
 
 <br />
 
