@@ -51,11 +51,11 @@ The `--window` parameter can be used to send commands to existing terminal windo
 If no window exists with the given `window-id`, then a new window will be
 created with that id/name.
 
-For example, running `wt -w _quake` will open a new ["quake window"](./tips-and-tricks.md#Quake-mode). Running that command again will open a new tab in the existing quake window.
+For example, running `wt -w _quake` will open a new ["quake window"](./tips-and-tricks.md#quake-mode). Running that command again will open a new tab in the existing quake window.
 
 ### New tab command
 
-Used to create a new tab. See also the [`newTab` action](./customize-settings/actions.md#New-tab).
+Used to create a new tab. See also the [`newTab` action](./customize-settings/actions.md#new-tab).
 
 | Command | Parameter | Description | Values |
 | ------- | ---------- | ----------- | ------ |
@@ -73,7 +73,7 @@ Used to create a new tab. See also the [`newTab` action](./customize-settings/ac
 
 ### Split-pane command
 
-Used to create a new split pane. See also the [`splitPane` action](./customize-settings/actions.md#Split-a-pane).
+Used to create a new split pane. See also the [`splitPane` action](./customize-settings/actions.md#split-a-pane).
 
 | Command | Parameter | Description | Values |
 | ------- | ---------- | ----------- | ------ |
@@ -91,7 +91,7 @@ Used to create a new split pane. See also the [`splitPane` action](./customize-s
 
 ### Focus-tab command
 
-Used to focus a specific tab within the window. See also the [`switchToTab` action](./customize-settings/actions.md#Open-a-specific-tab).
+Used to focus a specific tab within the window. See also the [`switchToTab` action](./customize-settings/actions.md#open-a-specific-tab).
 
 | Command | Parameter | Description | Values |
 | ------- | ---------- | ----------- | ------ |
@@ -99,7 +99,7 @@ Used to focus a specific tab within the window. See also the [`switchToTab` acti
 
 ### Move-focus command
 
-Used to move focus within the window. See also the [`moveFocus` action](./customize-settings/actions.md#Move-pane-focus).
+Used to move focus within the window. See also the [`moveFocus` action](./customize-settings/actions.md#move-pane-focus).
 
 | Command | Parameter | Description | Values |
 | ------- | ---------- | ----------- | ------ |
@@ -113,7 +113,7 @@ Accepted `direction` values
 
 ### Move-pane command
 
-Used to move a pane within the window. See also the [`movePane` action](./customize-settings/actions.md#Move-pane).
+Used to move a pane within the window. See also the [`movePane` action](./customize-settings/actions.md#move-pane).
 
 | Command | Parameter | Description | Values |
 | ------- | ---------- | ----------- | ------ |
@@ -121,7 +121,7 @@ Used to move a pane within the window. See also the [`movePane` action](./custom
 
 ### Swap-pane command
 
-Used to swap the position of two panes within the window. See also the [`swapPane` action](./customize-settings/actions.md#Swap-panes).
+Used to swap the position of two panes within the window. See also the [`swapPane` action](./customize-settings/actions.md#swap-panes).
 
 | Command | Parameter | Description | Values |
 | ------- | ---------- | ----------- | ------ |
