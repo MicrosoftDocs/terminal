@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal SSH
 description: In this tutorial, learn how to set up an SSH connection in Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
+author: cinnamon-msft, nguyen-dows
+ms.author: cinnamon, chrnguyen
 ms.date: 10/06/2022
 ms.topic: tutorial
 #Customer intent: As a developer or IT admin, I want to set up am SSH connection in Windows Terminal so that I can connect to other servers.
@@ -19,9 +19,6 @@ The latest builds of Windows 10 and Windows 11 include a built-in SSH server and
 By default, the OpenSSH client will be located in the directory: `C:\Windows\System32\OpenSSH`. You can also check that it is installed in Windows Settings > Apps > Optional features, then search for "OpenSSH" in your installed features.
 
 ![OpenSSH feature in Windows Settings](../images/ssh-optonialfeatures.png)
-
-> [!NOTE]
-> Windows Terminal version 1.XX+ can dynamically generate profiles to connect to the SSH hosts within your [OpenSSH config file](https://man.openbsd.org/ssh_config).
 
 ## Create a profile
 
