@@ -7,12 +7,12 @@ ms.date: 04/10/2023
 ms.topic: how-to 
 ---
 
-# What is Windows Terminal Portable mode?
+# Windows Terminal Portable
 Windows Terminal supports [Portable mode](https://en.wikipedia.org/wiki/Portable_application). Portable mode enables all data created and maintained by Windows Terminal to live near itself so that it can be moved across different environments. 
 
 Portable mode is supported on the [unpackaged ZIP download](https://github.com/microsoft/terminal/releases). This release is an official unpackaged execution where Windows Terminal stores its settings in a `settings` folder next to `WindowsTerminal.exe`. Portable mode is not available on the packaged execution of Windows Terminal.
 
-# Why Portable mode? 
+## Why use Portable mode? 
 Windows Terminal portable mode empowers users with the ability to use Windows Terminal without the need to install it like a traditional application. 
 This is especially useful for users who unable to download and install Windows Terminal from the Microsoft Store. 
 
