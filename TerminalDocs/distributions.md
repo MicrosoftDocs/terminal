@@ -36,6 +36,7 @@ Windows Terminal is distributed via [GitHub releases] in a variety of formats:
 | **"Open in Terminal" context menu**        | ✅                       | ✅                  | ❌               | ❌                            |
 | **Automatic start on login**               | ✅                       | ✅                  | ❌               | ❌                            |
 | **Installation on non-networked machines** | ❌                       | ✅                  | ✅               | ✅                            |
+| **Preinstallation in a Windows image**     | ❌                       | ✅                  | _as plain files_ | _as plain files_              |
 | **User-controlled installation path**      | ❌                       | ❌                  | ✅               | ✅                            |
 | **Double-click activatable**               | ❌                       | ❌                  | ✅               | ✅                            |
 | **Settings storage location**              | User folder, per package | (same as packaged)  | `%LOCALAPPDATA%` | Next to `WindowsTerminal.exe` |
