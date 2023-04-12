@@ -34,7 +34,7 @@ Windows Terminal is distributed via [GitHub releases] in a variety of formats:
 | **Automatic architecture selection**       | ✅                       | ✅                  | ❌               | ❌                            |
 | **Can be set as your default terminal**    | ✅                       | ✅                  | ❌               | ❌                            |
 | **"Open in Terminal" context menu**        | ✅                       | ✅                  | ❌               | ❌                            |
-| **Automatic start on login**               | ✅                       | ✅                  | ❌               | ❌                            |
+| **Automatic start on login option**        | ✅                       | ✅                  | _manual_         | _manual_                      |
 | **Double-click installable**               | ✅                       | ❌                  | ❌               | ❌                            |
 | **Installation on non-networked machines** | ❌                       | ✅                  | ✅               | ✅                            |
 | **Preinstallation in a Windows image**     | ❌                       | ✅                  | _as plain files_ | _as plain files_              |
