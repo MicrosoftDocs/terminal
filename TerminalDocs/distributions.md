@@ -40,7 +40,7 @@ Windows Terminal is distributed via [GitHub releases] in a variety of formats:
 | **Double-click activatable**               | ❌                       | ❌                  | ✅               | ✅                            |
 | **Settings storage location**              | User folder, per package | (same as packaged)  | `%LOCALAPPDATA%` | Next to `WindowsTerminal.exe` |
 
-# Windows Terminal Portable
+## Windows Terminal Portable
 
 As of version 1.17, Windows Terminal supports being deployed in ["Portable mode"]. Portable mode ensures that all data
 created and maintained by Windows Terminal is saved next to the application so that it can be more easily moved across
@@ -53,7 +53,7 @@ to `WindowsTerminal.exe`.
 
 Portable mode is not supported in the packaged or preinstallation kit distributions of Windows Terminal.
 
-## Why use Portable mode? 
+### Why use Portable mode?
 
 The unpackaged and portable mode distributions of Windows Terminal allow you to use Terminal without installing it
 globally, e.g. on systems where you may not have permission to install MSIX packages or download software from the
@@ -63,7 +63,7 @@ Portable mode allows you to carry around (and archive!) a preconfigured installa
 a network share, cloud drive or USB flash drive. Any such installation is self-contained and will not interfere with
 other installed distributions of Windows Terminal.
 
-## Enabling Portable mode
+### Enabling Portable mode
 
 Portable mode needs to be enabled manually. After unzipping the Windows Terminal download, create a file named `.portable` next to `WindowsTerminal.exe`.
 
@@ -76,7 +76,7 @@ state such as window layouts.
 
 ![Windows Terminal portable mode](./images/portable-mode.png)
 
-## Disabling Portable mode
+### Disabling Portable mode
 
 You can restore Portable mode unpackaged installation to its original configuration, where settings are stored in
 `%LOCALAPPDATA%\Microsoft\Windows Terminal`, by removing the `.portable` marker file from the directory containing
@@ -84,12 +84,12 @@ You can restore Portable mode unpackaged installation to its original configurat
 
 If you wish to reenable portable mode, you can create a new `.portable` marker file next to `WindowsTerminal.exe`.
 
-## Upgrading a Portable mode Install
+### Upgrading a Portable mode Install
 
 You can upgrade a portable mode installation of Windows Terminal by moving the `.portable` marker file and the
 `settings` directory to a newly-extracted unpackaged version of Windows Terminal.
 
 ["Portable mode"]: https://en.wikipedia.org/wiki/Portable_application
 [GitHub releases]: https://github.com/microsoft/terminal/releases
-[preinstallation kit]: https://docs.microsoft.com/en-us/windows/msix/desktop/deploy-preinstalled-apps
-[DISM documentation on preinstallation]: https://docs.microsoft.com/windows-hardware/manufacture/desktop/preinstall-apps-using-dism
+[preinstallation kit]: /windows/msix/desktop/deploy-preinstalled-apps
+[DISM documentation on preinstallation]: /windows-hardware/manufacture/desktop/preinstall-apps-using-dism
