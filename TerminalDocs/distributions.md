@@ -24,7 +24,7 @@ Windows Terminal is distributed via [GitHub releases] in a variety of formats:
       preinstall Windows Terminal should continue using the Packaged distribution.
     - When installed via preinstallation kit, Terminal will receive automatic updates through the Store.
 - Unpackaged, or "ZIP" (new in 1.17 stable)
-    - This distribution method was not officially supported until 1.17.
+    - This distribution method was not officially supported until stable channel version 1.17.
     - A `.zip` file that contains Windows Terminal.
     - The unpackaged distribution does not receive automatic updates, which puts you in control of exactly when new
       versions are installed.
@@ -50,9 +50,9 @@ Windows Terminal is distributed via [GitHub releases] in a variety of formats:
 
 ## Windows Terminal Portable
 
-As of version 1.17, Windows Terminal supports being deployed in ["Portable mode"]. Portable mode ensures that all data
-created and maintained by Windows Terminal is saved next to the application so that it can be more easily moved across
-different environments.
+As of stable channel version 1.17, Windows Terminal supports being deployed in ["Portable mode"]. Portable mode ensures
+that all data created and maintained by Windows Terminal is saved next to the application so that it can be more easily
+moved across different environments.
 
 Portable mode is supported by the unpackaged "ZIP" distribution.
 
