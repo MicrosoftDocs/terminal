@@ -34,14 +34,14 @@ Windows Terminal is distributed via [GitHub releases] in a variety of formats:
 
 ## Distribution feature comparison
 
-| Feature                                    | Packaged                 | Preinstallation Kit | Unpackaged       | Portable                      |
+|                                            | Packaged                 | Preinstallation Kit | Unpackaged       | Portable                      |
 | ------------------------------------------ | ------------------------ | ------------------- | ---------------- | ----------------------------- |
 | **Automatic updates**                      | ✅                       | ✅                  | ❌               | ❌                            |
 | **Automatic architecture selection**       | ✅                       | ✅                  | ❌               | ❌                            |
 | **Can be set as your default terminal**    | ✅                       | ✅                  | ❌               | ❌                            |
 | **"Open in Terminal" context menu**        | ✅                       | ✅                  | ❌               | ❌                            |
 | **Automatic start on login option**        | ✅                       | ✅                  | _manual_         | _manual_                      |
-| **Double-click installable**               | ✅                       | ❌                  | ❌               | ❌                            |
+| **Double-click installation**              | ✅                       | ❌                  | ❌               | ❌                            |
 | **Installation on non-networked machines** | ❌                       | ✅                  | ✅               | ✅                            |
 | **Preinstallation in a Windows image**     | ❌                       | ✅                  | _as plain files_ | _as plain files_              |
 | **User-controlled installation path**      | ❌                       | ❌                  | ✅               | ✅                            |
@@ -82,7 +82,7 @@ Portable mode needs to be enabled manually. After unzipping the Windows Terminal
 Windows Terminal will automatically create a directory named `settings` in which it will store both settings and runtime
 state such as window layouts.
 
-![Windows Terminal portable mode](./images/portable-mode.png)
+![Windows Terminal portable mode disclaimer example](./images/portable-mode.png)
 
 ### Disabling Portable mode
 
