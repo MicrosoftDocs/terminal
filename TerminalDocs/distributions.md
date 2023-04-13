@@ -12,18 +12,24 @@ ms.topic: how-to
 Windows Terminal is distributed via [GitHub releases] in a variety of formats:
 
 - Packaged, or "MSIX bundle"
-    - This is the oldest and best-supported distribution of Windows Terminal. The packaged distribution can be installed
-      via the `.msixbundle` file provided on the [GitHub releases] page, or through the Microsoft Store.
+    - This is the oldest and best-supported distribution of Windows Terminal.
+    - The packaged distribution can be installed via the `.msixbundle` file provided on the [GitHub releases] page or
+      through the Microsoft Store ([Stable](https://aka.ms/terminal), [Preview](https://aka.ms/terminal-preview)).
+    - Installation via MSIX bundle may require network connectivity to download dependency packages from the Store.
+    - When installed via MSIX bundle, Terminal will receive automatic updates through the Store.
 - Preinstallation Kit
     - A [preinstallation kit] is available for system integrators and OEMs interested in preinstalling Windows Terminal
       on a Windows image.
     - More information is available in the [DISM documentation on preinstallation]. Users who do not intend to
       preinstall Windows Terminal should continue using the Packaged distribution.
+    - When installed via preinstallation kit, Terminal will receive automatic updates through the Store.
 - Unpackaged, or "ZIP" (new in 1.17 stable)
     - This distribution method was not officially supported until 1.17.
     - A `.zip` file that contains Windows Terminal.
+    - The unpackaged distribution does not receive automatic updates, which puts you in control of exactly when new
+      versions are installed.
 - Portable
-    - A version of the unpackaged distribution that stores its settings in a nearby directory.
+    - A personality of the unpackaged distribution, where Terminal stores its settings in a nearby directory.
     - [Learn more about configuring Portable mode.](#windows-terminal-portable)
 
 ## Distribution feature comparison
