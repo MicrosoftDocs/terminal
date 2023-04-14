@@ -1,5 +1,5 @@
 ---
-title: Windows Terminal Distributions
+title: Windows Terminal Distribution Types
 description: Learn how to use the different distributions of Windows Terminal.
 author: nguyen-dows
 ms.author: chrnguyen
@@ -7,7 +7,7 @@ ms.date: 04/10/2023
 ms.topic: how-to 
 ---
 
-# Windows Terminal Distributions
+# Windows Terminal Distribution Types
 
 Windows Terminal is distributed via [GitHub releases] in a variety of formats:
 
