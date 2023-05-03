@@ -193,12 +193,13 @@ Configures how the "close" button on the tab should appear. This accepts the fol
 * `"always"`: Always show tab close buttons.
 * `"hover"`: Show the tab close button on the active tab, and any tabs that are hovered with the mouse.
 * `"never"`: Never show tab close buttons. This also disables the ability to close the tab with the middle mouse button.
+* `"activeOnly"`: Show the tab close button on the active tab only.
 
 **Property name:** `showCloseButton`
 
 **Necessity:** Optional
 
-**Accepts:** `"always"`, `"hover"`, `"never"`
+**Accepts:** `"always"`, `"hover"`, `"never"`, `"activeOnly"`
 
 **Default value:** `"always"`
 
