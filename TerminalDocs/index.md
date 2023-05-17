@@ -25,12 +25,14 @@ Windows Terminal is a modern host application for the command-line shells you al
 
 Any application that has a command line interface can be run inside Windows Terminal. This includes everything from PowerShell and Command Prompt to Azure Cloud Shell and any WSL distribution such as Ubuntu or Oh-My-Zsh.
 
-## Tab tearout (in preview)
+## Tab tearout ([in preview](https://apps.microsoft.com/store/detail/windows-terminal-preview/9N8G5RFZ9XK3))
 
-You can tear out the tabs in Windows Terminal and create new windows.
+You can tear out tabs in Windows Terminal and create new windows.
+
 ![Windows Terminal tab tearout](./images/tear-tab.gif)
 
-You can also drag-and-drop tabs into existing windows.
+You can also drag and drop tabs into existing windows.
+
 ![Dragging and dropping tabs into Terminal windows](./images/attach-tab.gif)
 
 ## Customized schemes and configurations
