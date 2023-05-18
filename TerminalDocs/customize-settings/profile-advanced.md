@@ -88,7 +88,7 @@ ___
 
 ## History size
 
-This sets the number of lines above the ones displayed in the window you can scroll back to.
+This sets the number of lines above the ones displayed in the window you can scroll back to. The maximum history size is `32767`.
 
 **Property name:** `historySize`
 
