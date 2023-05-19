@@ -234,6 +234,9 @@ You can enable read-only mode on a pane. This works similarly to toggling, howev
 { "command": "enableReadOnlyMode" }
 ```
 
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 You can disable read-only mode on a pane. This works similarly to toggling, however, will not switch state if triggered again.
 
 **Command name:** `disableReadOnlyMode`
@@ -244,6 +247,8 @@ You can disable read-only mode on a pane. This works similarly to toggling, howe
 { "command": "disableReadOnlyMode" }
 ```
 
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ## Customizing panes using key bindings
 

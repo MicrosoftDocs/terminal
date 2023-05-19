@@ -195,6 +195,9 @@ Configures how the "close" button on the tab should appear. This accepts the fol
 * `"never"`: Never show tab close buttons. This also disables the ability to close the tab with the middle mouse button.
 * `"activeOnly"`: Show the tab close button on the active tab only.
 
+> [!IMPORTANT]
+> The `"activeOnly"` value is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 **Property name:** `showCloseButton`
 
 **Necessity:** Optional
