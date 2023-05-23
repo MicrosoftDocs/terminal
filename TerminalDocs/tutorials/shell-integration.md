@@ -157,16 +157,16 @@ PROMPT $e]133;D$e\$e]133;A$e\$e]9;9;$P$e\%PROMPT%$e]133;B$e\
 ## Shell integration demos
 
 ### Open new tabs in the same working directory
-![](https://learn.microsoft.com/en-us/windows/terminal/images/duplicate-tab-same-cwd.gif)
+![Open new tabs in the same working directory](../images/duplicate-tab-same-cwd.gif)
 
 ### Show marks for each command in the scrollbar
-![gh-12948-automark](https://user-images.githubusercontent.com/18356694/164290075-a9f0b92c-3dde-4ce3-88cf-da5e451fe46c.gif)
+![Show marks for each command in the scrollbar](https://user-images.githubusercontent.com/18356694/164290075-a9f0b92c-3dde-4ce3-88cf-da5e451fe46c.gif)
 
 ### Automatically jump between commands
 
-![gh-12948-scroll-between-marks](https://user-images.githubusercontent.com/18356694/164290677-ffaafe09-81c4-4181-a4b8-db79a8aed235.gif)
+![Automatically jump between commands](https://user-images.githubusercontent.com/18356694/164290677-ffaafe09-81c4-4181-a4b8-db79a8aed235.gif)
 
 ### Select the entire output of a command
-![accidentally the whole thing](https://user-images.githubusercontent.com/18356694/207696859-a227abe2-ccd4-4b81-8a2c-8a22219cd0dd.gif)
+![Select the entire output of a command](https://user-images.githubusercontent.com/18356694/207696859-a227abe2-ccd4-4b81-8a2c-8a22219cd0dd.gif)
 
-![select-command-for-pr](https://user-images.githubusercontent.com/18356694/222840120-7a2493b2-2264-4e94-af2b-17bfacc90353.gif)
+![Select the command using the right-click context menu](https://user-images.githubusercontent.com/18356694/222840120-7a2493b2-2264-4e94-af2b-17bfacc90353.gif)
