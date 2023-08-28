@@ -93,7 +93,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\paradox.omp.json" | Invoke-
 
 Now, each new PowerShell instance will start by importing Oh My Posh and setting your command line theme.
 
-If you receive a script error when trying to open a new PowerShell instance, your Execution Policy for PowerShell may be restricted. To set your PowerShell Execution Policy to unrestricted, use the following command:
+If you receive a script error when trying to open a new PowerShell instance, your Execution Policy for PowerShell may be restricted. To set your PowerShell Execution Policy to unrestricted, you will need to launch PowerShell as an administrator and then use the following command:
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
