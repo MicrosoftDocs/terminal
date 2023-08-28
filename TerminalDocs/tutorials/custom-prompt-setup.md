@@ -103,7 +103,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 > This is not your Windows Terminal profile. Your PowerShell profile is a script that runs every time PowerShell starts. [Learn more about PowerShell profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
 
 > [!TIP]
-> Oh My Posh can be configured to restore the current working directory by enabling `osc99` in the General Settings. See the [Oh My Posh docs](https://ohmyposh.dev/docs/configuration/overview#general-settings).
+> See the [Oh My Posh FAQs](https://ohmyposh.dev/docs/faq/) for answers to common questions or issues. To learn more about the configuration and general settings, such as how to restore the current working directory, see the [Oh My Posh docs](https://ohmyposh.dev/docs/configuration/general#general-settings).
 
 ## Customize your WSL prompt with Oh My Posh
 
