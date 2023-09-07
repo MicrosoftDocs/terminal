@@ -3,14 +3,13 @@ title: Windows Terminal Rendering Settings
 description: Learn how to customize rendering settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 1/21/2021
+ms.date: 04/14/2021
 ms.topic: how-to
-ms.localizationpriority: high
 ---
 
 # Rendering settings in Windows Terminal
 
-The properties listed below affect the entire terminal window, regardless of the profile settings. These should be placed at the root of your settings.json file.
+The properties listed below affect the entire terminal window, regardless of the profile settings. These should be placed at the root of your [settings.json file](../install.md#settings-json-file).
 
 If you are thinking about changing the rendering settings, additional information is provided on the [Troubleshooting page](./../troubleshooting.md#the-text-is-blurry) to help guide you.
 

@@ -3,14 +3,13 @@ title: Windows Terminal Interaction Settings
 description: Learn how to customize interaction settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 1/28/2021
+ms.date: 03/10/2023
 ms.topic: how-to
-ms.localizationpriority: high
 ---
 
 # Interaction settings in Windows Terminal
 
-The properties listed below affect the entire terminal window, regardless of the profile settings. These should be placed at the root of your settings.json file.
+The properties listed below affect the entire terminal window, regardless of the profile settings. These should be placed at the root of your [settings.json file](../install.md#settings-json-file).
 
 ## Automatically copy selection to clipboard
 
@@ -44,6 +43,36 @@ When this is set to `true`, the color and font formatting of the selected text i
 
 ___
 
+## Remove trailing white-space in rectangular selection
+
+When this is set to `true` and you copy text in a rectangular (block) selection to the clipboard, trailing white-spaces are removed from each line. When it's set to `false`, the white-spaces are preserved, ensuring that all lines have the same length. To copy text in a rectangular (block) selection, hold down the <kbd>Alt</kbd> key, click and drag your mouse over the text area you want to select. This can be useful for selecting text columns, etc.
+
+**Property name:** `trimBlockSelection`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `true`
+
+<br />
+
+___
+
+## Trim trailing whitespace on paste
+
+When enabled, the terminal will automatically trim trailing whitespace characters when pasting text to the terminal.
+
+**Property name:** `trimPaste`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `true`
+
+___
+
 ## Word delimiters
 
 This determines the word delimiters used in a double-click selection. Word delimiters are characters that specify where the boundary is between two words. The most common examples are spaces, semicolons, commas, and periods.
@@ -54,9 +83,13 @@ This determines the word delimiters used in a double-click selection. Word delim
 
 **Accepts:** Characters as a string
 
-**Default value:** <code>&nbsp;&#x2f;&#x5c;&#x28;&#x29;&#x22;&#x27;&#x2d;&#x3a;&#x2c;&#x2e;&#x3b;&#x3c;&#x3e;&#x7e;&#x21;&#x40;&#x23;&#x24;&#x25;&#x5e;&#x26;&#x2a;&#x7c;&#x2b;&#x3d;&#x5b;&#x5d;&#x7b;&#x7d;&#x7e;&#x3f;│</code><br>_(`│` is `U+2502 BOX DRAWINGS LIGHT VERTICAL`)_
+**Default value:** 
+<code>&nbsp;&#x2f;&#x5c;&#x5c;&#x28;&#x29;&#x5c;&#x22;&#x27;&#x2d;&#x3a;&#x2c;&#x2e;&#x3b;&#x3c;&#x3e;&#x7e;&#x21;&#x40;&#x23;&#x24;&#x25;&#x5e;&#x26;&#x2a;&#x7c;&#x2b;&#x3d;&#x5b;&#x5d;&#x7b;&#x7d;&#x3f;│</code>
+<br>
+_(`│` is `U+2502 BOX DRAWINGS LIGHT VERTICAL`)_
 
-<br />
+> [!IMPORTANT]
+> The following characters must be escaped with a backslash : `\`, `"`
 
 ___
 
@@ -85,9 +118,47 @@ When this is set to `true`, the window will snap to the nearest character bounda
 
 ___
 
+## Minimize to notification area
+
+When this is set to `true`, minimizing a window will hide it from the taskbar, making it inaccessible from that area. It will instead be accessible from terminal's notification area icon. If either this global setting or the `minimizeToNotificationArea` global setting is set to true, terminal will place an icon in the notification area.
+
+**Property name:** `minimizeToNotificationArea`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+> [!IMPORTANT]
+> This setting was renamed from `"minimizeToTray"` to `"minimizeToNotificationArea"`.
+
+<br />
+
+___
+
+## Always show notification icon
+
+When this is set to `true`, the terminal will place its icon in the notification area. If either this global setting or the `minimizeToNotificationArea` global setting is set to true, the terminal will place an icon in the notification area. The user will also be able to utilize the `minimizeToNotificationArea` _action_.
+
+**Property name:** `alwaysShowNotificationIcon`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+> [!IMPORTANT]
+> This setting was renamed from `"alwaysShowTrayIcon"` to `"alwaysShowNotificationIcon"`.
+
+<br />
+
+___
+
 ## Tab settings
 
-### Tab switcher interface style ([Preview](https://aka.ms/terminal-preview))
+### Tab switcher interface style
 
 :::row:::
 :::column span="":::
@@ -103,7 +174,7 @@ To disable the tab switcher, you can set this to `false` or `"disabled"`.
 
 **Accepts:** `true`, `false`, `"mru"`, `"inOrder"`, `"disabled"`
 
-**Default value:** `true`
+**Default value:** `"inOrder"`
 
 :::column-end:::
 :::column span="":::
@@ -111,9 +182,6 @@ To disable the tab switcher, you can set this to `false` or `"disabled"`.
 
 :::column-end:::
 :::row-end:::
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Enable tab switcher
 
@@ -131,6 +199,53 @@ The tab switcher will open on the initial press of the actions for `nextTab` and
 
 > [!CAUTION]
 > The `"useTabSwitcher"` setting is no longer available in versions 1.5 and later. It is recommended that you use the `"tabSwitcherMode"` setting instead.
+
+<br />
+
+___
+
+## Automatically hide on focus loss
+
+When enabled, this allows the Terminal window to automatically be hidden as soon as the window loses focus.
+
+**Property name:** `autoHideWindow`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+<br />
+___
+
+## Automatically focus pane on mouse hover
+
+When this is set to `true`, the terminal will move focus to the pane on mouse hover. When it's set to `false`, a click will be required to focus the pane using the mouse.
+
+**Property name:** `focusFollowMouse`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+<br />
+
+___
+
+## Automatically detect URLs and make them clickable
+
+When this is set to `true`, URLs will be detected by the terminal. This will cause URLs to underline on hover and be clickable by pressing <kbd>Ctrl</kbd>. This is an experimental feature and its continued existence is not guaranteed.
+
+**Property name:** `experimental.detectURLs`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `true`
 
 <br />
 
@@ -161,3 +276,19 @@ When this is set to `true`, trying to paste text with multiple lines will displa
 **Accepts:** `true`, `false`
 
 **Default value:** `true`
+
+<br />
+
+___
+
+## Legacy input encoding
+
+Force the terminal to use the legacy input encoding. Specific keys in some applications may stop working when enabling this setting, but it can be useful for advanced-level scenarios when debugging input issues, especially with the [debug tap](https://github.com/microsoft/terminal/wiki/Enabling-the-debug-tap).
+
+**Property name:** `experimental.input.forceVT`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`

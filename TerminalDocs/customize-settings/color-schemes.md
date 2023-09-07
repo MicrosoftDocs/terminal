@@ -3,14 +3,13 @@ title: Windows Terminal Color Schemes
 description: Learn how to create color schemes for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 7/28/2020
+ms.date: 04/14/2021
 ms.topic: how-to
-ms.localizationpriority: high
 ---
 
 # Color schemes in Windows Terminal
 
-Windows Terminal lets you define your own color schemes, either by using the built-in preset schemes, or by creating your own scheme from scratch. To change schemes, you'll need to edit the settings.json file in an editor such as [Visual Studio Code](https://code.visualstudio.com/).
+Windows Terminal lets you define your own color schemes, either by using the built-in preset schemes, or by creating your own scheme from scratch. To change schemes, you'll need to edit the [settings.json file](../install.md#settings-json-file) in an editor such as [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Switching to a different color scheme
 
@@ -39,7 +38,7 @@ Notice the extra comma in the **hidden** line. Once you save this file, Windows 
 
 The "Tango Light" scheme is included as a default option, but you can create your own scheme from scratch or by copying an existing scheme.
 
-Color schemes can be defined in the `schemes` array of your settings.json file. They are written in the following format:
+Color schemes can be defined in the `schemes` array of your [settings.json file](../install.md#settings-json-file). They are written in the following format:
 
 ```json
 {
@@ -78,7 +77,10 @@ ___
 
 ## Included color schemes
 
-Windows Terminal includes these color schemes inside the defaults.json file, which can be accessed by holding <kbd>alt</kbd> and selecting the settings button. 
+Windows Terminal includes these color schemes inside the defaults.json file, which can be accessed by holding <kbd>alt</kbd> and selecting the settings button. Color schemes can **not** be changed in the defaults.json file. For a color scheme to apply across all profiles, change it in the [defaults section of your settings.json file](./profile-general.md).
+
+> [!NOTE]
+> You can print the current color scheme to the Terminal using [`colortool`](https://github.com/microsoft/terminal/tree/main/src/tools/ColorTool), with the commandline `colortool -c`
 
 
 ### Campbell

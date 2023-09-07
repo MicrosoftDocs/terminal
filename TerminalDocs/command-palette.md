@@ -1,11 +1,10 @@
 ---
 title: Windows Terminal Command Palette
-description: Learn how to use the command palette in the Windows Terminal.
+description: Learn how to use the command palette in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 11/11/2020
+ms.date: 02/25/2021
 ms.topic: how-to 
-ms.localizationpriority: high
 ---
 
 # How to use the command palette in Windows Terminal
@@ -26,9 +25,15 @@ If you'd like to enter a `wt` command into the command palette, you can do so by
 
 ![Windows Terminal command line mode](./images/command-palette-command-line-mode.gif)
 
+You can add a custom key binding for invoking the command palette in the command line mode directly.
+
+```json
+{ "command": "commandPalette", "launchMode": "commandLine", "keys": "" }
+```
+
 ## Adding an icon to a command
 
-You can optionally add an icon to a command defined in your settings.json that appears in the command palette. This can be done by adding the `icon` property to the action. Icons can be a path to an image, a symbol from [Segoe MDL2 Assets](https://docs.microsoft.com/windows/uwp/design/style/segoe-ui-symbol-font), or any character, including emojis.
+You can optionally add an icon to a command defined in your [settings.json](./install.md#settings-json-file) that appears in the command palette. This can be done by adding the `icon` property to the action. Icons can be a path to an image, a symbol from [Segoe MDL2 Assets](/windows/uwp/design/style/segoe-ui-symbol-font), or any character, including emojis.
 
 ```json
 { "icon": "C:\\Images\\my-icon.png", "name": "New tab", "command": "newTab", "keys": "ctrl+shift+t" },
@@ -69,19 +74,12 @@ You can currently iterate over the following properties:
 
 Create a new tab command for each profile.
 
-![Windows Terminal iterable commands](./images/command-palette-iterable-commands.gif)
-
 ```json
 {
-    "name": "New tab",
-    "commands": [
-        {
-            "iterateOn": "profiles",
-            "icon": "${profile.icon}",
-            "name": "${profile.name}",
-            "command": { "action": "newTab", "profile": "${profile.name}" }
-        }
-    ]
+    "iterateOn": "profiles",
+    "icon": "${profile.icon}",
+    "name": "${profile.name}",
+    "command": { "action": "newTab", "profile": "${profile.name}" }
 }
 ```
 
@@ -104,26 +102,39 @@ The above command would behave like the following three commands:
 
 ```json
 {
-    "name": "New tab...",
+    "icon": null,
+    "name": "Command Prompt",
+    "command": { "action": "newTab", "profile": "Command Prompt" }
+},
+{
+    "icon": "C:\\path\\to\\icon",
+    "name": "PowerShell",
+    "command": { "action": "newTab", "profile": "PowerShell" }
+},
+{
+    "icon": null,
+    "name": "Ubuntu",
+    "command": { "action": "newTab", "profile": "Ubuntu" }
+}
+```
+
+It's also possible to combine nested and iterable commands. For example, you can combine the three "new tab" commands above under a single "New tab" entry in the command palette, as shown in the image above, in the following way:
+
+```json
+{
+    "name": "New tab",
     "commands": [
         {
-            "icon": null,
-            "name": "Command Prompt",
-            "command": { "action": "newTab", "profile": "Command Prompt" }
-        },
-        {
-            "icon": "C:\\path\\to\\icon",
-            "name": "PowerShell",
-            "command": { "action": "newTab", "profile": "PowerShell" }
-        },
-        {
-            "icon": null,
-            "name": "Ubuntu",
-            "command": { "action": "newTab", "profile": "Ubuntu" }
+            "iterateOn": "profiles",
+            "icon": "${profile.icon}",
+            "name": "${profile.name}",
+            "command": { "action": "newTab", "profile": "${profile.name}" }
         }
     ]
 }
 ```
+
+![Windows Terminal iterable commands](./images/command-palette-iterable-commands.gif)
 
 ## Hiding a command
 

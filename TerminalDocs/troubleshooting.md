@@ -1,24 +1,36 @@
 ---
 title: Windows Terminal Troubleshooting
-description: Learn fixes to common obstacles in the Windows Terminal.
+description: Learn fixes to common obstacles in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 1/21/2021
+ms.date: 03/07/2022
 ms.topic: overview
-ms.localizationpriority: high
 ---
 
 # Troubleshooting in Windows Terminal
 
 This guide addresses some of the common errors and obstacles you may encounter when using Windows Terminal.
 
-## Set your WSL distribution to start in the home `~` directory when launched
+## Opening the settings does nothing (or opens an unexpected application)
 
-By default, the `startingDirectory` of a profile is `%USERPROFILE%` (`C:\Users\<YourUsername>`). This is a Windows path. For WSL, however, you may want to use the WSL home path instead. `startingDirectory` only accepts a Windows-style path, so setting it to start within a WSL distribution requires a prefix.
+If you click on the "settings" button in the dropdown, the Terminal will attempt to open the settings file, `settings.json`. This will cause the OS to try and launch your configured `.json` file editor. This might be Visual Studio, or Notepad, or some other completely unexpected application. If there isn't a configured `.json` editor on your machine, then the OS will eventually show you the "How do you want to open this file" dialog.
 
-Beginning in Windows 10 version 1903, the file systems of WSL distributions can be addressed using the `\\wsl$\` prefix. For any WSL distribution with the name `DistroName`, use `\\wsl$\DistroName` as a Windows path that points to the root of that distribution's file system.
+> [!TIP]
+> You can also use the settings UI to configure your settings if you are using [Windows Terminal Preview](https://aka.ms/terminal-preview). You can learn how to open the settings UI on the [Actions page](./customize-settings/actions.md#application-level-commands).
 
-For example, the following setting will launch the "Ubuntu-18.04" distribution in its home file path:
+## Set your WSL distribution to start in the home `~` directory when launched in older versions of Windows Terminal
+
+By default, the `startingDirectory` of a profile is `%USERPROFILE%` (`C:\Users\<YourUsername>`). This is a Windows path. For WSL distributions running a new version of Windows Terminal, the file systems can enter `~` to set this home path. In older versions of Windows Terminal, you can use `/home/<Your Ubuntu Username>` to directly refer to your home folder. For example, the following setting will launch the "Ubuntu-20.04" distribution in its home file path:
+
+```json
+{
+    "name": "Ubuntu-20.04",
+    "commandline" : "wsl -d Ubuntu-20.04",
+    "startingDirectory" : "/home/<Your Ubuntu Username>"
+}
+```
+
+If you are using a very early version of Windows Terminal, WSL may require using the `\\wsl$\` prefix when referring to a distribution's home path for the `startingDirectory` setting. For example, the following setting will launch the "Ubuntu-18.04" distribution in its home file path:
 
 ```json
 {
@@ -28,9 +40,12 @@ For example, the following setting will launch the "Ubuntu-18.04" distribution i
 }
 ```
 
+> [!IMPORTANT]
+> On newer versions of Windows, `startingDirectory` can accept Linux-style paths.
+
 ## Setting the tab title
 
-To have the shell automatically set your tab title, [visit the set the tab title tutorial](./tutorials/tab-title.md). If you want to set your own tab title, open the settings.json file and follow these steps:
+To have the shell automatically set your tab title, [visit the set the tab title tutorial](./tutorials/tab-title.md). If you want to set your own tab title, open the [settings.json file](./install.md#settings-json-file) and follow these steps:
 
 1. In the profile for the command line of your choice, add `"suppressApplicationTitle": true` to suppress any title change events that get sent from the shell. Adding *only* this setting to your profile will set the tab title to the name of your profile.
 
@@ -46,7 +61,7 @@ Visit the [Command line arguments page](./command-line-arguments.md) to learn ho
 
 ## Problem setting `startingDirectory`
 
-If the `startingDirectory` is being ignored in your profile, first check to make sure your settings.json's syntax is correct. To help you check this syntax, `"$schema": "https://aka.ms/terminal-profiles-schema"` is automatically injected. Some applications, like [Visual Studio Code](https://code.visualstudio.com/download), can use that injected schema to validate your json file as you make edits.
+If the `startingDirectory` is being ignored in your profile, first check to make sure the syntax is correct in your [settings.json file](./install.md#settings-json-file). To help you check this syntax, `"$schema": "https://aka.ms/terminal-profiles-schema"` is automatically injected. Some applications, like [Visual Studio Code](https://code.visualstudio.com/download), can use that injected schema to validate your json file as you make edits.
 
 If your settings are correct, you may be running a startup script that sets the starting directory of your terminal separately. For example, PowerShell has its own separate concept of profiles. If you are changing your starting directory there, it will take precedence over the setting defined in Windows Terminal.
 
@@ -64,7 +79,7 @@ If you would like to disable this feature in order for `Ctrl+=` to work properly
 
 Change the 'Switch Keyboard Layout' option to 'Not Assigned' (or off of <kbd>ctrl+shift</kbd>), then select **OK** and then **Apply**. <kbd>ctrl+shift+0</kbd> should now work as a key binding and is passed through to the terminal.
 
-On the other hand, if you do use this hotkey feature for multiple input languages, you can [configure your own custom key binding](./customize-settings/actions.md) in your settings.json file.
+On the other hand, if you do use this hotkey feature for multiple input languages, you can [configure your own custom key binding](./customize-settings/actions.md) in your [settings.json file](./install.md#settings-json-file).
 
 ## The text is blurry
 
@@ -97,29 +112,68 @@ Only images linked from a file location can be rendered as profile icons in the 
 
 ## Technical Notes
 
-Applications that use the [`GetConsoleScreenBufferInfo` family of APIs](https://docs.microsoft.com/windows/console/getconsolescreenbufferinfoex) to retrieve the active console colors in Win32 format and then attempt to transform them into cross-platform VT sequences (for example, by transforming `BACKGROUND_RED` to `\x1b[41m`) may interfere with Terminal's ability to detect what background color the application is attempting to use.
+Applications that use the [`GetConsoleScreenBufferInfo` family of APIs](/windows/console/getconsolescreenbufferinfoex) to retrieve the active console colors in Win32 format and then attempt to transform them into cross-platform VT sequences (for example, by transforming `BACKGROUND_RED` to `\x1b[41m`) may interfere with Terminal's ability to detect what background color the application is attempting to use.
 
 Application developers are encouraged to choose either Windows API functions _or_ VT sequences for adjusting colors and not attempt to mix them.
 
 ### Keyboard service warning
 
 Starting in Windows Terminal 1.5, the Terminal will display a warning if the "Touch Keyboard and Handwriting Panel Service" is disabled. This service is needed by the operating system to properly route input events to the Terminal application (as well as many other applications on Windows). If you see this warning, you can follow these steps to re-enable the service:
+
 1. In the run dialog, run `services.msc`
 
-  ![services.msc in the run dialog](https://user-images.githubusercontent.com/18356694/97891741-c81eed00-1cf4-11eb-9d48-7b94fede5294.png)
+    ![services.msc in the run dialog](https://user-images.githubusercontent.com/18356694/97891741-c81eed00-1cf4-11eb-9d48-7b94fede5294.png)
 
 2. Find the "Touch Keyboard and Handwriting Panel Service"
 
-  ![Touch Keyboard and Handwriting Panel Service in Services.msc](https://user-images.githubusercontent.com/18356694/97891813-e1279e00-1cf4-11eb-91c8-69a5c6da6c3d.png)
+    ![Touch Keyboard and Handwriting Panel Service in Services.msc](https://user-images.githubusercontent.com/18356694/97891813-e1279e00-1cf4-11eb-91c8-69a5c6da6c3d.png)
 
 3. Open the "Properties" for this service
 
-  ![service properties](https://user-images.githubusercontent.com/18356694/97891923-03212080-1cf5-11eb-90cc-821a4fbf16ba.png)
+    ![service properties](https://user-images.githubusercontent.com/18356694/97891923-03212080-1cf5-11eb-90cc-821a4fbf16ba.png)
 
 4. Change the "startup type" to "Automatic"
 
-  ![service startup type](https://user-images.githubusercontent.com/18356694/97892043-25b33980-1cf5-11eb-8833-a2e65a306a79.png)
+    ![service startup type](https://user-images.githubusercontent.com/18356694/97892043-25b33980-1cf5-11eb-8833-a2e65a306a79.png)
 
 5. Hit "Ok", and restart the PC.
 
 After restarting the machine, the service should auto-start, and the dialog should no longer appear.
+
+## Why do I see blinking or flashing when using a git bash command line?
+
+You may notice a blinking or flashing when using a git bash command line inside Windows Terminal. This behavior is actually by design. The Terminal is obeying what git bash is telling it to do (setting bell-style to visible, causing a flash to associate with the bell response), BUT we understand this may be distracting. To fix this, open the `.inputrc` file for your Git bash with a text editor. This file will likely be located in the path `C:\Program Files\Git\etc`. To open with the Nano text editor: `nano ~/.inputrc`
+
+Change the default:
+
+```bash
+# none, visible or audible
+set bell-style visible
+```
+
+Set the bell-style to either `none` or `audible` to remove the visible flash:
+
+```bash
+set bell-style none
+```
+
+Press Ctrl + O and Ctrl + X to Save and Exit.
+
+## How do I reset my settings in Windows Terminal back to the default settings?
+
+To reset your settings back to the original default settings, delete your [settings.json file](./install.md#settings-json-file). This will cause Windows Terminal to regenerate a settings.json file with the original default settings.
+
+> [!IMPORTANT]
+> As of Windows Terminal version 1.10 or greater, you'll also need to delete the `state.json` file in the same directory as the `settings.json` file to fully reset the settings to the defaults.
+
+## Why is Acrylic opacity not making my Windows Terminal background transparent?
+
+You can set the transparency of a terminal window with the [`useAcrylic` property](./customize-settings/profile-appearance.md#transparency). There are a few reasons why your opacity setting may not be working for Acrylic, including:
+
+- As a system-wide policy, acrylic is only enabled for the foreground window. So if you activate any other window than the Terminal, the Terminal's acrylic will turn off.
+- Acrylic doesn't work if your GPU hardware does not support it. If you're running an app in a Virtual Machine (VM) or over remote desktop, acrylic likely will not work.
+- Acrylic can be disabled by the operating system for a number of reasons, like being in power saver (low-battery) mode or when accessing a machine using Remote Desktop.
+
+## Why does my mouse pointer disappear when hovering over a window and typing?
+
+This cursor auto-hiding behavior is by design, but can be disabled in the by searching in Windows Settings for "Mouse settings" > "Additional Mouse Settings" > "Mouse Properties" > "Pointer Options" > Uncheck "Hide pointer while typing". You may need to restart your Windows Terminal in order for this change to take effect.

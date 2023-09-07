@@ -1,6 +1,6 @@
 ---
 title: Windows Terminal Search
-description: Learn how to search in the Windows Terminal.
+description: Learn how to search in Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 09/22/2020
@@ -16,7 +16,6 @@ Windows Terminal comes with a search feature that allows you to look through the
 By default, you can open the search dialog by typing <kbd>ctrl+shift+f</kbd>. Once opened, you can type the keyword you're looking for into the text box and hit <kbd>enter</kbd> to search.
 
 ![Windows Terminal search screenshot](./images/search.png)
-_Configuration: [Powerline in PowerShell](./custom-terminal-gallery/powerline-in-powershell.md)_
 
 ## Directional search
 
@@ -38,7 +37,7 @@ The search dialog works with [panes](./panes.md) as well. When focused on a pane
 
 ## Customize the search key binding
 
-You can open the search dialog with any key binding (shortcut key combination) that you prefer. To change the search key binding, open your settings.json file and search for the `find` command. By default, this command is set to `ctrl+shift+f`.
+You can open the search dialog with any key binding (shortcut key combination) that you prefer. To change the search key binding, open your [settings.json file](./install.md#settings-json-file) and search for the `find` command. By default, this command is set to `ctrl+shift+f`.
 
 ```json
 // Press ctrl+shift+f to open the search box

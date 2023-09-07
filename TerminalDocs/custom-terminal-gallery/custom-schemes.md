@@ -1,5 +1,5 @@
 ---
-title: Custom Color Schemes guide
+title: Windows Terminal Custom Color Schemes guide
 description: Some sample configurations for Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
@@ -13,12 +13,12 @@ Here are some color schemes for you to try or use as the basis of your own desig
 
 ## Installing schemes
 
-Copy the JSON from the **"schemes"** section into the correct section in settings.json, for example:
+Copy the JSON from the **"schemes"** section into the correct section in [settings.json](../install.md#settings-json-file), for example:
 
 Before:
 
 ```json
-"schemes:" [],
+"schemes": [],
 ```
 
 After:
@@ -86,12 +86,6 @@ After:
 ![Windows Terminal Frosted Glass Theme](./../images/frosted-glass-theme.png)
 
 [Details](frosted-glass-theme.md)
-
-## Powerline
-
-![Windows Terminal Powerline PowerShell](./../images/powerline-powershell.png)
-
-[Details](powerline-in-powershell.md)
 
 ## Raspberry Ubuntu
 
