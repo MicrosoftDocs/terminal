@@ -11,6 +11,24 @@ ms.topic: how-to
 
 The properties listed below affect the entire terminal window, regardless of the profile settings. These should be placed at the root of your [settings.json file](../install.md#settings-json-file).
 
+## Enable unfocused acrylic
+
+Controls if unfocused acrylic is possible. When this is set to  `true`, unfocused windows can have acrylic instead of opaque.
+When set to  `false` unfocused windows cannot have acrylic, when the focused window has acrylic the unfocused window will be Solid. 
+![plumbing_global_done_maybe_share_92](https://github.com/Jaswir/terminal-docs/assets/15957528/bcea1ad4-5683-4c10-949f-f6aedbe5a9b7)
+
+**Property name:** `compatibility.enableUnfocusedAcrylic`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+<br />
+
+___
+
 ## Automatically copy selection to clipboard
 
 When this is set to `true`, a selection is immediately copied to your clipboard upon creation. The right-click on your mouse will always paste in this case. When it's set to `false`, the selection persists and awaits further action. Using your mouse to right-click will copy the selection.
