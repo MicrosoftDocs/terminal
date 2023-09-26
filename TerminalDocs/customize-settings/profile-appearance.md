@@ -519,7 +519,7 @@ An object you can add to a profile that applies settings to the profile when it 
 
 **Necessity:** Optional
 
-**Accepts:** `backgroundImage`, `backgroundImageAlignment`, `backgroundImageOpacity`, `backgroundImageStretchMode`, `cursorHeight`, `cursorShape`, `cursorColor`, `colorScheme`, `foreground`, `background`, `selectionBackground`, `experimental.retroTerminalEffect`, `experimental.pixelShaderPath`
+**Accepts:** `backgroundImage`, `backgroundImageAlignment`, `backgroundImageOpacity`, `backgroundImageStretchMode`, `cursorHeight`, `cursorShape`, `cursorColor`, `colorScheme`, `foreground`, `background`, `opacity`, `selectionBackground`, `useAcrylic`, `experimental.retroTerminalEffect`, `experimental.pixelShaderPath`
 
 **Example:**
 ```json
