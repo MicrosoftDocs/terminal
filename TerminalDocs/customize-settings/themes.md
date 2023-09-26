@@ -133,7 +133,7 @@ This sets the color of the window border, when the window is active. When set to
 **Default value:** `null`
 
 > [!NOTE]
-> Window border colors are only available on Windows builds >= 22000.
+> Window border colors are only available on Windows 11.
 
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
@@ -156,7 +156,18 @@ This sets the color of the window border, when the window is inactive. When set 
 
 ### Experimental: Rainbow Window border
 
+:::row:::
+:::column span="":::
+
 When enabled, this setting will cause the window border to cycle through the colors of the rainbow. This is an experimental feature, and its continued existence is not guaranteed. When this setting is enabled, it will take precedence over both `frame` and `unfocusedFrame`.
+
+:::column-end:::
+:::column span="":::
+
+![The Windows Terminal with `rainbowFrame` enabled](../images/rainbow-frame.gif)
+
+:::column-end:::
+:::row-end:::
 
 **Property name:** `experimental.rainbowFrame`
 

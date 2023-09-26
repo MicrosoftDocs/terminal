@@ -228,7 +228,7 @@ This experimentally adds support for moving the text cursor by clicking with the
 :::column-end:::
 :::column span="":::
 
-![](../images/moveCursorWithMouse.gif)
+![A recording of the user moving the cursor with the mouse](../images/moveCursorWithMouse.gif)
 
 :::column-end:::
 :::row-end:::

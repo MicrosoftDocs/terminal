@@ -640,7 +640,7 @@ Attempts to open a browser window with a search for the selected text. This does
 
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
-| `queryUrl` | Required | String | URL to use to search with. A `%s` in this string will be replaced by the selected text. If ommitted, will default to the `searchWebDefaultQueryUrl` setting.  |
+| `queryUrl` | Required | String | URL to use to search with. A `%s` in this string will be replaced by the selected text. If omitted, will default to the `searchWebDefaultQueryUrl` setting.  |
 
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).

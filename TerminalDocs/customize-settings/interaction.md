@@ -309,7 +309,7 @@ The context menu can also be opened with the `showContextMenu` action, regardles
 :::column-end:::
 :::column span="":::
 
-![](../images/RightClickMenu.png)
+![A screenshot of the context menu in the Terminal](../images/RightClickMenu.png)
 
 :::column-end:::
 :::row-end:::
