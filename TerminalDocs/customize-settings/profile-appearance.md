@@ -387,7 +387,7 @@ When `useAcrylic` is set to `true`, the window will use the acrylic material to 
 
 :::row:::
 :::column span="":::
-When this is set to `true`, the window will have an acrylic background. When it's set to `false`, the window will have a plain, untextured background. The transparency only applies to focused windows due to OS limitations.
+When this is set to `true`, the window will have an acrylic background. When it's set to `false`, the window will have a plain, untextured background. Depending on the `Enable Unfocused Acrylic` setting the transparency applies to unfocused windows or only to focused windows.
 
 **Property name:** `useAcrylic`
 
