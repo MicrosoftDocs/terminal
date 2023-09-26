@@ -80,7 +80,6 @@ This sets the UI theme of the application. This will stylize items such as butto
 
 **Default value:** `"dark"`
 
-<br />
 
 ### Mica
 
@@ -120,6 +119,55 @@ Note that when Mica is enabled for the window it is enabled under the entirety o
 
 > [!NOTE]
 > Mica is only available on Windows builds >= 22621.
+
+### Window border
+
+This sets the color of the window border, when the window is active. When set to `null`, the border will use whatever the default color is for the OS theme.
+
+**Property name:** `frame`
+
+**Necessity:** Optional
+
+**Accepts:** a [theme color](#theme-colors)
+
+**Default value:** `null`
+
+> [!NOTE]
+> Window border colors are only available on Windows builds >= 22000.
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+
+### Inactive window border
+
+This sets the color of the window border, when the window is inactive. When set to `null`, the border will use whatever the default color is for the OS theme.
+
+**Property name:** `unfocusedFrame`
+
+**Necessity:** Optional
+
+**Accepts:** a [theme color](#theme-colors)
+
+**Default value:** `null`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### Experimental: Rainbow Window border
+
+When enabled, this setting will cause the window border to cycle through the colors of the rainbow. This is an experimental feature, and its continued existence is not guaranteed. When this setting is enabled, it will take precedence over both `frame` and `unfocusedFrame`.
+
+**Property name:** `experimental.rainbowFrame`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
