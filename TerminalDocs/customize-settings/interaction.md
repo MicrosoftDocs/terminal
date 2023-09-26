@@ -15,7 +15,7 @@ The properties listed below affect the entire terminal window, regardless of the
 
 Controls if unfocused acrylic is possible. When this is set to  `true`, unfocused windows can have acrylic instead of opaque.
 When set to  `false` unfocused windows cannot have acrylic, when the focused window has acrylic the unfocused window will be Solid. 
-![plumbing_global_done_maybe_share_92](https://github.com/Jaswir/terminal-docs/assets/15957528/bcea1ad4-5683-4c10-949f-f6aedbe5a9b7)
+![enable_unfocused_docs](https://github.com/Jaswir/terminal-docs/assets/15957528/cd065838-e803-421a-9e1c-55a07267afad)
 
 **Property name:** `compatibility.enableUnfocusedAcrylic`
 
