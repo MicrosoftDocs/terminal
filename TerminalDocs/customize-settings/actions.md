@@ -1339,7 +1339,18 @@ ___
 
 ### Open suggestions menu
 
+:::row:::
+:::column span="":::
+
 This allows the user to open the suggestions menu. The entries in the suggestions menu are controlled by the `source` property. The suggestions menu behaves much like the command palette. Typing in the text box will filter the results to only show entries that match the text. Pressing `enter` will execute the selected entry. Pressing `esc` will close the menu.
+
+:::column-end:::
+:::column span="":::
+
+![Suggestions UI](https://devblogs.microsoft.com/commandline/wp-content/uploads/sites/33/2023/09/SuggestionsUI.gif)
+
+:::column-end:::
+:::row-end:::
 
 **Command name:** `openSuggestions`
 
@@ -1348,13 +1359,13 @@ This allows the user to open the suggestions menu. The entries in the suggestion
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `source` | Required | any number of `"recentCommands"`, `"tasks"`, or `"all"` | Which suggestion sources to use to populate this menu. See below for a description of each.  |
-| `useCommandline` | Optional | Boolean | If [shell integration](./../shell-integration.md) is enabled, and this is `true`, the suggestions menu will be pre-populated with the contents of the current commandline. Defaults to `true` |
+| `useCommandline` | Optional | Boolean | If [shell integration](./../tutorials/shell-integration.md) is enabled, and this is `true`, the suggestions menu will be pre-populated with the contents of the current commandline. Defaults to `true` |
 
 #### Suggestion sources
 
 The following suggestion sources are supported:
 
-* `"recentCommands"`: This will populate the suggestions menu with the most recently used commands. These are powered by shell integration, so they will only be available if you have your shell configured to support shell integration. See [shell integration](./../shell-integration.md) for more information.
+* `"recentCommands"`: This will populate the suggestions menu with the most recently used commands. These are powered by shell integration, so they will only be available if you have your shell configured to support shell integration. See [Shell Integration](./../tutorials/shell-integration.md) for more information.
 * `"tasks"`: This will populate the suggestions menu with all of the `sendInput` actions from your settings.
 * `"all"`: Use all suggestion sources.
 
