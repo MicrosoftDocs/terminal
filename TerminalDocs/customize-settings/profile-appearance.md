@@ -365,7 +365,7 @@ When `useAcrylic` is set to `true`, the window will use the acrylic material to 
 
 **Accepts:** Number as a integer value from 0-100
 
-**Default value:** `100` when `useAcrylic` is false, `50` when `useAcrylic` is true.
+**Default value:** `100` 
 
 :::column-end:::
 :::column span="":::
@@ -387,7 +387,7 @@ When `useAcrylic` is set to `true`, the window will use the acrylic material to 
 
 :::row:::
 :::column span="":::
-When this is set to `true`, the window will have an acrylic background. When it's set to `false`, the window will have a plain, untextured background. Depending on the `Enable Unfocused Acrylic` setting the transparency applies to unfocused windows or only to focused windows.
+When this is set to `true`, the window will have an acrylic background. When it's set to `false`, the window will have a plain, untextured background. Depending on the `Enable Unfocused Acrylic` global setting the transparency applies to unfocused windows aswell as focused windows when set to `true` or only applies to focused windows when set to `false`.
 
 **Property name:** `useAcrylic`
 
