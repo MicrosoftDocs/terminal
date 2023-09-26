@@ -401,7 +401,7 @@ When this is set to `true`, the window will have an acrylic background. When it'
 
 :::column-end:::
 :::column span="":::
-![Windows Terminal acrylic](./../images/acrylic.gif)
+![updated_acrylic_toggle_doc](https://github.com/Jaswir/terminal-docs/assets/15957528/f27e8213-1311-4c3f-b91d-f66a0b4c1d3c)
 
 :::column-end:::
 :::row-end:::
