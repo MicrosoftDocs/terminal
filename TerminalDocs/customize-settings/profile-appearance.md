@@ -359,6 +359,8 @@ This sets the transparency of the window for the profile. This accepts an intege
 
 When `useAcrylic` is set to `true`, the window will use the acrylic material to create a blurred background for the terminal. When `useAcrylic` is set to false, the terminal will use a unblurred opacity.
 
+Users can choose different opacity values for focused and unfocused windows. 
+
 **Property name:** `opacity`
 
 **Necessity:** Optional
@@ -369,8 +371,8 @@ When `useAcrylic` is set to `true`, the window will use the acrylic material to 
 
 :::column-end:::
 :::column span="":::
-![Windows Terminal acrylic opacity](./../images/acrylic-opacity.gif)
-
+![opacity_permutations_1_doc](https://github.com/Jaswir/terminal-docs/assets/15957528/8efc1447-f50c-44f2-a36d-f8ea9a83cf09)
+![jolsen](https://github.com/Jaswir/terminal-docs/assets/15957528/066ecc66-5172-47c5-abc1-fc9ee425fe45)
 :::column-end:::
 :::row-end:::
 
