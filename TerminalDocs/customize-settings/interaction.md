@@ -297,6 +297,35 @@ Force the terminal to use the legacy input encoding. Specific keys in some appli
 
 ___
 
+## Context Menu
+
+:::row:::
+:::column span="":::
+
+The context menu in the Windows Terminal is an easy way to access common actions quickly. When this is set to `true`, a right-click in the Terminal will activate the context menu. When set to `false`, a right-click will paste.
+
+The context menu can also be opened with the `showContextMenu` action, regardless if this setting is enabled or not.
+
+:::column-end:::
+:::column span="":::
+
+![](../images/RightClickMenu.png)
+
+:::column-end:::
+:::row-end:::
+
+**Property name:** `experimental.rightClickContextMenu`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+<br />
+
+___
+
 ## Web searching
 
 This is the default URL used when searching the web from the terminal with the `searchWeb` action (including the right-click context menu). The `%s` in this string is replaced with the selected text. The default value is `https://www.bing.com/search?q=%s`.
@@ -309,7 +338,5 @@ This is the default URL used when searching the web from the terminal with the `
 
 **Default value:** `https://www.bing.com/search?q=%s`
 
-
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
