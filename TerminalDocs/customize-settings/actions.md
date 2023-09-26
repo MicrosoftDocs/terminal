@@ -1347,7 +1347,7 @@ This allows the user to open the suggestions menu. The entries in the suggestion
 :::column-end:::
 :::column span="":::
 
-![Suggestions UI](https://devblogs.microsoft.com/commandline/wp-content/uploads/sites/33/2023/09/SuggestionsUI.gif)
+![Suggestions UI](../images/SuggestionsUI.gif)
 
 :::column-end:::
 :::row-end:::
