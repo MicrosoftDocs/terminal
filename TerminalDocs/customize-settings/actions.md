@@ -1576,7 +1576,7 @@ You can disable keybindings or "unbind" the associated keys from any command. Th
 
 **Example using unbound:**
 
-For example, to unbind the shortcut keys <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd>" and <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>=</kbd>", include these commands in the `actions` section of your [settings.json file](../install.md#settings-json-file).
+For example, to unbind the shortcut keys <kbd>Alt+Shift+-</kbd>" and <kbd>Alt+Shift+=</kbd>", include these commands in the `actions` section of your [settings.json file](../install.md#settings-json-file).
 
 ```json
 {
@@ -1599,4 +1599,4 @@ You can also unbind a keystroke that is bound by default to an action by setting
 
 **Use-case scenario:**
 
-Windows Terminal uses the shortcut key binding <kbd>Ctrl</kbd>+<kbd>V</kbd> as the paste command. When working with a WSL command line, you may want to use a Linux application such as Vim to edit files. However, Vim relies on the <kbd>Ctrl</kbd>+<kbd>v</kbd> key binding to use [blockwise Visual mode](http://vimdoc.sourceforge.net/htmldoc/visual.html#CTRL-V). This key binding will be blocked, with the Windows Terminal paste command taking priority, unless the `unbound` setting is adjusted in your settings.json file so that the key binding will associate with the Vim command line app, rather than with the Windows Terminal binding.
+Windows Terminal uses the shortcut key binding <kbd>Ctrl+V</kbd> as the paste command. When working with a WSL command line, you may want to use a Linux application such as Vim to edit files. However, Vim relies on the <kbd>Ctrl+v</kbd> key binding to use [blockwise Visual mode](http://vimdoc.sourceforge.net/htmldoc/visual.html#CTRL-V). This key binding will be blocked, with the Windows Terminal paste command taking priority, unless the `unbound` setting is adjusted in your settings.json file so that the key binding will associate with the Vim command line app, rather than with the Windows Terminal binding.
