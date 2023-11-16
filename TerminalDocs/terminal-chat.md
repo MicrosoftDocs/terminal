@@ -2,7 +2,7 @@
 title: Terminal Chat
 description: Learn how to setup and use Terminal Chat in Windows Terminal Canary.
 author: chrnguyen
-ms.author: nguyen
+ms.author: chrnguyen
 ms.date: 11/15/2023
 ms.topic: how-to
 ---
@@ -30,9 +30,9 @@ For now, this feature is only available in Windows Terminal Canary and supports 
 
 In that documentation, you will learn how to:
 
-1. [Create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#create-a-resource)
+1. [Create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource#create-a-resource)
 
-2. [Deploy a model](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#deploy-a-model)
+2. [Deploy a model](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource#deploy-a-model)
 
 You will need to use a `gpt-35-turbo` model (or equivalent) with your deployment.
 
