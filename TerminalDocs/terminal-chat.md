@@ -8,11 +8,11 @@ ms.topic: how-to
 ---
 
 # Terminal Chat
-Terminal Chat is a feature in [Windows Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary) that allows the user to leverage an AI service to get suggestions within the context of their terminal. 
+Terminal Chat is a feature in [Windows Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary) that allows the user to communicate with an AI service to get suggestions within the context of their terminal. 
 
-Windows Terminal Canary only communicates with an AI service when the user sends a message. The chat history and name of the user’s active shell is also appended to the message that is sent to the AI service. The chat history is not saved by Windows Terminal Canary after their terminal session is over.
+Windows Terminal Canary only communicates with an AI service when the user sends a message in Terminal Chat. The chat history and name of the user’s active shell is also appended to the message that is sent to the AI service. The chat history is not saved by Windows Terminal Canary after their terminal session is over.
 
-For now, this feature is only available in Windows Terminal Canary and supports [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service). This feature does not ship with its own large-language model. 
+This feature does not ship with its own large-language model. For now, this feature is only available in Windows Terminal Canary and only supports [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service). 
 
 > [!NOTE]
 > This feature is only available in [Windows Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary).
@@ -20,7 +20,9 @@ For now, this feature is only available in Windows Terminal Canary and supports 
  ![Terminal Chat UI](./images/terminal-chat.png)
 
 ## Setting up Terminal Chat
- To use Terminal Chat, you will need to add an Azure OpenAI Service endpoint and key to the AI Settings of Windows Terminal Canary. To get an Azure OpenAI Service endpoint and key, you will need to create and deploy an Azure OpenAI Service resource.
+ To use Terminal Chat, you will need to add a service endpoint and key to the AI Settings of Windows Terminal Canary. 
+ 
+ For now, Terminal Chat only supports Azure OpenAI Service. To get an Azure OpenAI Service endpoint and key, you will need to create and deploy an Azure OpenAI Service resource.
 
  ![AI Settings](./images/ai-settings.png)
 
