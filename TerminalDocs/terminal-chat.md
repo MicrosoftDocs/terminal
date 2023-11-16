@@ -7,7 +7,7 @@ ms.date: 11/15/2023
 ms.topic: how-to
 ---
 
-# Terminal Chat in Windows Terminal Canary
+# Terminal Chat
 Terminal Chat is a feature in [Windows Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary) that allows the user to leverage an AI service to get suggestions within the context of their terminal. 
 
 Windows Terminal Canary only communicates with an AI service when the user sends a message. The chat history and name of the user’s active shell is also appended to the message that is sent to the AI service. The chat history is not saved by Windows Terminal Canary after their terminal session is over.
@@ -15,7 +15,7 @@ Windows Terminal Canary only communicates with an AI service when the user sends
 For now, this feature is only available in Windows Terminal Canary and supports [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service). This feature does not ship with its own large-language model. 
 
 > [!NOTE]
-> Terminal Chat is only available on [Windows Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary).
+> This feature is only available in [Windows Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary).
 
  ![Terminal Chat UI](./images/terminal-chat.png)
 
