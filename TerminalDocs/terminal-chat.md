@@ -8,11 +8,11 @@ ms.topic: how-to
 ---
 
 # Terminal Chat
-Terminal Chat is a feature in [Windows Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary) that allows the user to communicate with an AI service to get suggestions within the context of their terminal. 
-
-Windows Terminal Canary only communicates with an AI service when the user sends a message in Terminal Chat. The chat history and name of the user’s active shell is also appended to the message that is sent to the AI service. The chat history is not saved by Windows Terminal Canary after their terminal session is over.
+Terminal Chat is a feature in [Windows Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary) that allows the user to chat with an AI service to get intelligent suggestions (such as looking up a command or explaining an error message) while staying in the context of their terminal.
 
 This feature does not ship with its own large-language model. For now, this feature is only available in Windows Terminal Canary and only supports [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service). 
+
+Windows Terminal Canary only communicates with an AI service when the user sends a message in Terminal Chat. The chat history and name of the user’s active shell is also appended to the message that is sent to the AI service. The chat history is not saved by Windows Terminal Canary after their terminal session is over.
 
 > [!NOTE]
 > This feature is only available in [Windows Terminal Canary](https://github.com/microsoft/terminal#installing-windows-terminal-canary).
@@ -51,9 +51,7 @@ This will allow you to use Terminal Chat with the AI service affiliated with you
 
 ## Using Terminal Chat
 
-Terminal Chat allows the user to chat with an AI service to get intelligent suggestions (such as looking up a command or explaining an error message) while staying in the context of their terminal.
-
-Clicking on the chat bubble will place the suggestion on the input line of the terminal. This will not run the suggestion automatically. 
+Clicking on the suggestion will copy it to the input line of the terminal. This will not run the suggestion for the user automatically. 
 
 ![Terminal Chat in action](./images/terminal-chat.gif)
 
