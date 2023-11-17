@@ -20,11 +20,11 @@ Windows Terminal Canary only communicates with an AI service when the user sends
  ![Terminal Chat UI](./images/terminal-chat.png)
 
 ## Setting up Terminal Chat
- To use Terminal Chat, you will need to add a service endpoint and key to the AI Settings of Windows Terminal Canary. 
+ To use Terminal Chat, you will need to add a service endpoint and key to the Terminal Chat settings of Windows Terminal Canary. 
  
  For now, Terminal Chat only supports Azure OpenAI Service. To get an Azure OpenAI Service endpoint and key, you will need to create and deploy an Azure OpenAI Service resource.
 
- ![AI Settings](./images/ai-settings.png)
+ ![Terminal Chat Settings](./images/terminal-chat-settings.png)
 
  ### Creating and Deploying an Azure OpenAI Service resource
 
@@ -44,8 +44,8 @@ After creating a resource and deploying a model, you can find your Azure OpenAI 
 
 The **View code** pop-up dialog will show you a valid Azure OpenAI Service endpoint and key that you can use for Terminal Chat.
 
-### Saving and Storing your AI Settings
-After entering your AI service endpoint and key in AI Settings, select **Store** and **Save** to store and save those values. 
+### Saving and Storing your Terminal Chat settings
+After entering your AI service endpoint and key in Terminal Chat settings, select **Store** and **Save** to store and save those values. 
 
 This will allow you to use Terminal Chat with the AI service affiliated with your service endpoint.
 
