@@ -36,7 +36,7 @@ In that documentation, you will learn how to:
 
 2. [Deploy a model](/azure/ai-services/openai/how-to/create-resource#deploy-a-model)
 
-You will need to use a `gpt-35-turbo` model (or equivalent) with your deployment.
+You will need to use a `gpt-35-turbo` model with your deployment.
 
 After creating a resource and deploying a model, you can find your Azure OpenAI Service endpoint and key by navigating to the **Chat** playground in Azure OpenAI Studio and selecting **View code** in the Chat session section.
 
