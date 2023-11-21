@@ -34,7 +34,7 @@ If you would like to change these key bindings, you can create new ones using th
 
 ### Using the new tab button and dropdown menu
 
-If you'd like to open a new pane of your default profile, you can hold the <kbd>alt</kbd> key and click the new tab button. If you'd like to open a new pane through the dropdown menu, you can hold <kbd>alt</kbd> and click on your desired profile. Both of these options will `auto` split the active window or pane into a new pane of the selected profile. The `auto` split mode splits in the direction that has the longest edge to create a pane.
+If you'd like to open a new pane of your default profile, you can hold the <kbd>Alt</kbd> key and click the new tab button. If you'd like to open a new pane through the dropdown menu, you can hold <kbd>Alt</kbd> and click on your desired profile. Both of these options will `auto` split the active window or pane into a new pane of the selected profile. The `auto` split mode splits in the direction that has the longest edge to create a pane.
 
 ![Windows Terminal dropdown pane](./images/alt-click-pane.gif)
 

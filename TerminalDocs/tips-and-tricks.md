@@ -84,7 +84,7 @@ You can adjust the opacity of the background by holding <kbd>Ctrl+Shift</kbd> an
 
 ### Open a hyperlink
 
-You can open a hyperlink from inside Windows Terminal with your mouse using <kbd>ctrl</kbd> + click.
+You can open a hyperlink from inside Windows Terminal with your mouse using <kbd>Ctrl</kbd> + click.
 
 ### Drag and drop file/folder to open
 
@@ -100,7 +100,7 @@ Windows Terminal also includes a **[copyOnSelect](./customize-settings/interacti
 
 ### Virtual Terminal and WSL mouse support
 
-Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) applications as well as Windows applications that use virtual terminal (VT) input. This means applications such as [tmux](https://github.com/tmux/tmux/wiki) and [Midnight Commander](https://www.linuxhelp.com/how-to-install-midnight-commander-in-linux) will recognize when you select items in the Terminal window. If an application is in mouse mode, you can hold down <kbd>shift</kbd> to make a selection instead of sending VT input.
+Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) applications as well as Windows applications that use virtual terminal (VT) input. This means applications such as [tmux](https://github.com/tmux/tmux/wiki) and [Midnight Commander](https://www.linuxhelp.com/how-to-install-midnight-commander-in-linux) will recognize when you select items in the Terminal window. If an application is in mouse mode, you can hold down <kbd>Shift</kbd> to make a selection instead of sending VT input.
 
 ## Send input commands with a key binding
 
