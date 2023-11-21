@@ -24,7 +24,7 @@ Actions can be structured in the following formats:
 { "command": "commandName", "keys": "modifiers+key" }
 ```
 
-For example, this default setting uses the shortcut key <kbd>Alt+f4</kbd> to close the terminal window:
+For example, this default setting uses the shortcut key <kbd>Alt+F4</kbd> to close the terminal window:
 
 ```json
 { "command": "closeWindow", "keys": "alt+f4" }

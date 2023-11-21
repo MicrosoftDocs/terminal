@@ -13,7 +13,7 @@ Windows Terminal comes with a search feature that allows you to look through the
 
 ## Using search
 
-By default, you can open the search dialog by typing <kbd>Ctrl+Shift+F</kbd>. Once opened, you can type the keyword you're looking for into the text box and hit <kbd>enter</kbd> to search.
+By default, you can open the search dialog by typing <kbd>Ctrl+Shift+F</kbd>. Once opened, you can type the keyword you're looking for into the text box and hit <kbd>Enter</kbd> to search.
 
 ![Windows Terminal search screenshot](./images/search.png)
 
