@@ -1,13 +1,13 @@
 name: "📄 Post a documentation issue"
 title: "Feedback"
 description: >-
-Post an issue specific to Windows Terminal documentation. If you wish to post a Windows Terminal issue, bug, or feature request not specific to documentation, see https://github.com/microsoft/terminal/issues.
+  Post an issue specific to Windows Terminal documentation. If you wish to post a Windows Terminal issue, bug, or feature request not specific to documentation, see https://github.com/microsoft/terminal/issues.
 labels:
   - "needs-triage"
 body:
   - type: markdown
     attributes:
-      value: "## 🎁Enter your feedback🎁"
+      value: "## Enter your feedback"
   - type: markdown
     attributes:
       value: Select the issue type, and describe the issue in the text box below. Add as much detail as needed to help us resolve the issue.
