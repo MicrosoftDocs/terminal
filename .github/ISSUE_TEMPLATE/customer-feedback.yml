@@ -1,7 +1,7 @@
 name: "📄 Post a documentation issue"
 title: "Feedback"
 description: >-
-  Post an issue specific to Windows Terminal documentation. If you wish to post a Windows Terminal issue, bug, or feature request not specific to documentation, see https://github.com/microsoft/terminal/issues.
+  Post an issue specific to Windows Terminal documentation.
 labels:
   - "needs-triage"
 body:
