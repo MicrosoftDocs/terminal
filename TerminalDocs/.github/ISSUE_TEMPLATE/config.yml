@@ -1,4 +1,4 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
   - name: Report issues, bugs, or file feature requests related to Windows Terminal
     url: https://github.com/microsoft/terminal/issues
