@@ -8,16 +8,6 @@ ms.topic: tutorial
 #Customer intent: As a developer or IT admin, I want to set up am SSH connection in Windows Terminal so that I can connect to other servers.
 ---
 
----
-title: Windows Terminal SSH
-description: In this tutorial, learn how to set up an SSH connection in Windows Terminal.
-author: nguyen-dows
-ms.author: chrnguyen
-ms.date: 03/31/2023
-ms.topic: tutorial
-#Customer intent: As a developer or IT admin, I want to set up am SSH connection in Windows Terminal so that I can connect to other servers.
----
-
 # Tutorial: SSH in Windows Terminal
 
 Windows has a built-in SSH client that you can use in Windows Terminal. In this tutorial, you'll learn how to set up a profile in Windows Terminal that uses SSH. Note that this feature is in preview.
