@@ -91,6 +91,18 @@ _(`│` is `U+2502 BOX DRAWINGS LIGHT VERTICAL`)_
 > [!IMPORTANT]
 > The following characters must be escaped with a backslash : `\`, `"`
 
+As an example, here are some sets of delimiters you can use to match the behavior of various other terminal emulators:
+
+| Terminal       | Delimiters              |
+|----------------|-------------------------|
+| Xterm          | "$'()*;<>[\\]^`{|}      |
+| Gnome Terminal | !" $'()*:;<>[]^`{|}     |
+| Konsole        | !" $'()*,;<>[\\]^`{|}   |
+| Rxvt           | &();<>|                 |
+| Alacritty      | "'(),:<>[]`{|}          |
+| Kitty          | !" $'()*,:;<>[\\]^`{|}  |
+
+
 ___
 
 ## Snap window resizing to character grid
