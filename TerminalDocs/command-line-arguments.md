@@ -409,6 +409,8 @@ wt --title tabname1 ; new-tab -p "Ubuntu-18.04" --title tabname2
 wt --title tabname1 `; new-tab -p "Ubuntu-18.04" --title tabname2
 ```
 
+PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+
 #### [Linux](#tab/linux)
 
 ```bash
@@ -434,6 +436,8 @@ wt --title pane1 ; split-pane -p "Command Prompt" --title pane2
 ```powershell
 wt --title pane1 `; split-pane -p "Command Prompt" --title pane2
 ```
+
+PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
@@ -491,6 +495,8 @@ wt --tabColor #009999 ; new-tab --tabColor #f59218
 wt --tabColor '#009999' `; new-tab --tabColor '#f59218'
 ```
 
+PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+
 #### [Linux](#tab/linux)
 
 ```bash
@@ -525,6 +531,8 @@ wt --colorScheme Vintage ; split-pane --colorScheme "Tango Light"
 wt --colorScheme Vintage `; split-pane --colorScheme "Tango Light"
 ```
 
+PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+
 #### [Linux](#tab/linux)
 
 ```bash
@@ -552,6 +560,8 @@ wt ; new-tab -p "Ubuntu-18.04" ; focus-tab -t 1
 ```powershell
 wt `; new-tab -p "Ubuntu-18.04" `; focus-tab -t 1
 ```
+
+PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
