@@ -289,7 +289,7 @@ wt ; ;
 wt `; `;
 ```
 
-PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+PowerShell uses a semicolon `;` to delimit statements. To interpret a semicolon `;` as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (`--%`), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
@@ -317,7 +317,7 @@ wt -p "Command Prompt" ; new-tab -p "Windows PowerShell"
 wt -p "Command Prompt" `; new-tab -p "Windows PowerShell"
 ```
 
-PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+PowerShell uses a semicolon `;` to delimit statements. To interpret a semicolon `;` as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (`--%`), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
@@ -347,7 +347,7 @@ wt -p "Command Prompt" ; split-pane -p "Windows PowerShell" ; split-pane -H wsl.
 wt -p "Command Prompt" `; split-pane -p "Windows PowerShell" `; split-pane -H wsl.exe
 ```
 
-PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+PowerShell uses a semicolon `;` to delimit statements. To interpret a semicolon `;` as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (`--%`), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
@@ -379,7 +379,7 @@ wt -p "Command Prompt" ; split-pane -V wsl.exe ; new-tab -d c:\ ; split-pane -H 
 wt -p "Command Prompt" `; split-pane -V wsl.exe `; new-tab -d c:\ `; split-pane -H -d c:\ wsl.exe
 ```
 
-PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+PowerShell uses a semicolon `;` to delimit statements. To interpret a semicolon `;` as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (`--%`), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
@@ -409,7 +409,7 @@ wt --title tabname1 ; new-tab -p "Ubuntu-18.04" --title tabname2
 wt --title tabname1 `; new-tab -p "Ubuntu-18.04" --title tabname2
 ```
 
-PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+PowerShell uses a semicolon `;` to delimit statements. To interpret a semicolon `;` as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (`--%`), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
@@ -437,7 +437,7 @@ wt --title pane1 ; split-pane -p "Command Prompt" --title pane2
 wt --title pane1 `; split-pane -p "Command Prompt" --title pane2
 ```
 
-PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+PowerShell uses a semicolon `;` to delimit statements. To interpret a semicolon `;` as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (`--%`), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
@@ -495,7 +495,7 @@ wt --tabColor #009999 ; new-tab --tabColor #f59218
 wt --tabColor '#009999' `; new-tab --tabColor '#f59218'
 ```
 
-PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+PowerShell uses a semicolon `;` to delimit statements. To interpret a semicolon `;` as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (`--%`), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
@@ -531,7 +531,7 @@ wt --colorScheme Vintage ; split-pane --colorScheme "Tango Light"
 wt --colorScheme Vintage `; split-pane --colorScheme "Tango Light"
 ```
 
-PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+PowerShell uses a semicolon `;` to delimit statements. To interpret a semicolon `;` as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (`--%`), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
@@ -561,7 +561,7 @@ wt ; new-tab -p "Ubuntu-18.04" ; focus-tab -t 1
 wt `; new-tab -p "Ubuntu-18.04" `; focus-tab -t 1
 ```
 
-PowerShell uses a semicolon ; to delimit statements. To interpret a semicolon ; as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (--%), which instructs it to stop interpreting anything after it and just pass it on verbatim.
+PowerShell uses a semicolon `;` to delimit statements. To interpret a semicolon `;` as a command delimiter for wt command-line arguments, you need to escape semicolon characters using backticks. PowerShell also has the stop parsing operator (`--%`), which instructs it to stop interpreting anything after it and just pass it on verbatim.
 
 #### [Linux](#tab/linux)
 
