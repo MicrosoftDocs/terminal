@@ -177,7 +177,7 @@ PROMPT $e]133;D$e\$e]133;A$e\$e]9;9;$P$e\%PROMPT%$e]133;B$e\
 You can add the following to the end of your `~/.bashrc` to enable shell integration in bash:
 
 ```bash
-PS1="\[\033]133;D;\007\]\[\e]9;9;\w\a\]\[\033]133;A;\007\]$PS1\[\033]133;B;\007\]"
+PS1="\[\033]133;D;\007\]\[\033]133;A;\007\]$PS1\[\033]133;B;\007\]"
 ```
 
 This will wrap your existing `$PS1` with the necessary sequences to enable shell integration.
@@ -213,7 +213,7 @@ The following uses the `experimental.rightClickContextMenu` setting to enable a 
 
 With shell integration enabled, the Suggestions UI can be configured to also show your recent commands.
 
-![recent-command-suggestions](../images/recent-command-suggestions.gif)
+![The suggestions UI showing recent commands in it](../images/recent-command-suggestions.gif)
 
 You can open this menu with the following action:
 
