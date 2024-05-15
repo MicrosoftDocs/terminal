@@ -21,7 +21,7 @@ The settings listed below are specific to each unique profile. If you'd like a s
     // PROFILE OBJECTS
 ]
 ```
-## Profile order (index)
+## Profile Ordering
 
 The ordering of profiles in the `"list"` determines the profile index numbering. This is used to map to the launch key combo, such as <kbd>Ctrl+Shift+1</kbd>.
 To change the profile index number, simply cut/paste the profile objects above or below each other.
