@@ -3,7 +3,7 @@ title: Windows Terminal Interaction Settings
 description: Learn how to customize interaction settings within Windows Terminal.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 03/10/2023
+ms.date: 05/29/2024
 ms.topic: how-to
 ---
 
@@ -26,7 +26,7 @@ When set to  `false` unfocused windows cannot have acrylic, when the focused win
 
 :::column-end:::
 :::column span="":::
-![enable_unfocused_docs](https://github.com/Jaswir/terminal-docs/assets/15957528/cd065838-e803-421a-9e1c-55a07267afad)
+![enable_unfocused_docs](./../images/opacity.gif)
 
 :::column-end:::
 :::row-end:::
