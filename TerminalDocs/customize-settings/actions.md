@@ -616,13 +616,11 @@ As with any action, you can also invoke "broadcast mode" by search for "Toggle b
 { "command": "toggleBroadcastInput" }
 ```
 
-:::column-end:::
 :::column span="":::
 
 ![Broadcast Input](../images/broadcast-input.gif)
 
 :::column-end:::
-:::row-end:::
 
 ### Open context menu
 
