@@ -619,7 +619,7 @@ As with any action, you can also invoke "broadcast mode" by search for "Toggle b
 :::column-end:::
 :::column span="":::
 
-![Broadcast Input](./../images/broadcast-input.gif)
+![Broadcast Input](../images/broadcast-input.gif)
 
 :::column-end:::
 :::row-end:::
