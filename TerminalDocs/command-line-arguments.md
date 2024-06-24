@@ -69,6 +69,7 @@ Used to create a new tab. See also the [`newTab` action](./customize-settings/ac
 | `new-tab`, `nt` | `--suppressApplicationTitle` | Override the profile's `suppressApplicationTitle` setting, and set it to `true` |  |
 | `new-tab`, `nt` | `--useApplicationTitle` | Override the profile's `suppressApplicationTitle` setting, and set it to `false` |  |
 | `new-tab`, `nt` | `--colorScheme scheme-name` | Override the profile's `colorScheme` setting, and set it to the scheme from the settings with the name `scheme-name` | The name of a color scheme in the settings |
+| `new-tab`, `nt` | `--keepOpen, -o` | Override the profile's profile's `closeOnExit` setting, and set it to `never` | This keeps the tab/pane always open after executing the command. |
 
 > [!TIP]
 > If you change the title of a tab in Windows Terminal and want that title to persist, you must enable the [suppressApplicationTitle](./customize-settings/profile-advanced.md#suppress-title-changes) option by setting it to `true`.
