@@ -98,7 +98,7 @@ You can upgrade a portable mode installation of Windows Terminal by moving the `
 
 ### Portable mode FAQs
 
-#### Why are my ms-appdata URLs not working in Portable mode?
+#### Why don't ms-appdata URLs work in Portable mode?
 Prior to portable mode, a common heuristic to reference images in `settings.json` would be to use `ms-appdata:///Local`. 
 
 Portable mode promises a terminal that is encapsulated in a separate folder (i.e. a flash drive). References to `ms-appdata` will not work in Portable mode however references `ms-appx` will. 
