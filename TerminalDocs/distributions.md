@@ -3,7 +3,7 @@ title: Windows Terminal Distribution Types
 description: Learn how to use the different distributions of Windows Terminal.
 author: nguyen-dows
 ms.author: chrnguyen
-ms.date: 04/10/2023
+ms.date: 09/20/2024
 ms.topic: how-to 
 ---
 
@@ -95,6 +95,13 @@ If you wish to reenable portable mode, you can create a new `.portable` marker f
 
 You can upgrade a portable mode installation of Windows Terminal by moving the `.portable` marker file and the
 `settings` directory to a newly-extracted unpackaged version of Windows Terminal.
+
+### Portable mode FAQs
+
+#### Why are my ms-appdata URLs not working in Portable mode?
+Prior to portable mode, a common heuristic to reference images in `settings.json` would be to use `ms-appdata:///Local`. 
+
+Portable mode promises a terminal that is encapsulated in a separate folder (i.e. a flash drive). References to `ms-appdata` will not work in Portable mode however references `ms-appx` will. 
 
 ["Portable mode"]: https://en.wikipedia.org/wiki/Portable_application
 [GitHub releases]: https://github.com/microsoft/terminal/releases
