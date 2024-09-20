@@ -56,17 +56,17 @@ Learn more about dynamic profiles on the [Dynamic profiles page](./dynamic-profi
 
 ## Open a new tab
 
-You can open a new tab of the default profile by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd> or by selecting the + (plus) button. To open a different profile, select the ˅ (arrow) next to the + button to open the dropdown menu. From there, you can select which profile to open.
+You can open a new tab of the default profile by pressing <kbd>Ctrl+Shift+T</kbd> or by selecting the + (plus) button. To open a different profile, select the ˅ (arrow) next to the + button to open the dropdown menu. From there, you can select which profile to open.
 
 ## Invoke the command palette
 
-You can invoke most features of Windows Terminal through the [command palette](./command-palette.md). The default key combination to invoke it is <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>. You can also open it using the **Command palette** button in the dropdown menu.
+You can invoke most features of Windows Terminal through the [command palette](./command-palette.md). The default key combination to invoke it is <kbd>Ctrl+Shift+P</kbd>. You can also open it using the **Command palette** button in the dropdown menu.
 
 ![Example of the command palette in use](./images/command-palette-iterable-commands.gif)
 
 ## Open a new pane
 
-You can run multiple shells side-by-side using panes. To open a pane, you can use <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>+</kbd> for a vertical pane or <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd> for a horizontal one. You can also use <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> to open a duplicate pane of your focused profile. Learn more about panes on the [Panes page](./panes.md).
+You can run multiple shells side-by-side using panes. To open a pane, you can use <kbd>Alt+Shift++</kbd> for a vertical pane or <kbd>Alt+Shift+-</kbd> for a horizontal one. You can also use <kbd>Alt+Shift+D</kbd> to open a duplicate pane of your focused profile. Learn more about panes on the [Panes page](./panes.md).
 
 ## Configuration
 
@@ -82,7 +82,7 @@ The path for your Windows Terminal settings.json file may be found in one of the
 
 - Terminal (stable / general release): `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
 - Terminal (preview release): `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json`
-- Terminal (unpackaged: Scoop, Chocolately, etc): `%LOCALAPPDATA%\Microsoft\Windows Terminal\settings.json`
+- Terminal (unpackaged: Scoop, Chocolatey, etc): `%LOCALAPPDATA%\Microsoft\Windows Terminal\settings.json`
 
 > [!Tip]
 > 1. You can access the default settings for Windows Terminal by selecting  **Settings** in the dropdown menu while holding <kbd>Alt</kbd> to open the `defaults.json` file in your default text editor. This file is auto-generated and any changes to it will be ignored.

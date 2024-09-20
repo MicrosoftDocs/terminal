@@ -77,14 +77,14 @@ You can zoom the text window of Windows Terminal (making the text size larger or
 
 ### Adjust background opacity with the mouse
 
-You can adjust the opacity of the background by holding <kbd>Ctrl</kbd>+<kbd>Shift</kbd> and scrolling. The opacity will persist for that terminal session. If you want to change your acrylic opacity for a profile, you can learn more about acrylic background effects on the [Profile - Appearance page](./customize-settings/profile-appearance.md#transparency).
+You can adjust the opacity of the background by holding <kbd>Ctrl+Shift</kbd> and scrolling. The opacity will persist for that terminal session. If you want to change your acrylic opacity for a profile, you can learn more about acrylic background effects on the [Profile - Appearance page](./customize-settings/profile-appearance.md#transparency).
 
 > [!NOTE]
 > In Windows Terminal version 1.12, changing the background opacity with the mouse wheel will use vintage-style opacity by default, unless `useAcrylic` is set to true in your settings. Prior to 1.12, the terminal would always use acrylic for transparency.
 
 ### Open a hyperlink
 
-You can open a hyperlink from inside Windows Terminal with your mouse using <kbd>ctrl</kbd> + click.
+You can open a hyperlink from inside Windows Terminal with your mouse using <kbd>Ctrl</kbd> + click.
 
 ### Drag and drop file/folder to open
 
@@ -100,7 +100,7 @@ Windows Terminal also includes a **[copyOnSelect](./customize-settings/interacti
 
 ### Virtual Terminal and WSL mouse support
 
-Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) applications as well as Windows applications that use virtual terminal (VT) input. This means applications such as [tmux](https://github.com/tmux/tmux/wiki) and [Midnight Commander](https://www.linuxhelp.com/how-to-install-midnight-commander-in-linux) will recognize when you select items in the Terminal window. If an application is in mouse mode, you can hold down <kbd>shift</kbd> to make a selection instead of sending VT input.
+Windows Terminal supports mouse input in Windows Subsystem for Linux (WSL) applications as well as Windows applications that use virtual terminal (VT) input. This means applications such as [tmux](https://github.com/tmux/tmux/wiki) and [Midnight Commander](https://www.linuxhelp.com/how-to-install-midnight-commander-in-linux) will recognize when you select items in the Terminal window. If an application is in mouse mode, you can hold down <kbd>Shift</kbd> to make a selection instead of sending VT input.
 
 ## Send input commands with a key binding
 
@@ -134,7 +134,7 @@ You can also use this functionality to run builds or test scripts.
 
 "Focus mode" hides the title bar and tabs normally located at the top of Windows Terminal, letting you focus only on the terminal content. It is similar to ["Zen mode"](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_zen-mode) in Visual Studio Code.
 
-To enter focus mode, open the [command pallette](./command-palette.md) using `Ctrl` + `Shift` + `p`, enter "focus mode", and select "Toggle focus mode."  To exit focus mode, repeat these same steps.
+To enter focus mode, open the [command palette](./command-palette.md) using `Ctrl` + `Shift` + `p`, enter "focus mode", and select "Toggle focus mode."  To exit focus mode, repeat these same steps.
 
 To set focus mode to launch every time you start Windows Terminal, open the **Settings** (`Ctrl` + `,`) and select the **Startup** tab. Under **Launch mode**, select **Focus** (or **Maximized focus**, which is focus mode with your terminal window maximized). Select **Save** before exiting. The next time you launch the Windows Terminal, it will open up in focus mode. To stop Windows Terminal from launching in focus mode, follow these same steps, but select **Default** from the list of **Launch mode** options.
 
@@ -144,7 +144,7 @@ To add a shortcut key (or keybinding) for entering focus mode, open the  `settin
 { "command": "toggleFocusMode", "keys": "ctrl+f12" }
 ```
 
-Replace "ctrl+f12" with the shortcut / keybinding of your choice, but be sure not to repeat any existing keybindings from the Actions list. You can also see a list of Actions with associated keybindings, and **+ Add new** bindings, in the **Actions** tab of the Windows Terminal **Settings** dashboard. Remember to **Save** after making any changes. You can now toggle focus mode using the "action" shortcut key that you created. (In the case of our example, `Shift` + `F12`).
+Replace "ctrl+f12" with the shortcut / keybinding of your choice, but be sure not to repeat any existing keybindings from the Actions list. You can also see a list of Actions with associated keybindings, and **+ Add new** bindings, in the **Actions** tab of the Windows Terminal **Settings** dashboard. Remember to **Save** after making any changes. You can now toggle focus mode using the "action" shortcut key that you created. (In the case of our example, `Ctrl` + `F12`).
 
 To learn more about this command, see [`toggleFocusMode`](/windows/terminal/customize-settings/actions#toggle-focus-mode).
 
@@ -160,7 +160,7 @@ To learn more about this command, see [`toggleFocusMode`](/windows/terminal/cust
 
 * When [`windowingBehavior`](./customize-settings/startup.md#new-instance-behavior) is set to `"useExisting"` or `"useAnyExisting"`, they will ignore the existence of the `_quake` window.
 
-* When minimized, the window will be hidden from the taskbar and from <kbd>Alt</kbd>+<kbd>Tab</kbd>.
+* When minimized, the window will be hidden from the taskbar and from <kbd>Alt+Tab</kbd>.
 
 * Only one window may be the quake mode window at a time.
 

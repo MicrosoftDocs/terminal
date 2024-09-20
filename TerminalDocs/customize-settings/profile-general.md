@@ -21,6 +21,11 @@ The settings listed below are specific to each unique profile. If you'd like a s
     // PROFILE OBJECTS
 ]
 ```
+## Profile Ordering
+
+The ordering of profiles in the `"list"` determines the profile index numbering. This is used to map to the launch key combo, such as <kbd>Ctrl+Shift+1</kbd>.
+To change the profile index number, simply cut/paste the profile objects above or below each other.
+The first in the `"list"` will map to index 1, hence, it will be assigned to the key combo, <kbd>Ctrl+Shift+1</kbd>.
 
 ## Name
 
@@ -64,16 +69,16 @@ This is the directory the shell starts in when it is loaded.
 
 **Default value:** `"%USERPROFILE%"`
 
-**NOTE:** When starting directory is not defined, the default value will be set to `"%USERPROFILE%"` (the path relative to your user settings, for example this may be `C:\Users\<your username>`). However, if the starting directory is explicitely set to `null`, then you will get different results depending on where you launch Terminal.
+**NOTE:** When starting directory is not defined, the default value will be set to `"%USERPROFILE%"` (the path relative to your user settings, for example this may be `C:\Users\<your username>`). However, if the starting directory is explicitly set to `null`, then you will get different results depending on where you launch Terminal.
 
 **Example:** Start the PowerShell profile in the *GitHubRepos* folder of your *Documents* directory by finding the powershell.exe profile and adding `"startingDirectory": "%USERPROFILE%/Documents/GitHubRepos",`
 
 **Example with WSL:** When setting the starting directory for a [Linux distribution installed via WSL](/windows/wsl/install-win10), use the format: `"startingDirectory": "\\\\wsl$\\DISTRO NAME\\home\\USERNAME"`, replacing with the placeholders with the proper names of your distribution. For example, `"startingDirectory": "\\\\wsl$\\Ubuntu-20.04\\home\\user1"`. If you are using the Windows Terminal Settings UI, rather than the [settings.json file](../install.md#settings-json-file), to declare this path, you can use the **Browse...** button to select your starting directory or enter the WSL path as: `//wsl.localhost/DISTRO NAME/home/USERNAME`. For example, `//wsl.localhost/Ubuntu-20.04/home/user1`. 
 
 **Default behavior:** When the startingDirectory value is not specified, you will get different results depending on where you launch Terminal:
-- If you run Windows Terminal from the Start menu: C:\windows\system32
-- If you run wt.exe from the Start menu: C:\windows\system32
-- If you run wt.exe from Win+R: %USERPROFILE%
+- If you run Windows Terminal from the Start menu: `%WINDIR%\System32`
+- If you run wt.exe from the Start menu: `%WINDIR%\System32`
+- If you run wt.exe from <kbd>Win+R</kbd>: `%USERPROFILE%`
 - If you run wt.exe from the explorer address bar: whatever folder you were looking at.
 
 > [!NOTE]

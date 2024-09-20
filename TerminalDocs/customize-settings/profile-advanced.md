@@ -56,7 +56,7 @@ ___
 
 ## AltGr aliasing
 
-This allows you to control if Windows Terminal will treat <kbd>ctrl+alt</kbd> as an alias for <kbd>AltGr</kbd>.
+This allows you to control if Windows Terminal will treat <kbd>Ctrl+Alt</kbd> as an alias for <kbd>AltGr</kbd>.
 
 **Property name:** `altGrAliasing`
 
@@ -104,15 +104,17 @@ ___
 
 ## Profile termination behavior
 
-This sets how the profile reacts to termination or failure to launch. `"graceful"` will close the profile when `exit` is typed or when the process exits normally. `"always"` will always close the profile and `"never"` will never close the profile. `true` and `false` are accepted as synonyms for `"graceful"` and `"never"`, respectively.
+This sets how the profile reacts to termination or failure to launch. `"graceful"` will close the profile when `exit` is typed or when the process exits normally. `"always"` will always close the profile and `"never"` will never close the profile. `"automatic"` was added once Windows Terminal was allowed to be the default terminal application; for processes launched in Terminal directly, it behaves the same as `"graceful"` but for processes that were handed off to Terminal it behaves the same as `"always"`.
+
+`true` and `false` are accepted as synonyms for `"graceful"` and `"never"`, respectively.
 
 **Property name:** `closeOnExit`
 
 **Necessity:** Optional
 
-**Accepts:** `"graceful"`, `"always"`, `"never"`, `true`, `false`
+**Accepts:** `"automatic"`, `"graceful"`, `"always"`, `"never"`, `true`, `false`
 
-**Default value:** `"graceful"`
+**Default value:** `"automatic"`
 
 > [!NOTE]
 > In Windows Command Prompt (cmd.exe), `exit` will return the return code of the previous command. If the command you typed before `exit` resulted in an error, then `"closeOnExit": "graceful"` will still show that error code, instead of closing the tab.
@@ -151,33 +153,41 @@ ___
 
 ## Scroll marks ([Preview](https://aka.ms/terminal-preview))
 
-The following settings modify how scroll marks behave in Windows Terminal.
+The following settings modify how scroll marks behave in Windows Terminal. For
+more info on marks and shell integration, visit the [Shell integration
+page](../tutorials/shell-integration.md).
 
-### Experimental automatically add scroll marks ([Preview](https://aka.ms/terminal-preview))
+### Automatically add scroll marks
 
-Automatically marks prompts when set to `true`. This is an experimental feature, and its continued existence is not guaranteed.
+When set to `true`, the Terminal will automatically mark the current like as a
+prompt when the user presses <kbd>Enter</kbd>. If the user has shell integration
+enabled, this will treat the current cursor position as a `FTCS;C`, ending the
+current command and starting the output.
 
-**Property name:** `experimental.autoMarkPrompts`
 
-**Necessity:** Optional
-
-**Accepts:** `true`, `false`
-
-> [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
-### Experimental show marks on scrollbar ([Preview](https://aka.ms/terminal-preview))
-
-Displays marks on the scrollbar when set to `true`. This is an experimental feature, and its continued existence is not guaranteed.
-
-**Property name:** `experimental.showMarksOnScrollbar`
+**Property name:** `autoMarkPrompts`
 
 **Necessity:** Optional
 
 **Accepts:** `true`, `false`
 
 > [!IMPORTANT]
-> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+> This feature became stable in v1.21. Before that version, it was only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), and was named `experimental.autoMarkPrompts`.
+
+### Show marks on scrollbar
+
+Displays marks on the scrollbar when set to `true`. When combined with `autoMarkPrompts` or shell integration, this will show the location of the prompts on the scrollbar.
+
+![Windows Terminal scrollbar marks](../images/scroll-marks.png)
+
+**Property name:** `showMarksOnScrollbar`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+> [!IMPORTANT]
+> This feature became stable in v1.21. Before that version, it was only available in [Windows Terminal Preview](https://aka.ms/terminal-preview), and was named `experimental.showMarksOnScrollbar`.
 
 ___
 
@@ -223,7 +233,7 @@ ___
 :::row:::
 :::column span="":::
 
-This experimentally adds support for moving the text cursor by clicking with the mouse on the current commandline. This is an experimental feature - there are lots of edge cases where this will not work as expected. In ordfer for this setting to work, you will need to enable [shell integration](../tutorials/shell-integration.md) in your shell.
+This experimentally adds support for moving the text cursor by clicking with the mouse on the current commandline. This is an experimental feature - there are lots of edge cases where this will not work as expected. In order for this setting to work, you will need to enable [shell integration](../tutorials/shell-integration.md) in your shell.
 
 :::column-end:::
 :::column span="":::
