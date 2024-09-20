@@ -224,7 +224,6 @@ zle -N zle-line-init mark_command_start
 preexec_functions+=(mark_command_executed)
 ```
 
-=======
 ### Bash
 
 You can add the following to the end of your `~/.bashrc` to enable shell integration in bash:
