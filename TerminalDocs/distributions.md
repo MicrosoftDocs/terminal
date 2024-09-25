@@ -99,7 +99,7 @@ You can upgrade a portable mode installation of Windows Terminal by moving the `
 ### Portable mode FAQs
 
 #### Why don't ms-appdata URLs work in Portable mode?
-Prior to portable mode, a common heuristic to reference images in `settings.json` would be to use `ms-appdata:///Local`. 
+Prior to portable mode, a common practice to reference images in `settings.json` would be to use `ms-appdata:///Local`. 
 
 Portable mode offers a self-contained Terminal installation, where user data and application data are stored in the same place. As there is no separate user data folder, references to such folder (e.g. with `ms-appdata`) will not work.
 
