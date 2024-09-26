@@ -53,7 +53,7 @@ This is the executable used in the profile.
 
 **Default value:** `"cmd.exe"`
 
-Example: to run a batch file each time cmd.exe is run, set this value to "cmd.exe /k path\\to\\script.bat"
+Example: To run a batch file each time cmd.exe is run, set this value to "cmd.exe /k path\\to\\script.bat"
 
 <br />
 
