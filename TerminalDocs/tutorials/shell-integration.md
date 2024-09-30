@@ -92,6 +92,19 @@ How you enable these marks in your shell varies from shell to shell. Below are t
 
 ### PowerShell (`pwsh.exe`)
 
+>#### tldr (works for powershell.exe as well)
+>---
+>
+>1. Install the `wt-shell-integration` PowerShell [module](https://www.powershellgallery.com/packages/wt-shell-integration)
+>  ```powershell
+>  Install-Module wt-shell-integration -AllowClobber
+>  ```
+>2. Import it then add it to your `$profile`
+>  ```powershell
+>  Import-Module wt-shell-integration; ac $profile "`nImport-Module wt-shell-integration" -encoding utf8 -nonewline
+>  ```
+>  and make sure to not add anything below that import statement on your `$profile` going forward
+
 If you've never changed your PowerShell prompt before, you should check out [about_Prompts](/powershell/module/microsoft.powershell.core/about/about_prompts) first.
 
 We'll need to edit your `prompt` to make sure we tell the Terminal about the CWD, and mark up the prompt with the appropriate marks. PowerShell also lets us include the error code from the previous command in the `133;D` sequence, which will let the terminal automatically colorize the mark based if the command succeeeded or failed.
@@ -216,6 +229,22 @@ PROMPT $e]133;D$e\$e]133;A$e\$e]9;9;$P$e\%PROMPT%$e]133;B$e\
 
 ### Zsh
 
+If you are using the Oh My Zsh framework:
+1. Install the `wt-shell-integration` [plugin](https://github.com/digitalguy99/wt-shell-integration#oh-my-zsh):
+  ```zsh
+  curl -L https://api.github.com/repos/digitalguy99/wt-shell-integration/tarball/main | tar -xz --wildcards --strip=2 --one-top-level=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/wt-shell-integration '*/oh-my-zsh/*'
+  ```
+2. Add `wt-shell-integration` to your list of plugins in `~/.zshrc`
+
+Otherwise:
+>#### tldr
+>---
+>
+>You can add the following to the end of your `~/.zshrc` to enable shell integration in zsh:
+>```zsh
+>PROMPT=$'%{\e]133;D;\007%}%{\e]133;A;\007%}'"$PS1"$'%{\e]133;B;\007%}'
+>```
+
 Zsh provides the special hook functions `precmd`, `preexec` and `chpwd`:
 
 * `precmd` - Executed before each prompt.
@@ -268,13 +297,20 @@ preexec_functions+=(mark_command_executed)
 
 ### Bash
 
-You can add the following to the end of your `~/.bashrc` to enable shell integration in bash:
+If you are using the Oh My Bash framework:
+1. Install the `wt-shell-integration` [plugin](https://github.com/digitalguy99/wt-shell-integration#oh-my-bash):
+  ```bash
+  curl -kL https://api.github.com/repos/digitalguy99/wt-shell-integration/tarball/main | tar -xz --wildcards --strip=2 --one-top-level=${BASH_CUSTOM:-~/.oh-my-bash/custom}/plugins/wt-shell-integration '*/oh-my-bash/*'
+  ```
+2. Add `wt-shell-integration` to your list of plugins in `~/.bashrc`
 
-```bash
-PS1="\[\033]133;D;\007\]\[\033]133;A;\007\]$PS1\[\033]133;B;\007\]"
-```
+Otherwise:
 
-This will wrap your existing `$PS1` with the necessary sequences to enable shell integration.
+- You can add the following to the end of your `~/.bashrc` to enable shell integration in bash:
+  ```bash
+  PS1="\[\033]133;D;\007\]\[\033]133;A;\007\]$PS1\[\033]133;B;\007\]"
+  ```
+  This will wrap your existing `$PS1` with the necessary sequences to enable shell integration.
 
 > **Note**:
 > Don't see your favorite shell here? If you figure it out, feel free to [contribute a solution for your preferred shell!](https://github.com/MicrosoftDocs/terminal/compare)
