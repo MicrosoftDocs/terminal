@@ -15,7 +15,10 @@ ms.topic: tutorial
   - [How to enable shell integration marks](#how-to-enable-shell-integration-marks)
     - [PowerShell (`pwsh.exe`)](#powershell-pwshexe)
     - [Command Prompt](#command-prompt)
+    - [Zsh](#zsh)
+      - Oh My Zsh
     - [Bash](#bash)
+      - Oh My Bash
   - [Shell integration features](#shell-integration-features)
     - [Open new tabs in the same working directory](#open-new-tabs-in-the-same-working-directory)
     - [Show marks for each command in the scrollbar](#show-marks-for-each-command-in-the-scrollbar)
