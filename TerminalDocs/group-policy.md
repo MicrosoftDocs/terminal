@@ -28,14 +28,14 @@ You can find the latest administrative templates (ADMX and ADML files) in the as
 ### Add the administrative template to Active Directory
 
 1. On a domain controller or workstation with RSAT, go to the **PolicyDefinition** folder (also known as the Central Store) on any domain controller for your domain. <br>
-For older versions of Windows Server, you might need to create the PolicyDefinition folder. For more information, see [How to create an manage the Central Store for Group Policy Administrative Templates in Windows](https://learn.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+For older versions of Windows Server, you might need to create the PolicyDefinition folder. For more information, see [How to create an manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 2. Copy the `WindowsTerminal.admx` file to the **PolicyDefinition** folder. (Example: `%systemroot%\sysvol\domain\policies\PolicyDefinitions`)
 3. Copy the `WindowsTerminal.adml` file to the matching language folder in your language folder in your Policy Definition folder. Create the folder if it does not already exist (Example: `%systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US`)
 4. If your domain has more than one domain controller, the new ADMX files will be replicated to them at the next domain replication interval.
 
 ### Import the administrative template in Intune
 
-You can find all instructions on how to import the administrative template in Intune on [Import custom ADMX and ADML administrative templates into Microsoft Intune](https://learn.microsoft.com/mem/intune/configuration/administrative-templates-import-custom#add-the-admx-and-adml-files)
+You can find all instructions on how to import the administrative template in Intune on [Import custom ADMX and ADML administrative templates into Microsoft Intune](/mem/intune/configuration/administrative-templates-import-custom#add-the-admx-and-adml-files)
 
 ## Policies
 
