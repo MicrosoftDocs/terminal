@@ -15,15 +15,14 @@ Since Windows Terminal Preview 1.22, Windows Terminal is released on GitHub with
 
 ### Download
 
-You can find the latest administrative templates (ADMX and ADML files) in the assets section of our newest Windows Terminal release on GitHub. The file is named `GroupPolicyTemplates-<Version>.zip`
+You can find the latest administrative templates (ADMX and ADML files) in the assets section of our [newest Windows Terminal release on GitHub](https://github.com/microsoft/terminal/releases/latest). The file is named `GroupPolicyTemplates-<Version>.zip`
 
 ### Add the administrative template to an individual computer
 
-1. Copy the `WindowsTerminal.admx` file to your **Policy Definition** template folder. (Example: `C:\Windows\PolicyDefinitions`)
-2. Copy the `WindowsTerminal.adml` file to the matching language folder in your language folder in your Policy Definition folder. (Example: `C:\Windows\PolicyDefinitions\en-US`)
+1. Unzip the `GroupPolicyTemplates-<Version>.zip` file to your **Policy Definition** template folder. (Example: `C:\Windows\PolicyDefinitions`)
 
 > [!NOTE]
-> Copying the `WindowsTerminal.adml` file to the `en-US` folder will apply the policy even if you are not using an `en-US`-based machine.
+> The `WindowsTerminal.adml` file in the `en-US` folder will apply the policy even if you are not using an `en-US`-based machine.
 
 ### Add the administrative template to Active Directory
 
@@ -33,6 +32,9 @@ For older versions of Windows Server, you might need to create the PolicyDefinit
 3. Copy the `WindowsTerminal.adml` file to the matching language folder in your language folder in your Policy Definition folder. Create the folder if it does not already exist (Example: `%systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US`)
 4. If your domain has more than one domain controller, the new ADMX files will be replicated to them at the next domain replication interval.
 
+> [!NOTE]
+> You can always use `EN-US` as this is the fallback language. If no correct language exists, `EN-US` will be used.
+
 ### Import the administrative template in Intune
 
 You can find all instructions on how to import the administrative template in Intune on [Import custom ADMX and ADML administrative templates into Microsoft Intune](/mem/intune/configuration/administrative-templates-import-custom#add-the-admx-and-adml-files)
@@ -41,6 +43,8 @@ You can find all instructions on how to import the administrative template in In
 
 ### Disabled Source Profiles
 
+Supported on Windows Terminal Preview 1.22 or later.
+<br>
 This policy disables source profiles from being generated. Source names can be arbitrary strings. Potential candidates can be found as the "source" property on profile definitions in Windows Terminal's `settings.json` file.
 
 Common sources are:
@@ -54,6 +58,9 @@ Existing profiles will disappear from Windows Terminal after adding their source
 
 ### Enabled Language Models/AI Providers
 
+Supported on Windows Terminal Preview 1.22 or later.
+<br>
+
 This policy allows the listed Language Models / AI providers to be used with Terminal Chat. <br>
 
 Common providers are:
@@ -63,6 +70,6 @@ Common providers are:
 
 For instance, setting this policy to `OpenAI` will allow the use of OpenAI in Terminal Chat.
 
-#### Disabling Terminal Chat
+**Disabling Terminal Chat**
 
 Enabling this policy but leaving the list empty disallows all providers and disables the Terminal Chat feature. 
