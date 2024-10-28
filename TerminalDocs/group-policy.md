@@ -46,7 +46,7 @@ You can find all instructions on how to import the administrative template in In
 
 ### Disabled Source Profiles
 
-Supported on Windows Terminal Preview 1.22 or later.
+Supported on Windows Terminal 1.21 or later.
 <br>
 This policy disables source profiles from being generated. Source names can be arbitrary strings. Potential candidates can be found as the "source" property on profile definitions in Windows Terminal's `settings.json` file.
 
@@ -59,9 +59,24 @@ For instance, setting this policy to `Windows.Terminal.Wsl` will disable the bui
 
 Existing profiles will disappear from Windows Terminal after adding their source to this policy.
 
+#### Group Policy (ADMX) information
+
+- GP unique name: DisabledProfileSources
+- GP name: Disabled Profile Sources
+- GP path: Administrative Templates/Windows Components/Windows Terminal/
+- GP scope: Computer and user
+- ADMX file name: WindowsTerminal.admx
+
+#### Registry information
+
+- Path: Software\Policies\Microsoft\Windows Terminal
+- Name: DisabledProfileSources
+- Type: MULTI_SZ
+- Example value: `Windows.Terminal.Azure`
+
 ### Enabled Language Models/AI Providers
 
-Supported on Windows Terminal Preview 1.23 or later.
+Supported on Windows Terminal Canary 1.23 or later.
 <br>
 
 This policy allows the listed Language Models / AI providers to be used with Terminal Chat. <br>
@@ -76,3 +91,18 @@ For instance, setting this policy to `OpenAI` will allow the use of OpenAI in Te
 **Disabling Terminal Chat**
 
 Enabling this policy but leaving the list empty disallows all providers and disables the Terminal Chat feature. 
+
+#### Group Policy (ADMX) information
+
+- GP unique name: EnabledLMProviders
+- GP name: Enabled Language Models/AI Providers
+- GP path: Administrative Templates/Windows Components/Windows Terminal/
+- GP scope: Computer and user
+- ADMX file name: WindowsTerminal.admx
+
+#### Registry information
+
+- Path: Software\Policies\Microsoft\Windows Terminal
+- Name: EnabledLMProviders
+- Type: MULTI_SZ
+- Example value: `AzureOpenAI`
