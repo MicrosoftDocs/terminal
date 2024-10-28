@@ -60,7 +60,7 @@ Existing profiles will disappear from Windows Terminal after adding their source
 
 ### Enabled Language Models/AI Providers
 
-Supported on Windows Terminal Preview 1.22 or later.
+Supported on Windows Terminal Preview 1.23 or later.
 <br>
 
 This policy allows the listed Language Models / AI providers to be used with Terminal Chat. <br>
