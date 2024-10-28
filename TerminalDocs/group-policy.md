@@ -19,7 +19,7 @@ You can find the latest administrative templates (ADMX and ADML files) in the as
 
 ### Add the administrative template to an individual computer
 
-1. Unzip the `GroupPolicyTemplates-<Version>.zip` file to your **Policy Definition** template folder (`C:\Windows\PolicyDefinitions`)
+1. Unzip the `GroupPolicyTemplates-<Version>.zip` file to your **Policy Definition** template folder (`C:\Windows\PolicyDefinitions`).
 
 > [!NOTE]
 > You can always use `en-US` as this is the fallback language. If no correct language exists, `en-US` will be used.
