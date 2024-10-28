@@ -39,7 +39,8 @@ For older versions of Windows Server, you might need to create the PolicyDefinit
 
 You can find all instructions on how to import the administrative template in Intune on [Import custom ADMX and ADML administrative templates into Microsoft Intune](/mem/intune/configuration/administrative-templates-import-custom#add-the-admx-and-adml-files)
 
-You will also need to import `Windows.admx` since the Windows Terminal ADMX files contains references to that file.
+> [!Important]
+> You will also need to import `Windows.admx` since the Windows Terminal ADMX files contains references to that file.
 
 ## Policies
 
