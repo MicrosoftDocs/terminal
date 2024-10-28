@@ -30,8 +30,8 @@ You can find the latest administrative templates (ADMX and ADML files) in the as
 For older versions of Windows Server, you might need to create the PolicyDefinition folder. For more information, see [How to create an manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Copy the `WindowsTerminal.admx` file to the **PolicyDefinition** folder.
 (`%systemroot%\sysvol\domain\policies\PolicyDefinitions`)
-3. Copy the `WindowsTerminal.adml` file to the matching language folder in your language folder in your Policy Definition folder. Create the folder if it does not already exist
-(Example: `%systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US`)
+3. Copy the `WindowsTerminal.adml` file to the matching language folder in your language folder in your Policy Definition folder. Create the folder if it does not already exist.
+(`%systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US`)
 4. If your domain has more than one domain controller, the new ADMX files will be replicated to them at the next domain replication interval
 
 > [!NOTE]
