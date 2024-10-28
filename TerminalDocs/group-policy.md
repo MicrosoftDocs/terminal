@@ -19,18 +19,20 @@ You can find the latest administrative templates (ADMX and ADML files) in the as
 
 ### Add the administrative template to an individual computer
 
-1. Unzip the `GroupPolicyTemplates-<Version>.zip` file to your **Policy Definition** template folder. (Example: `C:\Windows\PolicyDefinitions`)
+1. Unzip the `GroupPolicyTemplates-<Version>.zip` file to your **Policy Definition** template folder (`C:\Windows\PolicyDefinitions`)
 
 > [!NOTE]
-> The `WindowsTerminal.adml` file in the `en-US` folder will apply the policy even if you are not using an `en-US`-based machine.
+> You can always use `en-US` as this is the fallback language. If no correct language exists, `en-US` will be used.
 
 ### Add the administrative template to Active Directory
 
 1. On a domain controller or workstation with RSAT, go to the **PolicyDefinition** folder (also known as the Central Store) on any domain controller for your domain. <br>
-For older versions of Windows Server, you might need to create the PolicyDefinition folder. For more information, see [How to create an manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
-2. Copy the `WindowsTerminal.admx` file to the **PolicyDefinition** folder. (Example: `%systemroot%\sysvol\domain\policies\PolicyDefinitions`)
-3. Copy the `WindowsTerminal.adml` file to the matching language folder in your language folder in your Policy Definition folder. Create the folder if it does not already exist (Example: `%systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US`)
-4. If your domain has more than one domain controller, the new ADMX files will be replicated to them at the next domain replication interval.
+For older versions of Windows Server, you might need to create the PolicyDefinition folder. For more information, see [How to create an manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+2. Copy the `WindowsTerminal.admx` file to the **PolicyDefinition** folder.
+(`%systemroot%\sysvol\domain\policies\PolicyDefinitions`)
+3. Copy the `WindowsTerminal.adml` file to the matching language folder in your language folder in your Policy Definition folder. Create the folder if it does not already exist
+(Example: `%systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US`)
+4. If your domain has more than one domain controller, the new ADMX files will be replicated to them at the next domain replication interval
 
 > [!NOTE]
 > You can always use `EN-US` as this is the fallback language. If no correct language exists, `EN-US` will be used.
