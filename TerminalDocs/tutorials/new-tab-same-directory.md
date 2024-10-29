@@ -14,7 +14,7 @@ Typically, the "new tab" and "split pane" actions will always open a new tab/pan
 
 Unfortunately, on Windows, it's tricky to determine what the current working directory ("CWD") for a process is. Even if we were able to look it up, not all applications actually set their CWD as they navigate. Notably, Windows PowerShell doesn't change its CWD as you `cd` around the file system! Duplicating the CWD of PowerShell automatically would almost always be wrong.
 
-Fortunately, there's a workaround. Applications can emit a special escape sequence to manually tell the Terminal what the CWD should be.
+Fortunately, there's a workaround. Applications can emit a special escape sequence (specifically the "OSC 9;9" format) to manually tell the Terminal what the CWD should be.
 
 In this tutorial, you learn how to:
 
@@ -113,7 +113,7 @@ Windows Subsystem for Linux distributions primarily use BASH as the command line
 Add the following line to the end of your `.bash_profile` config file:
 
 ```bash
-PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
+PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
 ```
 
 The `PROMPT_COMMAND` variable in bash tells bash what command to run before displaying the prompt. The `printf` statement is what we're using to append the sequence for setting the working directory with the Terminal. The `$(wslpath -w "$PWD")` bit will invoke the `wslpath` executable to convert the current directory into its Windows-like path. The `${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}` bit is [some bash magic](https://unix.stackexchange.com/a/466100) to make sure we append this command to any existing command (if you've already set `PROMPT_COMMAND` somewhere else.)
