@@ -1,8 +1,6 @@
 ---
 title: Terminal Chat
 description: Learn how to setup and use Terminal Chat in Windows Terminal Canary.
-author: chrnguyen
-ms.author: chrnguyen
 ms.date: 10/29/2024
 ms.topic: overview
 ---
@@ -88,7 +86,7 @@ Clicking on the suggestion will copy it to the input line of the terminal. This 
 
 - **Send code suggestions to command-line text editors**: If you're using a command-line text editor in WSL (like `nano` or `vi`), you can ask Terminal Chat to generate code and send the code suggestion to the editor by clicking the "Copy" button.
 
-- **Find and describe PowerShell cmdlets**: A [cmdlet](/powershell/module/microsoft.powershell.management/?view=powershell-7.4) (pronounced command-let) is a lightweight script command used to perform a specific function in PowerShell. Terminal Chat can help you to find cmdlets that may be useful and can explain what task they accomplish. For example, "Find a cmdlet to show a list of active processes" would result in `Get-Process`. Or "Explain the `Get-ChildItem` cmdlet" would describe that the cmdlet is used to retrieve a list of items within a specified location.
+- **Find and describe PowerShell cmdlets**: A [cmdlet](/powershell/module/microsoft.powershell.management/) (pronounced command-let) is a lightweight script command used to perform a specific function in PowerShell. Terminal Chat can help you to find cmdlets that may be useful and can explain what task they accomplish. For example, "Find a cmdlet to show a list of active processes" would result in `Get-Process`. Or "Explain the `Get-ChildItem` cmdlet" would describe that the cmdlet is used to retrieve a list of items within a specified location.
 
 ### Terminal-specific context
 
