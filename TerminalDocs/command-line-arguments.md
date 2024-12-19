@@ -66,7 +66,6 @@ Used to create a new tab. See also the [`newTab` action](./customize-settings/ac
 | `new-tab`, `nt` | `--suppressApplicationTitle` | Override the profile's `suppressApplicationTitle` setting, and set it to `true` |  |
 | `new-tab`, `nt` | `--useApplicationTitle` | Override the profile's `suppressApplicationTitle` setting, and set it to `false` |  |
 | `new-tab`, `nt` | `--colorScheme scheme-name` | Override the profile's `colorScheme` setting, and set it to the scheme from the settings with the name `scheme-name` | The name of a color scheme in the settings |
-| `new-tab`, `nt` | `--sessionId session-id` | Imports a previous Windows Terminal session | Guid |
 | `new-tab`, `nt` | `--appendCommandLine` | Appends the provided command-line to the profile's default command instead of replacing it |  |
 | `new-tab`, `nt` | `--inheritEnvironment, !--reloadEnvironment` | Inherit the terminal's own environment variables when creating the new session, rather than creating a fresh environment block. This defaults to set when a `command` is passed. |  |
 | `new-tab`, `nt` | `commandline` | Creates a new tab based on the command line assigned. | Executable with optional commands |
