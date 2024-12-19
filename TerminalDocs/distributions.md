@@ -9,6 +9,9 @@ ms.topic: how-to
 
 # Windows Terminal Distribution Types
 
+> [!NOTE]
+> Windows Terminal requires Windows 10 2004 (build 19041) or later
+
 Windows Terminal is distributed via [GitHub releases] in a variety of formats:
 
 - Packaged, or "MSIX bundle"
