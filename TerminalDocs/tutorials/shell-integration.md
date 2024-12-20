@@ -218,17 +218,21 @@ PROMPT $e]133;D$e\$e]133;A$e\$e]9;9;$P$e\%PROMPT%$e]133;B$e\
 
 You may source the following script to an active shell with `source` or `.`
 built-in `bash` commands or add it to the end of your `${HOME}/.bash_profile`
-(for login shells) or `${HOME}/.bashrc` (for non-login shells) to enable a
-complete shell integration in `bash` with versions greater or equal to
-`bash-4.4` (where the `PS0` built-in variable was implemented initially).
+(for login shells) or `${HOME}/.bashrc` (for non-login shells) to enable
+a complete shell integration in `bash` with versions greater or equal to
+`bash-4.4` (where the `PS0` built-in variable was [implemented
+initially](https://lists.gnu.org/archive/html/bug-bash/2016-09/msg00018.html)).
 Complete shell integration means that every announced terminal feature works as
 designed.
 
-Please note that if there are `PROMPT_COMMAND`, `PS0`, `PS1` or `PS2` variables
-already assigned to any non-default values that may lead to unpredictable
-results. It would be better to test the script with the "clean" shell first by
-executing `env --ignore-environment bash --noprofile --norc` and sourcing the
-described file as noted earlier.
+> [!NOTE]
+> It should be pointed out that if there are `PROMPT_COMMAND`, `PS0`, `PS1` or
+> `PS2` variables already assigned to any [non-default
+> values](https://www.gnu.org/software/bash/manual/bash.html#index-PS1) that
+> may lead to unpredictable results. It would be better to test the script with
+> the "clean" shell first by executing `env --ignore-environment bash
+> --noprofile --norc` and sourcing the described file as it was indicated
+> earlier.
 
 ``` bash
 # .bash_profile | .bashrc
@@ -284,24 +288,24 @@ PROMPT_COMMAND=__prompt_command
 if [ ${__BASH_V} -ge 44 ]; then
     PS0="${__PS0_BASE}"
 fi
-# `PS1` is set with `__prompt_command` function call.
+# `PS1` is set with the `__prompt_command` function call.
 PS2="${__PS2_BASE}"
 ```
 
-That will wrap your existing `PS0, PS1 and PS2` with the necessary sequences to
-enable complete shell integration.
+That wraps all assortment of `bash` prompt variables (`PS0`, `PS1` and `PS2`)
+with the necessary sequences to enable the complete shell integration.
 
 In addition, `${HOME}/.inputrc` might also need an adjustment to remove the
 "editing mode notification" and "modified lines" signs:
 
-``` bash
+``` inputrc
 # .inputrc
 
 set mark-modified-lines Off
 set show-mode-in-prompt Off
 ```
 
-That is what it should look like if everything done correctly:
+That is what it should look like if everything is done correctly:
 
 ``` bash
 $ env --ignore-environment bash --noprofile --norc
