@@ -108,6 +108,11 @@ function Invoke-Starship-PreCommand {
 
 Windows Subsystem for Linux distributions primarily use BASH as the command line shell.
 
+#### Prerequisites 
+
+Make sure your `commandline` setting is targeting the `wsl.exe -d <distro>` file, not the `<distro>.exe` file.  
+For example, use `C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu-24.04` instead of `Ubuntu-24.04.exe`.
+
 #### `bash`
 
 Add the following line to the end of your `.bash_profile` config file:
