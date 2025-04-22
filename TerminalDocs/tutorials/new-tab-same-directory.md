@@ -111,7 +111,7 @@ Windows Subsystem for Linux distributions primarily use BASH as the command line
 #### Prerequisites 
 
 Make sure your `commandline` setting is targeting the `wsl.exe -d <distro>` file, not the `<distro>.exe` file.  
-For example, use `C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu-24.04` instead of `Ubuntu-24.04.exe`.
+For example, use `C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu-24.04` instead of `Ubuntu2404.exe`.
 
 #### `bash`
 
