@@ -1,7 +1,7 @@
 ---
 title: Group Policy for Windows Terminal
 description: Learn how to set Group Policy for Windows Terminal.
-ms.date: 12/25/2024
+ms.date: 04/25/2025
 ms.topic: how-to 
 ---
 
