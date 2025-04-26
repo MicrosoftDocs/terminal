@@ -116,7 +116,7 @@ The possible selections are:
 > [!Important]
 > This policy is implemented as and acts like a preference. This means it's value won't be deleted when you change it from configured to not configured.
 
-_For more details on how to configure the default terminal application please see the official [support articel](https://support.microsoft.com/windows/command-prompt-and-windows-powershell-for-windows-11-6453ce98-da91-476f-8651-5c14d5777c20)._
+_For more details on how to configure the default terminal application please see [Command Prompt and Windows Powershell on Microsoft Support](https://support.microsoft.com/windows/command-prompt-and-windows-powershell-for-windows-11-6453ce98-da91-476f-8651-5c14d5777c20)._
 
 #### Group Policy (ADMX) information
 
