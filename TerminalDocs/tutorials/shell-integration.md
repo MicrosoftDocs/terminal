@@ -58,33 +58,28 @@ Supporting these features requires cooperation between your shell and the Termin
 To enable these features in the Terminal, you'll want to add the following to your settings:
 
 ```json
-"profiles":
-{
-    "defaults":
-    {
-        // Enable marks on the scrollbar
-        "showMarksOnScrollbar": true,
+"profiles": {
+  "defaults": {
+    // Enable marks on the scrollbar
+    "showMarksOnScrollbar": true,
 
-        // Needed for both pwsh, CMD and bash shell integration
-        "autoMarkPrompts": true,
+    // Needed for both pwsh, CMD and bash shell integration
+    "autoMarkPrompts": true,
 
-        // Add support for a right-click context menu
-        // You can also just bind the `showContextMenu` action
-        "experimental.rightClickContextMenu": true,
-    },
-}
-"actions":
-[
-    // Scroll between prompts
-    { "keys": "ctrl+up",   "command": { "action": "scrollToMark", "direction": "previous" }, },
-    { "keys": "ctrl+down", "command": { "action": "scrollToMark", "direction": "next" }, },
-
-    // Add the ability to select a whole command (or its output)
-    { "command": { "action": "selectOutput", "direction": "prev" }, },
-    { "command": { "action": "selectOutput", "direction": "next" }, },
-
-    { "command": { "action": "selectCommand", "direction": "prev" }, },
-    { "command": { "action": "selectCommand", "direction": "next" }, },
+    // Add support for a right-click context menu
+    // You can also just bind the `showContextMenu` action
+    "experimental.rightClickContextMenu": true,
+  },
+},
+"actions": [
+  // Create actions/commands for scrolling to previous/next mark
+  { "command": { "action": "scrollToMark", "direction": "previous" }, "id": "Terminal.ScrollToPreviousMark" },
+  { "command": { "action": "scrollToMark", "direction": "next" }, "id": "Terminal.ScrollToNextMark" }
+],
+"keybindings": [
+  // Define hotkeys/shortcuts for these actions by referencing the prior (user-)assigned IDs
+  { "id": "Terminal.ScrollToPreviousMark", "keys": "ctrl+up" },
+  { "id": "Terminal.ScrollToNextMark", "keys": "ctrl+down" }
 ]
 ```
 
