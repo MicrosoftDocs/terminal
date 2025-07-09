@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal Appearance Profile Settings
 description: Learn how to customize the appearance profile settings within Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
+author: mattwojo
+ms.author: mattwoj
 ms.date: 02/03/2022
 ms.topic: how-to
 ---

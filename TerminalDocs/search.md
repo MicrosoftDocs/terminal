@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal Search
 description: Learn how to search in Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
+author: mattwojo
+ms.author: mattwoj
 ms.date: 09/22/2020
 ms.topic: how-to 
 ---

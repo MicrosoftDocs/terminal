@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal Interaction Settings
 description: Learn how to customize interaction settings within Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
+author: mattwojo
+ms.author: mattwoj
 ms.date: 05/29/2024
 ms.topic: how-to
 ---

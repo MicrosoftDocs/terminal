@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal General Profile Settings
 description: Learn how to customize the general profile settings within Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
+author: mattwojo
+ms.author: mattwoj
 ms.date: 03/10/2023
 ms.topic: how-to
 ---

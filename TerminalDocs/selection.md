@@ -1,8 +1,8 @@
 ---
 title: Selection
 description: Learn how to select text in Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
+author: mattwojo
+ms.author: mattwoj
 ms.date: 07/06/2022
 ms.topic: how-to
 ---

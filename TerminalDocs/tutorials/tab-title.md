@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal Tab Title Setup
 description: In this tutorial, you learn how to set the tab title in Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
+author: mattwojo
+ms.author: mattwoj
 ms.date: 05/19/2020
 ms.topic: tutorial
 #Customer intent: As a developer or IT admin, I want to customize my tab titles so that I can have a more organized Windows Terminal.

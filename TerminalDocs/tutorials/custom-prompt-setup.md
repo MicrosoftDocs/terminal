@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal Custom Prompt Setup
 description: In this tutorial, you learn how to set up Oh My Posh and Terminal-Icons in Windows Terminal.
-author: nguyen-dows
-ms.author: chrnguyen
+author: mattwojo
+ms.author: mattwoj
 ms.date: 09/20/2024
 ms.topic: tutorial
 #Customer intent: As a developer or IT admin, I want to set up a customized command line experience using Oh My Posh, Terminal-Icons, and posh-git in my Windows Terminal.

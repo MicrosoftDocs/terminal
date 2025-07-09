@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal Advanced Profile Settings
 description: Learn how to customize the advanced profile settings within Windows Terminal.
-author: nguyen-dows
-ms.author: chrnguyen
+author: mattwojo
+ms.author: mattwoj
 ms.date: 04/13/2022
 ms.topic: how-to
 ---

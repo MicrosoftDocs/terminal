@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal Custom Color Schemes guide
 description: Some sample configurations for Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
+author: mattwojo
+ms.author: mattwoj
 ms.date: 07/27/2020
 ms.topic: sample
 ---
