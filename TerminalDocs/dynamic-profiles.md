@@ -1,8 +1,6 @@
 ---
 title: Windows Terminal Dynamic Profiles
 description: Learn about dynamic profiles in Windows Terminal.
-author: mattwojo
-ms.author: mattwoj
 ms.date: 01/06/2022
 ms.topic: conceptual
 ---

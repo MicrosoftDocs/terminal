@@ -1,8 +1,6 @@
 ---
 title: Windows Terminal installation
 description: Learn how to install and set up Windows Terminal.
-author: mattwojo
-ms.author: mattwoj
 ms.date: 10/04/2021
 ms.topic: quickstart
 ---

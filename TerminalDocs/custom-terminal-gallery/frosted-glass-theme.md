@@ -1,8 +1,6 @@
 ---
 title: Windows Terminal Frosted Glass Theme
 description: This is a sample configuration for a frosted glass theme.
-author: mattwojo
-ms.author: mattwoj
 ms.date: 08/30/2021
 ms.topic: sample
 ---

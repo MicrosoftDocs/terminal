@@ -1,8 +1,6 @@
 ---
 title: Windows Terminal Actions
 description: Learn how to create custom actions for Windows Terminal.
-author: mattwojo
-ms.author: mattwoj
 ms.date: 05/08/2024
 ms.topic: how-to
 ---
