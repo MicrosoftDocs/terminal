@@ -244,6 +244,7 @@ When enabled, this allows the Terminal window to automatically be hidden as soon
 **Default value:** `false`
 
 <br />
+
 ___
 
 ## Automatically focus pane on mouse hover
@@ -251,6 +252,22 @@ ___
 When this is set to `true`, the terminal will move focus to the pane on mouse hover. When it's set to `false`, a click will be required to focus the pane using the mouse.
 
 **Property name:** `focusFollowMouse`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
+
+<br />
+
+___
+
+## Adjust terminal font size with ctrl + scroll
+
+When this is set to `true`, holding the <kbd>Ctrl</kbd> key while scrolling will increase or decrease the terminal font size. This is an experimental feature and its continued existence is not guaranteed.
+
+**Property name:** `experimental.scrollToZoom`
 
 **Necessity:** Optional
 
