@@ -273,7 +273,7 @@ When this is set to `true`, holding the <kbd>Ctrl</kbd> key while scrolling will
 
 **Accepts:** `true`, `false`
 
-**Default value:** `false`
+**Default value:** `true`
 
 <br />
 
