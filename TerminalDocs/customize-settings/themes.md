@@ -260,6 +260,47 @@ Configures how the "close" button on the tab should appear. This accepts the fol
 
 ___
 
+## Panes
+
+These are settings that control the appearance of individual panes in the terminal
+
+**Property name:** `pane`
+
+### Active Border Color
+
+The color of the active pane's border.
+
+**Property name:** `activeBorderColor`
+
+**Necessity:** Optional
+
+**Accepts:** a [theme color](#theme-colors)
+
+### Inactive Border Color
+
+The color of the inactive pane's border/s.
+
+**Property name:** `inactiveBorderColor`
+
+**Necessity:** Optional
+
+**Accepts:** a [theme color](#theme-colors)
+
+### Broadcast Border Color
+
+The color of any broadcasting pane's border/s.
+
+**Property name:** `broadcastBorderColor`
+
+**Necessity:** Optional
+
+**Accepts:** a [theme color](#theme-colors)
+
+<br />
+
+___
+
+
 ## Theme colors
 
 The colors used in themes both accept RGBA color values, as well as a few special strings for custom values. The accepted values are as follows:
