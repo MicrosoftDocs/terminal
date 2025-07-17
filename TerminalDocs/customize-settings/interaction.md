@@ -263,7 +263,7 @@ When this is set to `true`, the terminal will move focus to the pane on mouse ho
 
 ___
 
-## Adjust terminal font size with ctrl + scroll
+## Adjust terminal font size by scrolling while holding the Ctrl key
 
 When this is set to `true`, holding the <kbd>Ctrl</kbd> key while scrolling will increase or decrease the terminal font size. This is an experimental feature and its continued existence is not guaranteed.
 
