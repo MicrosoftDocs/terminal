@@ -190,7 +190,7 @@ In the second case, the installation is only for the current user. In this case,
 
 Note that both the `ProgramData` and `LocalAppData` folders are known folders that the installer should be able to access. If in either case, if the `Windows Terminal\Fragments` directory does not exist, the installer should create it. The `{app-name}` should be unique to your application and the `{file-name}.json` can be anything - the terminal will read all .json files in that directory.
 
-### Distributing media resources with your fragment extension
+## Distributing media resources with your fragment extension
 
 As of Windows Terminal 1.24, fragment extensions can distribute media resources such as images and pixel shaders to be used with the `icon`, `backgroundImage`, `experimental.pixelShaderPath` and `experimental.pixelShaderImagePath` properties on profiles and actions.
 
