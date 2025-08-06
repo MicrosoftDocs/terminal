@@ -195,7 +195,7 @@ Note that both the `ProgramData` and `LocalAppData` folders are known folders th
 As of Windows Terminal 1.24, fragment extensions can distribute media resources such as images and pixel shaders to be used with the `icon`, `backgroundImage`, `experimental.pixelShaderPath` and `experimental.pixelShaderImagePath` properties on profiles and actions.
 
 Earlier versions of Terminal supported Web URLs for `icon` and `backgroundImage`. Those versions will continue to load Web URL resources in perpetuity.
-Newer versions will no longer access web URLs, but will instead look in directory containing your fragment file.
+Newer versions will no longer access web URLs, but will instead look in the directory containing your fragment file.
 
 If you wish to maintain compatibility with all available versions of Terminal, you may place any web resources in the same directory as your `.json` files.
 
