@@ -217,4 +217,4 @@ You can rely on the following compatibility behaviors:
 
 > [!NOTE]
 > Versions of Windows Terminal prior to 1.24 only supported Web URLs for `icon` and `backgroundImage` on a profile.
-> There is no way to specify a compatibile fallback for either `experimental.pixelShaderPath` or action `icon`s.
+> There is no way to specify a compatible fallback for either `experimental.pixelShaderPath` or action `icon`s.
