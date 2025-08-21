@@ -1,8 +1,6 @@
 ---
 title: Windows Terminal Appearance Settings
 description: Learn how to customize appearance settings within Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
 ms.date: 07/06/2022
 ms.topic: how-to
 ---
@@ -62,6 +60,22 @@ When this is set to `true`, tabs are always displayed. When it's set to `false` 
 
 :::column-end:::
 :::row-end:::
+
+<br />
+
+___
+
+## Show tabs in fullscreen
+
+When this is set to `true`, tabs remain visible in fullscreen mode. When it's set to `false`, tabs will be hidden when entering fullscreen mode.
+
+**Property name:** `showTabsFullscreen`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `false`
 
 <br />
 
@@ -255,7 +269,7 @@ An example of this setting might look like:
 {
     "newTabMenu": [
         { "type":"profile", "profile": "Command Prompt" },
-        { "type":"profile", "profile": "Windows PowerShell" },
+        { "type":"profile", "profile": "Windows PowerShell", "icon": "C:\\path\\to\\icon.png" },
         { "type":"separator" },
         {
             "type":"folder",
@@ -295,6 +309,7 @@ The following are different types of new tab menu entries that can be used in th
 * [`separator`](#separator)
 * [`matchProfiles`](#match-profiles)
 * [`remainingProfiles`](#remaining-profiles)
+* [`action`](#action)
 
 #### Profile
 
@@ -309,6 +324,10 @@ This entry type represents a profile from your list of profiles. The profile can
 | Name | Necessity | Accepts | Description |
 | ---- | --------- | ------- | ----------- |
 | `profile` | Required | Profile's name or GUID as a string | Profile that will open based on its GUID or name. |
+| `icon` | Optional | Path to an icon as a string | Path to an icon that will be displayed next to the profile name. The profile's default icon will be used if not specified. |
+
+> [!NOTE]
+> As of Windows Terminal 1.24, `icon` may refer to content adjacent to the `settings.json` file.
 
 #### Folder
 
@@ -337,6 +356,9 @@ This entry type represents a nested folder in the new tab dropdown menu. Folders
 | `allowEmpty` | Optional | Boolean (defaults to `true`) | If set to `true`, the folder will be displayed even if it has no entries. If set to `false`, the folder will not be displayed if it has no entries. This can be useful with `matchProfiles` entries. |
 | `inline` | Optional | Boolean (defaults to `false`) | If set to `true`, and there's only a single entry in the folder, this folder won't create a nested menu. Instead, the entry in the menu will just be the single entry in the folder. This can be useful with `matchProfiles` entries. |
 
+> [!NOTE]
+> As of Windows Terminal 1.24, `icon` may refer to content adjacent to the `settings.json` file.
+
 #### Separator
 
 This entry type represents a separator in the new tab dropdown menu.
@@ -344,7 +366,6 @@ This entry type represents a separator in the new tab dropdown menu.
 ```json
 { "type":"separator" }
 ```
-
 
 #### Remaining Profiles
 
@@ -377,5 +398,25 @@ A full string comparison is done on these properties - not a regex or partial st
 | `name` | Optional | Profile name as a string | A value to compare to the `name` of the profile. |
 | `commandline` | Optional | Command line as a string | A value to compare to the `commandline` of the profile. |
 | `source` | Optional | Profile source as a string | A value to compare to the `source` of the profile. |
+
+#### Action
+
+This entry type represents a menu entry that should execute a specific action. The text for this menu entry will be the action's label (which is either provided as the "name" in the action's definition, or the generated name if no name was provided).
+
+For more information, see the [custom actions and keybindings](actions.md) documentation.
+
+```json
+{ "type": "action", "id": "User.MyCommand" }
+```
+
+##### Parameters
+
+| Name | Necessity | Accepts | Description |
+| ---- | --------- | ------- | ----------- |
+| `id` | Required | Action ID as a string | Action that will be executed |
+| `icon` | Optional | Path to an icon as a string | Path to an icon that will be displayed next to the action name. If not specified, the action's own icon will be used (if configured). |
+
+> [!NOTE]
+> As of Windows Terminal 1.24, `icon` may refer to content adjacent to the `settings.json` file.
 
 ___

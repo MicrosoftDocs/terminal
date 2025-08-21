@@ -1,8 +1,6 @@
 ---
 title: Windows Terminal Advanced Profile Settings
 description: Learn how to customize the advanced profile settings within Windows Terminal.
-author: nguyen-dows
-ms.author: chrnguyen
 ms.date: 04/13/2022
 ms.topic: how-to
 ---
@@ -298,3 +296,22 @@ This stores the name of the profile generator that originated the profile. _Ther
 
 > [!NOTE]
 > This field should be omitted when declaring a custom profile. It is used by Terminal to connect automatically generated profiles to your settings file.
+
+___
+
+## Path translation
+
+Controls how file and directory paths are translated during drag-and-drop operations. `"wsl"` will convert paths like `C:\` to `/mnt/c`. `"cygwin"` will convert paths like `C:\` to `/cygdrive/c`. `"msys2"` will convert paths like `C:\` to `/c`. `"mingw"` will convert paths like `C:\` to `C:/`.
+
+**Property name:** `pathTranslationStyle`
+
+**Necessity:** Optional
+
+**Accepts:** `"none"`, `"wsl"`, `"cygwin"`, `"msys2"`, `"mingw"`
+
+**Default value:** `"none"`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+<br />

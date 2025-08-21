@@ -1,9 +1,7 @@
 ---
 title: Windows Terminal Distribution Types
 description: Learn how to use the different distributions of Windows Terminal.
-author: nguyen-dows
-ms.author: chrnguyen
-ms.date: 04/10/2023
+ms.date: 02/03/2025
 ms.topic: how-to 
 ---
 
@@ -49,7 +47,7 @@ Windows Terminal is distributed via [GitHub releases] in a variety of formats:
 
 ## Windows Terminal Portable
 
-As of stable channel version 1.17, Windows Terminal supports being deployed in ["Portable mode"]. Portable mode ensures
+Windows Terminal supports being deployed in ["Portable mode"]. Portable mode ensures
 that all data created and maintained by Windows Terminal is saved next to the application so that it can be more easily
 moved across different environments.
 
@@ -59,6 +57,8 @@ This is an officially-supported mode of execution where Windows Terminal stores 
 to `WindowsTerminal.exe`.
 
 Portable mode is not supported in the packaged or preinstallation kit distributions of Windows Terminal.
+
+Portable mode will only run on Windows 10 version 2004 (10.019041) or higher. 
 
 ### Why use Portable mode?
 
@@ -95,6 +95,17 @@ If you wish to reenable portable mode, you can create a new `.portable` marker f
 
 You can upgrade a portable mode installation of Windows Terminal by moving the `.portable` marker file and the
 `settings` directory to a newly-extracted unpackaged version of Windows Terminal.
+
+### Portable mode FAQs
+
+#### Why don't ms-appdata URLs work in Portable mode?
+Prior to portable mode, a common practice to reference images in `settings.json` would be to use `ms-appdata:///Local`. 
+
+Portable mode offers a self-contained Terminal installation, where user data and application data are stored in the same place. As there is no separate user data folder, references to such folder (e.g. with `ms-appdata`) will not work.
+
+To refer to paths relative to the application install directory, use an `ms-appx:` URL.
+
+To refer to paths relative to the settings directory, use the environment variable `%WT_SETTINGS_DIR%`.
 
 ["Portable mode"]: https://en.wikipedia.org/wiki/Portable_application
 [GitHub releases]: https://github.com/microsoft/terminal/releases

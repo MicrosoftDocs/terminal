@@ -1,8 +1,8 @@
 ---
 title: Windows Terminal Command Palette
 description: Learn how to use the command palette in Windows Terminal.
-author: cinnamon-msft
-ms.author: cinnamon
+
+
 ms.date: 02/25/2021
 ms.topic: how-to 
 ---
@@ -40,6 +40,9 @@ You can optionally add an icon to a command defined in your [settings.json](./in
 { "icon": "\uE756", "name": "New tab", "command": "newTab", "keys": "ctrl+shift+t" },
 { "icon": "⚡", "name": "New tab", "command": "newTab", "keys": "ctrl+shift+t" }
 ```
+
+> [!NOTE]
+> As of Windows Terminal 1.24, `icon` may refer to content adjacent to the `settings.json` file.
 
 ## Nested commands
 
