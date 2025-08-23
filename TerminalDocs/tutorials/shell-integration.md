@@ -318,7 +318,7 @@ bash-5.2$ echo "|${PS1}|"
 bash-5.2$ echo "|${PS2}|"
 ||
 ```
-# Fish
+### Fish
 For the fish shell, you can enable shell integration by creating a new file, for example ~/.config/fish/conf.d/wt_integration.fish, and adding the following script.
 
 This script leverages fish's event system to automatically send the necessary shell integration sequences. It is designed to be robust, only activating when in an interactive session within Windows Terminal (by checking for the $WT_SESSION variable). It also includes a specific function to correctly report the current working directory when running under WSL by using wslpath.
