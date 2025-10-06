@@ -85,5 +85,12 @@ echo Started progress (normal, 50)
 
 The above example uses the `NUL` device to write the escape sequence to the console without a newline.
 
+### Nushell
+
+```nu
+# Set the progress bar to 50%
+print "\u{1b}]9;4;1;50\u{07}"
+```
+
 > **Note**:
 > Don't see your favorite shell here? If you figure it out, feel free to [contribute a solution for your preferred shell!](https://github.com/MicrosoftDocs/terminal/compare)
