@@ -7,6 +7,11 @@ ms.topic: quickstart
 
 # Install and get started setting up Windows Terminal
 
+## System Requirements
+
+> [!IMPORTANT]
+> Windows Terminal requires Windows 10 version 2004 (build 19041) or later. For a complete list of supported operating systems, see the [System Requirements section](./distributions.md#system-requirements) on the Windows Terminal distribution types page.
+
 ## Install
 
 > [!div class="nextstepaction"]
