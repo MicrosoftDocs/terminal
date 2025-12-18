@@ -159,7 +159,7 @@ Or use the built-in quake mode shorthand:
 { "command": "quakeMode", "keys": "win+`" }
 ```
 
-(Replace `"win+\`"` with your preferred key combination)
+(Replace `"win+`"` with your preferred key combination)
 
 > [!WARNING]
 > If you enable quake mode and don't set a keyboard shortcut, you may need to use Task Manager to close the quake window when it's minimized.
