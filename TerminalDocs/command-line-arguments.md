@@ -232,13 +232,13 @@ To avoid this behavior when session restore is enabled, use the `--window, -w` o
 #### [Command Prompt](#tab/windows)
 
 ```cmd
-// Open a new tab with a specific profile in the most recently used window (avoids opening a second window)
+REM Open a new tab with a specific profile in the most recently used window (avoids opening a second window)
 wt -w 0 nt -p "Ubuntu-18.04"
 
-// Force a new window with the profile, without restoring previous session
+REM Force a new window with the profile, without restoring previous session
 wt -w -1 nt -p "Command Prompt"
 
-// Open in a named window (creates it only if it doesn't exist)
+REM Open in a named window (creates it only if it doesn't exist)
 wt -w mywork nt -p "PowerShell"
 ```
 
