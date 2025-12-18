@@ -245,26 +245,26 @@ wt -w mywork nt -p "PowerShell"
 #### [PowerShell](#tab/powershell)
 
 ```powershell
-// Open a new tab with a specific profile in the most recently used window (avoids opening a second window)
+# Open a new tab with a specific profile in the most recently used window (avoids opening a second window)
 wt -w 0 nt -p "Ubuntu-18.04"
 
-// Force a new window with the profile, without restoring previous session
+# Force a new window with the profile, without restoring previous session
 wt -w -1 nt -p "Command Prompt"
 
-// Open in a named window (creates it only if it doesn't exist)
+# Open in a named window (creates it only if it doesn't exist)
 wt -w mywork nt -p "PowerShell"
 ```
 
 #### [Linux](#tab/linux)
 
 ```bash
-// Open a new tab with a specific profile in the most recently used window (avoids opening a second window)
+# Open a new tab with a specific profile in the most recently used window (avoids opening a second window)
 cmd.exe /c "wt.exe" -w 0 nt -p "Ubuntu-18.04"
 
-// Force a new window with the profile, without restoring previous session
+# Force a new window with the profile, without restoring previous session
 cmd.exe /c "wt.exe" -w -1 nt -p "Command Prompt"
 
-// Open in a named window (creates it only if it doesn't exist)
+# Open in a named window (creates it only if it doesn't exist)
 cmd.exe /c "wt.exe" -w mywork nt -p "PowerShell"
 ```
 
