@@ -159,7 +159,7 @@ Press Ctrl + O and Ctrl + X to save and exit.
 
 ## Data collection and telemetry
 
-Windows Terminal collects usage data to help improve the product. For information about what data is collected and how to disable telemetry, see the [Data Collection and Telemetry section in the README](https://github.com/MicrosoftDocs/terminal#data-collection-and-telemetry) or the [FAQ entry on disabling telemetry](./faq.yml#how-do-i-disable-telemetry-collection-on-windows-terminal).
+Windows Terminal collects usage data to help improve the product. For information about what data is collected and how to disable telemetry, see the [Data Collection and Telemetry section in the README](https://github.com/MicrosoftDocs/terminal#data-collection-and-telemetry) or refer to the FAQ page for instructions on disabling telemetry.
 
 ## How do I reset my settings in Windows Terminal back to the default settings?
 
