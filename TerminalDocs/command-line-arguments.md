@@ -191,6 +191,8 @@ wt new-tab PowerShell -NoExit -Command "Get-Date" `; new-tab PowerShell -NoExit 
 
 #### [Linux](#tab/linux)
 
+These examples are for WSL (Windows Subsystem for Linux) environments. Windows Terminal runs on Windows, so you need to call `wt.exe` through `cmd.exe` from WSL.
+
 To open a new tab and run a command in bash:
 
 ```bash
@@ -249,7 +251,7 @@ function launch_my_project() {
     # Tab 4: Run a direct command
     cmd.exe /c "wt.exe" -w 0 new-tab --title "Server" --tabColor '#aa5f37' -p "Ubuntu-22.04" bash -c "cd ~/my-project/server && npm start"
     
-    # Focus on the first tab
+    # Focus on the second tab (index 1)
     cmd.exe /c "wt.exe" focus-tab -t 1
 }
 ```
