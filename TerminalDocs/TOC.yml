@@ -38,6 +38,8 @@
       href: selection.md
     - name: Panes
       href: panes.md
+    - name: Window modes
+      href: window-modes.md
     - name: Dynamic profiles
       href: dynamic-profiles.md
     - name: JSON fragment extensions
