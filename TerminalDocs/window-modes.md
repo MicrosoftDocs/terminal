@@ -81,10 +81,10 @@ Focus mode hides the title bar and tabs to minimize distractions, allowing you t
 
 **Using keyboard shortcut:**
 
-Focus mode doesn't have a default keyboard shortcut, but you can add one. Open your [settings.json file](./install.md#settings-json-file) and add this to the `actions` section:
+Focus mode doesn't have a default keyboard shortcut, but you can add one. Open your [settings.json file](./install.md#settings-json-file) and add this to the `keybindings` array:
 
 ```json
-{ "command": "toggleFocusMode", "keys": "ctrl+f12" }
+{ "keys": "ctrl+f12", "id": "Terminal.ToggleFocusMode" }
 ```
 
 (Replace `"ctrl+f12"` with your preferred key combination)
@@ -147,7 +147,7 @@ Quake mode is a special window mode that creates a drop-down terminal that slide
 
 **Using keyboard shortcut:**
 
-Quake mode doesn't have a default global keyboard shortcut, but you can set one. This requires a [global summon](./customize-settings/actions.md#global-commands) binding. Add this to your [settings.json file](./install.md#settings-json-file) in the `keybindings` section:
+Quake mode doesn't have a default global keyboard shortcut, but you can set one. This requires a [global summon](./customize-settings/actions.md#global-commands) binding. Add this to your [settings.json file](./install.md#settings-json-file) in the `keybindings` array:
 
 ```json
 { "keys": "win+`", "id": "Terminal.QuakeMode" }
