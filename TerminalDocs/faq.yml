@@ -154,3 +154,19 @@ sections:
               "dark": "One Half Dark",
           },
           ```
+
+      - question: How do I disable telemetry collection on Windows Terminal?
+        answer: |
+          Windows Terminal collects usage data and sends it to Microsoft to help improve the product. Telemetry collection is controlled by the Windows diagnostic data settings.
+
+          To disable telemetry data collection:
+
+          1. Open **Settings** in Windows
+          2. Go to **Privacy & security** > **Diagnostics & feedback**
+          3. Set **Diagnostic data** to **Required diagnostic data** (the minimum setting)
+
+          Alternatively, you can completely disable diagnostic data collection on Windows, which will also disable telemetry for Windows Terminal.
+
+          For more information about managing diagnostic data in Windows, see [Diagnostics, feedback, and privacy in Windows](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-28808a2b-a31b-dd73-dcd3-4559a5199319).
+
+          The data collected is subject to the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement). For more details about data collection in Windows Terminal, see the [Data Collection and Telemetry section in the product repository README](https://github.com/MicrosoftDocs/terminal#data-collection-and-telemetry).
