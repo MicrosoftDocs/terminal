@@ -3,7 +3,7 @@ title: Shell integration in the Windows Terminal
 description: In this tutorial, you learn how to configure your shell to enable shell integration features in the Windows Terminal
 author: zadjii-msft
 ms.author: migrie
-ms.date: 05/23/2023
+ms.date: 12/18/2025
 ms.topic: tutorial
 #Customer intent: As a developer or IT admin, I want to enable shell integration
 ---
@@ -319,11 +319,13 @@ bash-5.2$ echo "|${PS2}|"
 ||
 ```
 ### Fish
+
 For the fish shell, you can enable shell integration by creating a new file, for example ~/.config/fish/conf.d/wt_integration.fish, and adding the following script.
 
 This script leverages fish's event system to automatically send the necessary shell integration sequences. It is designed to be robust, only activating when in an interactive session within Windows Terminal (by checking for the $WT_SESSION variable). It also includes a specific function to correctly report the current working directory when running under WSL by using wslpath.
 
-Add the following to your ~/.config/fish/conf.d/wt_integration.fish file:
+Add the following to your `~/.config/fish/conf.d/wt_integration.fish` file:
+
 ```fish
 # Only activate in an interactive session running inside Windows Terminal
 if status --is-interactive; and set -q WT_SESSION
@@ -370,10 +372,13 @@ if status --is-interactive; and set -q WT_SESSION
 
 end
 ```
+
 #### Starship Setup
+
 If you are using Starship as your prompt, you will need to modify the fish_prompt function to wrap the starship command. This ensures Starship's output is correctly placed between the start and end prompt markers.
 
 Replace the fish_prompt function from the script above with the following:
+
 ```fish
 function fish_prompt
     set -l last_status $status
@@ -392,7 +397,7 @@ end
 ```
 
 
-> **Note**:
+> [!NOTE]
 > Don't see your favorite shell here? If you figure it out, feel free to [contribute a solution for your preferred shell!](https://github.com/MicrosoftDocs/terminal/compare)
 
 ## Shell integration features
