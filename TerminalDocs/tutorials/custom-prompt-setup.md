@@ -36,7 +36,6 @@ To see all of the glyphs in your terminal, we recommend installing a [Nerd Font]
 After downloading, you will need to unzip and install the font on your system. ([How to add a new font to Windows](https://support.microsoft.com/en-us/office/add-a-font-b7c5f17c-4426-4b53-967f-455339c564c1)).
 
 To set a Nerd Font for use with Oh My Posh and Terminal Icons, open the Windows Terminal settings UI by selecting **Settings** (Ctrl+,) from your Windows Terminal dropdown menu. Select the profile where you wish to apply the font (PowerShell for example) and then select **Appearance**. In the **Font face** drop-down menu, select *Cascadia Code NF* or whichever Nerd Font you want to use.
-To set a Nerd Font for use with Oh My Posh and Terminal Icons, open the Windows Terminal settings UI by selecting **Settings** (Ctrl+,) from your Windows Terminal dropdown menu. Select the profile where you wish to apply the font (PowerShell for example) and then select **Appearance**. In the **Font face** drop-down menu, select *Cascadia Code NF* or whichever Nerd Font you want to use.
 
 > [!NOTE]
 > If you want to use a terminal font that does not support glyph icons, such as [Cascadia Code PL](https://github.com/microsoft/cascadia-code/releases), consider using an Oh My Posh theme that contains the `minimal` function, indicating that additional icons aren't required.
