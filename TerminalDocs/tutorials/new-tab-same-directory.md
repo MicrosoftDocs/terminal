@@ -155,6 +155,14 @@ Add the following line to the end of your `.bashrc` file:
 PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "`cygpath -w "$PWD" -C ANSI`"'
 ```
 
+#### Nushell
+
+Add the following line to your `config.nu` config file (use `config nu` in Nushell to open it):
+
+```
+$env.config.shell_integration.osc9_9 = true
+```
+
 > [!NOTE]
 > Don't see your favorite shell here? If you figure it out, feel free to [open a PR](https://github.com/MicrosoftDocs/terminal/edit/main/TerminalDocs/tutorials/new-tab-same-directory.md)
 > to contribute a solution for your preferred shell!
