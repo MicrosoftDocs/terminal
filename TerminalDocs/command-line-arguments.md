@@ -25,6 +25,14 @@ wt [options] [command ; ]
 > [!NOTE]
 > The [`windowingBehavior` property](./customize-settings/startup.md#new-instance-behavior) can affect the behavior of the `wt.exe` command. Adjust this setting to default between opening a new window or opening a new tab.
 
+> [!IMPORTANT]
+> If you have enabled the **"Open windows from a previous session"** startup option ([`firstWindowPreference: "persistedWindowLayout"`](./customize-settings/startup.md#behavior-when-starting-a-new-terminal-session)), running `wt` from the command line will restore your previous session **and** execute the command you provided, potentially opening two windows. To prevent this behavior, use the `--window, -w` option to control where your command executes:
+> - `wt -w 0 nt -p <profile>` - Opens in the most recently used window (prevents a second window from opening)
+> - `wt -w -1 nt -p <profile>` - Forces a new window without restoring the previous session
+> - `wt -w <name> nt -p <profile>` - Opens in a named window, creating it only if it doesn't exist
+>
+> See the [`--window` option](#options-and-commands) below for more details.
+
 To display a help message that lists the available command line arguments, enter: `wt -h`, `wt --help`, `wt -?`, or `wt /?`.
 
 ## Options and commands
@@ -207,6 +215,57 @@ cmd.exe /c "wt.exe" -w 1 nt
 
 // Open a new tab in the terminal window named foo with the default profile. If foo does not exist then, create a new window named foo.
 cmd.exe /c "wt.exe" -w foo nt
+```
+
+Execution aliases don't work in WSL distributions. If you want to use wt.exe from a WSL command line, you can spawn it from CMD directly by running `cmd.exe`. The `/c` option tells CMD to terminate after running.
+
+---
+<!-- End tab selectors.  -->
+
+### Session restore and command line arguments
+
+If you have enabled the **"Open windows from a previous session"** startup option ([`firstWindowPreference: "persistedWindowLayout"`](./customize-settings/startup.md#behavior-when-starting-a-new-terminal-session)), running `wt` with command line arguments will both restore your previous session layout **and** execute your command, which may result in opening two windows.
+
+To avoid this behavior when session restore is enabled, use the `--window, -w` option to control where your commands execute:
+
+<!-- Start tab selectors. -->
+#### [Command Prompt](#tab/windows)
+
+```cmd
+// Open a new tab with a specific profile in the most recently used window (avoids opening a second window)
+wt -w 0 nt -p "Ubuntu-18.04"
+
+// Force a new window with the profile, without restoring previous session
+wt -w -1 nt -p "Command Prompt"
+
+// Open in a named window (creates it only if it doesn't exist)
+wt -w mywork nt -p "PowerShell"
+```
+
+#### [PowerShell](#tab/powershell)
+
+```powershell
+// Open a new tab with a specific profile in the most recently used window (avoids opening a second window)
+wt -w 0 nt -p "Ubuntu-18.04"
+
+// Force a new window with the profile, without restoring previous session
+wt -w -1 nt -p "Command Prompt"
+
+// Open in a named window (creates it only if it doesn't exist)
+wt -w mywork nt -p "PowerShell"
+```
+
+#### [Linux](#tab/linux)
+
+```bash
+// Open a new tab with a specific profile in the most recently used window (avoids opening a second window)
+cmd.exe /c "wt.exe" -w 0 nt -p "Ubuntu-18.04"
+
+// Force a new window with the profile, without restoring previous session
+cmd.exe /c "wt.exe" -w -1 nt -p "Command Prompt"
+
+// Open in a named window (creates it only if it doesn't exist)
+cmd.exe /c "wt.exe" -w mywork nt -p "PowerShell"
 ```
 
 Execution aliases don't work in WSL distributions. If you want to use wt.exe from a WSL command line, you can spawn it from CMD directly by running `cmd.exe`. The `/c` option tells CMD to terminate after running.
