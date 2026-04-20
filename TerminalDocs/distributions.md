@@ -7,6 +7,34 @@ ms.topic: how-to
 
 # Windows Terminal distribution types
 
+## System Requirements
+
+Windows Terminal requires **Windows 10 version 2004 (build 19041) or later**. The following table shows which Windows versions are supported:
+
+| Operating System | Version | Build Number | Supported |
+|------------------|---------|--------------|-----------|
+| **Windows 11** | All versions | 22000+ | ✅ Yes |
+| **Windows 10** | Version 2004 (May 2020 Update) and later | 19041+ | ✅ Yes |
+| **Windows 10** | Version 1909 and earlier | 18363 and earlier | ❌ No |
+| **Windows Server 2022** | All versions | 20348+ | ✅ Yes |
+| **Windows Server 2019** | All versions | 17763 | ❌ No |
+| **Windows Server 2016** | All versions | 14393 | ❌ No |
+
+### Why these requirements?
+
+Windows Terminal uses modern Windows platform APIs and UI frameworks (including the Universal Windows Platform and Windows UI Library) that were introduced and stabilized in Windows 10 version 2004. These APIs are essential for Terminal's features, including:
+
+- Modern UI rendering and theming
+- GPU-accelerated text rendering
+- Advanced input handling
+- Multi-window and tab management
+
+**Windows Server 2016 and 2019** are based on older Windows 10 builds (14393 and 17763, respectively) that don't include these required platform features. If you're using these Windows Server versions, consider using the traditional console host (`conhost.exe`) or upgrading to Windows Server 2022.
+
+---
+
+## Distribution formats
+
 Windows Terminal is available through [GitHub releases] in several formats:
 
 - Packaged, or "MSIX bundle"
