@@ -11,9 +11,6 @@ ms.topic: tutorial
 [Oh My Posh](https://ohmyposh.dev) provides theme capabilities for a fully customized command prompt experience providing Git status color-coding and prompts.
 
 If you just want to customize the [color schemes](../customize-settings/color-schemes.md) or [appearance](../customize-settings/appearance.md) of your terminal, you can do so in the Windows Terminal settings (without the need to install Oh My Posh themes).
-[Oh My Posh](https://ohmyposh.dev) provides theme capabilities for a fully customized command prompt experience providing Git status color-coding and prompts.
-
-If you just want to customize the [color schemes](../customize-settings/color-schemes.md) or [appearance](../customize-settings/appearance.md) of your terminal, you can do so in the Windows Terminal settings (without the need to install Oh My Posh themes).
 
 In this tutorial, you learn how to:
 
