@@ -2,7 +2,7 @@
 title: Windows Terminal Dynamic Profiles
 description: Learn about dynamic profiles in Windows Terminal.
 ms.date: 11/10/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Dynamic profiles in Windows Terminal
