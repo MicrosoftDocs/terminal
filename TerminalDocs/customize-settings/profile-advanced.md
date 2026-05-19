@@ -100,6 +100,25 @@ This sets the number of lines above the ones displayed in the window you can scr
 
 ___
 
+## Environment variables
+
+This sets additional environment variables that will be passed to the process started in the profile. This setting is only available in the [settings.json file](../install.md#settings-json-file) and is not configurable via the settings UI.
+
+**Property name:** `environment`
+
+**Necessity:** Optional
+
+**Accepts:** An object with string keys and values, for example: `"environment": { "VAR_NAME": "value" }`
+
+**Example:** To add environment variables `FOO` and `BAR` to your PowerShell profile, add `"environment": { "FOO": "one", "BAR": "two" }` to that profile.
+
+> [!NOTE]
+> When a profile specifies its own `environment`, it completely replaces any environment variables set in the `defaults` section rather than merging with them. Profiles without their own `environment` setting will still inherit from `defaults`.
+
+<br />
+
+___
+
 ## Profile termination behavior
 
 This sets how the profile reacts to termination or failure to launch. `"graceful"` will close the profile when `exit` is typed or when the process exits normally. `"always"` will always close the profile and `"never"` will never close the profile. `"automatic"` was added once Windows Terminal was allowed to be the default terminal application; for processes launched in Terminal directly, it behaves the same as `"graceful"` but for processes that were handed off to Terminal it behaves the same as `"always"`.
