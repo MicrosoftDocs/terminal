@@ -77,7 +77,7 @@ Assuming that you've installed Cygwin into `C:\cygwin64`:
 }
 ```
 
-> ![NOTE]
+> [!NOTE]
 > The starting directory of Cygwin is set in order for the path
 to work. The default directory opened when starting Cygwin will be `$HOME` because
 of the `--login` flag.
