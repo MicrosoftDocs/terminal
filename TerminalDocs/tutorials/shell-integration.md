@@ -60,33 +60,40 @@ Supporting these features requires cooperation between your shell and the Termin
 To enable these features in the Terminal, you'll want to add the following to your settings:
 
 ```json
-"profiles":
-{
-    "defaults":
-    {
-        // Enable marks on the scrollbar
-        "showMarksOnScrollbar": true,
+"profiles": {
+  "defaults": {
+    // Enable marks on the scrollbar
+    "showMarksOnScrollbar": true,
 
-        // Needed for both pwsh, CMD and bash shell integration
-        "autoMarkPrompts": true,
+    // Needed for both pwsh, CMD and bash shell integration
+    "autoMarkPrompts": true,
 
-        // Add support for a right-click context menu
-        // You can also just bind the `showContextMenu` action
-        "experimental.rightClickContextMenu": true,
-    },
-}
-"actions":
-[
-    // Scroll between prompts
-    { "keys": "ctrl+up",   "command": { "action": "scrollToMark", "direction": "previous" }, },
-    { "keys": "ctrl+down", "command": { "action": "scrollToMark", "direction": "next" }, },
+    // Add support for a right-click context menu
+    // You can also just bind the `showContextMenu` action
+    "experimental.rightClickContextMenu": true,
+  },
+},
+"actions": [
+  // Create actions for scrolling to previous/next mark
+  { "command": { "action": "scrollToMark", "direction": "previous" }, "id": "Terminal.ScrollToPreviousMark" },
+  { "command": { "action": "scrollToMark", "direction": "next" }, "id": "Terminal.ScrollToNextMark" },
+  // Create actions for selecting command(s) at previous/next mark(s)
+  { "command": { "action": "selectCommand", "direction": "prev" }, "id": "Terminal.SelectPrevCommand" },
+  { "command": { "action": "selectCommand", "direction": "next" }, "id": "Terminal.SelectNextCommand" },
+  // Create actions for selecting output(s) from previous/next command(s)
+  { "command": { "action": "selectOutput", "direction": "prev" }, "id": "Terminal.SelectPrevOutput" },
+  { "command": { "action": "selectOutput", "direction": "next" }, "id": "Terminal.SelectNextOutput" },
+],
+"keybindings": [
+  // Define hotkeys/shortcuts for these actions by referencing the prior (user-)assigned IDs
+  { "id": "Terminal.ScrollToPreviousMark", "keys": "ctrl+up" },
+  { "id": "Terminal.ScrollToNextMark", "keys": "ctrl+down" },
 
-    // Add the ability to select a whole command (or its output)
-    { "command": { "action": "selectOutput", "direction": "prev" }, },
-    { "command": { "action": "selectOutput", "direction": "next" }, },
+  { "id": "Terminal.SelectPrevCommand", "keys": "ctrl+alt+shift+up" },
+  { "id": "Terminal.SelectNextCommand", "keys": "ctrl+alt+shift+down" },
 
-    { "command": { "action": "selectCommand", "direction": "prev" }, },
-    { "command": { "action": "selectCommand", "direction": "next" }, },
+  { "id": "Terminal.SelectPrevOutput", "keys": "ctrl+shift+up" },
+  { "id": "Terminal.SelectNextOutput", "keys": "ctrl+shift+down" }
 ]
 ```
 
@@ -185,7 +192,7 @@ function prompt {
   $loc = $($executionContext.SessionState.Path.CurrentLocation);
   $out += "`e]133;A$([char]07)";
   $out += "`e]9;9;`"$loc`"$([char]07)";
-  
+
   $out += $Global:__OriginalPrompt.Invoke(); # <-- This line adds the original prompt back
 
   $out += "`e]133;B$([char]07)";
