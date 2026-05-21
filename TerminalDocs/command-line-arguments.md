@@ -156,6 +156,109 @@ Here's an example of calling Windows Terminal to open a new tab with a PowerShel
 wt new-tab PowerShell -c Start-Service ; new-tab cmd /k dir
 ```
 
+### Executing commands in new tabs
+
+When you open a new tab, you can execute commands in that tab by passing a `commandline` argument. The `commandline` must be an executable (with optional arguments), not shell functions or aliases.
+
+<!-- Start tab selectors. -->
+#### [Command Prompt](#tab/windows)
+
+To open a new tab and run a command:
+
+```cmd
+wt new-tab cmd /k echo Hello World
+```
+
+To open multiple tabs with different commands:
+
+```cmd
+wt new-tab cmd /k dir ; new-tab cmd /k "echo Tab 2" ; new-tab PowerShell -NoExit -Command "Get-Date"
+```
+
+#### [PowerShell](#tab/powershell)
+
+To open a new tab and run a PowerShell command:
+
+```powershell
+wt new-tab PowerShell -NoExit -Command "Get-ChildItem"
+```
+
+To open multiple tabs with different commands:
+
+```powershell
+wt new-tab PowerShell -NoExit -Command "Get-Date" `; new-tab PowerShell -NoExit -Command "Get-Location"
+```
+
+#### [Linux](#tab/linux)
+
+These examples are for WSL (Windows Subsystem for Linux) environments. Windows Terminal runs on Windows, so you need to call `wt.exe` through `cmd.exe` from WSL.
+
+To open a new tab and run a command in bash:
+
+```bash
+cmd.exe /c "wt.exe" new-tab bash -c "ls -la"
+```
+
+To open a new tab and keep it open after running a command, use `bash -c` with an interactive shell:
+
+```bash
+cmd.exe /c "wt.exe" new-tab bash -c "cd /home && exec bash"
+```
+
+To open multiple tabs with different commands and titles:
+
+```bash
+cmd.exe /c "wt.exe" new-tab --title "Tab1" bash -c "cd /home && exec bash" \; new-tab --title "Tab2" bash -c "ls && exec bash"
+```
+
+**Important notes for WSL/Linux:**
+
+- **Bash functions and aliases are not available**: When you run `wt.exe new-tab`, it starts a new shell session. Functions and aliases defined in your `.bashrc` are only available in interactive shells.
+- **To use bash functions**: You need to source your `.bashrc` file or define the function inline:
+  
+  ```bash
+  cmd.exe /c "wt.exe" new-tab bash -c "source ~/.bashrc && my_function && exec bash"
+  ```
+
+- **To run a script file**: Create a script file and execute it directly:
+  
+  ```bash
+  # Create a script file first
+  echo '#!/bin/bash' > /tmp/myscript.sh
+  echo 'echo "Running script"' >> /tmp/myscript.sh
+  echo 'npm start' >> /tmp/myscript.sh
+  chmod +x /tmp/myscript.sh
+  
+  # Then run it in a new tab
+  cmd.exe /c "wt.exe" new-tab bash -c "/tmp/myscript.sh && exec bash"
+  ```
+
+- **Use `exec bash` to keep the tab open**: Without `exec bash`, the tab will close when the command completes.
+
+**Example: Opening multiple tabs with commands from a bash function**
+
+```bash
+function launch_my_project() {
+    # Tab 1: Just open a bash shell
+    cmd.exe /c "wt.exe" -w 0 new-tab --title "Main" --tabColor '#4d658d' bash -c "exec bash"
+    
+    # Tab 2: Run a command and keep the shell open
+    cmd.exe /c "wt.exe" -w 0 new-tab --title "Client" --tabColor '#468b76' -p "Ubuntu-22.04" bash -c "cd ~/my-project/client && npm install && exec bash"
+    
+    # Tab 3: Source .bashrc and run a function
+    cmd.exe /c "wt.exe" -w 0 new-tab --title "Daemon" --tabColor '#7484a6' -p "Ubuntu-22.04" bash -c "source ~/.bashrc && my_daemon_start_function && exec bash"
+    
+    # Tab 4: Run a direct command
+    cmd.exe /c "wt.exe" -w 0 new-tab --title "Server" --tabColor '#aa5f37' -p "Ubuntu-22.04" bash -c "cd ~/my-project/server && npm start"
+    
+    # Focus on the Client tab (index 1)
+    cmd.exe /c "wt.exe" focus-tab -t 1
+}
+```
+
+---
+<!-- End tab selectors.  -->
+
 ### Target a specific window
 
 The following examples show how to use the `--window,-w` option to target specific windows.
