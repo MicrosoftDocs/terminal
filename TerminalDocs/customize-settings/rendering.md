@@ -1,7 +1,7 @@
 ---
 title: Windows Terminal Rendering Settings
 description: Learn how to customize rendering settings within Windows Terminal.
-ms.date: 04/14/2021
+ms.date: 12/18/2024
 ms.topic: how-to
 ---
 
@@ -30,6 +30,27 @@ ___
 ## Use software rendering
 
 When this is set to `true`, the terminal will use the software renderer (a.k.a. WARP) instead of the hardware one.
+
+WARP (Windows Advanced Rasterization Platform) is a high-performance software rasterizer built into Windows that implements Direct3D graphics APIs using the CPU instead of a GPU. It is a Microsoft DirectX technology and is not related to the [Warp terminal application](https://www.warp.dev/).
+
+### When to enable software rendering
+
+Consider enabling software rendering in these scenarios:
+
+- **Graphics driver issues**: If you experience visual glitches, artifacts, or crashes related to your GPU drivers
+- **Remote desktop or virtual machines**: When running Windows Terminal over Remote Desktop or in a VM where GPU acceleration may not be available
+- **Compatibility problems**: If your hardware doesn't support the required Direct3D feature level
+- **Systems without a GPU**: When running on systems without dedicated or integrated graphics hardware
+- **Troubleshooting**: To isolate whether rendering issues are caused by hardware or drivers
+
+### Performance considerations
+
+Software rendering uses your CPU instead of your GPU, which may result in:
+- **Higher CPU usage** during terminal operations
+- **Potentially slower rendering** compared to hardware acceleration, especially on lower-end CPUs
+- **More consistent behavior** across different hardware configurations
+
+For most users with modern GPUs and up-to-date drivers, hardware rendering (the default) provides the best performance. Only enable software rendering if you encounter specific issues with hardware acceleration.
 
 **Property name:** `experimental.rendering.software`
 
