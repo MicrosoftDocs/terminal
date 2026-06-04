@@ -16,7 +16,9 @@ ms.topic: tutorial
     - [PowerShell (`pwsh.exe`)](#powershell-pwshexe)
     - [Command Prompt](#command-prompt)
     - [Bash](#bash)
+    - [Zsh](#zsh)
     - [Fish](#fish)
+      - [Starship Setup](#starship-setup)
   - [Shell integration features](#shell-integration-features)
     - [Open new tabs in the same working directory](#open-new-tabs-in-the-same-working-directory)
     - [Show marks for each command in the scrollbar](#show-marks-for-each-command-in-the-scrollbar)
@@ -90,7 +92,7 @@ To enable these features in the Terminal, you'll want to add the following to yo
 ]
 ```
 
-How you enable these marks in your shell varies from shell to shell. Below are tutorials for CMD, PowerShell and Zsh.
+How you enable these marks in your shell varies from shell to shell. Below are tutorials for CMD, PowerShell, and others.
 
 ### PowerShell (`pwsh.exe`)
 
@@ -319,6 +321,63 @@ bash-5.2$ echo "|${PS1}|"
 bash-5.2$ echo "|${PS2}|"
 ||
 ```
+### Zsh
+
+> [!IMPORTANT]
+> Some themes may have built-in shell integrations that can conflict with this
+> tutorial, refer to your theme's documentation first. Transient prompts
+> are known to have issues with `OSC 133 ; B ST` ("_FTCS_COMMAND_START_").
+
+Zsh provides the special hook functions `precmd`, `preexec` and `chpwd`:
+
+* `precmd` - Executed before each prompt.
+* `preexec` - Executed just after a command has been read and is about to be executed.
+* `chpwd` - Executed whenever the current working directory is changed.
+
+We'll be using these hooks to mark the start of a prompt, start of command output, end of command output, and to tell the Terminal about the CWD.
+
+To mark the beginning of a command we can use the Zsh Line Editor special widget `zle-line-init`, which is executed every time the line editor is started to read a new line of input.
+
+Add the following to your `.zshrc`:
+
+```zsh
+# CWD
+keep_current_path() {
+    printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
+}
+chpwd_functions+=(keep_current_path)
+
+mark_prompt_start() {
+  printf "\e]133;A\e\\"
+}
+
+mark_command_start() {
+  # Only emit mark if at the start of a command line
+  if [[ $CONTEXT == "start" ]]; then
+    printf "\e]133;B\e\\"
+  fi
+}
+
+mark_command_executed() {
+  printf "\e]133;C\e\\"
+}
+
+mark_command_finished() {
+  # The special variable ? expands to the exit status of the last command
+  printf "\e]133;D;%s\e\\" $?
+}
+
+# Before each prompt, emit a mark for the end of the previous command
+# And after that, a mark for the start of the prompt
+precmd_functions+=(mark_command_finished mark_prompt_start)
+
+# Starting to read new line of input
+zle -N zle-line-init mark_command_start
+
+# Command has been read and is about to be executed
+preexec_functions+=(mark_command_executed)
+```
+
 ### Fish
 
 For the fish shell, you can enable shell integration by creating a new file, for example ~/.config/fish/conf.d/wt_integration.fish, and adding the following script.
