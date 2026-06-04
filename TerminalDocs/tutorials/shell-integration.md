@@ -323,6 +323,11 @@ bash-5.2$ echo "|${PS2}|"
 ```
 ### Zsh
 
+> [!IMPORTANT]
+> Some themes may have built-in shell integrations that can conflict with this
+> tutorial, refer to your theme's documentation first. Transient prompts
+> are known to have issues with `OSC 133 ; B ST` ("_FTCS_COMMAND_START_").
+
 Zsh provides the special hook functions `precmd`, `preexec` and `chpwd`:
 
 * `precmd` - Executed before each prompt.
