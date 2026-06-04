@@ -18,6 +18,7 @@ ms.topic: tutorial
     - [Bash](#bash)
     - [Zsh](#zsh)
     - [Fish](#fish)
+      - [Starship Setup](#starship-setup)
   - [Shell integration features](#shell-integration-features)
     - [Open new tabs in the same working directory](#open-new-tabs-in-the-same-working-directory)
     - [Show marks for each command in the scrollbar](#show-marks-for-each-command-in-the-scrollbar)
