@@ -333,4 +333,20 @@ Controls how file and directory paths are translated during drag-and-drop operat
 > [!IMPORTANT]
 > This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
+___
+
+## Drag and drop delimiter
+
+This allows you to configure the string separator used when dragging and dropping multiple files into the terminal. By default, paths are separated by a single space. You can customize this to use other separators, such as a comma and a space (`", "`) or a semicolon (`";"`).
+
+![A recording of the user configuring a custom drag and drop delimiter](../images/drag-and-drop-delimiter.gif)
+
+**Property name:** `dragDropDelimiter`
+
+**Necessity:** Optional
+
+**Accepts:** String
+
+**Default value:** `" "`
+
 <br />
