@@ -109,6 +109,10 @@ Windows Terminal includes these color schemes inside the defaults.json file, whi
 
 ![Windows Terminal Tango Light color scheme](./../images/tango-light-color-scheme.png)
 
+### Tango Solarized Dark
+
+Tango Solarized Dark is a dark theme with balanced colors.
+
 
 ## More schemes
 
