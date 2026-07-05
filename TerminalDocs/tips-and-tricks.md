@@ -128,6 +128,16 @@ Navigating to the parent directory with a key binding is also helpful.
 
 You can use this functionality to run builds or test scripts.
 
+## Full screen, focus mode, and quake mode
+
+Windows Terminal includes several ways to change how the terminal window uses your screen:
+
+* **Full screen** expands the terminal window to fill the display.
+* **Focus mode** hides the title bar and tabs so only the terminal content is visible.
+* **Quake mode** creates a special `_quake` window that snaps to the top half of the monitor, hides when minimized, and automatically enters focus mode.
+
+Use full screen when you want the largest terminal window, focus mode when you want fewer distractions in the current window, and quake mode when you want a drop-down terminal that you can quickly show or hide.
+
 ## Focus mode
 
 "Focus mode" hides the title bar and tabs normally located at the top of Windows Terminal. You can focus only on the terminal content. It's similar to ["Zen mode"](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_zen-mode) in Visual Studio Code.
