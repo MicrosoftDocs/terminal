@@ -96,23 +96,30 @@ This enables the Mica effect on this window, beneath all other UI layers. For Mi
     "window":
     {
         "applicationTheme": "system",
-        "useMica": true
+        "useMica": "mica"
     }
 },
 ```
 
 Note that when Mica is enabled for the window it is enabled under the entirety of the window, including as a backdrop for the Terminal panes in the window. This means that profiles which are using `opacity` without `useAcrylic` enabled will show through to the new Mica background. It is not currently possible to have an unblurred transparent background for the Terminal and a Mica background for the tabs / tab row simultaneously.
 
+`"mica"` uses the standard Mica material. `"micaAlt"` uses the Mica Alt material, a variant of Mica with a stronger tint of the desktop wallpaper. `"none"` disables the backdrop.
+
+`true` and `false` are accepted as synonyms for `"mica"` and `"none"`, respectively.
+
 **Property name:** `useMica`
 
 **Necessity:** Optional
 
-**Accepts:** `true`, `false`
+**Accepts:** `"none"`, `"mica"`, `"micaAlt"`, `true`, `false`
 
-**Default value:** `false`
+**Default value:** `"none"`
 
 > [!NOTE]
 > Mica is only available on Windows builds >= 22621.
+
+> [!IMPORTANT]
+> The `"micaAlt"` value is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### Window border
 
