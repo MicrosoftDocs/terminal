@@ -118,6 +118,9 @@ Note that when Mica is enabled for the window it is enabled under the entirety o
 > [!NOTE]
 > Mica is only available on Windows builds >= 22621.
 
+> [!IMPORTANT]
+> The `"micaAlt"` value is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
 ### Window border
 
 This sets the color of the window border, when the window is active. When set to `null`, the border will use whatever the default color is for the OS theme.
