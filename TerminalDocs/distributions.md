@@ -58,7 +58,7 @@ to `WindowsTerminal.exe`.
 
 The packaged or preinstallation kit distributions of Windows Terminal don't support portable mode.
 
-Portable mode runs only on Windows 10 version 2004 (10.0.19041) or higher. 
+Portable mode runs only on Windows 10 version 2004 (10.019041) or higher. 
 
 ### Why use Portable mode?
 
