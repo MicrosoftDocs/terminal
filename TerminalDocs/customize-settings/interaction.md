@@ -1,7 +1,7 @@
 ---
 title: Windows Terminal Interaction Settings
 description: Learn how to customize interaction settings within Windows Terminal.
-ms.date: 05/29/2024
+ms.date: 10/29/2026
 ms.topic: how-to
 ---
 
@@ -140,6 +140,25 @@ When this is set to `true`, the window will snap to the nearest character bounda
 
 :::column-end:::
 :::row-end:::
+
+<br />
+
+___
+
+## Show terminal size when resizing
+
+When this is set to `true`, the terminal will display its current size as columns × rows in the middle of the terminal while you resize the window or change the font size. When it's set to `false`, this overlay will not be shown.
+
+**Property name:** `showResizeOverlay`
+
+**Necessity:** Optional
+
+**Accepts:** `true`, `false`
+
+**Default value:** `true`
+
+> [!IMPORTANT]
+> This feature is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
