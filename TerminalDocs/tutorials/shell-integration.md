@@ -135,16 +135,16 @@ function prompt {
   $loc = $($executionContext.SessionState.Path.CurrentLocation);
 
   # Prompt started
-  $out += "`e]133;A$([char]07)";
+  $out += "`e]133;A`u{7}";
 
   # CWD
-  $out += "`e]9;9;`"$loc`"$([char]07)";
+  $out += "`e]9;9;`"$loc`"`u{7}";
 
   # (your prompt here)
   $out += "PWSH $loc$('>' * ($nestedPromptLevel + 1)) ";
 
   # Prompt ended, Command started
-  $out += "`e]133;B$([char]07)";
+  $out += "`e]133;B`u{7}";
 
   $Global:__LastHistoryId = $LastHistoryEntry.Id
 
@@ -183,12 +183,12 @@ function prompt {
     }
   }
   $loc = $($executionContext.SessionState.Path.CurrentLocation);
-  $out += "`e]133;A$([char]07)";
-  $out += "`e]9;9;`"$loc`"$([char]07)";
+  $out += "`e]133;A`u{7}";
+  $out += "`e]9;9;`"$loc`"`u{7}";
   
   $out += $Global:__OriginalPrompt.Invoke(); # <-- This line adds the original prompt back
 
-  $out += "`e]133;B$([char]07)";
+  $out += "`e]133;B`u{7}";
   $Global:__LastHistoryId = $LastHistoryEntry.Id
   return $out
 }
